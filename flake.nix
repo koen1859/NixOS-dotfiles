@@ -1,6 +1,6 @@
 {
 
-  description = "My first flake!";
+  description = "Flake";
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
