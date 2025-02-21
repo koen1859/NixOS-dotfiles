@@ -136,15 +136,7 @@
     tmux
     osmium-tool
     postgresql
-    adwaita-qt
-    gruvbox-dark-gtk
-    gruvbox-dark-icons-gtk
-    gnome-themes-extra
-    libsForQt5.qtstyleplugins
-    gsettings-desktop-schemas
-    gtk-engine-murrine
-    gtk_engines
-    glib
+    bibata-cursors
   ];
 
   fonts.packages = with pkgs; [
@@ -168,9 +160,8 @@
 
   system.stateVersion = "24.11";
 
-  nix.settings.experimental-features = [ "nix-command" "flakes"];
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  stylix.image = ./Wallpapers/Cave.jpg;
-
+  stylix.enable = false;
 }
 

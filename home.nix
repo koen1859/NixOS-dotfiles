@@ -22,22 +22,5 @@
   home.file = {
   };
 
-  gtk = {
-    enable = true;
-    theme = {
-      name = "Gruvbox-Dark";
-      package = pkgs.gruvbox-dark-gtk;
-    };
-    iconTheme = {
-      name = "Gruvbox-Dark-Icons";
-      package = pkgs.gruvbox-dark-icons-gtk;
-    };
-    cursorTheme = {
-      name = "Qogir";
-      package = pkgs.qogir-theme;
-      size = 24;
-    };
-  };
-
   programs.home-manager.enable = true;
 }

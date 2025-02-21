@@ -9,7 +9,7 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { nixpkgs, home-manager, ...}@inputs:
+  outputs = { nixpkgs, home-manager, stylix, ...}:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
@@ -18,10 +18,7 @@
     nixosConfigurations = {
       nixos = lib.nixosSystem {
         inherit system;
-        modules = [
-            ./configuration.nix
-            inputs.stylix.nixosModules.stylix
-          ];
+        modules = [ ./configuration.nix stylix.nixosModules.stylix ];
       };
     };
     homeConfigurations = {
