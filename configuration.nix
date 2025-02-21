@@ -170,5 +170,7 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes"];
 
+  stylix.image = ./Wallpapers/Cave.jpg;
+
 }
 

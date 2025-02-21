@@ -4,11 +4,12 @@
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
+    stylix.url = "github:danth/stylix";
     home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, home-manager, ...}:
+  outputs = { nixpkgs, home-manager, ...}@inputs:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
@@ -17,7 +18,10 @@
     nixosConfigurations = {
       nixos = lib.nixosSystem {
         inherit system;
-        modules = [ ./configuration.nix ];
+        modules = [
+            ./configuration.nix
+            inputs.stylix.nixosModules.stylix
+          ];
       };
     };
     homeConfigurations = {
