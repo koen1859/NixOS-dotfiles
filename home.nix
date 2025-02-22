@@ -9,6 +9,7 @@
     ./programs/waybar.nix
     ./programs/wofi.nix
     ./programs/git.nix
+    ./programs/hyprland.nix
   ];
 
   home.username = "koenstevens";
