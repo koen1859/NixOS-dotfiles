@@ -9,7 +9,6 @@
     ./programs/waybar.nix
     ./programs/wofi.nix
     ./programs/git.nix
-    ./programs/hyprland.nix
   ];
 
   home.username = "koenstevens";
@@ -17,11 +16,14 @@
 
   home.stateVersion = "24.11"; # Please read the comment before changing.
 
-  home.packages = [
+  home.packages = with pkgs; [
   ];
 
   home.file = {
   };
 
   programs.home-manager.enable = true;
+
+  # stylix.enable = true;
+  # stylix.image = ./Wallpapers/Nebula.jpg;
 }

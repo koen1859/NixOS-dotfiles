@@ -1,7 +1,3 @@
-# Edit this configuration file to define what should be installed on
-# your system. Help is available in the configuration.nix(5) man page, on
-# https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
-
 { config, lib, pkgs, ... }:
 
 {
@@ -84,6 +80,7 @@
     atuin
     pywalfox-native
     neovim
+    texlive.combined.scheme-full
     nixd
     zotero
     lua53Packages.sqlite
@@ -97,6 +94,10 @@
     vimPlugins.nvim-fzf
     nodejs_23
     python3
+    python312Packages.ipython
+    python312Packages.psycopg2
+    python312Packages.igraph
+    python312Packages.folium
     cargo
     rustc
     cmake
@@ -135,7 +136,9 @@
     blueman
     tmux
     osmium-tool
-    postgresql
+    postgresql_17
+    postgresql17Packages.postgis
+    osm2pgsql
     bibata-cursors
   ];
 
@@ -147,7 +150,7 @@
   ];
 
   programs.hyprland.enable = true;
- 
+
   services.displayManager.sddm.enable = true;
   services.displayManager.sddm.wayland.enable = true;
 
@@ -155,13 +158,23 @@
   xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
 
   environment.sessionVariables = {
-    NIXOS_OZONE_WL = "1";
+    nixos_ozone_wl = "1";
   };
 
   system.stateVersion = "24.11";
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  stylix.enable = false;
+  services.postgresql = {
+    enable = true;
+    package = pkgs.postgresql_17;
+    dataDir = "/var/lib/postgresql/data";
+    extensions = with pkgs.postgresql17Packages; [ postgis ];
+    authentication = ''
+      local   all             all                                     trust
+      host    all             all             127.0.0.1/32            trust
+      host    all             all             ::1/128                 trust
+      '';
+  };
 }
 
