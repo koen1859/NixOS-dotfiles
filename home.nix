@@ -24,6 +24,9 @@
 
   programs.home-manager.enable = true;
 
+  gtk.enable = true;
+  qt.enable = true;
+
   # stylix.enable = true;
   # stylix.image = ./Wallpapers/Nebula.jpg;
 }
