@@ -142,6 +142,7 @@
     postgresql17Packages.postgis
     osm2pgsql
     bibata-cursors
+    dconf-editor
   ];
 
   fonts.packages = with pkgs; [
