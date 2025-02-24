@@ -129,6 +129,8 @@
         lintr
         roxygen2
         xml2
+        ggplot2
+        MASS
       ];
     })
     vscode
@@ -153,6 +155,7 @@
     enable = true;
     image = ./Wallpapers/Nebula.jpg;
     polarity = "dark";
+    targets.gtk.enable = true;
   };
 
   programs.hyprland.enable = true;

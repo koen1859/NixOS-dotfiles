@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   imports = [
@@ -25,8 +25,8 @@
   programs.home-manager.enable = true;
 
   gtk.enable = true;
-  qt.enable = true;
+  gtk.cursorTheme.package = pkgs.bibata-cursors;
+  gtk.cursorTheme.name = "Bibata-Modern_Ice";
 
-  # stylix.enable = true;
-  # stylix.image = ./Wallpapers/Nebula.jpg;
+  qt.enable = true;
 }
