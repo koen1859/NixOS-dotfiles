@@ -14,13 +14,13 @@
       ll = "ls -l --color=auto";
       ff = "fastfetch";
       ".." = "cd ..";
+      v = "nvim";
     };
 
     initExtra = ''
       PS1='[\u@\h \W]\$ '
       ff
       source ~/.local/share/blesh/ble.sh
-      set -o vi
     '';
   };
 

@@ -154,7 +154,7 @@
 
   stylix = {
     enable = true;
-    image = ./Wallpapers/Nebula.jpg;
+    image = ./Wallpapers/SolarSystem.jpg;
     polarity = "dark";
     targets.gtk.enable = true;
   };
