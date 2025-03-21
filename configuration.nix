@@ -152,6 +152,7 @@
     nixpkgs-fmt
     librewolf
     (pkgs.callPackage ./programs/lkh.nix { })
+    ruff-lsp
   ];
 
   fonts.packages = with pkgs; [
