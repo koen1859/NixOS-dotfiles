@@ -160,15 +160,6 @@
     nerd-fonts.symbols-only
   ];
 
-  stylix = {
-    enable = true;
-    image = ./Wallpapers/NixRainbow.png;
-    polarity = "dark";
-    targets = {
-      gtk.enable = true;
-      qt.enable = true;
-    };
-  };
   programs.hyprland.enable = true;
 
   services.displayManager.sddm.enable = true;
