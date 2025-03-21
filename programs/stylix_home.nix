@@ -3,7 +3,7 @@
 {
   stylix = {
     enable = true;
-    image = ./../Wallpapers/NixRainbow.png;
+    image = ./../Wallpapers/SolarSystem.png;
     polarity = "dark";
     cursor = {
       package = pkgs.bibata-cursors;
