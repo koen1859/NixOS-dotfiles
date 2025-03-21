@@ -26,13 +26,5 @@
   home.packages = with pkgs; [
   ];
 
-  home.file = { };
-
   programs.home-manager.enable = true;
-
-  gtk.enable = true;
-  gtk.cursorTheme.package = pkgs.bibata-cursors;
-  gtk.cursorTheme.name = "Bibata-Modern_Ice";
-
-  qt.enable = true;
 }
