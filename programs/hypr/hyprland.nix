@@ -8,8 +8,8 @@
     settings = {
       exec-once = [
         "waybar"
-        "bash ~/Bash-Scripts/OneDrive.sh"
-        "bash ~/Bash-Scripts/Wallpaper_init.sh"
+        "bash ~/.dotfiles/Bash-Scripts/OneDrive.sh"
+        "bash ~/.dotfiles/Bash-Scripts/Wallpaper_init.sh"
       ];
       input = {
         kb_layout = "us";

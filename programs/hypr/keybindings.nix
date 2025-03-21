@@ -3,7 +3,7 @@
 {
   wayland.windowManager.hyprland.settings = {
     bind = [
-      "$mainMod, V, exec, ~/Bash-Scripts/VPN.sh"
+      "$mainMod, V, exec, ~/.dotfiles/Bash-Scripts/VPN.sh"
       "SUPER_SHIFT, V, exec, sudo pkill openvpn"
       "$mainMod, B, exec, firefox"
       "SUPER_SHIFT, B, exec, brave --password-store=basic --incognito"
@@ -20,7 +20,7 @@
       "$mainMod, E, exec, thurar"
       "$mainMod, R, exec, wofi --show drun"
       "SUPER_SHIFT, P, exec, killall waybar; waybar"
-      "SUPER_SHIFT, W, exec, bash ~/Bash-Scripts/Wallpaper.sh"
+      "SUPER_SHIFT, W, exec, bash ~/.dotfiles/Bash-Scripts/Wallpaper.sh"
       ", F12, exec, pkill waybar || waybar"
       ", F1, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 0%"
       ", F2, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"

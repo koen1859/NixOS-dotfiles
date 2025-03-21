@@ -7,9 +7,9 @@
       tmuxPlugins.vim-tmux-navigator
       tmuxPlugins.resurrect
       tmuxPlugins.continuum
+      tmuxPlugins.cpu
     ];
     extraConfig = ''
-      set -g default-shell /bin/bash
       set -g default-terminal "screen-256color" # Set terminal type for 256-color support
       set -ga terminal-overrides ",*256col*:Tc" # Override to enable true-color for compatible terminals
       set -g set-clipboard on         # Use system clipboard
@@ -42,20 +42,10 @@
       set -g base-index 1
       set -g pane-base-index 1
       set -g renumber-windows on # Automatically renumber windows when one is closed
-      set -g status-left "#[fg=${session_fg},bold,bg=${bg}]  #S"
-      set -g status-right " #{cpu -i 3} |  #{mem} "
       set -g status-justify centre
-      set -g status-style "bg=${bg}"
-      set -g window-status-format "#[fg=${default_fg},bg=default] #I:#W"
-      set -g window-status-current-format "#[fg=${active_window_fg},bg=default]  #I:#W"
-      set -g window-status-last-style "fg=${default_fg},bg=default"
-      set -g message-command-style "bg=default,fg=${default_fg}"
-      set -g message-style "bg=default,fg=${default_fg}"
-      set -g mode-style "bg=${session_selection_bg},fg=${session_selection_fg}"
-      set -g pane-active-border-style "fg=${active_pane_border},bg=default"
       set -g pane-border-style "fg=brightblack,bg=default"
       set -g @resurrect-capture-pane-contents 'on'
       set -g @continuum-restore 'on'
-    ''
+    '';
   };
 }
