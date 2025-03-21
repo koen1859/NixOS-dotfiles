@@ -98,30 +98,21 @@
     nodejs_23
     python3
     python312Packages.ipython
-    python312Packages.psycopg2
-    python312Packages.igraph
-    python312Packages.folium
     cargo
     rustc
     cmake
     gnumake
     unzip
-    python312Packages.pip
-    vimPlugins.jupytext-nvim
-    python312Packages.jupytext
     nodejs_20.out
     fzf
     vimPlugins.fzfWrapper
     quarto
-    vimPlugins.quarto-nvim
     imagemagick
     lua5_1
     luajit
     tree-sitter
     gcc
     wlogout
-    hypridle
-    hyprlock
     bitwarden-desktop
     brightnessctl
     R
@@ -130,14 +121,8 @@
         languageserver
         languageserversetup
         lintr
-        roxygen2
-        xml2
-        ggplot2
-        MASS
       ];
     })
-    vscode
-    rstudio
     blueman
     tmux
     tmuxPlugins.vim-tmux-navigator
@@ -154,6 +139,7 @@
     librewolf
     (pkgs.callPackage ./programs/lkh.nix { })
     ruff-lsp
+    tlp
   ];
 
   fonts.packages = with pkgs; [
@@ -189,5 +175,24 @@
       host    all             all             127.0.0.1/32            trust
       host    all             all             ::1/128                 trust
     '';
+  };
+
+  services.tlp = {
+    enable = true;
+    settings = {
+      CPU_SCALING_GOVERNOR_ON_AC = "performance";
+      CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
+
+      CPU_ENERGY_PERF_POLICY_ON_BAT = "power";
+      CPU_ENERGY_PERF_POLICY_ON_AC = "performance";
+
+      CPU_MIN_PERF_ON_AC = 0;
+      CPU_MAX_PERF_ON_AC = 100;
+      CPU_MIN_PERF_ON_BAT = 0;
+      CPU_MAX_PERF_ON_BAT = 20;
+
+      #Optional helps save long term battery health
+      START_CHARGE_THRESH_BAT0 = 40; # 40 and below it starts to charge
+    };
   };
 }
