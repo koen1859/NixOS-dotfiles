@@ -2,11 +2,11 @@
 
 stdenv.mkDerivation rec {
   pname = "LKH";
-  version = "3.0.10"; # Change this to the latest version
+  version = "2.0.10";
 
   src = fetchurl {
-    url = "http://webhotel4.ruc.dk/~keld/research/LKH/LKH-${version}.tar.gz";
-    sha256 = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="; # Replace with correct hash
+    url = "http://webhotel4.ruc.dk/~keld/research/LKH/LKH-${version}.tgz";
+    sha256 = "0klg2i1s3pilrphdggjplpxbaaflg0yfdr1vaw0jx710swcr0r6g";
   };
 
   nativeBuildInputs = [ unzip ];
