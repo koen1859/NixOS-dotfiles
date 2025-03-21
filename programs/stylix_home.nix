@@ -18,6 +18,7 @@
       hyprland.enable = false;
       starship.enable = false;
       waybar.enable = false;
+      kitty.enable = false;
     };
   };
 }

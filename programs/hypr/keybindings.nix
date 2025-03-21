@@ -9,6 +9,7 @@
       ", PRINT, exec, hyprshot -m region"
       "$mainMod, S, exec, hyprshot -m output -m eDP-1"
       "SUPER_SHIFT, S, exec, hyprshot -m window"
+      "$mainMod, E, exec, thunar"
       "$mainMod, ESCAPE, exec, wlogout"
       "$mainMod, M, exec, spotify"
       "$mainMod, Return, exec, kitty"
