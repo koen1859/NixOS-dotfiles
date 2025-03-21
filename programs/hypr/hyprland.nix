@@ -24,7 +24,7 @@
         workspace_swipe = false;
       };
       device = {
-        name = epic-mouse-v1;
+        name = "epic-mouse-v1";
         sensitivity = -0.5;
       };
       general = {
@@ -41,7 +41,7 @@
         preserve_split = true;
       };
       master = {
-        new_status = master;
+        new_status = "master";
       };
       misc = {
         force_default_wallpaper = 0;

@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 
 {
-  wayland.windowManager.hyprland = {
+  wayland.windowManager.hyprland.settings = {
     bind = [
       "$mainMod, V, exec, ~/Bash-Scripts/VPN.sh"
       "SUPER_SHIFT, V, exec, sudo pkill openvpn"
