@@ -5,6 +5,8 @@
     [
       # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./programs/stylix.nix
+      ./programs/thunar.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
@@ -61,6 +63,7 @@
     vim
     wget
     hyprland
+    xfce.thunar
     hyprshot
     waybar
     kitty
