@@ -143,6 +143,7 @@
     osm2pgsql
     bibata-cursors
     dconf-editor
+    papirus-icon-theme
   ];
 
   fonts.packages = with pkgs; [

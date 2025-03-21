@@ -13,6 +13,7 @@
     ./programs/hypr/animations.nix
     ./programs/hypr/keybindings.nix
     ./programs/hypr/windowrules.nix
+    ./programs/gtk.nix
   ];
 
   home.username = "koenstevens";
