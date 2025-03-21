@@ -1,9 +1,12 @@
 { pkgs, ... }:
 
+let
+  inherit (import ./../wallpaper.nix) wallpaper;
+in
 {
   stylix = {
     enable = true;
-    image = ./../Wallpapers/NixRainbow.png;
+    image = wallpaper;
     polarity = "dark";
     cursor = {
       package = pkgs.bibata-cursors;

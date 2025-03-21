@@ -1,0 +1,3 @@
+{
+  wallpaper = ./Wallpapers/StainedGlass.png;
+}
