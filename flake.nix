@@ -25,7 +25,7 @@
       homeConfigurations = {
         koenstevens = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
-          modules = [ ./home.nix ];
+          modules = [ ./home.nix stylix.homeManagerModules.stylix ];
         };
       };
     };
