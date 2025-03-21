@@ -3,7 +3,7 @@
 {
   stylix = {
     enable = true;
-    image = ./../Wallpapers/SolarSystem.png;
+    image = ./../Wallpapers/NixRainbow.png;
     polarity = "dark";
     cursor = {
       package = pkgs.bibata-cursors;
@@ -14,10 +14,6 @@
     targets = {
       gtk.enable = true;
       qt.enable = true;
-      wofi.enable = false;
-      hyprland.enable = false;
-      starship.enable = false;
-      waybar.enable = false;
     };
   };
 }

@@ -5,7 +5,7 @@
     [
       # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./programs/stylix.nix
+      ./programs/stylix_system.nix
       ./programs/thunar.nix
     ];
 
