@@ -26,8 +26,7 @@
   home.packages = with pkgs; [
   ];
 
-  home.file = {
-  };
+  home.file = { };
 
   programs.home-manager.enable = true;
 

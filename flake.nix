@@ -9,24 +9,25 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { nixpkgs, home-manager, stylix, ...}@inputs:
+  outputs = { nixpkgs, home-manager, stylix, ... }@inputs:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
-    in {
-    nixosConfigurations = {
-      nixos = lib.nixosSystem {
-        inherit system;
-        modules = [ ./configuration.nix stylix.nixosModules.stylix ];
+    in
+    {
+      nixosConfigurations = {
+        nixos = lib.nixosSystem {
+          inherit system;
+          modules = [ ./configuration.nix stylix.nixosModules.stylix ];
+        };
+      };
+      homeConfigurations = {
+        koenstevens = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+          modules = [ ./home.nix ];
+        };
       };
     };
-    homeConfigurations = {
-      koenstevens = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        modules = [ ./home.nix ];
-      };
-    };
-  };
 
 }

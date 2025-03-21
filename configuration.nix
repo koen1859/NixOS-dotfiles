@@ -2,7 +2,8 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
+      # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ];
 
@@ -43,15 +44,15 @@
 
   nixpkgs.config = {
     packageOverrides = pkgs: {
-      unstable = import <nixos-unstable> {};
+      unstable = import <nixos-unstable> { };
     };
     allowUnfree = true;
   };
 
   users.users.koenstevens = {
     isNormalUser = true;
-     extraGroups = [ "wheel" ];
-     packages = with pkgs; [
+    extraGroups = [ "wheel" ];
+    packages = with pkgs; [
       tree
     ];
   };
@@ -148,6 +149,8 @@
     dconf-editor
     papirus-icon-theme
     openvpn
+    nixpkgs-fmt
+    librewolf
   ];
 
   fonts.packages = with pkgs; [
@@ -191,7 +194,6 @@
       local   all             all                                     trust
       host    all             all             127.0.0.1/32            trust
       host    all             all             ::1/128                 trust
-      '';
+    '';
   };
 }
-
