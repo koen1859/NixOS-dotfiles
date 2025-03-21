@@ -154,7 +154,7 @@
 
   stylix = {
     enable = true;
-    image = ./Wallpapers/SolarSystem.jpg;
+    image = ./Wallpapers/NixRainbow.png;
     polarity = "dark";
     targets.gtk.enable = true;
   };
