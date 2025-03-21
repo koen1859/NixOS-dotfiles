@@ -15,7 +15,7 @@
     ./programs/hypr/windowrules.nix
     ./programs/gtk.nix
     ./programs/qt.nix
-    ./programs/stylix.nix
+    ./programs/tmux.nix
   ];
 
   home.username = "koenstevens";

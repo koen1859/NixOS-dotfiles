@@ -19,7 +19,6 @@
 
     initExtra = ''
       PS1='[\u@\h \W]\$ '
-      ff
       source ~/.local/share/blesh/ble.sh
     '';
   };

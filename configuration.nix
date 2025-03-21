@@ -60,6 +60,7 @@
     vim
     wget
     hyprland
+    hyprshot
     waybar
     kitty
     swaynotificationcenter
@@ -68,7 +69,6 @@
     networkmanagerapplet
     firefox
     brave
-    xfce.thunar
     zathura
     fastfetch
     rclone
@@ -137,6 +137,9 @@
     rstudio
     blueman
     tmux
+    tmuxPlugins.vim-tmux-navigator
+    tmuxPlugins.resurrect
+    tmuxPlugins.continuum
     osmium-tool
     postgresql_17
     postgresql17Packages.postgis
@@ -157,9 +160,11 @@
     enable = true;
     image = ./Wallpapers/NixRainbow.png;
     polarity = "dark";
-    targets.gtk.enable = true;
+    targets = {
+      gtk.enable = true;
+      qt.enable = true;
+    };
   };
-
   programs.hyprland.enable = true;
 
   services.displayManager.sddm.enable = true;
