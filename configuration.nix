@@ -83,7 +83,6 @@
     neovim
     texlive.combined.scheme-full
     nixd
-    zotero
     lua53Packages.sqlite
     sqlite
     lua
@@ -146,7 +145,6 @@
     postgresql17Packages.postgis
     osm2pgsql
     bibata-cursors
-    dconf-editor
     papirus-icon-theme
     openvpn
     nixpkgs-fmt

@@ -3,21 +3,16 @@
 {
   wayland.windowManager.hyprland.settings = {
     bind = [
-      "$mainMod, V, exec, ~/.dotfiles/Bash-Scripts/VPN.sh"
-      "SUPER_SHIFT, V, exec, sudo pkill openvpn"
       "$mainMod, B, exec, firefox"
       "SUPER_SHIFT, B, exec, brave --password-store=basic --incognito"
       "$mainMod, P, exec, bitwarden-desktop"
       ", PRINT, exec, hyprshot -m region"
       "$mainMod, S, exec, hyprshot -m output -m eDP-1"
       "SUPER_SHIFT, S, exec, hyprshot -m window"
-      "SUPER_SHIFT, ESCAPE, exec, hyprlock"
       "$mainMod, ESCAPE, exec, wlogout"
-      "$mainMod, N, exec, $terminal -e nvim"
       "$mainMod, M, exec, spotify"
       "$mainMod, Return, exec, kitty"
       "$mainMod, Q, killactive,"
-      "$mainMod, E, exec, thurar"
       "$mainMod, R, exec, wofi --show drun"
       "SUPER_SHIFT, P, exec, killall waybar; waybar"
       "SUPER_SHIFT, W, exec, bash ~/.dotfiles/Bash-Scripts/Wallpaper.sh"
