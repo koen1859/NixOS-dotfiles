@@ -147,6 +147,7 @@
     bibata-cursors
     dconf-editor
     papirus-icon-theme
+    openvpn
   ];
 
   fonts.packages = with pkgs; [
