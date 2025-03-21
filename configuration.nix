@@ -7,6 +7,7 @@
       ./hardware-configuration.nix
       ./programs/stylix.nix
       ./programs/thunar.nix
+      ./programs/librewolf.nix
     ];
 
   # Use the systemd-boot EFI boot loader.

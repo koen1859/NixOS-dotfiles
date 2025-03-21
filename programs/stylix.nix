@@ -10,6 +10,7 @@
       name = "Bibata-Modern-Classic";
       size = 24;
     };
+    autoEnable = true;
     targets = {
       gtk.enable = true;
       qt.enable = true;
