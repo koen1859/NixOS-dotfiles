@@ -138,6 +138,7 @@
     ruff-lsp
     btop
     nix-ld
+    glibc
   ];
 
   fonts.packages = with pkgs; [
@@ -174,4 +175,6 @@
       host    all             all             ::1/128                 trust
     '';
   };
+
+  programs.nix-ld.enable = true;
 }
