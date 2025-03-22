@@ -7,6 +7,8 @@
   networking.hostName = "nixpc";
 
   environment.systemPackages = with pkgs; [
+    steam
+    gamescope
   ];
 
 
