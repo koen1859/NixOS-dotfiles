@@ -3,7 +3,6 @@
 {
   imports =
     [
-      # Include the results of the hardware scan.
       ./programs/stylix_system.nix
       ./programs/thunar.nix
     ];
@@ -137,7 +136,6 @@
     librewolf
     (pkgs.callPackage ./programs/lkh.nix { })
     ruff-lsp
-    blesh
   ];
 
   fonts.packages = with pkgs; [

@@ -1,6 +1,9 @@
 { config, lib, pkgs, ... }:
 
 {
+  imports = [
+    ../laptop-hardware.nix
+  ];
   networking.hostName = "nixlaptop";
 
   environment.systemPackages = with pkgs; [
