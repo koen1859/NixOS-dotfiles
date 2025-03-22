@@ -137,6 +137,7 @@
     (pkgs.callPackage ./programs/lkh.nix { })
     ruff-lsp
     btop
+    nix-ld
   ];
 
   fonts.packages = with pkgs; [
