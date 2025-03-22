@@ -22,6 +22,7 @@ in
       starship.enable = false;
       waybar.enable = false;
       kitty.enable = false;
+      zathura.enable = true;
     };
   };
 }
