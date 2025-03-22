@@ -1,3 +1,3 @@
 {
-  wallpaper = ./Wallpapers/SolarSystem.png;
+  wallpaper = ./Wallpapers/SolarSystem3.png;
 }

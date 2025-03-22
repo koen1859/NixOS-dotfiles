@@ -9,8 +9,22 @@
   environment.systemPackages = with pkgs; [
     steam
     gamescope
+    vulkan-loader
+    vulkan-tools
+    heroic
   ];
 
+  boot.kernelPackages = pkgs.linuxPackages; # (this is the default) some amdgpu issues on 6.10
+  programs = {
+    gamescope = {
+      enable = true;
+      capSysNice = true;
+    };
+    steam = {
+      enable = true;
+      gamescopeSession.enable = true;
+    };
+  };
 
   services.xserver.videoDrivers = [ "nvidia" ];
 
@@ -38,5 +52,8 @@
     "GBM_BACKEND" = "nvidia-drm";
     "LIBVA_DRIVER_NAME" = "nvidia";
     "WLR_NO_HARDWARE_CURSORS" = "1";
+    "LIBGL_ALWAYS_INDIRECT" = "1";
   };
+
+  hardware.graphics.enable = true;
 }
