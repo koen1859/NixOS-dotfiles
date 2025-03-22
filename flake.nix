@@ -17,9 +17,21 @@
     in
     {
       nixosConfigurations = {
-        nixos = lib.nixosSystem {
+        nixlaptop = lib.nixosSystem {
           inherit system;
-          modules = [ ./configuration.nix stylix.nixosModules.stylix ];
+          modules = [
+            ./configuration.nix
+            stylix.nixosModules.stylix
+            ./hosts/laptop.nix
+          ];
+        };
+        nixpc = lib.nixosSystem {
+          inherit system;
+          modules = [
+            ./configuration.nix
+            ./programs/nvidia.nix
+            stylix.nixosModules.stylix
+          ];
         };
       };
       homeConfigurations = {
