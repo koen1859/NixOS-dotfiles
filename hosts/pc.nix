@@ -1,7 +1,13 @@
 { config, pkgs, ... }:
 
 {
-  # Enable NVIDIA proprietary driver
+  networking.hostName = "nixpc";
+
+  environment.systemPackages = with pkgs; [
+    tlp
+  ];
+
+
   services.xserver.videoDrivers = [ "nvidia" ];
 
   hardware.nvidia = {

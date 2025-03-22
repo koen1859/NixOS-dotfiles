@@ -29,7 +29,7 @@
           inherit system;
           modules = [
             ./configuration.nix
-            ./programs/nvidia.nix
+            ./hosts/pc.nix
             stylix.nixosModules.stylix
           ];
         };
