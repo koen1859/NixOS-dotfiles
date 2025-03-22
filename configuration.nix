@@ -136,6 +136,7 @@
     librewolf
     (pkgs.callPackage ./programs/lkh.nix { })
     ruff-lsp
+    btop
   ];
 
   fonts.packages = with pkgs; [
@@ -162,14 +163,14 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   services.postgresql = {
-   enable = true;
-   package = pkgs.postgresql_17;
-   dataDir = "/var/lib/postgresql/data";
-   extensions = with pkgs.postgresql17Packages; [ postgis ];
-   authentication = ''
-     local   all             all                                     trust
-     host    all             all             127.0.0.1/32            trust
-     host    all             all             ::1/128                 trust
-   '';
+    enable = true;
+    package = pkgs.postgresql_17;
+    dataDir = "/var/lib/postgresql/data";
+    extensions = with pkgs.postgresql17Packages; [ postgis ];
+    authentication = ''
+      local   all             all                                     trust
+      host    all             all             127.0.0.1/32            trust
+      host    all             all             ::1/128                 trust
+    '';
   };
 }
