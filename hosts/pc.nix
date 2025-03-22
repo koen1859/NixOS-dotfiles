@@ -1,10 +1,12 @@
 { config, pkgs, ... }:
 
 {
+  imports = [
+    ../pc-hardware.nix
+  ];
   networking.hostName = "nixpc";
 
   environment.systemPackages = with pkgs; [
-    tlp
   ];
 
 
@@ -19,21 +21,15 @@
     open = false;
     nvidiaSettings = true;
 
-    prime = {
-      offload.enable = true;
-      offload.enableOffloadCmd = true;
-    };
+    #prime = {
+    #  offload.enable = true;
+    #  offload.enableOffloadCmd = true;
+    #};
   };
 
   boot.initrd.kernelModules = [ "nvidia" ];
   boot.kernelModules = [ "nvidia" "nvidia_modeset" "nvidia_uvm" "nvidia_drm" ];
   boot.extraModulePackages = [ config.boot.kernelPackages.nvidiaPackages.latest ];
-
-  services.xserver.enable = true;
-
-  hardware.opengl.enable = true;
-  hardware.opengl.driSupport = true;
-  hardware.opengl.driSupport32Bit = true;
 
   environment.variables = {
     "__GLX_VENDOR_LIBRARY_NAME" = "nvidia";
