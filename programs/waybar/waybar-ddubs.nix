@@ -146,7 +146,7 @@ with lib; {
           return-type = "json";
           exec-if = "which swaync-client";
           exec = "swaync-client -swb";
-          on-click = "sleep 0.1 && task-waybar";
+          on-click = "sleep 0.1 && swaync-client -op";
           escape = true;
         };
         "battery" = {

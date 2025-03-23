@@ -141,6 +141,7 @@
     glibc
     htop
     libnotify
+    pavucontrol
   ];
 
   fonts.packages = with pkgs; [
