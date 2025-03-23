@@ -1,5 +1,8 @@
 { pkgs, config, ... }:
 
+let
+  inherit (import ../../wallpaper.nix) wallpaper;
+in
 {
   programs = {
     rofi = {
@@ -57,7 +60,7 @@
           "imagebox" = {
             padding = mkLiteral "20px";
             background-color = mkLiteral "transparent";
-            background-image = mkLiteral ''url("~/Pictures/Wallpapers/Rainnight.jpg", height)'';
+            background-image = mkLiteral ''${wallpaper}, height)'';
             orientation = mkLiteral "vertical";
             children = map mkLiteral [
               "inputbar"
