@@ -6,7 +6,7 @@
     ./programs/fastfetch.nix
     ./programs/kitty.nix
     ./programs/starship.nix
-    ./programs/waybar.nix
+    ./programs/waybar/waybar-stylix-simple.nix
     ./programs/wofi.nix
     ./programs/git.nix
     ./programs/hypr/hyprland.nix
