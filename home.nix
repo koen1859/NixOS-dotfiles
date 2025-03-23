@@ -22,6 +22,7 @@
     ./programs/htop.nix
     ./programs/wofi.nix
     ./programs/zathura.nix
+    ./programs/rofi
   ];
 
   home.username = "koenstevens";
