@@ -5,6 +5,7 @@
     [
       ./programs/stylix_system.nix
       ./programs/thunar.nix
+      ./programs/greetd.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
@@ -152,8 +153,8 @@
 
   programs.hyprland.enable = true;
 
-  services.displayManager.sddm.enable = true;
-  services.displayManager.sddm.wayland.enable = true;
+  # services.displayManager.sddm.enable = true;
+  # services.displayManager.sddm.wayland.enable = true;
 
   xdg.portal.enable = true;
   xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
