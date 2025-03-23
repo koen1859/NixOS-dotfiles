@@ -142,6 +142,7 @@
     htop
     libnotify
     pavucontrol
+    greetd.tuigreet
   ];
 
   fonts.packages = with pkgs; [
