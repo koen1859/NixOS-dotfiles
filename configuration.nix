@@ -133,7 +133,6 @@
     papirus-icon-theme
     openvpn
     nixpkgs-fmt
-    librewolf
     (pkgs.callPackage ./programs/lkh.nix { })
     ruff-lsp
     btop
