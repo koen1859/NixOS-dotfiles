@@ -23,6 +23,7 @@ in
       waybar.enable = false;
       kitty.enable = false;
       zathura.enable = false;
+      rofi.enable = false;
     };
   };
 }

@@ -143,6 +143,7 @@
     libnotify
     pavucontrol
     greetd.tuigreet
+    rofi-wayland
   ];
 
   fonts.packages = with pkgs; [
