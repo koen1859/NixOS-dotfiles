@@ -141,6 +141,7 @@
     glibc
     htop
     libnotify
+    rofi
   ];
 
   fonts.packages = with pkgs; [
