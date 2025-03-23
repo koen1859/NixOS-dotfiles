@@ -23,6 +23,8 @@
         "opacity 0.80 0.70,class:^(code)$"
         "opacity 0.80 0.70,class:^(org.pwmt.zathura)$"
         "opacity 0.80 0.60,class:^(com.mitchellh.ghostty)$"
+        "float,class:*"
+        "size 960 540,class:*"
       ];
       layerrule = [
         "blur, wofi"

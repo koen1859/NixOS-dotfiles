@@ -19,10 +19,11 @@ with lib; {
           "pulseaudio"
           "cpu"
           "memory"
-          "idle_inhibitor"
+          # "idle_inhibitor"
+          "network"
         ];
         modules-right = [
-          "custom/hyprbindings"
+          # "custom/hyprbindings"
           "custom/notification"
           "custom/exit"
           "battery"
@@ -47,7 +48,7 @@ with lib; {
           tooltip-format = "<big>{:%A, %d.%B %Y }</big>\n<tt><small>{calendar}</small></tt>";
         };
         "hyprland/window" = {
-          max-length = 22;
+          max-length = 40;
           separate-outputs = false;
           rewrite = {
             "" = " 🙈 No Windows? ";
