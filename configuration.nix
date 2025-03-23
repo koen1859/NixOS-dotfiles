@@ -141,7 +141,7 @@
     glibc
     htop
     libnotify
-    rofi
+    rofi-wayland
   ];
 
   fonts.packages = with pkgs; [
