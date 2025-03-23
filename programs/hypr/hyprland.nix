@@ -88,6 +88,7 @@ in
         "XCURSOR_THEME,Bibata-Modern-Classic"
         "HYPRCURSOR_SIZE,24"
         "HYPRCURSOR_THEME,Bibata-Modern-Classic"
+        "HYPRSHOT_DIR,/home/koenstevens/Pictures/"
       ];
     };
     extraConfig = "

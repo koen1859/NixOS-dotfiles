@@ -9,7 +9,7 @@ in
       enable = true;
       package = pkgs.rofi-wayland;
       extraConfig = {
-        modi = "drun,filebrowser,run";
+        modi = "drun,filebrowser,run,ssh";
         show-icons = true;
         icon-theme = "Papirus";
         font = "JetBrainsMono Nerd Font Mono 12";
@@ -17,6 +17,8 @@ in
         display-drun = " Apps";
         display-run = " Run";
         display-filebrowser = " File";
+        display-ssh = "🔑 SSH";
+        start-dir = "/home/koenstevens/";
       };
       theme =
         let
