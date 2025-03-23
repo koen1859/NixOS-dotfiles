@@ -18,15 +18,15 @@
     ./programs/tmux.nix
     ./programs/stylix_home.nix
     ./programs/wlogout/wlogout.nix
+    ./programs/swaync.nix
+    ./programs/btop.nix
+    ./programs/htop.nix
   ];
 
   home.username = "koenstevens";
   home.homeDirectory = "/home/koenstevens";
 
   home.stateVersion = "24.11"; # Please read the comment before changing.
-
-  home.packages = with pkgs; [
-  ];
 
   programs.home-manager.enable = true;
 }

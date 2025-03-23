@@ -139,6 +139,8 @@
     btop
     nix-ld
     glibc
+    htop
+    libnotify
   ];
 
   fonts.packages = with pkgs; [
