@@ -17,6 +17,7 @@
     ./programs/qt.nix
     ./programs/tmux.nix
     ./programs/stylix_home.nix
+    ./programs/wlogout/wlogout.nix
   ];
 
   home.username = "koenstevens";
