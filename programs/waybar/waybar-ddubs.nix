@@ -113,9 +113,9 @@ with lib; {
         "custom/startmenu" = {
           tooltip = false;
           format = "";
-          # exec = "rofi -show drun";
-          #on-click = "sleep 0.1 && rofi-launcher";
-          on-click = "sleep 0.1 && nwg-drawer -mb 200 -mt 200 -mr 200 -ml 200";
+          on-click = "wofi -show drun";
+          # on-click = "sleep 0.1 && rofi-launcher";
+          # on-click = "sleep 0.1 && nwg-drawer -mb 200 -mt 200 -mr 200 -ml 200";
         };
         "custom/hyprbindings" = {
           tooltip = false;
@@ -178,7 +178,7 @@ with lib; {
       ''
         * {
           font-family: JetBrainsMono Nerd Font Mono;
-          font-size: 18px;
+          font-size: 10px;
           border-radius: 0px;
           border: none;
           min-height: 0px;
@@ -189,15 +189,15 @@ with lib; {
         #workspaces {
           color: #${config.lib.stylix.colors.base00};
           background: #${config.lib.stylix.colors.base01};
-          margin: 4px 4px;
-          padding: 5px 5px;
-          border-radius: 16px;
+          margin: 2px 2px;
+          padding: 3px 3px;
+          border-radius: 8px;
         }
         #workspaces button {
           font-weight: bold;
-          padding: 0px 5px;
-          margin: 0px 3px;
-          border-radius: 16px;
+          padding: 0px 3px;
+          margin: 0px 2px;
+          border-radius: 8px;
           color: #${config.lib.stylix.colors.base00};
           background: linear-gradient(45deg, #${config.lib.stylix.colors.base08}, #${config.lib.stylix.colors.base0D});
           opacity: 0.5;
@@ -205,18 +205,18 @@ with lib; {
         }
         #workspaces button.active {
           font-weight: bold;
-          padding: 0px 5px;
-          margin: 0px 3px;
-          border-radius: 16px;
+          padding: 0px 3px;
+          margin: 0px 2px;
+          border-radius: 8px;
           color: #${config.lib.stylix.colors.base00};
           background: linear-gradient(45deg, #${config.lib.stylix.colors.base08}, #${config.lib.stylix.colors.base0D});
           transition: ${betterTransition};
           opacity: 1.0;
-          min-width: 40px;
+          min-width: 20px;
         }
         #workspaces button:hover {
           font-weight: bold;
-          border-radius: 16px;
+          border-radius: 8px;
           color: #${config.lib.stylix.colors.base00};
           background: linear-gradient(45deg, #${config.lib.stylix.colors.base08}, #${config.lib.stylix.colors.base0D});
           opacity: 0.8;
@@ -225,7 +225,7 @@ with lib; {
         tooltip {
           background: #${config.lib.stylix.colors.base00};
           border: 1px solid #${config.lib.stylix.colors.base08};
-          border-radius: 12px;
+          border-radius: 8px;
         }
         tooltip label {
           color: #${config.lib.stylix.colors.base08};
@@ -234,41 +234,41 @@ with lib; {
           font-weight: bold;
           margin: 4px 0px;
           margin-left: 7px;
-          padding: 0px 18px;
+          padding: 0px 9px;
           background: #${config.lib.stylix.colors.base00};
           color: #${config.lib.stylix.colors.base08};
-          border-radius: 8px 8px 8px 8px;
+          border-radius: 4px 4px 4px 4px;
         }
         #idle_inhibitor {
-        font-size: 28px;
+        font-size: 10px;
         }
         #custom-startmenu {
           color: #${config.lib.stylix.colors.base0B};
           background: #${config.lib.stylix.colors.base02};
-          font-size: 22px;
+          font-size: 10px;
           margin: 0px;
-          padding: 0px 5px 0px 5px;
-          border-radius: 16px 16px 16px 16px;
+          padding: 0px 3px 0px 3px;
+          border-radius: 8px 8px 8px 8px;
         }
         #custom-hyprbindings, #network, #battery,
         #custom-notification, #tray, #custom-exit {
           /* font-weight: bold; */
-          font-size: 20px;
+          font-size: 10px;
           background: #${config.lib.stylix.colors.base00};
           color: #${config.lib.stylix.colors.base08};
-          margin: 4px 0px;
-          margin-right: 7px;
-          border-radius: 8px 8px 8px 8px;
-          padding: 0px 18px;
+          margin: 2px 0px;
+          margin-right: 4px;
+          border-radius: 4px 4px 4px 4px;
+          padding: 0px 9px;
         }
         #clock {
           font-weight: bold;
-          font-size: 16px;
+          font-size: 10px;
           color: #0D0E15;
           background: linear-gradient(90deg, #${config.lib.stylix.colors.base0B}, #${config.lib.stylix.colors.base02});
           margin: 0px;
-          padding: 0px 5px 0px 5px;
-          border-radius: 16px 16px 16px 16px;
+          padding: 0px 3px 0px 3px;
+          border-radius: 8px 8px 8px 8px;
         }
       ''
     ];
