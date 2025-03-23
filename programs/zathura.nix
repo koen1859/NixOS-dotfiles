@@ -9,6 +9,7 @@
       recolor = true;
       recolor-lightcolor = "#${config.lib.stylix.colors.base00}";
       recolor-darkcolor = "#${config.lib.stylix.colors.base07}";
+      selection-clipboard = "clipboard";
     };
   };
 }
