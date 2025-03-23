@@ -19,7 +19,7 @@ in
         kb_layout = "us";
         kb_options = "caps:swapescape";
         follow_mouse = 1;
-        sensitivity = 0;
+        sensitivity = -1.0;
         touchpad = {
           natural_scroll = false;
         };
