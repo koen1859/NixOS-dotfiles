@@ -66,7 +66,6 @@
     waybar
     kitty
     swaynotificationcenter
-    wofi
     wl-clipboard
     networkmanagerapplet
     firefox

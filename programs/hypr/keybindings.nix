@@ -14,7 +14,7 @@
       "$mainMod, M, exec, spotify"
       "$mainMod, Return, exec, kitty"
       "$mainMod, Q, killactive,"
-      "$mainMod, R, exec, wofi --show drun"
+      "$mainMod, R, exec, rofi -show drun"
       "SUPER_SHIFT, P, exec, killall waybar; waybar"
       "SUPER_SHIFT, W, exec, bash ~/.dotfiles/Bash-Scripts/Wallpaper.sh"
       ", F12, exec, pkill waybar || waybar"

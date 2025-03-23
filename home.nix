@@ -20,7 +20,6 @@
     ./programs/swaync.nix
     ./programs/btop.nix
     ./programs/htop.nix
-    ./programs/wofi.nix
     ./programs/zathura.nix
     ./programs/rofi
   ];

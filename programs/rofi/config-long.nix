@@ -17,7 +17,7 @@ in
     inputbar {
       padding: 75px 40px;
       background-color: transparent;
-      background-image: ${wallpaper}, width);
+      background-image: url("${wallpaper}", width);
       text-color: @foreground;
       children: [ "textbox-prompt-colon", "entry" ];
     }

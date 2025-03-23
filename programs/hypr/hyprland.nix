@@ -12,7 +12,8 @@ in
       exec-once = [
         "waybar"
         "bash ~/.dotfiles/Bash-Scripts/OneDrive.sh"
-        "swww-daemon && swww img ${wallpaper}"
+        "swww-daemon"
+        "swww img ${wallpaper}"
         "wal -i ${wallpaper}"
       ];
       input = {
