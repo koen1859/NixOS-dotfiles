@@ -9,7 +9,7 @@
     };
     extraConfig = ''
       include ${config.home.homeDirectory}/.cache/wal/colors-kitty.conf
-      background_opacity 0.8
+      background_opacity 0.6
       enable_audio_bell no
     '';
     shellIntegration = {

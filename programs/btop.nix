@@ -19,6 +19,7 @@
       only_physical = true;
       io_mode = true;
       io_graph_combined = false;
+      theme_background = false;
     };
   };
 }
