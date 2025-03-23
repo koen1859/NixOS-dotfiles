@@ -35,9 +35,21 @@
         };
       };
       homeConfigurations = {
-        koenstevens = home-manager.lib.homeManagerConfiguration {
+        laptop = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
-          modules = [ ./home.nix stylix.homeManagerModules.stylix ];
+          modules = [
+            ./home.nix
+            ./hosts/home-laptop.nix
+            stylix.homeManagerModules.stylix
+          ];
+        };
+        pc = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+          modules = [
+            ./home.nix
+            ./hosts/home-pc.nix
+            stylix.homeManagerModules.stylix
+          ];
         };
       };
     };
