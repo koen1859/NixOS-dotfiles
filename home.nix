@@ -20,7 +20,7 @@
     ./programs/swaync.nix
     ./programs/btop.nix
     ./programs/htop.nix
-    ./programs/rofi
+    ./programs/wofi.nix
   ];
 
   home.username = "koenstevens";
