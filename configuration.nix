@@ -146,6 +146,7 @@
     spotify
     spicetify-cli
     obs-studio
+    onefetch
   ];
 
   fonts.packages = with pkgs; [
