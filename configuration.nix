@@ -147,7 +147,11 @@
     spicetify-cli
     obs-studio
     onefetch
+<<<<<<< HEAD
     signal-desktop
+=======
+    timg
+>>>>>>> 0483e334b1169531adc19a9377840ce86f1daf89
   ];
 
   fonts.packages = with pkgs; [
