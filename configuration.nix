@@ -147,6 +147,7 @@
     spicetify-cli
     obs-studio
     onefetch
+    timg
   ];
 
   fonts.packages = with pkgs; [
