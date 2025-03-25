@@ -147,6 +147,7 @@
     spicetify-cli
     obs-studio
     onefetch
+    signal-desktop
   ];
 
   fonts.packages = with pkgs; [
