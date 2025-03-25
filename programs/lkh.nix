@@ -6,7 +6,7 @@ stdenv.mkDerivation rec {
 
   src = fetchurl {
     url = "http://webhotel4.ruc.dk/~keld/research/LKH/LKH-${version}.tgz";
-    sha256 = "0klg2i1s3pilrphdggjplpxbaaflg0yfdr1vaw0jx710swcr0r6g";
+    sha256 = "1nl86n8qcx8znbq9rfghx8mgbb36iwanlj5lfjrpdm2hv19zqwjj";
   };
 
   nativeBuildInputs = [ unzip ];
