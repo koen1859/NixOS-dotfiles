@@ -34,13 +34,14 @@
       settings = {
         PasswordAuthentication = false;
         PermitRootLogin = "no";
+        Port = 2222;
       };
     };
   };
 
   networking.firewall = {
     enable = true;
-    allowedTCPPorts = [ 22 ];
+    allowedTCPPorts = [ 2222 ];
   };
 
   hardware.nvidia = {
