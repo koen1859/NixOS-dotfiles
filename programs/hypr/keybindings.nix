@@ -12,7 +12,7 @@
       "$mainMod, Return, exec, kitty"
       "$mainMod, Q, killactive,"
       "$mainMod, R, exec, rofi -show drun"
-      "$mainMod, E, exec, rofi -show filebrowser"
+      "$mainMod, E, exec, thunar"
       "$mainMod, S, exec, rofi -show ssh"
       "SUPER_SHIFT, P, exec, killall waybar; waybar"
       ", F12, exec, pkill waybar || waybar"

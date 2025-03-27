@@ -162,6 +162,7 @@
     nerd-fonts.jetbrains-mono
     nerd-fonts.caskaydia-cove
     nerd-fonts.symbols-only
+    montserrat
   ];
 
   programs.hyprland.enable = true;

@@ -23,10 +23,10 @@
     '';
   };
 
-  programs.starship = {
-    enable = true;
-    enableBashIntegration = true;
-  };
+  # programs.starship = {
+  #   enable = true;
+  #   enableBashIntegration = true;
+  # };
 
   programs.atuin = {
     enable = true;

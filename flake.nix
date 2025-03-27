@@ -5,11 +5,12 @@
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
     stylix.url = "github:danth/stylix";
+    nvf.url = "github:notashelf/nvf";
     home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { nixpkgs, home-manager, stylix, ... }@inputs:
+  outputs = { nixpkgs, home-manager, stylix, nvf, ... }@inputs:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
@@ -41,6 +42,7 @@
             ./home.nix
             ./hosts/home-laptop.nix
             stylix.homeManagerModules.stylix
+            nvf.homeManagerModules.default
           ];
         };
         pc = home-manager.lib.homeManagerConfiguration {
@@ -49,6 +51,7 @@
             ./home.nix
             ./hosts/home-pc.nix
             stylix.homeManagerModules.stylix
+            nvf.homeManagerModules.default
           ];
         };
       };
