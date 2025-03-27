@@ -153,6 +153,7 @@
     plocate
     vlc
     organicmaps
+    speedtest-cli
   ];
 
   fonts.packages = with pkgs; [
