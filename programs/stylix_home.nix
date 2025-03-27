@@ -1,14 +1,12 @@
 { pkgs, ... }:
 
 let
-  # inherit (import ./../wallpaper.nix) wallpaper;
-  inherit (import ../theme.nix) theme wallpaper;
+  inherit (import ./../wallpaper.nix) wallpaper;
 in
 {
   stylix = {
     enable = true;
     image = wallpaper;
-    base16scheme = theme;
     polarity = "dark";
     cursor = {
       package = pkgs.bibata-cursors;

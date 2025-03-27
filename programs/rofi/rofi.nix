@@ -1,8 +1,7 @@
 { pkgs, config, ... }:
 
 let
-  # inherit (import ../../wallpaper.nix) wallpaper;
-  inherit (import ../../theme.nix) wallpaper;
+  inherit (import ../../wallpaper.nix) wallpaper;
 in
 {
   programs = {
