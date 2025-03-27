@@ -22,12 +22,13 @@
     ./programs/htop.nix
     ./programs/zathura.nix
     ./programs/rofi
+    ./programs/flatpak.nix
   ];
 
   home.username = "koenstevens";
   home.homeDirectory = "/home/koenstevens";
 
-  home.stateVersion = "24.11"; # Please read the comment before changing.
+  home.stateVersion = "24.11";
 
   programs.home-manager.enable = true;
 }
