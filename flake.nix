@@ -1,5 +1,4 @@
 {
-
   description = "Flake";
 
   inputs = {
@@ -10,50 +9,54 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { nixpkgs, home-manager, stylix, nvf, ... }@inputs:
-    let
-      lib = nixpkgs.lib;
-      system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
-    in
-    {
-      nixosConfigurations = {
-        nixlaptop = lib.nixosSystem {
-          inherit system;
-          modules = [
-            ./configuration.nix
-            stylix.nixosModules.stylix
-            ./hosts/laptop.nix
-          ];
-        };
-        nixpc = lib.nixosSystem {
-          inherit system;
-          modules = [
-            ./configuration.nix
-            ./hosts/pc.nix
-            stylix.nixosModules.stylix
-          ];
-        };
+  outputs = {
+    nixpkgs,
+    home-manager,
+    stylix,
+    nvf,
+    ...
+  }: let
+    lib = nixpkgs.lib;
+    system = "x86_64-linux";
+    pkgs = nixpkgs.legacyPackages.${system};
+  in {
+    nixosConfigurations = {
+      nixlaptop = lib.nixosSystem {
+        inherit system;
+        modules = [
+          ./configuration.nix
+          stylix.nixosModules.stylix
+          ./hosts/laptop.nix
+        ];
       };
-      homeConfigurations = {
-        laptop = home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;
-          modules = [
-            ./home.nix
-            ./hosts/home-laptop.nix
-            stylix.homeManagerModules.stylix
-            nvf.homeManagerModules.default
-          ];
-        };
-        pc = home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;
-          modules = [
-            ./home.nix
-            ./hosts/home-pc.nix
-            stylix.homeManagerModules.stylix
-            nvf.homeManagerModules.default
-          ];
-        };
+      nixpc = lib.nixosSystem {
+        inherit system;
+        modules = [
+          ./configuration.nix
+          ./hosts/pc.nix
+          stylix.nixosModules.stylix
+        ];
       };
     };
+    homeConfigurations = {
+      laptop = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        modules = [
+          ./home.nix
+          ./hosts/home-laptop.nix
+          stylix.homeManagerModules.stylix
+          nvf.homeManagerModules.default
+        ];
+      };
+      pc = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        modules = [
+          ./home.nix
+          ./hosts/home-pc.nix
+          stylix.homeManagerModules.stylix
+          nvf.homeManagerModules.default
+        ];
+      };
+    };
+  };
 }

@@ -1,9 +1,4 @@
-{ inputs
-, config
-, ...
-}: {
-  imports = [ inputs.nvf.homeManagerModules.default ];
-
+{config, ...}: {
   programs.nvf = {
     enable = true;
 
@@ -22,51 +17,93 @@
       keymaps = [
         {
           key = "<leader>nh";
-          mode = [ "n" ];
+          mode = ["n"];
           action = ":nohl<CR>";
           desc = "Clear search highlights";
         }
         {
-          key = "<leader>sf";
-          mode = [ "n" ];
+          key = "<leader>ff";
+          mode = ["n"];
           action = "<cmd>Telescope find_files<cr>";
           desc = "Search files by name";
         }
         {
-          key = "<leader>sg";
-          mode = [ "n" ];
+          key = "<leader>lg";
+          mode = ["n"];
           action = "<cmd>Telescope live_grep<cr>";
           desc = "Search files by contents";
         }
         {
-          key = "<leader>e";
-          mode = [ "n" ];
+          key = "<leader>fe";
+          mode = ["n"];
           action = "<cmd>Neotree toggle<cr>";
           desc = "File browser toggle";
         }
         {
-          key = "<C-h>";
-          mode = [ "i" ];
-          action = "<Left>";
-          desc = "Move left in insert mode";
+          key = "<Up>";
+          mode = ["n"];
+          action = ":resize -2<CR>";
+          desc = "Horizontal resize";
         }
         {
-          key = "<C-j>";
-          mode = [ "i" ];
-          action = "<Down>";
-          desc = "Move down in insert mode";
+          key = "<Down>";
+          mode = ["n"];
+          action = ":resize +2<CR>";
+          desc = "Horizontal resize";
+        }
+        {
+          key = "<Left>";
+          mode = ["n"];
+          action = ":vertical resize -2<CR>";
+          desc = "Vertical resize";
+        }
+        {
+          key = "<Right>";
+          mode = ["n"];
+          action = ":vertical resize +2<CR>";
+          desc = "Vertical resize";
         }
         {
           key = "<C-k>";
-          mode = [ "i" ];
-          action = "<Up>";
-          desc = "Move up in insert mode";
+          mode = ["n"];
+          action = ":wincmd k<CR>";
+          desc = "Navigate up";
+        }
+        {
+          key = "<C-j>";
+          mode = ["n"];
+          action = ":wincmd j<CR>";
+          desc = "Navigate down";
+        }
+        {
+          key = "<C-h>";
+          mode = ["n"];
+          action = ":wincmd h<CR>";
+          desc = "Navigate left";
         }
         {
           key = "<C-l>";
-          mode = [ "i" ];
-          action = "<Right>";
-          desc = "Move right in insert mode";
+          mode = ["n"];
+          action = ":wincmd l<CR>";
+          desc = "Navigate right";
+        }
+        {
+          key = "<Tab>";
+          mode = ["n"];
+          action = ":bnext<CR>";
+          desc = "Next buffer";
+        }
+        {
+          key = "<S-Tab>";
+          mode = ["n"];
+          action = ":bprevious<CR>";
+          desc = "Previous buffer";
+        }
+        {
+          key = "<leader>x";
+          mode = ["n"];
+          action = ":bdelete!<CR>";
+          desc = "Close buffer";
         }
       ];
 

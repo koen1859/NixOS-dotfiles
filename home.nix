@@ -1,6 +1,4 @@
-{ config, pkgs, inputs, ... }:
-
-{
+{...}: {
   imports = [
     ./shell.nix
     ./programs/fastfetch.nix
@@ -25,10 +23,11 @@
     ./programs/nvf.nix
   ];
 
-  home.username = "koenstevens";
-  home.homeDirectory = "/home/koenstevens";
+  home = {
+    username = "koenstevens";
+    homeDirectory = "/home/koenstevens";
 
-  home.stateVersion = "24.11";
-
+    stateVersion = "24.11";
+  };
   programs.home-manager.enable = true;
 }
