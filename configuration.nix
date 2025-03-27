@@ -154,6 +154,7 @@
     vlc
     organicmaps
     speedtest-cli
+    base16-schemes
   ];
 
   fonts.packages = with pkgs; [

@@ -1,7 +1,8 @@
 { ... }:
 
 let
-  inherit (import ../../wallpaper.nix) wallpaper;
+  # inherit (import ../../wallpaper.nix) wallpaper;
+  inherit (import ../../theme.nix) wallpaper;
 in
 {
   home.file.".config/rofi/config-long.rasi".text = ''

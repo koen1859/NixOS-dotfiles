@@ -1,7 +1,8 @@
 { config, lib, pkgs, ... }:
 
 let
-  inherit (import ./../../wallpaper.nix) wallpaper;
+  # inherit (import ./../../wallpaper.nix) wallpaper;
+  inherit (import ../../theme.nix) wallpaper;
 in
 {
   wayland.windowManager.hyprland = {

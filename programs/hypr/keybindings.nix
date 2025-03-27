@@ -15,7 +15,6 @@
       "$mainMod, E, exec, rofi -show filebrowser"
       "$mainMod, S, exec, rofi -show ssh"
       "SUPER_SHIFT, P, exec, killall waybar; waybar"
-      "SUPER_SHIFT, W, exec, bash ~/.dotfiles/Bash-Scripts/Wallpaper.sh"
       ", F12, exec, pkill waybar || waybar"
       ", F1, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 0%"
       ", F2, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
