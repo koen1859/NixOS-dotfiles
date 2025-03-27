@@ -152,6 +152,7 @@
     flatpak
     plocate
     vlc
+    organicmaps
   ];
 
   fonts.packages = with pkgs; [
