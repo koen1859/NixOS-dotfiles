@@ -1,10 +1,10 @@
 {...}: {
   imports = [
     ./modules/home/hypr/hyprland.nix
-    ./modules/home/animations.nix
-    ./modules/home/keybindings.nix
-    ./modules/home/windowrules.nix
-    ./modules/home/waybar-ddubs.nix
+    ./modules/home/hypr/animations.nix
+    ./modules/home/hypr/keybindings.nix
+    ./modules/home/hypr/windowrules.nix
+    ./modules/home/waybar/waybar-ddubs.nix
     ./modules/home/wlogout/wlogout.nix
     ./modules/home/btop.nix
     ./modules/home/fastfetch.nix

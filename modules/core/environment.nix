@@ -102,6 +102,7 @@
       organicmaps
       speedtest-cli
       base16-schemes
+      wofi
     ];
   };
 }
