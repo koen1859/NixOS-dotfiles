@@ -1,26 +1,26 @@
 {...}: {
   imports = [
-    ./shell.nix
-    ./programs/fastfetch.nix
-    ./programs/kitty.nix
-    ./programs/starship.nix
-    ./programs/waybar/waybar-ddubs.nix
-    ./programs/git.nix
-    ./programs/hypr/hyprland.nix
-    ./programs/hypr/animations.nix
-    ./programs/hypr/keybindings.nix
-    ./programs/hypr/windowrules.nix
-    ./programs/gtk.nix
-    ./programs/qt.nix
-    ./programs/tmux.nix
-    ./programs/stylix_home.nix
-    ./programs/wlogout/wlogout.nix
-    ./programs/swaync.nix
-    ./programs/btop.nix
-    ./programs/htop.nix
-    ./programs/zathura.nix
-    # ./programs/rofi
-    ./programs/nvf.nix
+    ./modules/home/hypr/hyprland.nix
+    ./modules/home/animations.nix
+    ./modules/home/keybindings.nix
+    ./modules/home/windowrules.nix
+    ./modules/home/waybar-ddubs.nix
+    ./modules/home/wlogout/wlogout.nix
+    ./modules/home/btop.nix
+    ./modules/home/fastfetch.nix
+    ./modules/home/git.nix
+    ./modules/home/gtk.nix
+    ./modules/home/htop.nix
+    ./modules/home/kitty.nix
+    ./modules/home/nvf.nix
+    ./modules/home/qt.nix
+    ./modules/home/shell.nix
+    ./modules/home/starship.nix
+    ./modules/home/stylix.nix
+    ./modules/home/swaync.nix
+    ./modules/home/tmux.nix
+    ./modules/home/wofi.nix
+    ./modules/home/zathura.nix
   ];
 
   home = {

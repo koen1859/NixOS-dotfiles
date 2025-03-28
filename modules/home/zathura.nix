@@ -1,6 +1,4 @@
-{ config, lib, pkgs, ... }:
-
-{
+{config, ...}: {
   programs.zathura = {
     enable = true;
     options = {

@@ -1,9 +1,6 @@
-{ config, lib, pkgs, ... }:
-
-let
-  inherit (import ./../../wallpaper.nix) wallpaper;
-in
-{
+{pkgs, ...}: let
+  inherit (import ../../../wallpaper.nix) wallpaper;
+in {
   wayland.windowManager.hyprland = {
     enable = true;
     package = pkgs.hyprland;

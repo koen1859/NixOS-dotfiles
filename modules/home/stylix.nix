@@ -1,9 +1,6 @@
-{ pkgs, ... }:
-
-let
-  inherit (import ./../wallpaper.nix) wallpaper;
-in
-{
+{pkgs, ...}: let
+  inherit (import ../../wallpaper.nix) wallpaper;
+in {
   stylix = {
     enable = true;
     image = wallpaper;
@@ -19,11 +16,9 @@ in
       gtk.enable = true;
       qt.enable = true;
       hyprland.enable = false;
-      # starship.enable = false;
       waybar.enable = false;
       # kitty.enable = false;
       zathura.enable = false;
-      # rofi.enable = false;
     };
 
     # fonts = {

@@ -1,7 +1,4 @@
-{ config, pkgs, ... }:
-
-{
-
+_: {
   home.sessionVariables = {
     EDITOR = "nvim";
   };
@@ -32,5 +29,4 @@
     enable = true;
     enableBashIntegration = true;
   };
-
 }

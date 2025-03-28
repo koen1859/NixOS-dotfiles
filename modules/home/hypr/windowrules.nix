@@ -1,6 +1,4 @@
-{ config, lib, pkgs, ... }:
-
-{
+_: {
   wayland.windowManager.hyprland = {
     settings = {
       windowrulev2 = [

@@ -1,6 +1,4 @@
-{ config, pkgs, ...}:
-
-{
+{pkgs, ...}: {
   programs.tmux = {
     enable = true;
     plugins = with pkgs; [
@@ -34,7 +32,7 @@
       bind -r h resize-pane -L 5
       bind -r m resize-pane -Z
       set-window-option -g mode-keys vi
-      bind-key -T copy-mode-vi 'v' send -X begin-selection 
+      bind-key -T copy-mode-vi 'v' send -X begin-selection
       bind -T copy-mode-vi 'y' send-keys -X copy-pipe-and-cancel "wl-copy"
        # Paste yanked text with "Prefix + P" ("Prefix + p" goes to previous window)
       bind P paste-buffer
