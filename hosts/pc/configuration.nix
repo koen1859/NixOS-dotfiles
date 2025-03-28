@@ -15,6 +15,7 @@
     vulkan-tools
     heroic
     ollama-cuda
+    lmstudio
     mangohud
     prismlauncher
   ];
