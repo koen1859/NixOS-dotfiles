@@ -12,6 +12,9 @@
         tabstop = 2;
         shiftwidth = 2;
         wrap = false;
+        scrolloff = 8;
+        sidescrolloff = 8;
+        cursorline = true;
       };
 
       keymaps = [
@@ -32,6 +35,24 @@
           mode = ["n"];
           action = "<cmd>Telescope live_grep<cr>";
           desc = "Search files by contents";
+        }
+        {
+          key = "gd";
+          mode = ["n"];
+          action = "<cmd>Telescope lsp_definitions<CR>";
+          desc = "Go to definition";
+        }
+        {
+          key = "gr";
+          mode = ["n"];
+          action = "<cmd>Telescope lsp_references<CR>";
+          desc = "Go to references";
+        }
+        {
+          key = "gI";
+          mode = ["n"];
+          action = "<cmd>Telescope lsp_implementations<CR>";
+          desc = "Go to implementations";
         }
         {
           key = "<leader>fe";
@@ -100,7 +121,7 @@
           desc = "Previous buffer";
         }
         {
-          key = "<leader>x";
+          key = "<C-q>";
           mode = ["n"];
           action = ":bdelete!<CR>";
           desc = "Close buffer";

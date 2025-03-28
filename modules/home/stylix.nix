@@ -1,10 +1,15 @@
 {pkgs, ...}: let
   inherit (import ../../wallpaper.nix) wallpaper;
+  inherit (import ../../theme.nix {inherit pkgs;}) theme;
+  painted_wallpaper = pkgs.runCommand "painted_wallpaper.png" {} ''
+    BASE_COLOR=$(${pkgs.yq}/bin/yq -r .palette.base0A ${theme})
+    ${pkgs.imagemagick}/bin/magick ${wallpaper} -fill "$BASE_COLOR" -colorize 30% $out
+  '';
 in {
   stylix = {
     enable = true;
-    image = wallpaper;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/eighties.yaml";
+    image = painted_wallpaper;
+    base16Scheme = theme;
     polarity = "dark";
     cursor = {
       package = pkgs.bibata-cursors;
@@ -15,9 +20,8 @@ in {
     targets = {
       gtk.enable = true;
       qt.enable = true;
-      hyprland.enable = false;
+      hyprland.enable = true;
       waybar.enable = false;
-      # kitty.enable = false;
       zathura.enable = false;
     };
 
