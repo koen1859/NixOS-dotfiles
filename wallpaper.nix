@@ -1,3 +1,3 @@
 {
-  wallpaper = ./Wallpapers/Nix.png;
+  wallpaper = ./Wallpapers/NixRainbow.png;
 }

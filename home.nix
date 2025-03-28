@@ -4,7 +4,6 @@
     ./modules/home/hypr/animations.nix
     ./modules/home/hypr/keybindings.nix
     ./modules/home/hypr/windowrules.nix
-    ./modules/home/waybar/waybar-ddubs.nix
     ./modules/home/wlogout/wlogout.nix
     ./modules/home/btop.nix
     ./modules/home/fastfetch.nix
@@ -20,6 +19,7 @@
     ./modules/home/swaync.nix
     ./modules/home/tmux.nix
     ./modules/home/wofi.nix
+    ./modules/home/waybar.nix
     ./modules/home/zathura.nix
   ];
 

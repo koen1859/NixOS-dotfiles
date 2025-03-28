@@ -1,6 +1,4 @@
-{pkgs, ...}: let
-  inherit (import ../../../wallpaper.nix) wallpaper;
-in {
+{pkgs, ...}: {
   wayland.windowManager.hyprland = {
     enable = true;
     package = pkgs.hyprland;
@@ -9,8 +7,6 @@ in {
       exec-once = [
         "waybar"
         "bash ~/.dotfiles/Bash-Scripts/OneDrive.sh"
-        "swww-daemon && swww img ${wallpaper}"
-        "wal -i ${wallpaper}"
       ];
       input = {
         kb_layout = "us";
