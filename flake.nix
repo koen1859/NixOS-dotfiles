@@ -52,7 +52,7 @@
         inherit pkgs;
         modules = [
           ./home.nix
-          ./hosts/hosts/pc.nix
+          ./hosts/hosts/pc/home.nix
           stylix.homeManagerModules.stylix
           nvf.homeManagerModules.default
         ];
