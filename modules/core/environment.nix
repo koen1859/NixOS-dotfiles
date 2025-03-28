@@ -80,7 +80,7 @@
       papirus-icon-theme
       openvpn
       nixpkgs-fmt
-      (pkgs.callPackage ./programs/lkh.nix {})
+      (pkgs.callPackage ./lkh.nix {})
       ruff-lsp
       btop
       nix-ld
@@ -102,14 +102,6 @@
       organicmaps
       speedtest-cli
       base16-schemes
-    ];
-
-    fonts.packages = with pkgs; [
-      nerd-fonts.code-new-roman
-      nerd-fonts.jetbrains-mono
-      nerd-fonts.caskaydia-cove
-      nerd-fonts.symbols-only
-      montserrat
     ];
   };
 }
