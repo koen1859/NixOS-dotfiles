@@ -1,0 +1,115 @@
+{pkgs, ...}: {
+  environment = {
+    shells = with pkgs; [bash];
+    sessionVariables = {
+      nixos_ozone_wl = "1";
+    };
+    systemPackages = with pkgs; [
+      vim
+      wget
+      hyprland
+      xfce.thunar
+      hyprshot
+      waybar
+      kitty
+      swaynotificationcenter
+      wl-clipboard
+      networkmanagerapplet
+      firefox
+      brave
+      zathura
+      fastfetch
+      rclone
+      pywal
+      swww
+      yazi
+      starship
+      git
+      atuin
+      pywalfox-native
+      neovim
+      texlive.combined.scheme-full
+      nixd
+      lua53Packages.sqlite
+      sqlite
+      lua
+      lua54Packages.luarocks
+      vimPlugins.sqlite-lua
+      vimPlugins.telescope-fzf-native-nvim
+      ripgrep
+      fd
+      vimPlugins.nvim-fzf
+      nodejs_23
+      python3
+      python312Packages.ipython
+      cargo
+      rustc
+      cmake
+      gnumake
+      unzip
+      nodejs_20.out
+      fzf
+      vimPlugins.fzfWrapper
+      quarto
+      imagemagick
+      lua5_1
+      luajit
+      tree-sitter
+      gcc
+      wlogout
+      bitwarden-desktop
+      brightnessctl
+      R
+      (rWrapper.override {
+        packages = with rPackages; [
+          languageserver
+          languageserversetup
+          lintr
+        ];
+      })
+      blueman
+      tmux
+      tmuxPlugins.vim-tmux-navigator
+      tmuxPlugins.resurrect
+      tmuxPlugins.continuum
+      osmium-tool
+      postgresql_17
+      postgresql17Packages.postgis
+      osm2pgsql
+      bibata-cursors
+      papirus-icon-theme
+      openvpn
+      nixpkgs-fmt
+      (pkgs.callPackage ./programs/lkh.nix {})
+      ruff-lsp
+      btop
+      nix-ld
+      glibc
+      htop
+      libnotify
+      pavucontrol
+      greetd.tuigreet
+      rofi-wayland
+      spotify
+      spicetify-cli
+      obs-studio
+      onefetch
+      signal-desktop
+      timg
+      flatpak
+      plocate
+      vlc
+      organicmaps
+      speedtest-cli
+      base16-schemes
+    ];
+
+    fonts.packages = with pkgs; [
+      nerd-fonts.code-new-roman
+      nerd-fonts.jetbrains-mono
+      nerd-fonts.caskaydia-cove
+      nerd-fonts.symbols-only
+      montserrat
+    ];
+  };
+}

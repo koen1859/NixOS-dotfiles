@@ -1,6 +1,4 @@
-{ host, pkgs, ... }:
-
-{
+_: {
   programs = {
     thunar = {
       enable = true;
