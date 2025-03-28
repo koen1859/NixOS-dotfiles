@@ -15,6 +15,8 @@
     vulkan-tools
     heroic
     ollama-cuda
+    mangohud
+    prismlauncher
   ];
 
   programs = {
