@@ -25,15 +25,15 @@
         inherit system;
         modules = [
           ./configuration.nix
+          ./hosts/laptop/configuration.nix
           stylix.nixosModules.stylix
-          ./hosts/laptop.nix
         ];
       };
       nixpc = lib.nixosSystem {
         inherit system;
         modules = [
           ./configuration.nix
-          ./hosts/pc.nix
+          ./hosts/pc/configuration.nix
           stylix.nixosModules.stylix
         ];
       };
@@ -43,7 +43,7 @@
         inherit pkgs;
         modules = [
           ./home.nix
-          ./hosts/home-laptop.nix
+          ./hosts/laptop/home.nix
           stylix.homeManagerModules.stylix
           nvf.homeManagerModules.default
         ];
@@ -52,7 +52,7 @@
         inherit pkgs;
         modules = [
           ./home.nix
-          ./hosts/home-pc.nix
+          ./hosts/hosts/pc.nix
           stylix.homeManagerModules.stylix
           nvf.homeManagerModules.default
         ];

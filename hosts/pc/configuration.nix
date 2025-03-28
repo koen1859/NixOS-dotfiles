@@ -4,7 +4,7 @@
   ...
 }: {
   imports = [
-    ../pc-hardware.nix
+    ./hardware.nix
   ];
   networking.hostName = "nixpc";
 
@@ -17,7 +17,6 @@
     ollama-cuda
   ];
 
-  boot.kernelPackages = pkgs.linuxPackages;
   programs = {
     gamescope = {
       enable = true;
@@ -62,9 +61,12 @@
     #};
   };
 
-  boot.initrd.kernelModules = ["nvidia"];
-  boot.kernelModules = ["nvidia" "nvidia_modeset" "nvidia_uvm" "nvidia_drm"];
-  boot.extraModulePackages = [config.boot.kernelPackages.nvidiaPackages.latest];
+  boot = {
+    kernelPackages = pkgs.linuxPackages;
+    initrd.kernelModules = ["nvidia"];
+    kernelModules = ["nvidia" "nvidia_modeset" "nvidia_uvm" "nvidia_drm"];
+    extraModulePackages = [config.boot.kernelPackages.nvidiaPackages.latest];
+  };
 
   environment.variables = {
     "__GLX_VENDOR_LIBRARY_NAME" = "nvidia";

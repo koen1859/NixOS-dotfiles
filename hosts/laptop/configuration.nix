@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   imports = [
-    ../laptop-hardware.nix
+    ./hardware.nix
   ];
   networking.hostName = "nixlaptop";
 
