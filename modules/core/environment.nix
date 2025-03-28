@@ -20,28 +20,19 @@
       zathura
       fastfetch
       rclone
-      pywal
-      swww
       yazi
       starship
       git
       atuin
-      pywalfox-native
       neovim
       texlive.combined.scheme-full
       nixd
-      lua53Packages.sqlite
       sqlite
       lua
-      lua54Packages.luarocks
-      vimPlugins.sqlite-lua
-      vimPlugins.telescope-fzf-native-nvim
       ripgrep
       fd
-      vimPlugins.nvim-fzf
       nodejs_23
       python3
-      python312Packages.ipython
       cargo
       rustc
       cmake
@@ -49,7 +40,6 @@
       unzip
       nodejs_20.out
       fzf
-      vimPlugins.fzfWrapper
       quarto
       imagemagick
       lua5_1

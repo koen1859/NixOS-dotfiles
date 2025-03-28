@@ -1,4 +1,8 @@
-{config, ...}: {
+{
+  config,
+  pkgs,
+  ...
+}: {
   programs.nvf = {
     enable = true;
 
@@ -14,8 +18,11 @@
         wrap = false;
         scrolloff = 8;
         sidescrolloff = 8;
-        cursorline = true;
       };
+
+      startPlugins = [
+        pkgs.vimPlugins.vim-tmux-navigator
+      ];
 
       keymaps = [
         {
@@ -152,6 +159,8 @@
         enableTreesitter = true;
         enableExtraDiagnostics = true;
 
+        rust.enable = true;
+        sql.enable = true;
         nix.enable = true;
         clang.enable = true;
         zig.enable = true;
@@ -159,6 +168,10 @@
         markdown.enable = true;
         ts.enable = true;
         html.enable = true;
+        dart.enable = true;
+        go.enable = true;
+        lua.enable = true;
+        php.enable = true;
       };
 
       visuals = {
@@ -214,7 +227,7 @@
         ccc.enable = false;
         vim-wakatime.enable = false;
         icon-picker.enable = true;
-        surround.enable = true;
+        surround.enable = false;
         diffview-nvim.enable = true;
         motion = {
           hop.enable = true;
@@ -228,8 +241,8 @@
       };
 
       ui = {
-        borders.enable = true;
-        noice.enable = true;
+        borders.enable = false;
+        noice.enable = false;
         colorizer.enable = true;
         illuminate.enable = true;
         breadcrumbs = {
