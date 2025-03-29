@@ -257,7 +257,7 @@
       assistant = {
         chatgpt.enable = false;
         copilot = {
-          enable = false;
+          enable = true;
           cmp.enable = false;
         };
         codecompanion-nvim.enable = true;
