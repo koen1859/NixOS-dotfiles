@@ -230,7 +230,7 @@ in
           tooltip label {
             color: #${config.lib.stylix.colors.base08};
           }
-          #window, #pulseaudio, #cpu, #memory, #idle_inhibitor {
+          #window, #pulseaudio, #cpu, #memory, #network, #idle_inhibitor {
             font-weight: bold;
             margin: 4px 0px;
             margin-left: 7px;
@@ -250,14 +250,14 @@ in
             padding: 0px 3px 0px 3px;
             border-radius: 8px 8px 8px 8px;
           }
-          #custom-hyprbindings, #network, #battery,
+          #custom-hyprbindings, #battery,
           #custom-notification, #tray, #custom-exit {
             /* font-weight: bold; */
             font-size: 10px;
             background: #${config.lib.stylix.colors.base00};
             color: #${config.lib.stylix.colors.base08};
-            margin: 2px 0px;
-            margin-right: 4px;
+            margin: 4px 0px;
+            margin-right: 7px;
             border-radius: 4px 4px 4px 4px;
             padding: 0px 9px;
           }
@@ -268,7 +268,7 @@ in
             background: linear-gradient(90deg, #${config.lib.stylix.colors.base0B}, #${config.lib.stylix.colors.base02});
             margin: 0px;
             padding: 0px 3px 0px 3px;
-            border-radius: 8px 8px 8px 8px;
+            border-radius: 4px 4px 4px 4px;
           }
         ''
       ];
