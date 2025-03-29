@@ -15,7 +15,10 @@
     vulkan-tools
     heroic
     ollama-cuda
-    lmstudio
+    (alpaca.override
+      {
+        ollama = ollama-cuda;
+      })
     mangohud
     prismlauncher
   ];
