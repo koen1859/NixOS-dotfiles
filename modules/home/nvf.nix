@@ -10,6 +10,7 @@
       viAlias = true;
       withNodeJs = true;
       useSystemClipboard = true;
+      undoFile.enable = true;
 
       options = {
         tabstop = 2;
@@ -21,9 +22,16 @@
 
       startPlugins = [
         pkgs.vimPlugins.vim-tmux-navigator
+        pkgs.vimPlugins.undotree
       ];
 
       keymaps = [
+        {
+          key = "<leader>u";
+          mode = ["n"];
+          action = ":UndotreeToggle<cr>";
+          desc = "Open undo tree";
+        }
         {
           key = "<leader>cc";
           mode = ["n"];
