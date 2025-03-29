@@ -79,7 +79,6 @@
       libnotify
       pavucontrol
       greetd.tuigreet
-      rofi-wayland
       spotify
       spicetify-cli
       obs-studio
