@@ -5,7 +5,6 @@
 }: {
   programs.nvf = {
     enable = true;
-
     settings.vim = {
       vimAlias = true;
       viAlias = true;
@@ -25,6 +24,36 @@
       ];
 
       keymaps = [
+        {
+          key = "<leader>cc";
+          mode = ["n"];
+          action = ":CodeCompanionChat<CR>";
+          desc = "Open Code Companion chat";
+        }
+        {
+          key = "<C-k>";
+          mode = ["n"];
+          action = "<cmd>TmuxNavigateUp<cr>";
+          desc = "Navigate up";
+        }
+        {
+          key = "<C-j>";
+          mode = ["n"];
+          action = "<cmd>TmuxNavigateDown<cr>";
+          desc = "Navigate down";
+        }
+        {
+          key = "<C-h>";
+          mode = ["n"];
+          action = "<cmd>TmuxNavigateLeft<cr>";
+          desc = "Navigate left";
+        }
+        {
+          key = "<C-l>";
+          mode = ["n"];
+          action = "<cmd>TmuxNavigateRight<cr>";
+          desc = "Navigate right";
+        }
         {
           key = "<leader>nh";
           mode = ["n"];
@@ -92,30 +121,6 @@
           desc = "Vertical resize";
         }
         {
-          key = "<C-k>";
-          mode = ["n"];
-          action = ":wincmd k<CR>";
-          desc = "Navigate up";
-        }
-        {
-          key = "<C-j>";
-          mode = ["n"];
-          action = ":wincmd j<CR>";
-          desc = "Navigate down";
-        }
-        {
-          key = "<C-h>";
-          mode = ["n"];
-          action = ":wincmd h<CR>";
-          desc = "Navigate left";
-        }
-        {
-          key = "<C-l>";
-          mode = ["n"];
-          action = ":wincmd l<CR>";
-          desc = "Navigate right";
-        }
-        {
           key = "<Tab>";
           mode = ["n"];
           action = ":bnext<CR>";
@@ -165,6 +170,7 @@
         clang.enable = true;
         zig.enable = true;
         python.enable = true;
+        r.enable = true;
         markdown.enable = true;
         ts.enable = true;
         html.enable = true;
@@ -200,7 +206,7 @@
         nvimBufferline.enable = true;
       };
 
-      treesitter.context.enable = true;
+      treesitter.context.enable = false;
 
       binds = {
         whichKey.enable = true;
@@ -238,6 +244,15 @@
         images = {
           image-nvim.enable = false;
         };
+      };
+
+      assistant = {
+        chatgpt.enable = false;
+        copilot = {
+          enable = false;
+          cmp.enable = false;
+        };
+        codecompanion-nvim.enable = true;
       };
 
       ui = {
