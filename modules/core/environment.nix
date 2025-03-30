@@ -93,6 +93,7 @@
       base16-schemes
       wofi
       yq
+      tmux-mem-cpu-load
     ];
   };
 }

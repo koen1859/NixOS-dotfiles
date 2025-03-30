@@ -5,7 +5,10 @@
       tmuxPlugins.vim-tmux-navigator
       tmuxPlugins.resurrect
       tmuxPlugins.continuum
+      tmuxPlugins.tmux-powerline
+      tmuxPlugins.power-theme
       tmuxPlugins.cpu
+      tmuxPlugins.net-speed
     ];
     extraConfig = ''
       set -g default-terminal "screen-256color" # Set terminal type for 256-color support
