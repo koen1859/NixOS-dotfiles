@@ -92,8 +92,6 @@ in
             format-source-muted = "";
             format-icons = {
               headphone = "";
-              hands-free = "";
-              headset = "";
               phone = "";
               portable = "";
               car = "";
