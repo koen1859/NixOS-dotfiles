@@ -1,3 +1,3 @@
 {pkgs, ...}: {
-  theme = "${pkgs.base16-schemes}/share/themes/gruvbox-material-dark-hard.yaml";
+  theme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
 }
