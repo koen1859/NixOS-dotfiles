@@ -1,3 +1,3 @@
 {
-  wallpaper = ./Wallpapers/nvim.png;
+  wallpaper = ./Wallpapers/Forest.png;
 }

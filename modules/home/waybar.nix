@@ -185,8 +185,8 @@ in
             background: rgba(0,0,0,0);
           }
           #workspaces {
-            color: #${config.lib.stylix.colors.base00};
-            background: #${config.lib.stylix.colors.base01};
+            color: #${config.lib.stylix.colors.base08};
+            background: #${config.lib.stylix.colors.base00};
             margin: 2px 2px;
             padding: 3px 3px;
             border-radius: 8px;
@@ -197,7 +197,7 @@ in
             margin: 0px 2px;
             border-radius: 8px;
             color: #${config.lib.stylix.colors.base00};
-            background: linear-gradient(45deg, #${config.lib.stylix.colors.base08}, #${config.lib.stylix.colors.base0D});
+            background: linear-gradient(45deg, #${config.lib.stylix.colors.base08}, #${config.lib.stylix.colors.base0F});
             opacity: 0.5;
             transition: ${betterTransition};
           }
@@ -207,7 +207,7 @@ in
             margin: 0px 2px;
             border-radius: 8px;
             color: #${config.lib.stylix.colors.base00};
-            background: linear-gradient(45deg, #${config.lib.stylix.colors.base08}, #${config.lib.stylix.colors.base0D});
+            background: linear-gradient(45deg, #${config.lib.stylix.colors.base08}, #${config.lib.stylix.colors.base0F});
             transition: ${betterTransition};
             opacity: 1.0;
             min-width: 20px;
@@ -216,7 +216,7 @@ in
             font-weight: bold;
             border-radius: 8px;
             color: #${config.lib.stylix.colors.base00};
-            background: linear-gradient(45deg, #${config.lib.stylix.colors.base08}, #${config.lib.stylix.colors.base0D});
+            background: linear-gradient(45deg, #${config.lib.stylix.colors.base08}, #${config.lib.stylix.colors.base0F});
             opacity: 0.8;
             transition: ${betterTransition};
           }
@@ -241,8 +241,8 @@ in
           font-size: 10px;
           }
           #custom-startmenu {
-            color: #${config.lib.stylix.colors.base0B};
-            background: #${config.lib.stylix.colors.base02};
+            color: #${config.lib.stylix.colors.base08};
+            background: #${config.lib.stylix.colors.base00};
             font-size: 10px;
             margin: 0px;
             padding: 0px 3px 0px 3px;
@@ -262,8 +262,8 @@ in
           #clock {
             font-weight: bold;
             font-size: 10px;
-            color: #0D0E15;
-            background: linear-gradient(90deg, #${config.lib.stylix.colors.base0B}, #${config.lib.stylix.colors.base02});
+            color: #${config.lib.stylix.colors.base08};
+            background: linear-gradient(90deg, #${config.lib.stylix.colors.base00}, #${config.lib.stylix.colors.base00});
             margin: 0px;
             padding: 0px 3px 0px 3px;
             border-radius: 4px 4px 4px 4px;
