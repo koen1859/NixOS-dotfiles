@@ -27,6 +27,12 @@
 
       keymaps = [
         {
+          key = "<leader>ldt";
+          mode = ["n"];
+          action = ":lua vim.diagnostic.config({ virtual_text = not vim.diagnostic.config().virtual_text })<CR>";
+          desc = "Toggle inline diagnostics";
+        }
+        {
           key = "<leader>u";
           mode = ["n"];
           action = ":UndotreeToggle<cr>";
@@ -170,7 +176,7 @@
         enableLSP = true;
         enableFormat = true;
         enableTreesitter = true;
-        enableExtraDiagnostics = true;
+        enableExtraDiagnostics = false;
 
         rust.enable = true;
         sql.enable = true;
