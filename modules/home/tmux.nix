@@ -7,8 +7,6 @@
       tmuxPlugins.continuum
       tmuxPlugins.tmux-powerline
       tmuxPlugins.power-theme
-      tmuxPlugins.cpu
-      tmuxPlugins.net-speed
     ];
     extraConfig = ''
       set -g default-terminal "screen-256color" # Set terminal type for 256-color support
@@ -53,6 +51,7 @@
       bind-key -n 'C-j' if-shell "$is_vim" 'send-keys C-j'  'select-pane -D'
       bind-key -n 'C-k' if-shell "$is_vim" 'send-keys C-k'  'select-pane -U'
       bind-key -n 'C-l' if-shell "$is_vim" 'send-keys C-l'  'select-pane -R'
+      set -g status-right "#S #(tmux-mem-cpu-load -i 2 -a 0)#[default]"
     '';
   };
 }
