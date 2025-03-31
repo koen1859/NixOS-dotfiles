@@ -19,6 +19,9 @@ _: {
       initExtra = ''
         PS1='[\u@\h \W]\$ '
         source ~/.local/share/blesh/ble.sh
+        if ! pgrep -f "cpu_ram_monitor.sh" > /dev/null; then
+          bash ~/.dotfiles/Bash-Scripts/cpu_ram_monitor.sh &
+        fi
       '';
     };
 
