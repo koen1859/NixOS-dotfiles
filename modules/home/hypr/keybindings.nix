@@ -9,7 +9,7 @@ _: {
       "$mainMod, M, exec, spotify"
       "$mainMod, Return, exec, kitty"
       "$mainMod, Q, killactive,"
-      "$mainMod, R, exec, wofi -show drun"
+      "$mainMod, R, exec, wofi --show drun"
       "$mainMod, E, exec, thunar"
       "SUPER_SHIFT, P, exec, killall waybar; waybar"
       ", F12, exec, pkill waybar || waybar"

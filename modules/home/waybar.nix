@@ -111,7 +111,7 @@ in
           "custom/startmenu" = {
             tooltip = false;
             format = "";
-            on-click = "wofi -show drun";
+            on-click = "wofi --show drun";
             # on-click = "sleep 0.1 && rofi-launcher";
             # on-click = "sleep 0.1 && nwg-drawer -mb 200 -mt 200 -mr 200 -ml 200";
           };
