@@ -4,13 +4,6 @@
   ...
 }: {
   programs.nvf = {
-    config.vim.extraPlugins = with pkgs.vimPlugins; {
-      zellij-nav = {
-        package = zellij-nav-nvim;
-        setup = "require('zellij-nav').setup {}";
-      };
-    };
-
     enable = true;
     settings.vim = {
       vimAlias = true;
@@ -29,8 +22,15 @@
 
       startPlugins = [
         pkgs.vimPlugins.undotree
-        pkgs.vimPlugins.zellij-nav-nvim
       ];
+
+      lazy.plugins = {
+        "zellij-nav.nvim" = {
+          package = pkgs.vimPlugins.zellij-nav-nvim;
+          setupModule = "zellij-nav";
+          setupOpts = {};
+        };
+      };
 
       keymaps = [
         {

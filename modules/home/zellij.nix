@@ -45,7 +45,7 @@
               zjstatus location="https://github.com/dj95/zjstatus/releases/download/v0.20.1/zjstatus.wasm" {
                       format_left   "{mode}#[bg=${base01}] {tabs}"
                       format_center ""
-                      format_right  "#[bg=#${base0D},fg=#${base01},bold]  #[bg=#${base01},fg=#${base0D},bold] {session} #[bg=#${base01},fg=#${base0D},bold]"
+                      format_right  "#[bg=#${base0D},fg=#${base01},bold]  #[bg=#${base01},fg=#${base0D},bold] {session} #[bg=#${base01},fg=#${base0D},bold] {datetime}"
                       format_space  ""
                       format_hide_on_overlength "true"
                       format_precedence "crl"
