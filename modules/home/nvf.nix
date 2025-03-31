@@ -21,8 +21,8 @@
       };
 
       startPlugins = [
-        pkgs.vimPlugins.vim-tmux-navigator
         pkgs.vimPlugins.undotree
+        pkgs.vimPlugins.zellij-nav-nvim
       ];
 
       keymaps = [
@@ -45,27 +45,27 @@
           desc = "Open Code Companion chat";
         }
         {
-          key = "<C-k>";
+          key = "<Alt-k>";
           mode = ["n"];
-          action = "<cmd>TmuxNavigateUp<cr>";
+          action = "<cmd>ZellijNavigateUp<cr>";
           desc = "Navigate up";
         }
         {
-          key = "<C-j>";
+          key = "<Alt-j>";
           mode = ["n"];
-          action = "<cmd>TmuxNavigateDown<cr>";
+          action = "<cmd>ZellijNavigateDown<cr>";
           desc = "Navigate down";
         }
         {
-          key = "<C-h>";
+          key = "<Alt-h>";
           mode = ["n"];
-          action = "<cmd>TmuxNavigateLeft<cr>";
+          action = "<cmd>ZellijNavigateLeft<cr>";
           desc = "Navigate left";
         }
         {
-          key = "<C-l>";
+          key = "<Alt-l>";
           mode = ["n"];
-          action = "<cmd>TmuxNavigateRight<cr>";
+          action = "<cmd>ZellijNavigateRight<cr>";
           desc = "Navigate right";
         }
         {
