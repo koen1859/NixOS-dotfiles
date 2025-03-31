@@ -1,6 +1,7 @@
 _: {
   home.sessionVariables = {
     EDITOR = "nvim";
+    XDG_CONFIG_HOME = "$HOME/.config";
   };
 
   programs = {
