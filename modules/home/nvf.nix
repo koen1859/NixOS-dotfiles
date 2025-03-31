@@ -52,25 +52,25 @@
           desc = "Open Code Companion chat";
         }
         {
-          key = "<Alt-k>";
+          key = "<C-k>";
           mode = ["n"];
           action = "<cmd>ZellijNavigateUp<cr>";
           desc = "Navigate up";
         }
         {
-          key = "<Alt-j>";
+          key = "<C-j>";
           mode = ["n"];
           action = "<cmd>ZellijNavigateDown<cr>";
           desc = "Navigate down";
         }
         {
-          key = "<Alt-h>";
+          key = "<C-h>";
           mode = ["n"];
           action = "<cmd>ZellijNavigateLeft<cr>";
           desc = "Navigate left";
         }
         {
-          key = "<Alt-l>";
+          key = "<C-l>";
           mode = ["n"];
           action = "<cmd>ZellijNavigateRight<cr>";
           desc = "Navigate right";
