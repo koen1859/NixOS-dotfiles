@@ -21,6 +21,7 @@
     ./modules/home/wofi.nix
     ./modules/home/waybar.nix
     ./modules/home/zathura.nix
+    ./modules/home/zellij.nix
   ];
 
   home = {

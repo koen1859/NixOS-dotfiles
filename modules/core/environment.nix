@@ -94,6 +94,7 @@
       wofi
       yq
       tmux-mem-cpu-load
+      zellij
     ];
   };
 }
