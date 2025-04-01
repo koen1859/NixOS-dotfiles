@@ -46,6 +46,11 @@
         bind "Alt 8" { GoToTab 8; }
         bind "Alt 9" { GoToTab 9; }
 
+        bind "Alt p" { NewPane; }
+        bind "Alt t" { NewTab; }
+        bind "Alt q" { CloseFocus; }
+        bind "Alt c" { Clear; }
+        bind "Alt d" { Detach; }
       }
       shared_except "locked" {
         bind "Alt z" {
@@ -56,12 +61,6 @@
         bind "Ctrl l" { MoveFocusOrTab "Right"; }
         bind "Ctrl j" { MoveFocusOrTab "Down"; }
         bind "Ctrl k" { MoveFocusOrTab "Up"; }
-
-        bind "Alt p" { NewPane; }
-        bind "Alt t" { NewTab; }
-        bind "Alt q" { CloseFocus; }
-        bind "Alt c" { Clear; }
-        bind "Alt d" { Detach; }
       }
     }
     plugins {

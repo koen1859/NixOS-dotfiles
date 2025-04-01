@@ -197,6 +197,9 @@
         zig.enable = true;
         python = {
           enable = true;
+          lsp = {
+            server = "pyright";
+          };
           format = {
             type = "ruff";
           };

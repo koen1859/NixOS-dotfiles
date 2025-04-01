@@ -26,7 +26,6 @@
       atuin
       neovim
       texlive.combined.scheme-full
-      nixd
       sqlite
       lua
       luajitPackages.luarocks
@@ -51,13 +50,6 @@
       bitwarden-desktop
       brightnessctl
       R
-      (rWrapper.override {
-        packages = with rPackages; [
-          languageserver
-          languageserversetup
-          lintr
-        ];
-      })
       blueman
       tmux
       tmuxPlugins.vim-tmux-navigator
@@ -72,7 +64,6 @@
       openvpn
       nixpkgs-fmt
       (pkgs.callPackage ./lkh.nix {})
-      ruff-lsp
       btop
       nix-ld
       glibc
