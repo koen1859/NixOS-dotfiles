@@ -6,7 +6,7 @@
     settings = {
       exec-once = [
         "waybar"
-        "rclone --vfs-cache-mode writes mount OneDrive: ~/OneDrive/ &"
+        # "rclone --vfs-cache-mode writes mount OneDrive: ~/OneDrive/ &"
       ];
       input = {
         kb_layout = "us";
