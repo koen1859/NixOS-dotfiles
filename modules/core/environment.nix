@@ -97,6 +97,7 @@
       tmux-mem-cpu-load
       zellij
       librewolf
+      microfetch
     ];
   };
 }
