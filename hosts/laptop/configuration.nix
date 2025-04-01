@@ -23,4 +23,9 @@
       CPU_MAX_PERF_ON_BAT = 50;
     };
   };
+  fileSystems."/home/koenstevens/secondary_storage" = {
+    device = "/dev/nvme0n1p2";
+    fsType = "ext4";
+    options = ["defaults"];
+  };
 }
