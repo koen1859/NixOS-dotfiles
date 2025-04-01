@@ -89,6 +89,7 @@
       zellij
       librewolf
       microfetch
+      lsd
     ];
   };
 }

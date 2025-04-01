@@ -8,12 +8,15 @@ _: {
     bash = {
       enable = true;
       shellAliases = {
-        ls = "ls --color=auto";
+        ls = "lsd --color=auto";
         grep = "grep --color=auto";
-        ll = "ls -l --color=auto";
+        ll = "lsd -l --color=auto";
         ff = "fastfetch";
+        mf = "microfetch";
         ".." = "cd ..";
         v = "nvim";
+        gps = "git push";
+        gpl = "git pull";
       };
 
       initExtra = ''
