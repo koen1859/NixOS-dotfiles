@@ -11,7 +11,7 @@
 in {
   stylix = {
     enable = true;
-    image = painted_wallpaper;
+    image = wallpaper;
     base16Scheme = theme;
     polarity = "dark";
     cursor = {
@@ -21,32 +21,8 @@ in {
     };
     autoEnable = true;
     targets = {
-      gtk.enable = true;
-      qt.enable = true;
-      hyprland.enable = true;
       waybar.enable = false;
       zathura.enable = false;
     };
-
-    # fonts = {
-    #   monospace = {
-    #     package = pkgs.nerd-fonts.jetbrains-mono;
-    #     name = "JetBrains Mono";
-    #   };
-    #   sansSerif = {
-    #     package = pkgs.montserrat;
-    #     name = "Montserrat";
-    #   };
-    #   serif = {
-    #     package = pkgs.montserrat;
-    #     name = "Montserrat";
-    #   };
-    #   sizes = {
-    #     applications = 12;
-    #     terminal = 15;
-    #     desktop = 11;
-    #     popups = 12;
-    #   };
-    # };
   };
 }

@@ -11,7 +11,7 @@
 in {
   stylix = {
     enable = true;
-    image = painted_wallpaper;
+    image = wallpaper;
     polarity = "dark";
     base16Scheme = theme;
     cursor = {
@@ -20,9 +20,5 @@ in {
       size = 24;
     };
     autoEnable = true;
-    targets = {
-      gtk.enable = true;
-      qt.enable = true;
-    };
   };
 }
