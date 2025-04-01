@@ -187,10 +187,20 @@
 
         rust.enable = true;
         sql.enable = true;
-        nix.enable = true;
+        nix = {
+          enable = true;
+          lsp = {
+            server = "nixd";
+          };
+        };
         clang.enable = true;
         zig.enable = true;
-        python.enable = true;
+        python = {
+          enable = true;
+          format = {
+            type = "ruff";
+          };
+        };
         r.enable = true;
         markdown.enable = true;
         ts.enable = true;

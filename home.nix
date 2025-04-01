@@ -1,4 +1,4 @@
-{ ... }: {
+{...}: {
   imports = [
     ./modules/home/hypr/hyprland.nix
     ./modules/home/hypr/animations.nix
@@ -22,6 +22,7 @@
     ./modules/home/waybar.nix
     ./modules/home/zathura.nix
     ./modules/home/zellij.nix
+    ./modules/home/librewolf.nix
   ];
 
   home = {
