@@ -17,6 +17,8 @@ _: {
         v = "nvim";
         gps = "git push";
         gpl = "git pull";
+        ga = "git add -A";
+        gc = "git commit";
       };
 
       initExtra = ''
