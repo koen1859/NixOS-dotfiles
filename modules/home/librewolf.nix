@@ -24,14 +24,15 @@
     "browser.quitShortcut.disabled" = true;
     "browser.sessionstore.restore_pinned_tabs_on_demand" = true;
 
-    "browser.urlbar.suggest.bookmark" = false;
+    "browser.urlbar.suggest.bookmark" = true;
     "browser.urlbar.suggest.engines" = false;
-    "browser.urlbar.suggest.history" = false;
-    "browser.urlbar.suggest.openpage" = false;
-    "browser.urlbar.suggest.topsites" = false;
+    "browser.urlbar.suggest.history" = true;
+    "browser.urlbar.suggest.openpage" = true;
+    "browser.urlbar.suggest.topsites" = true;
     "browser.urlbar.trimHttps" = true;
 
-    "sidebar.position_start" = false;
+    "sidebar.position_start" = "left";
+    "sidebar.verticalTabs" = true;
     "findbar.highlightAll" = true;
 
     "xpinstall.signatures.required" = false;
@@ -40,6 +41,12 @@
     "browser.tabs.hoverPreview.enabled" = true;
 
     "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+
+    "identity.fxaccounts.enabled" = true;
+
+    "media.autoplay.blocking_policy" = 2;
+
+    "privacy.resistFingerprinting.letterboxing" = true;
   };
 in {
   stylix.targets.librewolf.profileNames = ["default"];
