@@ -1,4 +1,4 @@
-{...}: {
+{ ... }: {
   imports = [
     ./modules/home/hypr/hyprland.nix
     ./modules/home/hypr/animations.nix
@@ -11,7 +11,7 @@
     ./modules/home/gtk.nix
     ./modules/home/htop.nix
     ./modules/home/kitty.nix
-    # ./modules/home/nvf.nix
+    ./modules/home/nvf.nix
     ./modules/home/qt.nix
     ./modules/home/shell.nix
     ./modules/home/starship.nix

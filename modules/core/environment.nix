@@ -1,6 +1,6 @@
-{pkgs, ...}: {
+{ pkgs, ... }: {
   environment = {
-    shells = with pkgs; [bash];
+    shells = with pkgs; [ bash ];
     sessionVariables = {
       nixos_ozone_wl = "1";
     };
@@ -29,6 +29,7 @@
       nixd
       sqlite
       lua
+      luajitPackages.luarocks
       ripgrep
       fd
       nodejs_23
@@ -70,7 +71,7 @@
       papirus-icon-theme
       openvpn
       nixpkgs-fmt
-      (pkgs.callPackage ./lkh.nix {})
+      (pkgs.callPackage ./lkh.nix { })
       ruff-lsp
       btop
       nix-ld
