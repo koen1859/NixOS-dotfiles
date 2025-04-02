@@ -31,6 +31,18 @@
     "browser.urlbar.suggest.topsites" = true;
     "browser.urlbar.trimHttps" = true;
 
+    "browser.sessionstore.privacy_level" = 0;
+    "browser.sessionstore.resume_from_crash" = true;
+    "browser.sessionstore.max_resumed_crashes" = -1;
+
+    "places.history.enabled" = true;
+    "privacy.sanitize.sanitizeOnShutdown" = false;
+
+    "dom.storage.enabled" = true;
+    "dom.indexedDB.enabled" = true;
+    "browser.cache.disk.enable" = true;
+    "browser.cache.offline.enable" = true;
+
     "browser.newtabpage.activity-stream.showSearch" = false;
 
     "sidebar.position_start" = "left";
@@ -48,7 +60,11 @@
 
     "media.autoplay.blocking_policy" = 2;
 
-    "privacy.resistFingerprinting.letterboxing" = true;
+    "network.cookie.lifetimePolicy" = 0;
+    "privacy.clearOnShutdown.cookies" = false;
+    "privacy.clearOnShutdown.sessions" = false;
+    "privacy.clearOnShutdown.siteSettings" = false;
+    "privacy.resistFingerprinting.letterboxing" = false;
   };
 in {
   stylix.targets.librewolf.profileNames = ["default"];
