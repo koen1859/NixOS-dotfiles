@@ -51,6 +51,11 @@
         bind "Alt q" { CloseFocus; }
         bind "Alt c" { Clear; }
         bind "Alt d" { Detach; }
+
+        bind "Alt left" { Resize "Left"; }
+        bind "Alt right" { Resize "Right"; }
+        bind "Alt up" { Resize "Up"; }
+        bind "Alt down" { Resize "Down"; }
       }
       shared_except "locked" {
         bind "Alt z" {
@@ -59,8 +64,8 @@
         }
         bind "Ctrl h" { MoveFocusOrTab "Left"; }
         bind "Ctrl l" { MoveFocusOrTab "Right"; }
-        bind "Ctrl j" { MoveFocusOrTab "Down"; }
-        bind "Ctrl k" { MoveFocusOrTab "Up"; }
+        bind "Ctrl j" { MoveFocus "Down"; }
+        bind "Ctrl k" { MoveFocus "Up"; }
       }
     }
     plugins {
