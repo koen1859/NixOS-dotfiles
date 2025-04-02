@@ -16,18 +16,17 @@ in
           position = "top";
           modules-center = ["hyprland/workspaces"];
           modules-left = [
-            "custom/startmenu"
             "hyprland/window"
             "pulseaudio"
             "cpu"
             "memory"
+            "disk"
             "network"
           ];
           modules-right = [
             "custom/notification"
             "custom/exit"
             "battery"
-            "tray"
             "clock"
           ];
 
@@ -80,9 +79,6 @@ in
             format-disconnected = "󰤮";
             tooltip = false;
           };
-          "tray" = {
-            spacing = 12;
-          };
           "pulseaudio" = {
             format = "{icon} {volume}% {format_source}";
             format-bluetooth = "{volume}% {icon} {format_source}";
@@ -112,21 +108,6 @@ in
             tooltip = false;
             format = "";
             on-click = "wofi --show drun";
-            # on-click = "sleep 0.1 && rofi-launcher";
-            # on-click = "sleep 0.1 && nwg-drawer -mb 200 -mt 200 -mr 200 -ml 200";
-          };
-          "custom/hyprbindings" = {
-            tooltip = false;
-            format = "󱕴";
-            on-click = "sleep 0.1 && list-keybinds";
-          };
-          "idle_inhibitor" = {
-            format = "{icon}";
-            format-icons = {
-              activated = "";
-              deactivated = "";
-            };
-            tooltip = "true";
           };
           "custom/notification" = {
             tooltip = false;
@@ -187,14 +168,14 @@ in
           #workspaces {
             color: #${config.lib.stylix.colors.base08};
             background: #${config.lib.stylix.colors.base00};
-            margin: 2px 2px;
+            margin: 0px 0px;
             padding: 3px 3px;
             border-radius: 8px;
           }
           #workspaces button {
             font-weight: bold;
             padding: 0px 3px;
-            margin: 0px 2px;
+            margin: 0px 0px;
             border-radius: 8px;
             color: #${config.lib.stylix.colors.base00};
             background: linear-gradient(45deg, #${config.lib.stylix.colors.base08}, #${config.lib.stylix.colors.base0F});
@@ -204,7 +185,7 @@ in
           #workspaces button.active {
             font-weight: bold;
             padding: 0px 3px;
-            margin: 0px 2px;
+            margin: 0px 0px;
             border-radius: 8px;
             color: #${config.lib.stylix.colors.base00};
             background: linear-gradient(45deg, #${config.lib.stylix.colors.base08}, #${config.lib.stylix.colors.base0F});
@@ -228,9 +209,9 @@ in
           tooltip label {
             color: #${config.lib.stylix.colors.base08};
           }
-          #window, #pulseaudio, #cpu, #memory, #network, #idle_inhibitor {
+          #window, #pulseaudio, #cpu, #memory, #network, #idle_inhibitor, #disk {
             font-weight: bold;
-            margin: 4px 0px;
+            margin: 0px 0px;
             margin-left: 7px;
             padding: 0px 9px;
             background: #${config.lib.stylix.colors.base00};
@@ -254,7 +235,7 @@ in
             font-size: 10px;
             background: #${config.lib.stylix.colors.base00};
             color: #${config.lib.stylix.colors.base08};
-            margin: 4px 0px;
+            margin: 0px 0px;
             margin-right: 7px;
             border-radius: 4px 4px 4px 4px;
             padding: 0px 9px;
@@ -264,8 +245,9 @@ in
             font-size: 10px;
             color: #${config.lib.stylix.colors.base08};
             background: linear-gradient(90deg, #${config.lib.stylix.colors.base00}, #${config.lib.stylix.colors.base00});
-            margin: 0px;
-            padding: 0px 3px 0px 3px;
+            margin: 0px 0px;
+            margin-right: 7px;
+            padding: 0px 9px;
             border-radius: 4px 4px 4px 4px;
           }
         ''
