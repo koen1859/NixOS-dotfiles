@@ -58,7 +58,6 @@
       spicetify-cli
       obs-studio
       onefetch
-      signal-desktop
       timg
       flatpak
       plocate
@@ -72,7 +71,6 @@
       microfetch
       lsd
       gimp
-      gh
     ];
   };
 }
