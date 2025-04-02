@@ -90,6 +90,7 @@
       librewolf
       microfetch
       lsd
+      gimp
     ];
   };
 }
