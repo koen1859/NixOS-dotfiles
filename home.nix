@@ -17,7 +17,6 @@
     ./modules/home/starship.nix
     ./modules/home/stylix.nix
     ./modules/home/swaync.nix
-    ./modules/home/tmux.nix
     ./modules/home/wofi.nix
     ./modules/home/waybar.nix
     ./modules/home/zathura.nix

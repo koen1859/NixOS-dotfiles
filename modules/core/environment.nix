@@ -16,7 +16,6 @@
       wl-clipboard
       networkmanagerapplet
       firefox
-      brave
       zathura
       fastfetch
       rclone
@@ -25,36 +24,21 @@
       git
       atuin
       neovim
-      texlive.combined.scheme-full
-      sqlite
       lua
-      luajitPackages.luarocks
-      ripgrep
       fd
-      nodejs_23
       python3
-      cargo
-      rustc
       cmake
       gnumake
       unzip
       nodejs_20.out
       fzf
-      quarto
       imagemagick
-      lua5_1
-      luajit
-      tree-sitter
       gcc
       wlogout
       bitwarden-desktop
       brightnessctl
       R
       blueman
-      tmux
-      tmuxPlugins.vim-tmux-navigator
-      tmuxPlugins.resurrect
-      tmuxPlugins.continuum
       osmium-tool
       postgresql_17
       postgresql17Packages.postgis
@@ -62,7 +46,6 @@
       bibata-cursors
       papirus-icon-theme
       openvpn
-      nixpkgs-fmt
       (pkgs.callPackage ./lkh.nix {})
       btop
       nix-ld
@@ -80,17 +63,16 @@
       flatpak
       plocate
       vlc
-      organicmaps
       speedtest-cli
       base16-schemes
       wofi
       yq
-      tmux-mem-cpu-load
       zellij
       librewolf
       microfetch
       lsd
       gimp
+      gh
     ];
   };
 }
