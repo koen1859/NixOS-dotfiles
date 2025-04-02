@@ -31,6 +31,8 @@
     "browser.urlbar.suggest.topsites" = true;
     "browser.urlbar.trimHttps" = true;
 
+    "browser.newtabpage.activity-stream.showSearch" = false;
+
     "sidebar.position_start" = "left";
     "sidebar.verticalTabs" = true;
     "findbar.highlightAll" = true;
