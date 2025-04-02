@@ -65,6 +65,23 @@
     "privacy.clearOnShutdown.sessions" = false;
     "privacy.clearOnShutdown.siteSettings" = false;
     "privacy.resistFingerprinting.letterboxing" = false;
+
+    "browser.theme.content-theme" = 2;
+    "browser.theme.toolbar-theme" = 2;
+    "ui.systemUsesDarkTheme" = 1;
+    "layout.css.prefers-color-scheme.content-override" = 0;
+
+    "dom.security.https_only_mode" = true;
+    "dom.security.https_only_mode_ever_enabled" = true;
+    "dom.security.https_only_mode.upgrade_local" = true;
+
+    "network.trr.mode" = 3;
+    "network.trr.uri" = "https://mozilla.cloudflare-dns.com/dns-query";
+    "network.trr.bootstrapAddress" = "1.1.1.1";
+    "network.trr.confirmationNS" = "example.com";
+    "network.dns.disablePrefetch" = true;
+    "network.dns.echconfig.enabled" = true;
+    "network.dns.use_https_rr_as_altsvc" = true;
   };
 in {
   stylix.targets.librewolf.profileNames = ["default"];
