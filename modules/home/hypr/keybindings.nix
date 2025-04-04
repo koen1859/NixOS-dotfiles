@@ -1,7 +1,7 @@
 _: {
   wayland.windowManager.hyprland.settings = {
     bind = [
-      "$mainMod, B, exec, flatpak run app.zen_browser.zen"
+      "$mainMod, B, exec, firefox"
       "SUPER_SHIFT, B, exec, brave --password-store=basic --incognito"
       "$mainMod, P, exec, bitwarden"
       ", PRINT, exec, hyprshot -m region"
