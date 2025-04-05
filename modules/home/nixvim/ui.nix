@@ -99,19 +99,19 @@
           "Repeat"
           "Operator"
           "Structure"
-          # "LineNr"
+          "LineNr"
           "NonText"
-          # "SignColumn"
+          "SignColumn"
           "CursorLine"
           "CursorLineNr"
           "StatusLine"
           "StatusLineNC"
           "EndOfBuffer"
         ];
-        exclude_groups = [
-          "LineNr"
-          "SignColumn"
-        ];
+        # exclude_groups = [
+        #   "LineNr"
+        #   "SignColumn"
+        # ];
       };
     };
   };
