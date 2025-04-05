@@ -32,16 +32,8 @@ in
       player-bar-bg = "${base01}";
       accent = "${base06}";
     };
-    enabledExtensions = with spicePkgs.extensions; [
-      beautifulLyrics
-      adblock
-      keyboardShortcut
-    ];
-
-    enabledCustomApps = with spicePkgs.apps; [
-      betterLibrary
-      reddit
-      newReleases
-    ];
+    # enabledExtensions = with spicePkgs.extensions; [
+    #   adblock
+    # ];
   };
 }
