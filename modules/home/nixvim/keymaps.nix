@@ -2,6 +2,11 @@
   programs.nixvim = {
     keymaps = [
       {
+        key = "gd";
+        mode = [ "n" ];
+        action = "<cmd>Telescope lsp_definitions<CR>";
+      }
+      {
         mode = "n";
         key = "<leader>fe";
         options.silent = true;
