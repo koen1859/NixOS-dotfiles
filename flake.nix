@@ -6,9 +6,11 @@
     stylix.url = "github:danth/stylix";
     stylix.inputs.nixpkgs.follows = "nixpkgs";
     nvf.url = "github:notashelf/nvf";
+    nvf.inputs.nixpkgs.follows = "nixpkgs";
     home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    nvf.inputs.nixpkgs.follows = "nixpkgs";
+    nixvim.url = "github:nix-community/nixvim";
+    nixvim.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = {
@@ -16,6 +18,7 @@
     home-manager,
     stylix,
     nvf,
+    nixvim,
     ...
   }: let
     lib = nixpkgs.lib;
@@ -48,6 +51,7 @@
           ./hosts/laptop/home.nix
           stylix.homeManagerModules.stylix
           nvf.homeManagerModules.default
+          nixvim.homeManagerModules.nixvim
         ];
       };
       pc = home-manager.lib.homeManagerConfiguration {

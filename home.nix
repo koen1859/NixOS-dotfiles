@@ -5,13 +5,14 @@
     ./modules/home/hypr/keybindings.nix
     ./modules/home/hypr/windowrules.nix
     ./modules/home/wlogout/wlogout.nix
+    ./modules/home/nixvim/nixvim.nix
     ./modules/home/btop.nix
     ./modules/home/fastfetch.nix
     ./modules/home/git.nix
     ./modules/home/gtk.nix
     ./modules/home/htop.nix
     ./modules/home/kitty.nix
-    ./modules/home/nvf.nix
+    # ./modules/home/nvf.nix
     ./modules/home/qt.nix
     ./modules/home/shell.nix
     ./modules/home/starship.nix
