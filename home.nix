@@ -37,6 +37,7 @@
     ./modules/home/zathura.nix
     ./modules/home/zellij.nix
     ./modules/home/librewolf.nix
+    ./modules/home/spicetify.nix
   ];
 
   home = {
