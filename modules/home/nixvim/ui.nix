@@ -4,6 +4,10 @@
       enable = true;
     };
 
+    which-key = {
+      enable = true;
+    };
+
     startify = {
       enable = true;
       settings = {

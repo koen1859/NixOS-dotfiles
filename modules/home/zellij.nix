@@ -1,7 +1,7 @@
 {config, ...}: {
   programs.zellij = {
     enable = true;
-    enableBashIntegration = false;
+    enableBashIntegration = true;
   };
 
   xdg.configFile."zellij/config.kdl".text = with config.lib.stylix.colors; ''
