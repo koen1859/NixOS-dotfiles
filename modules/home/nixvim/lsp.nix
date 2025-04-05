@@ -1,4 +1,4 @@
-{
+{pkgs, ...}: {
   programs.nixvim.plugins = {
     lsp = {
       enable = true;
@@ -7,7 +7,7 @@
         html.enable = true; # HTML
         pyright.enable = true; # Python
         marksman.enable = true; # Markdown
-        nil_ls.enable = true; # Nix
+        nixd.enable = true; # Nix
         bashls.enable = true; # Bash
         yamlls.enable = true; # YAML
         lua_ls = {

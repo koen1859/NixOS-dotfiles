@@ -1,9 +1,9 @@
-{
+{pkgs, ...}: {
   programs.nixvim.plugins = {
     none-ls = {
       enable = true;
       settings = {
-        cmd = [ "bash -c nvim" ];
+        cmd = ["bash -c nvim"];
         debug = true;
       };
       sources = {
@@ -21,12 +21,11 @@
           alejandra.enable = true;
           stylua.enable = true;
           shfmt.enable = true;
-          nixpkgs_fmt.enable = true;
           prettier = {
             enable = true;
             disableTsServerFormatter = true;
             settings = {
-              extra_filetypes = [ "vue" ];
+              extra_filetypes = ["vue"];
             };
           };
           black = {
@@ -56,17 +55,17 @@
     lint = {
       enable = true;
       lintersByFt = {
-        text = [ "vale" ];
-        eslint = [ "eslint" ];
-        json = [ "jsonlint" ];
-        markdown = [ "vale" ];
-        rst = [ "vale" ];
-        ruby = [ "ruby" ];
-        janet = [ "janet" ];
-        inko = [ "inko" ];
-        clojure = [ "clj-kondo" ];
-        dockerfile = [ "hadolint" ];
-        terraform = [ "tflint" ];
+        text = ["vale"];
+        eslint = ["eslint"];
+        json = ["jsonlint"];
+        markdown = ["vale"];
+        rst = ["vale"];
+        ruby = ["ruby"];
+        janet = ["janet"];
+        inko = ["inko"];
+        clojure = ["clj-kondo"];
+        dockerfile = ["hadolint"];
+        terraform = ["tflint"];
       };
     };
 

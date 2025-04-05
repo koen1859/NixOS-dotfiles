@@ -15,62 +15,60 @@
     spicetify-nix.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs =
-    { nixpkgs
-    , home-manager
-    , stylix
-    , nvf
-    , nixvim
-    , spicetify-nix
-    , ...
-    } @ inputs:
-    let
-      lib = nixpkgs.lib;
-      system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
-    in
-    {
-      nixosConfigurations = {
-        nixlaptop = lib.nixosSystem {
-          inherit system;
-          modules = [
-            ./configuration.nix
-            ./hosts/laptop/configuration.nix
-            stylix.nixosModules.stylix
-          ];
-        };
-        nixpc = lib.nixosSystem {
-          inherit system;
-          modules = [
-            ./configuration.nix
-            ./hosts/pc/configuration.nix
-            stylix.nixosModules.stylix
-          ];
-        };
+  outputs = {
+    nixpkgs,
+    home-manager,
+    stylix,
+    nvf,
+    nixvim,
+    spicetify-nix,
+    ...
+  } @ inputs: let
+    lib = nixpkgs.lib;
+    system = "x86_64-linux";
+    pkgs = nixpkgs.legacyPackages.${system};
+  in {
+    nixosConfigurations = {
+      nixlaptop = lib.nixosSystem {
+        inherit system;
+        modules = [
+          ./configuration.nix
+          ./hosts/laptop/configuration.nix
+          stylix.nixosModules.stylix
+        ];
       };
-      homeConfigurations = {
-        laptop = home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;
-          modules = [
-            ./home.nix
-            ./hosts/laptop/home.nix
-            stylix.homeManagerModules.stylix
-            nvf.homeManagerModules.default
-            nixvim.homeManagerModules.nixvim
-          ];
-	  extraSpecialArgs = {inherit inputs;};
-        };
-        pc = home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;
-          modules = [
-            ./home.nix
-            ./hosts/pc/home.nix
-            stylix.homeManagerModules.stylix
-            nvf.homeManagerModules.default
-            nixvim.homeManagerModules.nixvim
-          ];
-	  extraSpecialArgs = {inherit inputs;};
-        };
+      nixpc = lib.nixosSystem {
+        inherit system;
+        modules = [
+          ./configuration.nix
+          ./hosts/pc/configuration.nix
+          stylix.nixosModules.stylix
+        ];
       };
     };
+    homeConfigurations = {
+      laptop = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        modules = [
+          ./home.nix
+          ./hosts/laptop/home.nix
+          stylix.homeManagerModules.stylix
+          nvf.homeManagerModules.default
+          nixvim.homeManagerModules.nixvim
+        ];
+        extraSpecialArgs = {inherit inputs;};
+      };
+      pc = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        modules = [
+          ./home.nix
+          ./hosts/pc/home.nix
+          stylix.homeManagerModules.stylix
+          nvf.homeManagerModules.default
+          nixvim.homeManagerModules.nixvim
+        ];
+        extraSpecialArgs = {inherit inputs;};
+      };
+    };
+  };
 }
