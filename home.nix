@@ -17,6 +17,7 @@
     ./modules/home/nixvim/zellij-nav.nix
     ./modules/home/nixvim/vimtex.nix
     ./modules/home/nixvim/misc.nix
+    ./modules/home/nixvim/cmp.nix
     # Other programs
     ./modules/home/btop.nix
     ./modules/home/fastfetch.nix
