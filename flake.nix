@@ -61,6 +61,7 @@
           ./hosts/pc/home.nix
           stylix.homeManagerModules.stylix
           nvf.homeManagerModules.default
+          nixvim.homeManagerModules.nixvim
         ];
       };
     };
