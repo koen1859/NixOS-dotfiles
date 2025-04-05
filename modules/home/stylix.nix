@@ -23,6 +23,7 @@ in {
     targets = {
       waybar.enable = false;
       zathura.enable = false;
+      spicetify.enable = false;
     };
   };
 }

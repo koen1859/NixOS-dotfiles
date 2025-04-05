@@ -23,7 +23,7 @@
     , nixvim
     , spicetify-nix
     , ...
-    }:
+    } @ inputs:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
@@ -57,8 +57,8 @@
             stylix.homeManagerModules.stylix
             nvf.homeManagerModules.default
             nixvim.homeManagerModules.nixvim
-	    spicetify-nix.homeManagerModules.spicetify
           ];
+	  extraSpecialArgs = {inherit inputs;};
         };
         pc = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
@@ -68,8 +68,8 @@
             stylix.homeManagerModules.stylix
             nvf.homeManagerModules.default
             nixvim.homeManagerModules.nixvim
-	    spicetify-nix.homeManagerModules.spicetify
           ];
+	  extraSpecialArgs = {inherit inputs;};
         };
       };
     };
