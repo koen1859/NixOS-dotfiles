@@ -74,14 +74,6 @@
       enable = true;
     };
 
-    nui = {
-      enable = true;
-    };
-
-    noice = {
-      enable = true;
-    };
-
     transparent = {
       enable = true;
       settings = {

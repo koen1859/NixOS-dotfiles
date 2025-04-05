@@ -14,7 +14,7 @@
     ./modules/home/nixvim/lsp.nix
     ./modules/home/nixvim/keymaps.nix
     ./modules/home/nixvim/luasnip.nix
-    ./modules/home/nixvim/preview.nix
+    ./modules/home/nixvim/zellij-nav.nix
     # Other programs
     ./modules/home/btop.nix
     ./modules/home/fastfetch.nix
