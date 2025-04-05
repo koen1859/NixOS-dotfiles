@@ -1,4 +1,4 @@
-{...}: {
+{ ... }: {
   imports = [
     ./modules/home/hypr/hyprland.nix
     ./modules/home/hypr/animations.nix
@@ -13,6 +13,8 @@
     ./modules/home/nixvim/syntax_hl.nix
     ./modules/home/nixvim/lsp.nix
     ./modules/home/nixvim/keymaps.nix
+    ./modules/home/nixvim/luasnip.nix
+    ./modules/home/nixvim/preview.nix
     # Other programs
     ./modules/home/btop.nix
     ./modules/home/fastfetch.nix
