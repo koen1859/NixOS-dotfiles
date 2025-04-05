@@ -8,6 +8,10 @@
     ./modules/home/nixvim/nixvim.nix
     ./modules/home/nixvim/ui.nix
     ./modules/home/nixvim/telescope.nix
+    ./modules/home/nixvim/formatting.nix
+    ./modules/home/nixvim/highlighting.nix
+    ./modules/home/nixvim/lsp.nix
+    ./modules/home/nixvim/keymaps.nix
     ./modules/home/btop.nix
     ./modules/home/fastfetch.nix
     ./modules/home/git.nix

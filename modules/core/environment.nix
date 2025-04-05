@@ -71,7 +71,7 @@
       microfetch
       lsd
       gimp
-      texliveTeTeX
+      ripgrep
     ];
   };
 }

@@ -7,5 +7,6 @@
       completeopt = ["menu" "menuone" "noselect"];
       termguicolors = true;
     };
+    globals.mapleader = " ";
   };
 }
