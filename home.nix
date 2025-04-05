@@ -6,6 +6,8 @@
     ./modules/home/hypr/windowrules.nix
     ./modules/home/wlogout/wlogout.nix
     ./modules/home/nixvim/nixvim.nix
+    ./modules/home/nixvim/ui.nix
+    ./modules/home/nixvim/telescope.nix
     ./modules/home/btop.nix
     ./modules/home/fastfetch.nix
     ./modules/home/git.nix
