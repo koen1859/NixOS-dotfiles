@@ -72,6 +72,7 @@
       lsd
       gimp
       ripgrep
+      ltex-ls
     ];
   };
 }

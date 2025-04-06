@@ -18,6 +18,9 @@
           checkstyle.enable = true;
         };
         formatting = {
+          bibclean = {
+            enable = true;
+          };
           alejandra.enable = true;
           stylua.enable = true;
           shfmt.enable = true;
