@@ -73,7 +73,7 @@
       gimp
       ripgrep
       ltex-ls
-      discord
+      vesktop
     ];
   };
 }
