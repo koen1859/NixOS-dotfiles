@@ -73,6 +73,7 @@
       gimp
       ripgrep
       ltex-ls
+      discord
     ];
   };
 }

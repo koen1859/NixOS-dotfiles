@@ -3,16 +3,30 @@
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
-    stylix.url = "github:danth/stylix";
-    stylix.inputs.nixpkgs.follows = "nixpkgs";
-    nvf.url = "github:notashelf/nvf";
-    nvf.inputs.nixpkgs.follows = "nixpkgs";
-    home-manager.url = "github:nix-community/home-manager/master";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    nixvim.url = "github:nix-community/nixvim";
-    nixvim.inputs.nixpkgs.follows = "nixpkgs";
-    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
-    spicetify-nix.inputs.nixpkgs.follows = "nixpkgs";
+    stylix = {
+      url = "github:danth/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    nvf = {
+      url = "github:notashelf/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    home-manager = {
+      url = "github:nix-community/home-manager/master";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    spicetify-nix = {
+      url = "github:Gerg-L/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    nixcord = {
+      url = "github:kaylorben/nixcord";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -22,6 +36,7 @@
     nvf,
     nixvim,
     spicetify-nix,
+    nixcord,
     ...
   } @ inputs: let
     lib = nixpkgs.lib;
@@ -55,6 +70,7 @@
           stylix.homeManagerModules.stylix
           nvf.homeManagerModules.default
           nixvim.homeManagerModules.nixvim
+          nixcord.homeManagerModules.nixcord
         ];
         extraSpecialArgs = {inherit inputs;};
       };
@@ -66,6 +82,7 @@
           stylix.homeManagerModules.stylix
           nvf.homeManagerModules.default
           nixvim.homeManagerModules.nixvim
+          nixcord.homeManagerModules.nixcord
         ];
         extraSpecialArgs = {inherit inputs;};
       };
