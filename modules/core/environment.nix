@@ -74,6 +74,7 @@
       ripgrep
       ltex-ls
       vesktop
+      brave
     ];
   };
 }
