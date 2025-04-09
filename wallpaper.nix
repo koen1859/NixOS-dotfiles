@@ -1,3 +1,3 @@
 {
-  wallpaper = ./Wallpapers/Courtside-Sunset.png;
+  wallpaper = ./Wallpapers/Forest.png;
 }
