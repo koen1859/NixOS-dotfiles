@@ -19,6 +19,7 @@
     ./modules/home/nixvim/misc.nix
     ./modules/home/nixvim/cmp.nix
     ./modules/home/nixvim/git.nix
+    ./modules/home/nixvim/neorg.nix
     # Other programs
     ./modules/home/btop.nix
     ./modules/home/fastfetch.nix
