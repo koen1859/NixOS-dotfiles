@@ -75,6 +75,9 @@
       ltex-ls
       vesktop
       brave
+      entr
+      pandoc
+      texliveFull
     ];
   };
 }

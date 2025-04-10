@@ -2,8 +2,14 @@
   programs.nixvim = {
     keymaps = [
       {
+        key = "<leader>c";
+        mode = ["n"];
+        options.silent = true;
+        action = ":w<CR>:!ls % | entr -n bash ~/.dotfiles/modules/home/nixvim/build-pandoc.sh % &<CR>";
+      }
+      {
         key = "gd";
-        mode = [ "n" ];
+        mode = ["n"];
         action = "<cmd>Telescope lsp_definitions<CR>";
       }
       {
@@ -14,37 +20,37 @@
       }
       {
         key = "<leader>u";
-        mode = [ "n" ];
+        mode = ["n"];
         action = ":UndotreeToggle<cr>";
       }
       {
         key = "<C-k>";
-        mode = [ "n" ];
+        mode = ["n"];
         action = "<cmd>ZellijNavigateUp<cr>";
       }
       {
         key = "<C-j>";
-        mode = [ "n" ];
+        mode = ["n"];
         action = "<cmd>ZellijNavigateDown<cr>";
       }
       {
         key = "<C-h>";
-        mode = [ "n" ];
+        mode = ["n"];
         action = "<cmd>ZellijNavigateLeft<cr>";
       }
       {
         key = "<C-l>";
-        mode = [ "n" ];
+        mode = ["n"];
         action = "<cmd>ZellijNavigateRight<cr>";
       }
       {
         key = "<leader>nh";
-        mode = [ "n" ];
+        mode = ["n"];
         action = ":nohl<CR>";
       }
       {
         key = "<C-q>";
-        mode = [ "n" ];
+        mode = ["n"];
         action = ":bdelete!<CR>";
       }
     ];
