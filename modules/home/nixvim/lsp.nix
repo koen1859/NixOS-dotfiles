@@ -15,7 +15,10 @@
           settings.telemetry.enable = false;
         };
 	ltex.enable = true;
-	texlab.enable = true;
+	texlab = {
+	  enable = true;
+	  filetypes = ["org"];
+	};
       };
     };
 
