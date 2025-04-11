@@ -41,6 +41,7 @@
     ./modules/home/zellij.nix
     ./modules/home/librewolf.nix
     ./modules/home/spicetify.nix
+    ./modules/home/tex/bibliography.nix
   ];
 
   home = {
