@@ -39,14 +39,11 @@
       brightnessctl
       R
       blueman
-      osmium-tool
       postgresql_17
       postgresql17Packages.postgis
-      osm2pgsql
       bibata-cursors
       papirus-icon-theme
       openvpn
-      (pkgs.callPackage ./lkh.nix {})
       btop
       nix-ld
       glibc
