@@ -5,7 +5,7 @@
 }: {
   imports = [
     ./hardware.nix
-    ../../modules/core/virtualisation.nix
+    # ../../modules/core/virtualisation.nix
   ];
   networking.hostName = "nixpc";
 
