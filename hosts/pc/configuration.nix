@@ -15,11 +15,11 @@
     vulkan-loader
     vulkan-tools
     heroic
-    ollama-cuda
-    (alpaca.override
-      {
-        ollama = ollama-cuda;
-      })
+    # ollama-cuda
+    # (alpaca.override
+    #   {
+    #     ollama = ollama-cuda;
+    #   })
     mangohud
     prismlauncher
   ];
