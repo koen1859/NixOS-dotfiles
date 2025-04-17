@@ -3,7 +3,7 @@
     defaultUserShell = pkgs.bash;
     users.koenstevens = {
       isNormalUser = true;
-      extraGroups = ["wheel"];
+      extraGroups = ["wheel" "libvirtd"];
       packages = with pkgs; [
         tree
       ];
