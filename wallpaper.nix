@@ -1,3 +1,3 @@
 {
-  wallpaper = ./Wallpapers/a_blue_and_orange_background.jpg;
+  wallpaper = ./Wallpapers/train_tracks_in_a_forest.jpg;
 }
