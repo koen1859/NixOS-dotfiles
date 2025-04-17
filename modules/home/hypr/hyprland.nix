@@ -28,7 +28,7 @@
         layout = "dwindle";
         gaps_in = 2;
         gaps_out = 2;
-        border_size = 0;
+        border_size = 1;
         resize_on_border = false;
         allow_tearing = false;
       };
@@ -49,14 +49,23 @@
         inactive_opacity = 0.7;
         shadow = {
           enabled = true;
-          range = 4;
-          render_power = 3;
+          ignore_window = true;
+          range = 20;
+          offset = "0 2";
+          render_power = 4;
         };
         blur = {
           enabled = true;
-          size = 5;
-          passes = 3;
-          vibrancy = 0.1696;
+          xray = true;
+          special = false;
+          new_optimizations = true;
+          size = 14;
+          passes = 4;
+          # vibrancy = 0.1696;
+          brightness = 1;
+          noise = 0.01;
+          popups = true;
+          popups_ignorealpha = 0.6;
         };
       };
       env = [
