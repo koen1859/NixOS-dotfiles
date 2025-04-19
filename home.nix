@@ -42,6 +42,7 @@
     ./modules/home/librewolf.nix
     ./modules/home/spicetify.nix
     ./modules/home/tex/bibliography.nix
+    ./modules/home/zen.nix
   ];
 
   home = {

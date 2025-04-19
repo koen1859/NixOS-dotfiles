@@ -27,6 +27,10 @@
       url = "github:kaylorben/nixcord";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    zen-browser = {
+      url = "github:0xc000022070/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -37,6 +41,7 @@
     nixvim,
     spicetify-nix,
     nixcord,
+    zen-browser,
     ...
   } @ inputs: let
     lib = nixpkgs.lib;
@@ -71,6 +76,7 @@
           nvf.homeManagerModules.default
           nixvim.homeManagerModules.nixvim
           nixcord.homeManagerModules.nixcord
+          zen-browser.homeManagerModules.zen-browser
         ];
         extraSpecialArgs = {inherit inputs;};
       };
