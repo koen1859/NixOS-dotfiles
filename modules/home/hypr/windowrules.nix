@@ -3,8 +3,6 @@ _: {
     settings = {
       windowrulev2 = [
         "suppressevent maximize, class:.*"
-        "opacity 0.90 0.70,class:^(firefox)"
-        "opacity 0.90 0.70,class:^(brave-browser)$"
         "opacity 1.00 0.70,class:^(kitty)"
       ];
       layerrule = [

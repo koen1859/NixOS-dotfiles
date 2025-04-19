@@ -27,6 +27,10 @@
       url = "github:kaylorben/nixcord";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-doom-emacs-unstraightened = {
+      url = "github:marienz/nix-doom-emacs-unstraightened";
+      inputs.nixpkgs.follows = "";
+    };
   };
 
   outputs = {
@@ -71,6 +75,7 @@
           nvf.homeManagerModules.default
           nixvim.homeManagerModules.nixvim
           nixcord.homeManagerModules.nixcord
+          inputs.nix-doom-emacs-unstraightened.homeModule
         ];
         extraSpecialArgs = {inherit inputs;};
       };
@@ -83,6 +88,7 @@
           nvf.homeManagerModules.default
           nixvim.homeManagerModules.nixvim
           nixcord.homeManagerModules.nixcord
+          inputs.nix-doom-emacs-unstraightened.homeModule
         ];
         extraSpecialArgs = {inherit inputs;};
       };
