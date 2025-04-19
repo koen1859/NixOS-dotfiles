@@ -27,6 +27,12 @@
         action = ":lua vim.diagnostic.config({ virtual_text = not vim.diagnostic.config().virtual_text })<CR>";
       }
       {
+        key = "<leader><C-c>";
+        mode = ["n"];
+        options.silent = true;
+        action = ":w<CR>:!ls % | entr -n bash ~/.dotfiles/modules/home/nixvim/build-pandoc-simple.sh % &<CR>";
+      }
+      {
         key = "<leader>c";
         mode = ["n"];
         options.silent = true;
