@@ -69,7 +69,6 @@
   };
 
   boot = {
-    kernelPackages = pkgs.linuxPackages;
     initrd.kernelModules = ["nvidia"];
     kernelModules = ["nvidia" "nvidia_modeset" "nvidia_uvm" "nvidia_drm"];
     extraModulePackages = [config.boot.kernelPackages.nvidiaPackages.latest];

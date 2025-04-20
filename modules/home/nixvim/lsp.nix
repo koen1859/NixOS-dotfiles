@@ -6,7 +6,10 @@
         cssls.enable = true; # CSS
         html.enable = true; # HTML
         pyright.enable = true; # Python
-        marksman.enable = true; # Markdown
+        marksman = {
+	  enable = true; # Markdown
+	  filetypes = ["org"];
+	};
         nixd.enable = true; # Nix
         bashls.enable = true; # Bash
         yamlls.enable = true; # YAML

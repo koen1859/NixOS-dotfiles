@@ -75,6 +75,7 @@
       entr
       pandoc
       texliveFull
+      networkmanager-openvpn
     ];
   };
 }
