@@ -14,11 +14,11 @@
           enable = true;
           settings.telemetry.enable = false;
         };
-	ltex.enable = true;
-	texlab = {
-	  enable = true;
-	  filetypes = ["org"];
-	};
+        ltex.enable = true;
+        texlab = {
+          enable = true;
+          filetypes = ["org"];
+        };
       };
     };
 

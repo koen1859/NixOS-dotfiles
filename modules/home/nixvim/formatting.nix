@@ -50,7 +50,7 @@
         };
         completion = {
           luasnip.enable = true;
-          spell.enable = true;
+          # spell.enable = true;
         };
       };
     };
@@ -58,17 +58,17 @@
     lint = {
       enable = true;
       lintersByFt = {
-        text = ["vale"];
-        eslint = ["eslint"];
+        # text = ["vale"];
+        # eslint = ["eslint"];
         json = ["jsonlint"];
-        markdown = ["vale"];
-        rst = ["vale"];
-        ruby = ["ruby"];
-        janet = ["janet"];
-        inko = ["inko"];
-        clojure = ["clj-kondo"];
-        dockerfile = ["hadolint"];
-        terraform = ["tflint"];
+        # markdown = ["vale"];
+        # rst = ["vale"];
+        # ruby = ["ruby"];
+        # janet = ["janet"];
+        # inko = ["inko"];
+        # clojure = ["clj-kondo"];
+        # dockerfile = ["hadolint"];
+        # terraform = ["tflint"];
       };
     };
 

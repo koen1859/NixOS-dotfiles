@@ -41,7 +41,6 @@
     nixvim,
     spicetify-nix,
     nixcord,
-    zen-browser,
     ...
   } @ inputs: let
     lib = nixpkgs.lib;
@@ -76,7 +75,6 @@
           nvf.homeManagerModules.default
           nixvim.homeManagerModules.nixvim
           nixcord.homeManagerModules.nixcord
-          zen-browser.homeManagerModules.zen-browser
         ];
         extraSpecialArgs = {inherit inputs;};
       };
