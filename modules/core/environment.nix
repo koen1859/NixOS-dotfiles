@@ -75,6 +75,8 @@
       entr
       pandoc
       texliveFull
+      protonvpn-gui
+      protonvpn-cli
     ];
   };
 }
