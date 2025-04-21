@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+_: {
   programs.nixvim.plugins = {
     none-ls = {
       enable = true;
@@ -58,17 +58,17 @@
     lint = {
       enable = true;
       lintersByFt = {
-        # text = ["vale"];
-        # eslint = ["eslint"];
+        text = ["vale"];
+        eslint = ["eslint"];
         json = ["jsonlint"];
-        # markdown = ["vale"];
-        # rst = ["vale"];
-        # ruby = ["ruby"];
-        # janet = ["janet"];
-        # inko = ["inko"];
-        # clojure = ["clj-kondo"];
-        # dockerfile = ["hadolint"];
-        # terraform = ["tflint"];
+        markdown = ["vale"];
+        rst = ["vale"];
+        ruby = ["ruby"];
+        janet = ["janet"];
+        inko = ["inko"];
+        clojure = ["clj-kondo"];
+        dockerfile = ["hadolint"];
+        terraform = ["tflint"];
       };
     };
 

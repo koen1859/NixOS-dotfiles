@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+_: {
   programs.nixvim.plugins = {
     lsp = {
       enable = true;
@@ -7,9 +7,8 @@
         html.enable = true; # HTML
         pyright.enable = true; # Python
         marksman = {
-	  enable = true; # Markdown
-	  filetypes = ["org"];
-	};
+          enable = true; # Markdown
+        };
         nixd.enable = true; # Nix
         bashls.enable = true; # Bash
         yamlls.enable = true; # YAML
@@ -20,7 +19,6 @@
         ltex.enable = true;
         texlab = {
           enable = true;
-          filetypes = ["org"];
         };
       };
     };
