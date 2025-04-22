@@ -70,4 +70,4 @@ cat <<EOL >"$FILENAME"
 EOL
 
 notify-send "LaTeX file '$FILENAME' created."
-v $FILENAME
+nvim $FILENAME
