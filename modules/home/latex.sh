@@ -69,4 +69,5 @@ cat <<EOL >"$FILENAME"
 \\end{document}
 EOL
 
-echo "LaTeX file '$FILENAME' created."
+notify-send "LaTeX file '$FILENAME' created."
+v $FILENAME
