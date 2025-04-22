@@ -24,6 +24,7 @@ in {
       waybar.enable = false;
       zathura.enable = false;
       spicetify.enable = false;
+      hyprlock.enable = false;
     };
   };
 }
