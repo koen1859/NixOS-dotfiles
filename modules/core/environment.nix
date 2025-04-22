@@ -8,6 +8,7 @@
       vim
       wget
       hyprland
+      hyprlock
       xfce.thunar
       hyprshot
       waybar

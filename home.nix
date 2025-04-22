@@ -4,6 +4,7 @@
     ./modules/home/hypr/animations.nix
     ./modules/home/hypr/keybindings.nix
     ./modules/home/hypr/windowrules.nix
+    ./modules/home/hypr/hyprlock.nix
     ./modules/home/wlogout/wlogout.nix
     # Nixvim modules
     ./modules/home/nixvim/nixvim.nix
