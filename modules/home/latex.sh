@@ -31,6 +31,21 @@ cat <<EOL >"$FILENAME"
 \\usepackage{bm}
 \\usepackage{graphicx}
 \\usepackage{subfig}
+\usepackage{listings}
+\usepackage{xcolor}
+\\usepackage{bbm}
+\\lstdefinestyle{python}{
+    language=Python,
+    backgroundcolor=\color{gray!10},
+    keywordstyle=\color{blue}\bfseries,
+    commentstyle=\color{gray}\itshape,
+    stringstyle=\color{olive},
+    basicstyle=\ttfamily\small,
+    showstringspaces=false,
+    frame=single,
+    breaklines=true
+}
+
 
 \\setlength{\parindent}{0pt}     % No paragraph indentation
 \\setlength{\parskip}{1em}       % Add vertical space between paragraphs
