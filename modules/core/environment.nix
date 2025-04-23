@@ -75,6 +75,7 @@
       brave
       entr
       pandoc
+      texliveFull
       networkmanager-openvpn
     ];
   };
