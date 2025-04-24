@@ -49,7 +49,7 @@
     username = "koenstevens";
     homeDirectory = "/home/koenstevens";
     sessionVariables = {
-      TEXMFHOME = "/home/koenstevens/.dotfiles/modules/home/nixvim/texmf";
+      TEXMFHOME = "~/.texmf/";
     };
     stateVersion = "24.11";
   };

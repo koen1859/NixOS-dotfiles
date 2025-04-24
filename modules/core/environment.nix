@@ -3,7 +3,7 @@
     shells = with pkgs; [bash];
     sessionVariables = {
       nixos_ozone_wl = "1";
-      TEXMFHOME = "/home/koenstevens/.dotfiles/modules/home/nixvim/texmf";
+      TEXMFHOME = "~/.texmf";
     };
     systemPackages = with pkgs; [
       vim
