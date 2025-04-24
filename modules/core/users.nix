@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   users = {
-    defaultUserShell = pkgs.bash;
+    defaultUserShell = pkgs.zsh;
     users.koenstevens = {
       isNormalUser = true;
       extraGroups = ["wheel" "libvirtd"];

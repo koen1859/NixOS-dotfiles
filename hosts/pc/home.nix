@@ -21,4 +21,7 @@ _: {
   programs.bash.shellAliases = {
     reconfig = "home-manager switch --flake ~/.dotfiles#pc";
   };
+  programs.zsh.shellAliases = {
+    reconfig = "home-manager switch --flake ~/.dotfiles#pc";
+  };
 }

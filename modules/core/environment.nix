@@ -1,6 +1,9 @@
 {pkgs, ...}: {
   environment = {
-    shells = with pkgs; [bash];
+    shells = with pkgs; [
+      bash
+      zsh
+    ];
     sessionVariables = {
       nixos_ozone_wl = "1";
       TEXMFHOME = "~/.texmf";
