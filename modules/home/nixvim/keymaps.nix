@@ -33,17 +33,6 @@
         action = ":w<CR>:!ls % | entr -n bash ~/.dotfiles/modules/home/nixvim/build-pandoc-simple.sh % &<CR>";
       }
       {
-        key = "<leader>c";
-        mode = ["n"];
-        options.silent = true;
-        action = ":w<CR>:!ls % | entr -n bash ~/.dotfiles/modules/home/nixvim/build-pandoc.sh % &<CR>";
-      }
-      {
-        key = "<leader><S-y>";
-        mode = ["n" "v"];
-        action = "\"+Y";
-      }
-      {
         key = "<leader>y";
         mode = ["n" "v"];
         action = "\"+y";

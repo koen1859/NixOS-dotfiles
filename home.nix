@@ -21,7 +21,6 @@
     ./modules/home/nixvim/cmp.nix
     ./modules/home/nixvim/git.nix
     ./modules/home/nixvim/neorg.nix
-    ./modules/home/nixvim/orgmode.nix
     # Other programs
     ./modules/home/btop.nix
     ./modules/home/fastfetch.nix

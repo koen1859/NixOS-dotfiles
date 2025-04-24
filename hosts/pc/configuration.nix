@@ -10,18 +10,21 @@
   networking.hostName = "nixpc";
 
   environment.systemPackages = with pkgs; [
+    # Gaming
     steam
     gamescope
     vulkan-loader
     vulkan-tools
     heroic
+    mangohud
+    prismlauncher
+
+    # LLM
     # ollama-cuda
     # (alpaca.override
     #   {
     #     ollama = ollama-cuda;
     #   })
-    mangohud
-    prismlauncher
   ];
 
   programs = {

@@ -3,8 +3,6 @@ _: {
     lsp = {
       enable = true;
       servers = {
-        cssls.enable = true; # CSS
-        html.enable = true; # HTML
         pyright.enable = true; # Python
         marksman = {
           enable = true; # Markdown

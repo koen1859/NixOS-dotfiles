@@ -22,15 +22,7 @@ _: {
             enable = true;
           };
           alejandra.enable = true;
-          stylua.enable = true;
           shfmt.enable = true;
-          prettier = {
-            enable = true;
-            disableTsServerFormatter = true;
-            settings = {
-              extra_filetypes = ["vue"];
-            };
-          };
           black = {
             enable = true;
             settings = ''
@@ -39,18 +31,10 @@ _: {
               }
             '';
           };
-          xmllint = {
-            enable = true;
-            settings = {
-              extra_filetypes = [
-                "svg"
-              ];
-            };
-          };
         };
         completion = {
           luasnip.enable = true;
-          # spell.enable = true;
+          spell.enable = true;
         };
       };
     };
@@ -59,16 +43,9 @@ _: {
       enable = true;
       lintersByFt = {
         text = ["vale"];
-        eslint = ["eslint"];
         json = ["jsonlint"];
         markdown = ["vale"];
-        rst = ["vale"];
-        ruby = ["ruby"];
-        janet = ["janet"];
-        inko = ["inko"];
-        clojure = ["clj-kondo"];
-        dockerfile = ["hadolint"];
-        terraform = ["tflint"];
+	ruff = ["ruff"];
       };
     };
 
