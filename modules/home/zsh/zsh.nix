@@ -27,6 +27,7 @@
     ];
 
     initContent = ''
+      microfetch
     '';
 
     shellAliases = {
