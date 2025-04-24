@@ -33,6 +33,7 @@
     # ./modules/home/nvf.nix
     ./modules/home/qt.nix
     ./modules/home/shell.nix
+    ./modules/home/zsh/zsh.nix
     ./modules/home/starship.nix
     ./modules/home/stylix.nix
     ./modules/home/swaync.nix

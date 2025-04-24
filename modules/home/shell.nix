@@ -24,9 +24,7 @@
       };
 
       initExtra = ''
-               PS1='[\u@\h \W]\$ '
-               # source ~/.local/share/blesh/ble.sh
-        # source ${pkgs.blesh}/share/blesh/ble.sh
+        source ~/.local/share/blesh/ble.sh
       '';
     };
 
