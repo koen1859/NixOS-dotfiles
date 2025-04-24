@@ -25,6 +25,7 @@
       starship
       git
       atuin
+      blesh
       neovim
       lua
       fd

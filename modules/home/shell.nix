@@ -1,4 +1,4 @@
-_: {
+{pkgs, ...}: {
   home.sessionVariables = {
     EDITOR = "nvim";
     XDG_CONFIG_HOME = "$HOME/.config";
@@ -24,8 +24,9 @@ _: {
       };
 
       initExtra = ''
-        PS1='[\u@\h \W]\$ '
-        source ~/.local/share/blesh/ble.sh
+               PS1='[\u@\h \W]\$ '
+               # source ~/.local/share/blesh/ble.sh
+        # source ${pkgs.blesh}/share/blesh/ble.sh
       '';
     };
 

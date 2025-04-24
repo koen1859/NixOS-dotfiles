@@ -10,6 +10,7 @@ _: {
     ./modules/core/misc.nix
     ./modules/core/stylix.nix
     ./modules/core/network.nix
+    ./modules/core/shell.nix
   ];
 
   nixpkgs.config = {
