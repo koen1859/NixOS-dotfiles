@@ -10,14 +10,15 @@ _: {
     ./modules/core/misc.nix
     ./modules/core/stylix.nix
     ./modules/core/network.nix
+    ./modules/core/nixpkgs.nix
   ];
 
-  nixpkgs.config = {
-    packageOverrides = pkgs: {
-      unstable = import <nixos-unstable> {};
-    };
-    allowUnfree = true;
-  };
+  # nixpkgs.config = {
+  #   packageOverrides = pkgs: {
+  #     unstable = import <nixos-unstable> {};
+  #   };
+  #   allowUnfree = true;
+  # };
 
   system.stateVersion = "24.11";
 
@@ -32,6 +33,4 @@ _: {
       options = "--delete-older-than 7d";
     };
   };
-
-  programs.nix-ld.enable = true;
 }

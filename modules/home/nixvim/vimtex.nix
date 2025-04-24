@@ -2,11 +2,12 @@
   programs.nixvim.plugins = {
     vimtex = {
       enable = true;
-      texlivePackage = pkgs.texliveFull.withPackages (ps:
+      texlivePackage = pkgs.texliveSmall.withPackages (ps:
         with ps; [
-          bbm
           latexmk
           amsmath
+	  marvosym
+          bbm-macros
         ]);
     };
   };

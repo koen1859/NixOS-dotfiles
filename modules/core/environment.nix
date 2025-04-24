@@ -9,79 +9,85 @@
       TEXMFHOME = "~/.texmf";
     };
     systemPackages = with pkgs; [
-      vim
-      wget
-      hyprland
-      hyprlock
-      xfce.thunar
-      hyprshot
-      waybar
-      kitty
-      swaynotificationcenter
-      wl-clipboard
-      networkmanagerapplet
-      firefox
-      zathura
-      fastfetch
-      rclone
-      yazi
-      starship
-      git
-      atuin
-      blesh
-      neovim
-      lua
-      fd
-      python3
+      # Core packages
       cmake
       gnumake
       unzip
-      nodejs_20.out
-      fzf
-      imagemagick
+      wget
+      hyprland
+      kitty
+      wl-clipboard
+      git
       gcc
-      wlogout
-      bitwarden-desktop
       brightnessctl
-      R
       blueman
-      postgresql_17
-      postgresql17Packages.postgis
-      bibata-cursors
-      papirus-icon-theme
-      openvpn
-      btop
       nix-ld
       glibc
+      greetd.tuigreet
+
+      # File managers
+      fzf
+      yazi
+      fd
+      xfce.thunar
+      flatpak
+
+      # Some utilities
+      wofi
+      hyprlock
+      hyprshot
+      wlogout
+      waybar
+      swaynotificationcenter
+      networkmanagerapplet
+      fastfetch
+      onefetch
+      microfetch
+      timg
+      rclone
+      starship
+      atuin
+      imagemagick
+      btop
       htop
+      openvpn
       libnotify
       pavucontrol
-      greetd.tuigreet
+      speedtest-cli
+      lsd
+      ripgrep
+      zellij
+      yq
+      entr
+      pandoc
+
+      # Browsers
+      firefox
+      librewolf
+      brave
+
+      # Applications
+      zathura
+      bitwarden-desktop
       spotify
       spicetify-cli
       obs-studio
-      onefetch
-      timg
-      flatpak
-      plocate
       vlc
-      speedtest-cli
-      base16-schemes
-      wofi
-      yq
-      zellij
-      librewolf
-      microfetch
-      lsd
       gimp
-      ripgrep
-      ltex-ls
       vesktop
-      brave
-      entr
-      pandoc
-      texliveFull
-      networkmanager-openvpn
+
+      # Programming languages / database / LSP / LaTeX
+      python3
+      R
+      postgresql_17
+      postgresql17Packages.postgis
+      ltex-ls
+      # texliveFull
+
+      # Theming
+      bibata-cursors
+      papirus-icon-theme
+      base16-schemes
     ];
   };
 }

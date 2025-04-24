@@ -30,7 +30,6 @@
     ./modules/home/htop.nix
     ./modules/home/kitty.nix
     ./modules/home/nixcord.nix
-    # ./modules/home/nvf.nix
     ./modules/home/qt.nix
     ./modules/home/bash.nix
     ./modules/home/zsh/zsh.nix
