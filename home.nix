@@ -48,7 +48,9 @@
   home = {
     username = "koenstevens";
     homeDirectory = "/home/koenstevens";
-
+    sessionVariables = {
+      TEXMFHOME = "/home/koenstevens/.dotfiles/modules/home/nixvim/texmf";
+    };
     stateVersion = "24.11";
   };
   programs.home-manager.enable = true;
