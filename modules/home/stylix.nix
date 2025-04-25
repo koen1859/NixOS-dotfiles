@@ -12,7 +12,7 @@ in {
   stylix = {
     enable = true;
     image = wallpaper;
-    base16Scheme = theme;
+    # base16Scheme = theme;
     polarity = "dark";
     cursor = {
       package = pkgs.bibata-cursors;
