@@ -4,7 +4,7 @@ in {
   boot = {
     loader = {
       grub = {
-        enable = true;
+        enable = false;
         efiSupport = true;
         device = "nodev";
         useOSProber = true;
@@ -12,7 +12,7 @@ in {
       };
 
       limine = {
-        enable = false;
+        enable = true;
         maxGenerations = 5;
         style = {
           wallpapers = [wallpaper];
