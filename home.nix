@@ -42,7 +42,6 @@
     ./modules/home/librewolf.nix
     ./modules/home/spicetify.nix
     ./modules/home/zen.nix
-    ./modules/home/yazi
   ];
 
   home = {
