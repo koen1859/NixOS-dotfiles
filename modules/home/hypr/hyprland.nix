@@ -46,7 +46,7 @@
       decoration = {
         rounding = 5;
         active_opacity = 1.0;
-        inactive_opacity = 0.7;
+        inactive_opacity = 1.0;
         shadow = {
           enabled = true;
           ignore_window = true;
