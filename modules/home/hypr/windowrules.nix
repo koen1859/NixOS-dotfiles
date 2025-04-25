@@ -3,7 +3,7 @@ _: {
     settings = {
       windowrulev2 = [
         "suppressevent maximize, class:.*"
-        "opacity 1.00 0.70,class:^(kitty)"
+        # "opacity 1.00 0.70,class:^(kitty)"
       ];
       layerrule = [
         "blur, wofi"
