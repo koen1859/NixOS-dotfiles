@@ -23,7 +23,7 @@
     ./modules/home/nixvim/neorg.nix
     # Other programs
     ./modules/home/btop.nix
-    ./modules/home/fastfetch.nix
+    ./modules/home/fastfetch
     ./modules/home/git.nix
     ./modules/home/gtk.nix
     ./modules/home/htop.nix
