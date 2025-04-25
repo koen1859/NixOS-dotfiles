@@ -1,13 +1,34 @@
-{pkgs, ...}: {
+{pkgs, ...}: let
+  inherit (import ../../wallpaper.nix) wallpaper;
+in {
   boot = {
     loader = {
-      systemd-boot = {
+      grub = {
         enable = true;
+        efiSupport = true;
+        device = "nodev";
+        useOSProber = true;
+        gfxmodeEfi = "1920x1080";
+      };
+
+      limine = {
+        enable = false;
+        maxGenerations = 5;
+        style = {
+          wallpapers = [wallpaper];
+          interface.resolution = "1920x1080";
+        };
+      };
+
+      systemd-boot = {
+        enable = false;
         configurationLimit = 5;
+        consoleMode = "max";
       };
       timeout = 30;
       efi.canTouchEfiVariables = true;
     };
     kernelPackages = pkgs.linuxPackages_latest;
+    kernelParams = ["quit" "splash"];
   };
 }
