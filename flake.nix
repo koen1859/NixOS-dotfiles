@@ -74,7 +74,7 @@
           stylix.homeManagerModules.stylix
           nvf.homeManagerModules.default
           nixvim.homeManagerModules.nixvim
-          nixcord.homeManagerModules.nixcord
+          nixcord.homeModules.nixcord
         ];
         extraSpecialArgs = {inherit inputs;};
       };
@@ -86,7 +86,7 @@
           stylix.homeManagerModules.stylix
           nvf.homeManagerModules.default
           nixvim.homeManagerModules.nixvim
-          nixcord.homeManagerModules.nixcord
+          nixcord.homeModules.nixcord
         ];
         extraSpecialArgs = {inherit inputs;};
       };

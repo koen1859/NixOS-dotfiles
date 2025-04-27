@@ -35,5 +35,9 @@
       report = 9001; # disable "x more/fewer lines" messages
     };
     globals.mapleader = " ";
+    dependencies = {
+      chafa.enable = true;
+      imagemagick.enable = true;
+    };
   };
 }
