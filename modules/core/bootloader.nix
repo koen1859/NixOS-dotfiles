@@ -27,6 +27,7 @@ in {
       };
       timeout = 30;
       efi.canTouchEfiVariables = true;
+      efi.efiSysMountPoint = "/boot";
     };
     kernelPackages = pkgs.linuxPackages_latest;
     kernelParams = ["quit" "splash"];
