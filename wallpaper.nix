@@ -1,3 +1,3 @@
 {
-  wallpaper = ./Wallpapers/wp12764961-ultra-wide-3440x1440-wallpapers.png;
+  wallpaper = ./Wallpapers/wp13654814-3440x1440-nature-wallpapers.png;
 }
