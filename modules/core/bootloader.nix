@@ -12,7 +12,7 @@ in {
       };
 
       limine = {
-        enable = true;
+        enable = false;
         maxGenerations = 5;
         style = {
           wallpapers = [wallpaper];
@@ -21,7 +21,7 @@ in {
       };
 
       systemd-boot = {
-        enable = false;
+        enable = true;
         configurationLimit = 5;
         consoleMode = "max";
       };
