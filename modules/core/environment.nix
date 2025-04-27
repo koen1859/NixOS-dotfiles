@@ -60,6 +60,7 @@
       yq
       entr
       pandoc
+      feh
 
       # Browsers
       firefox

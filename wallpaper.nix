@@ -1,3 +1,3 @@
 {
-  wallpaper = ./Wallpapers/a_lake_with_trees_and_clouds.png;
+  wallpaper = ./Wallpapers/wp12764961-ultra-wide-3440x1440-wallpapers.png;
 }
