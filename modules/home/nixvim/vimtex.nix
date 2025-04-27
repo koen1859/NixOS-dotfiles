@@ -8,6 +8,7 @@
           amsmath
 	  marvosym
           bbm-macros
+	  minted
         ]);
     };
   };
