@@ -9,6 +9,7 @@
 	  marvosym
           bbm-macros
 	  minted
+	  texcount
         ]);
     };
   };
