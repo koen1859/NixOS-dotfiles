@@ -5,7 +5,7 @@
     xwayland.enable = true;
     settings = {
       exec-once = [
-        "waybar"
+        # "waybar"
         # "rclone --vfs-cache-mode writes mount OneDrive: ~/OneDrive/ &"
       ];
       input = {
