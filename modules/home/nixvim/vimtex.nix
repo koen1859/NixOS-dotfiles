@@ -10,6 +10,7 @@
           bbm-macros
 	  minted
 	  texcount
+	  tocbibind
         ]);
     };
   };
