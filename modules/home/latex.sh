@@ -11,6 +11,9 @@ if [ -f "$FILENAME" ]; then
 	fi
 fi
 
+echo "Title: "
+read TITLE
+
 mkdir setup
 mkdir sections
 
@@ -102,7 +105,7 @@ cat <<EOL >"setup/headers.tex"
 EOL
 
 cat <<EOL >>"setup/title.tex"
-\\title{}
+\\title{$TITLE}
 \\author{Koen Stevens}
 \\date{\today}
 \\begin{document}

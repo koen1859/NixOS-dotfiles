@@ -46,7 +46,7 @@
       ga = "git add -A";
       gc = "git commit";
       rebuild = "sudo nixos-rebuild switch --flake ~/.dotfiles";
-      latex = "bash ~/.dotfiles/modules/home/latex.sh";
+      # latex = "bash ~/.dotfiles/modules/home/latex.sh";
     };
   };
 }

@@ -1,4 +1,4 @@
-{...}: {
+{pkgs, ...}: {
   imports = [
     ./modules/home/hypr/hyprland.nix
     ./modules/home/hypr/animations.nix
@@ -51,6 +51,9 @@
       TEXMFHOME = "~/.texmf/";
     };
     stateVersion = "24.11";
+    packages = [
+      (import ./modules/home/latex.nix {inherit pkgs;})
+    ];
   };
   programs.home-manager.enable = true;
   nixpkgs.config.allowUnfree = true;
