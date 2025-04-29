@@ -1,5 +1,5 @@
 {pkgs, ...}:
-pkgs.writeShellsScriptBin "latex" ''
+pkgs.writeShellScriptBin "latex" ''
   FILENAME="main.tex"
 
   if [ -f "$FILENAME" ]; then
