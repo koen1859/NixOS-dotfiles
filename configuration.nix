@@ -11,26 +11,9 @@ _: {
     ./modules/core/stylix.nix
     ./modules/core/network.nix
     ./modules/core/nixpkgs.nix
+    ./modules/core/nix.nix
   ];
-
-  # nixpkgs.config = {
-  #   packageOverrides = pkgs: {
-  #     unstable = import <nixos-unstable> {};
-  #   };
-  #   allowUnfree = true;
-  # };
 
   system.stateVersion = "24.11";
 
-  nix = {
-    settings = {
-      experimental-features = ["nix-command" "flakes"];
-      auto-optimise-store = true;
-    };
-    gc = {
-      automatic = true;
-      dates = "weekly";
-      options = "--delete-older-than 7d";
-    };
-  };
 }
