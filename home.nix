@@ -7,20 +7,7 @@
     ./modules/home/hypr/hyprlock.nix
     ./modules/home/wlogout/wlogout.nix
     # Nixvim modules
-    ./modules/home/nixvim/nixvim.nix
-    ./modules/home/nixvim/ui.nix
-    ./modules/home/nixvim/telescope.nix
-    ./modules/home/nixvim/formatting.nix
-    ./modules/home/nixvim/syntax_hl.nix
-    ./modules/home/nixvim/lsp.nix
-    ./modules/home/nixvim/keymaps.nix
-    ./modules/home/nixvim/luasnip.nix
-    ./modules/home/nixvim/zellij-nav.nix
-    ./modules/home/nixvim/vimtex.nix
-    ./modules/home/nixvim/misc.nix
-    ./modules/home/nixvim/cmp.nix
-    ./modules/home/nixvim/git.nix
-    ./modules/home/nixvim/neorg.nix
+    ./modules/home/nixvim
     # Other programs
     ./modules/home/btop.nix
     ./modules/home/fastfetch

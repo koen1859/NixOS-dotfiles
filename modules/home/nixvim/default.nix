@@ -1,4 +1,18 @@
 {lib, ...}: {
+  imports = [
+    ./ui.nix
+    ./cmp.nix
+    ./git.nix
+    ./lsp.nix
+    ./misc.nix
+    ./vimtex.nix
+    ./keymaps.nix
+    ./luasnip.nix
+    ./syntax_hl.nix
+    ./telescope.nix
+    ./formatting.nix
+    ./zellij-nav.nix
+  ];
   programs.nixvim = {
     enable = true;
     opts = {
@@ -7,6 +21,7 @@
       shiftwidth = 2;
       completeopt = ["menu" "menuone" "noselect"];
       updatetime = 100;
+      scrolloff = 10;
 
       swapfile = false; # Disable the swap file
       modeline = true; # Tags such as 'vim:ft=sh'
