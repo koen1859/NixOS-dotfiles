@@ -119,5 +119,5 @@ cat <<EOL >>"main.tex"
 \\input{setup/footer.tex}
 EOL
 
-notify-send "LaTeX file '$FILENAME' created."
+notify-send "LaTeX project created succesfully!"
 nvim $FILENAME
