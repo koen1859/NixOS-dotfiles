@@ -14,6 +14,9 @@ pkgs.writeShellScriptBin "latex" ''
   echo "Title: "
   read TITLE
 
+  echo "Author: "
+  read AUTHOR
+
   mkdir setup
   mkdir sections
 
@@ -106,7 +109,7 @@ pkgs.writeShellScriptBin "latex" ''
 
   cat <<EOL >>"setup/title.tex"
   \\title{$TITLE}
-  \\author{Koen Stevens}
+  \\author{$AUTHOR}
   \\date{\today}
   \\begin{document}
   \\maketitle
