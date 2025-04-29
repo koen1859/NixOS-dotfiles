@@ -1,12 +1,6 @@
 {pkgs, ...}: {
   imports = [
-    ./modules/home/hypr/hyprland.nix
-    ./modules/home/hypr/animations.nix
-    ./modules/home/hypr/keybindings.nix
-    ./modules/home/hypr/windowrules.nix
-    ./modules/home/hypr/hyprlock.nix
-    ./modules/home/wlogout/wlogout.nix
-    # Nixvim modules
+    ./modules/home/hypr
     ./modules/home/nixvim
     # Other programs
     ./modules/home/btop.nix
@@ -29,6 +23,7 @@
     ./modules/home/librewolf.nix
     ./modules/home/spicetify.nix
     ./modules/home/zen.nix
+    ./modules/home/wlogout/wlogout.nix
   ];
 
   home = {
