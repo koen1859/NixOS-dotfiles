@@ -13,7 +13,6 @@
       cmake
       gnumake
       unzip
-      wget
       hyprland
       kitty
       wl-clipboard
@@ -61,6 +60,7 @@
       entr
       pandoc
       feh
+      bat
 
       # Browsers
       firefox
@@ -77,13 +77,12 @@
       gimp
       vesktop
 
-      # Programming languages / database / LSP / LaTeX
+      # Programming languages / database / LSP
       python3
       R
       postgresql_17
       postgresql17Packages.postgis
       ltex-ls
-      # texliveFull
 
       # Theming
       bibata-cursors
