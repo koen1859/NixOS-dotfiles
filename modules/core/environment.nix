@@ -9,26 +9,20 @@
     };
     systemPackages = with pkgs; [
       # Core packages
-      cmake
-      gnumake
       unzip
       hyprland
       kitty
       wl-clipboard
       git
-      gcc
       brightnessctl
       blueman
       nix-ld
-      glibc
       greetd.tuigreet
+      flatpak
 
       # File managers
-      fzf
       yazi
-      fd
       xfce.thunar
-      flatpak
 
       # Some utilities
       wofi
@@ -78,7 +72,7 @@
       gimp
       vesktop
 
-      # Programming languages / database / LSP
+      # Programming languages
       python3
       R
 
