@@ -61,6 +61,7 @@
       pandoc
       feh
       bat
+      devenv
 
       # Browsers
       firefox
