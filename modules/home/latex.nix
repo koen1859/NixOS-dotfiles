@@ -126,5 +126,5 @@ pkgs.writeShellScriptBin "latex" ''
   EOL
 
   notify-send "LaTeX project created succesfully!"
-  nvim $FILENAME
+  $EDITOR $FILENAME
 ''
