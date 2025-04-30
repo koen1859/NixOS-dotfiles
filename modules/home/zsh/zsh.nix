@@ -27,6 +27,7 @@
     ];
 
     initContent = ''
+      eval "$(direnv hook zsh)"
     '';
 
     shellAliases = {

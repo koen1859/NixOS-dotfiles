@@ -3,6 +3,7 @@ _: {
     settings = {
       experimental-features = ["nix-command" "flakes"];
       auto-optimise-store = true;
+      trusted-users = ["root" "koenstevens"];
     };
     gc = {
       automatic = true;

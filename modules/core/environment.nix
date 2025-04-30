@@ -6,7 +6,6 @@
     ];
     sessionVariables = {
       nixos_ozone_wl = "1";
-      TEXMFHOME = "~/.texmf";
     };
     systemPackages = with pkgs; [
       # Core packages
@@ -62,6 +61,7 @@
       feh
       bat
       devenv
+      direnv
 
       # Browsers
       firefox
@@ -81,9 +81,6 @@
       # Programming languages / database / LSP
       python3
       R
-      postgresql_17
-      postgresql17Packages.postgis
-      ltex-ls
 
       # Theming
       bibata-cursors
