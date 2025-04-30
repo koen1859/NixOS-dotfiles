@@ -66,7 +66,7 @@
       };
     };
     homeConfigurations = {
-      laptop = home-manager.lib.homeManagerConfiguration {
+      "koenstevens@nixlaptop" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [
           ./home.nix
@@ -78,7 +78,7 @@
         ];
         extraSpecialArgs = {inherit inputs;};
       };
-      pc = home-manager.lib.homeManagerConfiguration {
+      "koenstevens@nixpc" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [
           ./home.nix

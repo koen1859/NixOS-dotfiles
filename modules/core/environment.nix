@@ -6,6 +6,7 @@
     ];
     sessionVariables = {
       nixos_ozone_wl = "1";
+      NH_FLAKE = "/home/koenstevens/.dotfiles/";
     };
     systemPackages = with pkgs; [
       # Core packages
@@ -25,6 +26,9 @@
       xfce.thunar
 
       # Some utilities
+      nh
+      nix-output-monitor
+      nvd
       wofi
       hyprlock
       hyprshot
