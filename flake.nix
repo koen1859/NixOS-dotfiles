@@ -7,10 +7,6 @@
       url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nvf = {
-      url = "github:notashelf/nvf";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     home-manager = {
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -37,7 +33,6 @@
     nixpkgs,
     home-manager,
     stylix,
-    nvf,
     nixvim,
     spicetify-nix,
     nixcord,
@@ -72,7 +67,6 @@
           ./home.nix
           ./hosts/laptop/home.nix
           stylix.homeManagerModules.stylix
-          nvf.homeManagerModules.default
           nixvim.homeManagerModules.nixvim
           nixcord.homeModules.nixcord
         ];
@@ -84,7 +78,6 @@
           ./home.nix
           ./hosts/pc/home.nix
           stylix.homeManagerModules.stylix
-          nvf.homeManagerModules.default
           nixvim.homeManagerModules.nixvim
           nixcord.homeModules.nixcord
         ];
