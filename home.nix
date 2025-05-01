@@ -2,9 +2,10 @@
   imports = [
     ./modules/home/hypr
     ./modules/home/nixvim
-    # Other programs
-    ./modules/home/btop.nix
     ./modules/home/fastfetch
+    ./modules/home/wlogout
+    ./modules/home/zsh
+    ./modules/home/btop.nix
     ./modules/home/git.nix
     ./modules/home/gtk.nix
     ./modules/home/htop.nix
@@ -12,7 +13,6 @@
     ./modules/home/nixcord.nix
     ./modules/home/qt.nix
     ./modules/home/bash.nix
-    ./modules/home/zsh/zsh.nix
     ./modules/home/starship.nix
     ./modules/home/stylix.nix
     ./modules/home/swaync.nix
@@ -23,7 +23,6 @@
     ./modules/home/librewolf.nix
     ./modules/home/spicetify.nix
     ./modules/home/zen.nix
-    ./modules/home/wlogout/wlogout.nix
   ];
 
   home = {
