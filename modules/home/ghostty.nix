@@ -51,19 +51,15 @@
     # other
     copy-on-select = clipboard
 
-    font-size = 12
-    font-family = JetBrainsMono Nerd Font Mono
-    font-family-bold = JetBrainsMono NFM Bold
-    font-family-bold-italic = JetBrainsMono NFM Bold Italic
-    font-family-italic = JetBrainsMono NFM Italic
+    # font-size = 12
+    # font-family = JetBrainsMono Nerd Font Mono
+    # font-family-bold = JetBrainsMono NFM Bold
+    # font-family-bold-italic = JetBrainsMono NFM Bold Italic
+    # font-family-italic = JetBrainsMono NFM Italic
 
     title = "GhosTTY"
 
-    wait-after-command = false
     shell-integration = detect
-    window-save-state = always
-    gtk-single-instance = true
-    quick-terminal-position = center
     shell-integration-features = cursor,sudo
   '';
 }
