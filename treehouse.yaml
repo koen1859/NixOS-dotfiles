@@ -1,0 +1,21 @@
+system: "base16"
+name: "treehouse"
+author: "Koen Stevens"
+variant: "dark"
+palette:
+  base00: "191919" # background
+  base01: "321300" # black
+  base02: "433626" # bright black
+  base03: "786b53" # foreground dim
+  base04: "97363d" # bright red
+  base05: "786b53" # foreground
+  base06: "f2b732" # bright yellow
+  base07: "ffc800" # white
+  base08: "b2270e" # red
+  base09: "ed5d20" # orange
+  base0A: "aa820c" # yellow
+  base0B: "44a900" # green
+  base0C: "85cfed" # cyan
+  base0D: "58859a" # blue
+  base0E: "e14c5a" # magenta
+  base0F: "b25a1e" # brown
