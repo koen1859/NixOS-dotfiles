@@ -9,6 +9,8 @@
   ];
   networking.hostName = "nixpc";
 
+  programs.xwayland.enable = true;
+
   environment.systemPackages = with pkgs; [
     # Gaming
     steam
