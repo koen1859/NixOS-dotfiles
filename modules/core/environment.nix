@@ -20,6 +20,7 @@
       nix-ld
       greetd.tuigreet
       flatpak
+      ghostty
 
       # File managers
       yazi
