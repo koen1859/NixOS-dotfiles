@@ -23,7 +23,7 @@
 
         change_to_dir = false;
         use_unicode = true;
-        lists = [{ type = "dir"; }];
+        lists = [{type = "dir";}];
         files_number = 30;
         autoExpandWidth = true;
         skiplist = [
@@ -108,10 +108,6 @@
           "StatusLineNC"
           "EndOfBuffer"
         ];
-        # exclude_groups = [
-        #   "LineNr"
-        #   "SignColumn"
-        # ];
       };
     };
   };

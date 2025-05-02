@@ -34,7 +34,6 @@
       #   case characters
       cursorline = false; # Highlight the screen line of the cursor
       cursorcolumn = false; # Highlight the screen column of the cursor
-      signcolumn = "no"; # Whether to show the signcolumn
       laststatus = 3; # When to use a status line for the last window
       fileencoding = "utf-8"; # File-content encoding for the current buffer
       termguicolors = true; # Enables 24-bit RGB color in the |TUI|
