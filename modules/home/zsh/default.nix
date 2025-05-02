@@ -44,10 +44,10 @@
       ".." = "cd ..";
       gps = "git push";
       gpl = "git pull";
-      ga = "git add -A";
+      ga = "git add";
       gc = "git commit";
-      rebuild = "sudo nixos-rebuild switch --flake ~/.dotfiles";
-      # latex = "bash ~/.dotfiles/modules/home/latex.sh";
+      gs = "git status";
+      gd = "git diff";
     };
   };
 }
