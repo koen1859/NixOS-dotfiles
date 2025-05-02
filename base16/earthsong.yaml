@@ -3,19 +3,19 @@ name: "earthsong"
 author: "Koen Stevens"
 variant: "dark"
 palette:
-  base00: #121418
-  base01: #292520
-  base02: #675f54
-  base03: #847c70
-  base04: #b4a490
-  base05: #e5c6aa
-  base06: #f6f7ec
-  base07: #ffffff
-  base08: #c94234
-  base09: #d0633d
-  base0A: #f5ae2e
-  base0B: #85c54c
-  base0C: #509552
-  base0D: #1398b9
-  base0E: #ff9269
-  base0F: #98e036
+  base00: "#121418"
+  base01: "#292520"
+  base02: "#675f54"
+  base03: "#847c70"
+  base04: "#b4a490"
+  base05: "#e5c6aa"
+  base06: "#f6f7ec"
+  base07: "#ffffff"
+  base08: "#c94234"
+  base09: "#d0633d"
+  base0A: "#f5ae2e"
+  base0B: "#85c54c"
+  base0C: "#509552"
+  base0D: "#1398b9"
+  base0E: "#ff9269"
+  base0F: "#98e036"
