@@ -3,22 +3,14 @@
     lsp = {
       enable = true;
       servers = {
-        pyright.enable = true; # Python
+        pyright.enable = true;
         ruff.enable = true;
-        marksman = {
-          enable = true; # Markdown
-        };
-        nixd.enable = true; # Nix
-        bashls.enable = true; # Bash
-        yamlls.enable = true; # YAML
-        lua_ls = {
-          enable = true;
-          settings.telemetry.enable = false;
-        };
+        marksman.enable = true;
+        nixd.enable = true;
+        bashls.enable = true;
+        yamlls.enable = true;
         ltex.enable = true;
-        texlab = {
-          enable = true;
-        };
+        texlab.enable = true;
         r_language_server = {
           enable = true;
           package = pkgs.rPackages.languageserver;

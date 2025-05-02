@@ -11,6 +11,7 @@
 	  minted
 	  texcount
 	  tocbibind
+	  latexindent
         ]);
     };
   };

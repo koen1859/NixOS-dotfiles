@@ -18,9 +18,6 @@ _: {
           checkstyle.enable = true;
         };
         formatting = {
-          bibclean = {
-            enable = true;
-          };
           alejandra.enable = true;
           shfmt.enable = true;
         };
@@ -37,7 +34,6 @@ _: {
         text = ["vale"];
         json = ["jsonlint"];
         markdown = ["vale"];
-        ruff = ["ruff"];
       };
     };
 
