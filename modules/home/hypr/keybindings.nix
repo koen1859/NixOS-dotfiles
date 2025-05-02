@@ -9,7 +9,7 @@ _: {
       "$mainMod, ESCAPE, exec, wlogout"
       "SUPER_SHIFT, ESCAPE, exec, hyprlock"
       "$mainMod, M, exec, spotify"
-      "$mainMod, Return, exec, kitty"
+      "$mainMod, Return, exec, ghostty"
       "$mainMod, Q, killactive,"
       "$mainMod, R, exec, wofi --show drun"
       "$mainMod, E, exec, thunar"
