@@ -34,7 +34,6 @@
     home-manager,
     stylix,
     nixvim,
-    spicetify-nix,
     nixcord,
     ...
   } @ inputs: let
