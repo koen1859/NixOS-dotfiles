@@ -1,4 +1,4 @@
 {pkgs, ...}: {
   # theme = "${pkgs.base16-schemes}/share/themes/helios.yaml";
-  theme = ./treehouse.yaml;
+  theme = ./base16/earthsong.yaml;
 }
