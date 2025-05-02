@@ -1,9 +1,10 @@
-_: {
+{pkgs, ...}: {
   programs.nixvim.plugins = {
     lsp = {
       enable = true;
       servers = {
         pyright.enable = true; # Python
+        ruff.enable = true;
         marksman = {
           enable = true; # Markdown
         };
@@ -17,6 +18,13 @@ _: {
         ltex.enable = true;
         texlab = {
           enable = true;
+        };
+        r_language_server = {
+          enable = true;
+          package = pkgs.rPackages.languageserver;
+          autostart = true;
+          cmd = ["R" "--slave" "-e" "languageserver::run()"];
+          filetypes = ["r" "rmd"];
         };
       };
     };
@@ -38,8 +46,6 @@ _: {
           nvim_lua = "[api]";
           path = "[path]";
           luasnip = "[snip]";
-          buffer = "[buffer]";
-          neorg = "[neorg]";
         };
       };
     };

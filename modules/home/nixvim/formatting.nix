@@ -23,14 +23,6 @@ _: {
           };
           alejandra.enable = true;
           shfmt.enable = true;
-          black = {
-            enable = true;
-            settings = ''
-              {
-                extra_args = { "--fast" },
-              }
-            '';
-          };
         };
         completion = {
           luasnip.enable = true;
@@ -45,7 +37,7 @@ _: {
         text = ["vale"];
         json = ["jsonlint"];
         markdown = ["vale"];
-	ruff = ["ruff"];
+        ruff = ["ruff"];
       };
     };
 

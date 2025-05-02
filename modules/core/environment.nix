@@ -79,7 +79,12 @@
 
       # Programming languages
       python3
-      R
+      (rWrapper.override {
+        packages = with rPackages; [
+          languageserver
+          languageserversetup
+        ];
+      })
 
       # Theming
       bibata-cursors
