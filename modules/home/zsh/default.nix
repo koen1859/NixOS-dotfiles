@@ -44,7 +44,7 @@
       ".." = "cd ..";
       gps = "git push";
       gpl = "git pull";
-      ga = "git add";
+      ga = "git add --patch";
       gc = "git commit";
       gs = "git status";
       gd = "git diff";
