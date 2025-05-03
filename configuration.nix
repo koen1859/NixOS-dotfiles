@@ -1,4 +1,4 @@
-_: {
+{
   imports = [
     ./modules/core/bootloader.nix
     ./modules/core/environment.nix
