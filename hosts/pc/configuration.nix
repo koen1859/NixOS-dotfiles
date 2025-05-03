@@ -3,6 +3,7 @@
     ./hardware.nix
     ./nvidia.nix
     ./ssh.nix
+    ./gaming.nix
   ];
 
   networking.hostName = "nixpc";
