@@ -6,12 +6,12 @@
         with ps; [
           latexmk
           amsmath
-	  marvosym
+          marvosym
           bbm-macros
-	  minted
-	  texcount
-	  tocbibind
-	  latexindent
+          minted
+          texcount
+          tocbibind
+          latexindent
         ]);
     };
   };
