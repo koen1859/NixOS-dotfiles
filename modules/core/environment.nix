@@ -28,10 +28,6 @@
       zathura # PDF viewer
       obs-studio # Screenrecord
       vlc # Video viewer
-
-      # Theming
-      bibata-cursors
-      papirus-icon-theme
     ];
   };
 }
