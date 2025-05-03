@@ -5,7 +5,6 @@
 }: {
   imports = [
     ./hardware.nix
-    # ../../modules/core/virtualisation.nix
   ];
   networking.hostName = "nixpc";
 
@@ -66,11 +65,6 @@
 
     open = false;
     nvidiaSettings = true;
-
-    #prime = {
-    #  offload.enable = true;
-    #  offload.enableOffloadCmd = true;
-    #};
   };
 
   boot = {
