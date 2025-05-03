@@ -51,6 +51,8 @@
     dependencies = {
       chafa.enable = true;
       imagemagick.enable = true;
+      ripgrep.enable = true;
+      direnv.enable = true;
     };
   };
 }

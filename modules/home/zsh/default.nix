@@ -38,8 +38,8 @@
       ll = "${pkgs.lsd}/bin/lsd -l --color=auto";
       grep = "grep --color=auto";
       ".." = "cd ..";
-      gps = "git push";
-      gpl = "git pull";
+      gps = "git push github main";
+      gpl = "git pull github main";
       ga = "git add --patch";
       gc = "git commit";
       gs = "git status";
