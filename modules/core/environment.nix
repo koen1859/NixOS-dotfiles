@@ -20,7 +20,6 @@
       nix-output-monitor # Nice output when rebuilding
       nvd # Version diff after rebuilding
       yazi # Fast terminal file manager
-      timg # Terminal image viewer
       unzip # Unzip utility
 
       # Applications
