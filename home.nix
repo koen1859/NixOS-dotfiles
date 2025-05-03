@@ -36,6 +36,7 @@
     stateVersion = "24.11";
     packages = [
       (import ./modules/home/latex.nix {inherit pkgs;})
+      (import ./modules/home/website.nix {inherit pkgs;})
     ];
   };
   programs.home-manager.enable = true;
