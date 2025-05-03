@@ -24,6 +24,7 @@
     ./modules/home/spicetify.nix
     ./modules/home/zen.nix
     ./modules/home/ghostty.nix
+    ./modules/home/programming.nix
   ];
 
   home = {
