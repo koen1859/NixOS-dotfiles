@@ -4,8 +4,6 @@
     package = pkgs.ghostty;
   };
   home.file."./.config/ghostty/config".text = ''
-
-    theme = Treehouse
     adjust-cell-height = 10%
     cursor-style = bar
     mouse-hide-while-typing = true
