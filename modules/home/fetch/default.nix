@@ -9,10 +9,10 @@
 
     settings = {
       display = {
-        color = {
-          keys = "35";
-          output = "95";
-        };
+      #   color = {
+      #     keys = "35";
+      #     output = "95";
+      #   };
         separator = " ➜  ";
       };
 
