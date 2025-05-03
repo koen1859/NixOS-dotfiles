@@ -27,12 +27,6 @@
         action = ":lua vim.diagnostic.config({ virtual_text = not vim.diagnostic.config().virtual_text })<CR>";
       }
       {
-        key = "<leader><S-c>";
-        mode = ["n"];
-        options.silent = true;
-        action = ":w<CR>:!ls % | entr -n bash ~/.dotfiles/modules/home/nixvim/build-pandoc-simple.sh % &<CR>";
-      }
-      {
         key = "<leader>y";
         mode = ["n" "v"];
         action = "\"+y";
@@ -66,22 +60,22 @@
       {
         key = "<C-k>";
         mode = ["n"];
-        action = "<cmd>ZellijNavigateUp<cr>";
+        action = "<cmd>wincmd k<cr>";
       }
       {
         key = "<C-j>";
         mode = ["n"];
-        action = "<cmd>ZellijNavigateDown<cr>";
+        action = "<cmd>wincmd j<cr>";
       }
       {
         key = "<C-h>";
         mode = ["n"];
-        action = "<cmd>ZellijNavigateLeft<cr>";
+        action = "<cmd>wincmd h<cr>";
       }
       {
         key = "<C-l>";
         mode = ["n"];
-        action = "<cmd>ZellijNavigateRight<cr>";
+        action = "<cmd>wincmd l<cr>";
       }
       {
         key = "<leader>nh";
