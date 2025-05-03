@@ -18,6 +18,9 @@
           cmd = ["R" "--slave" "-e" "languageserver::run()"];
           filetypes = ["r" "rmd"];
         };
+        cssls.enable = true;
+        phpactor.enable = true;
+        html.enable = true;
       };
     };
 
