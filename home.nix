@@ -2,7 +2,7 @@
   imports = [
     ./modules/home/hypr
     ./modules/home/nixvim
-    ./modules/home/fastfetch
+    ./modules/home/fetch
     ./modules/home/wlogout
     ./modules/home/zsh
     ./modules/home/btop.nix

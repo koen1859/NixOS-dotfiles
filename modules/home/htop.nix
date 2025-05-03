@@ -1,6 +1,11 @@
-{config, ...}: {
+{
+  config,
+  pkgs,
+  ...
+}: {
   programs.htop = {
     enable = true;
+    package = pkgs.htop;
     settings =
       {
         color_scheme = 6;

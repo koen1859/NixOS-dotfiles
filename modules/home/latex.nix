@@ -125,6 +125,6 @@ pkgs.writeShellScriptBin "latex" ''
   \\input{setup/footer.tex}
   EOL
 
-  notify-send "LaTeX project created succesfully!"
+  ${pkgs.libnotify}/bin/notify-send "LaTeX project created succesfully!"
   $EDITOR $FILENAME
 ''

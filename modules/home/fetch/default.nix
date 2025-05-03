@@ -1,4 +1,9 @@
-{
+{pkgs, ...}: {
+  home.packages = with pkgs; [
+    fastfetch
+    microfetch
+    onefetch
+  ];
   programs.fastfetch = {
     enable = true;
 

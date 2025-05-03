@@ -7,6 +7,9 @@
   spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
 in {
   imports = [inputs.spicetify-nix.homeManagerModules.default];
+  home.packages = with pkgs; [
+    spicetify-cli
+  ];
   programs.spicetify = {
     enable = true;
     theme = spicePkgs.themes.text;
@@ -31,8 +34,7 @@ in {
       player-bar-bg = "${base01}";
       accent = "${base06}";
     };
-    # enabledExtensions = with spicePkgs.extensions; [
-    #   adblock
-    # ];
+    enabledExtensions = with spicePkgs.extensions; [
+    ];
   };
 }

@@ -1,14 +1,13 @@
-{
+{pkgs, ...}: {
+  home.packages = with pkgs; [
+    ripgrep
+  ];
   programs.nixvim.plugins = {
     telescope = {
       enable = true;
       extensions = {
         media-files = {
           enable = true;
-          #      dependencies = {
-          # chafa.enable = true;
-          #        imageMagick.enable = true;
-          #      };
           settings = {
             filetypes = [
               "png"

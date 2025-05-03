@@ -7,7 +7,7 @@ _: {
     '';
     shellIntegration = {
       mode = "no_rc";
-      enableBashIntegration = true;
+      enableZshIntegration = true;
     };
   };
 }
