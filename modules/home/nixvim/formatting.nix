@@ -20,12 +20,10 @@
         formatting = {
           alejandra.enable = true;
           shfmt.enable = true;
-	  prettier.enable = true;
-	  phpcbf.enable = true;
+          prettier.enable = true;
         };
         completion = {
           luasnip.enable = true;
-          spell.enable = true;
         };
       };
     };

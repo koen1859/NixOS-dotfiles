@@ -20,6 +20,10 @@
         };
         cssls.enable = true;
         phpactor.enable = true;
+        intelephense = {
+          enable = true;
+          package = pkgs.intelephense;
+        };
         emmet_ls = {
           enable = true;
           filetypes = ["html" "php"];
