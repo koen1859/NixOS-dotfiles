@@ -25,6 +25,7 @@
     ./modules/home/zen.nix
     ./modules/home/ghostty.nix
     ./modules/home/programming.nix
+    ./modules/home/packages.nix
   ];
 
   home = {
@@ -34,11 +35,6 @@
       TEXMFHOME = "~/.texmf/";
     };
     stateVersion = "24.11";
-    packages = [
-      (import ./modules/home/latex.nix {inherit pkgs;})
-      (import ./modules/home/website.nix {inherit pkgs;})
-    ];
   };
   programs.home-manager.enable = true;
-  nixpkgs.config.allowUnfree = true;
 }
