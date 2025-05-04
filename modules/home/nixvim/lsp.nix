@@ -20,9 +20,9 @@
         };
         cssls.enable = true;
         phpactor.enable = true;
-        html = {
+        emmet_ls = {
           enable = true;
-          filetypes = ["php"];
+          filetypes = ["html" "php"];
         };
       };
     };
