@@ -20,7 +20,10 @@
         };
         cssls.enable = true;
         phpactor.enable = true;
-        html.enable = true;
+        html = {
+          enable = true;
+          filetypes = ["php"];
+        };
       };
     };
 
