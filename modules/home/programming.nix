@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
+    gcc
     python3
     (rWrapper.override {
       packages = with rPackages; [

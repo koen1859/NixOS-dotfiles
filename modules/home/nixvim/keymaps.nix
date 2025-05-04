@@ -2,6 +2,11 @@
   programs.nixvim = {
     keymaps = [
       {
+	key = "<leader>r";
+	mode = ["n"];
+	action = "<cmd>!g++ % -o /tmp/a.out && /tmp/a.out<cr>";
+      }
+      {
         key = "<Up>";
         mode = ["n"];
         action = ":resize -2<CR>";

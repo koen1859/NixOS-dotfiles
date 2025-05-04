@@ -20,6 +20,7 @@
         };
         cssls.enable = true;
         phpactor.enable = true;
+	clangd.enable = true;
         # intelephense = {
         #   enable = true;
         #   package = pkgs.intelephense;
