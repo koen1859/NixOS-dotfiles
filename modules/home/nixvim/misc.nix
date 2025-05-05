@@ -10,5 +10,6 @@
     guess-indent.enable = true;
     jupytext.enable = true;
     lazygit.enable = true;
+    overseer.enable = true;
   };
 }

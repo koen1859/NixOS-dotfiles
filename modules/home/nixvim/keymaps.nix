@@ -7,9 +7,14 @@
         action = "<cmd>AerialToggle!<cr>";
       }
       {
-        key = "<leader>R";
+        key = "<C-Enter>";
         mode = ["n"];
         action = "<cmd>CompilerOpen<cr>";
+      }
+      {
+        key = "<leader><BS>";
+        mode = ["n"];
+        action = "<cmd>CompilerToggleResults<cr>";
       }
       {
         key = "<leader>r";
