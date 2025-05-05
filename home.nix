@@ -26,6 +26,7 @@
     ./modules/home/ghostty.nix
     ./modules/home/programming.nix
     ./modules/home/packages.nix
+    ./modules/home/wezterm.nix
   ];
 
   home = {
