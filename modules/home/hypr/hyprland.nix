@@ -2,7 +2,7 @@
   wayland.windowManager.hyprland = {
     enable = true;
     package = pkgs.hyprland;
-    xwayland.enable = false;
+    xwayland.enable = true;
     settings = {
       exec-once = [
         # "waybar"

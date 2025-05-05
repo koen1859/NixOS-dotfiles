@@ -21,12 +21,7 @@
       nvd # Version diff after rebuilding
       yazi # Fast terminal file manager
       unzip # Unzip utility
-
-      # Applications
-      feh # Image viewer
-      zathura # PDF viewer
-      obs-studio # Screenrecord
-      vlc # Video viewer
+      gcc # C/C++ compiler
     ];
   };
 }
