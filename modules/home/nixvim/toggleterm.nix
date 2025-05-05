@@ -1,18 +1,19 @@
 {
   programs.nixvim.plugins.toggleterm = {
     enable = true;
-    extraConfigLua = ''
-            local Terminal = require("toggleterm.terminal").Terminal
+    luaConfig.post = ''
+      local Terminal = require("toggleterm.terminal").Terminal
 
       local ipython = Terminal:new({
-        cmd = "ipython",
-        hidden = true,
-        direction = "float", -- or "horizontal" / "vertical"
+        cmd = "python",
+        direction = "horizontal",
       })
 
       function _IPYTHON_TOGGLE()
         ipython:toggle()
       end
+
+      vim.api.nvim_set_keymap("n", "<leader>ti", "<cmd>lua _IPYTHON_TOGGLE()<CR>", { noremap = true, silent = true })
     '';
   };
 }
