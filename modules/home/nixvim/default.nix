@@ -13,6 +13,7 @@
     ./formatting.nix
     ./zellij-nav.nix
     ./aerial.nix
+    ./mini.nix
   ];
   programs.nixvim = {
     enable = true;
