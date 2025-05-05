@@ -1,7 +1,12 @@
 {pkgs, ...}: {
   programs = {
     hyprland.enable = true;
-    nix-ld.enable = true;
+    nix-ld = {
+      enable = true;
+      libraries = with pkgs; [
+        stdenv.cc.cc.lib
+      ];
+    };
     thunar.enable = true;
     zsh.enable = true;
   };

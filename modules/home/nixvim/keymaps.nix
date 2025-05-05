@@ -7,9 +7,14 @@
         action = "<cmd>AerialToggle!<cr>";
       }
       {
+        key = "<leader>R";
+        mode = ["n"];
+        action = "<cmd>CompilerOpen<cr>";
+      }
+      {
         key = "<leader>r";
         mode = ["n"];
-        action = "<cmd>!g++ % -o /tmp/a.out && /tmp/a.out<cr>";
+        action = "<cmd>CompilerRedo<cr>";
       }
       {
         key = "<Up>";
