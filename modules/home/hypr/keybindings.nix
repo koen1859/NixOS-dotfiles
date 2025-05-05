@@ -10,7 +10,7 @@
       "SUPER_SHIFT, ESCAPE, exec, ${pkgs.hyprlock}/bin/hyprlock"
       "$mainMod, M, exec, spotify" # Do not run direct binary for spotify because of spicetify
       "$mainMod SHIFT, M, exec, ${pkgs.pavucontrol}/bin/pavucontrol"
-      "$mainMod, Return, exec, ${pkgs.ghostty}/bin/ghostty"
+      "$mainMod, Return, exec, ${pkgs.wezterm}/bin/wezterm"
       "$mainMod SHIFT, Return, exec, ${pkgs.kitty}/bin/kitty"
       "$mainMod, Q, killactive,"
       "$mainMod, R, exec, ${pkgs.wofi}/bin/wofi --show drun"

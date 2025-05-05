@@ -25,6 +25,7 @@ in {
       zathura.enable = false;
       spicetify.enable = false;
       ghostty.enable = false;
+      wezterm.enable = true;
     };
   };
 }
