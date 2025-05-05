@@ -12,6 +12,7 @@
     ./telescope.nix
     ./formatting.nix
     ./zellij-nav.nix
+    ./aerial.nix
   ];
   programs.nixvim = {
     enable = true;

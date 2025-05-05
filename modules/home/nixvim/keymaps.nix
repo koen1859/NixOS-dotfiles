@@ -2,9 +2,14 @@
   programs.nixvim = {
     keymaps = [
       {
-	key = "<leader>r";
-	mode = ["n"];
-	action = "<cmd>!g++ % -o /tmp/a.out && /tmp/a.out<cr>";
+        key = "<leader>a";
+        mode = ["n"];
+        action = "<cmd>AerialToggle!<cr>";
+      }
+      {
+        key = "<leader>r";
+        mode = ["n"];
+        action = "<cmd>!g++ % -o /tmp/a.out && /tmp/a.out<cr>";
       }
       {
         key = "<Up>";
