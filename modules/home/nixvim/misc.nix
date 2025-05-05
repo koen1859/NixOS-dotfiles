@@ -11,5 +11,6 @@
     jupytext.enable = true;
     lazygit.enable = true;
     overseer.enable = true;
+    wezterm.enable = true;
   };
 }

@@ -14,6 +14,7 @@
     ./zellij-nav.nix
     ./aerial.nix
     ./mini.nix
+    ./toggleterm.nix
   ];
   programs.nixvim = {
     enable = true;
