@@ -20,15 +20,12 @@
         };
         cssls.enable = true;
         phpactor.enable = true;
-	clangd.enable = true;
-        # intelephense = {
-        #   enable = true;
-        #   package = pkgs.intelephense;
-        # };
+        clangd.enable = true;
         emmet_ls = {
           enable = true;
           filetypes = ["html" "php"];
         };
+        lua_ls.enable = true;
       };
     };
 
