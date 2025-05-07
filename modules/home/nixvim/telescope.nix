@@ -3,6 +3,15 @@
     telescope = {
       enable = true;
       extensions = {
+        fzf-native = {
+          enable = true;
+          settings = {
+            case_mode = "smart_case";
+            fuzzy = false;
+            override_file_sorter = true;
+            override_generic_sorter = true;
+          };
+        };
         media-files = {
           enable = true;
           settings = {
@@ -31,6 +40,20 @@
         "<leader>p" = "oldfiles";
         "<C-f>" = "live_grep";
       };
+      settings.pickers = {
+        find_files = {
+          find_command = [
+            "fd"
+            "--type"
+            "f"
+            "--strip-cwd-prefix"
+            "--hidden"
+            "--exclude"
+            ".git"
+          ];
+        };
+      };
+
       settings.defaults = {
         file_ignore_patterns = [
           "^.git/"

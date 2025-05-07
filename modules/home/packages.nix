@@ -1,8 +1,9 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
-    pandoc
     (import ./latex.nix {inherit pkgs;})
     (import ./website.nix {inherit pkgs;})
+    pandoc
+    fd
 
     # Applications
     feh # Image viewer
