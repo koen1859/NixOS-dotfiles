@@ -2,6 +2,12 @@
   programs.nixvim = {
     keymaps = [
       {
+        key = "<leader>g";
+        mode = ["n"];
+        options.silent = true;
+        action = "<cmd>LazyGit<cr>";
+      }
+      {
         key = "<leader>a";
         mode = ["n"];
         options.silent = true;
