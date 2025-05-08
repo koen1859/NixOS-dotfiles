@@ -3,13 +3,14 @@
     bind = [
       "$mainMod, B, exec, ${pkgs.firefox}/bin/firefox"
       "SUPER_SHIFT, B, exec, ${pkgs.librewolf}/bin/librewolf"
-      "$mainMod, P, exec, ${pkgs.bitwarden}/bin/bitwarden"
+      "$mainMod, P, exec, ${pkgs.proton-pass}/bin/proton-pass"
       ", PRINT, exec, ${pkgs.hyprshot}/bin/hyprshot -m region"
       "$mainMod, S, exec, ${pkgs.hyprshot}/bin/hyprshot -m output -m active"
       "$mainMod, ESCAPE, exec, ${pkgs.wlogout}/bin/wlogout"
       "SUPER_SHIFT, ESCAPE, exec, ${pkgs.hyprlock}/bin/hyprlock"
       "$mainMod, M, exec, spotify" # Do not run direct binary for spotify because of spicetify
-      "$mainMod SHIFT, M, exec, ${pkgs.pavucontrol}/bin/pavucontrol"
+      "$mainMod SHIFT, M, exec, flatpak run me.proton.Mail" # Do not run direct binary for proton mail since it is flatpak
+      "$mainMod, A, exec, ${pkgs.pavucontrol}/bin/pavucontrol"
       "$mainMod, Return, exec, ${pkgs.wezterm}/bin/wezterm"
       "$mainMod SHIFT, Return, exec, ${pkgs.kitty}/bin/kitty"
       "$mainMod, Q, killactive,"
@@ -41,7 +42,7 @@
       "$mainMod, TAB, swapsplit"
       "$mainMod, F, fullscreen, 0"
       "$mainMod, T, togglesplit"
-      "$mainMod, A, exec, hyprctl dispatch workspaceopt allfloat"
+      # "$mainMod, A, exec, hyprctl dispatch workspaceopt allfloat"
       "SUPER_SHIFT, F, exec, hyprctl dispatch togglefloating && if hyprctl activewindow | grep -q 'floating: 1'; then hyprctl dispatch resizeactive exact 800 600 && hyprctl dispatch centerwindow; fi"
       "$mainMod, 1, workspace, 1"
       "$mainMod, 2, workspace, 2"
