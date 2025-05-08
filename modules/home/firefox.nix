@@ -22,6 +22,8 @@
 
     "middlemouse.paste" = false;
 
+    "signon.rememberSignons" = false;
+
     "browser.download.useDownloadDir" = true;
     "browser.tabs.insertAfterCurrent" = true;
     "browser.tabs.warnOnClose" = true;
@@ -33,6 +35,7 @@
     "browser.newtabpage.activity-stream.showTopSites" = false;
     "browser.newtabpage.activity-stream.showBookmarks" = true;
     # "browser.newtabpage.activity-stream.topSiteWidth" = 6;
+    "browser.newtabpage.activity-stream.newtabWallpapers.customColor.enabled" = true;
 
     "browser.translations.neverTranslateLanguages" = "Dutch";
 
@@ -105,7 +108,6 @@ in {
       default = {
         inherit settings search;
         extensions.packages = with inputs.firefox-addons.packages."x86_64-linux"; [
-          bitwarden
           ublock-origin
           sponsorblock
           darkreader
