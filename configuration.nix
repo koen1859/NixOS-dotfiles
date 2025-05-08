@@ -11,6 +11,7 @@
     ./modules/core/network.nix
     ./modules/core/nixpkgs.nix
     ./modules/core/nix.nix
+    ./modules/core/flatpak.nix
   ];
 
   system.stateVersion = "24.11";

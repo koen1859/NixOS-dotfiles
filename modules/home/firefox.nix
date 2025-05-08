@@ -9,10 +9,11 @@
     privateDefault = "google";
 
     engines = {
-      google.metaData.hidden = true;
+      google.metaData.hidden = false;
       bing.metaData.hidden = true;
       ddg.metaData.hidden = true;
       wikipedia.metaData.hidden = true;
+      ecosia.metaData.hidden = true;
     };
   };
 
@@ -27,6 +28,13 @@
     "browser.toolbars.bookmarks.visibility" = "never";
     "browser.quitShortcut.disabled" = true;
     "browser.sessionstore.restore_pinned_tabs_on_demand" = true;
+    "browser.newtabpage.activity-stream.showSponsoredTopSites" = false;
+    "browser.newtabpage.activity-stream.showSearch" = false;
+    "browser.newtabpage.activity-stream.showTopSites" = false;
+    "browser.newtabpage.activity-stream.showBookmarks" = true;
+    # "browser.newtabpage.activity-stream.topSiteWidth" = 6;
+
+    "browser.translations.neverTranslateLanguages" = "Dutch";
 
     "browser.urlbar.suggest.bookmark" = true;
     "browser.urlbar.suggest.engines" = false;
@@ -47,10 +55,10 @@
     "browser.cache.disk.enable" = true;
     "browser.cache.offline.enable" = true;
 
-    "browser.newtabpage.activity-stream.showSearch" = false;
-
     "sidebar.position_start" = "left";
     "sidebar.verticalTabs" = true;
+    "sidebar.visibility" = "expand-on-hover";
+    "sidebar.main.tools" = "";
     "findbar.highlightAll" = true;
 
     "xpinstall.signatures.required" = false;
@@ -88,28 +96,27 @@
     "network.dns.use_https_rr_as_altsvc" = true;
   };
 in {
-  stylix.targets.librewolf.profileNames = ["default"];
+  stylix.targets.firefox.profileNames = ["default"];
 
   programs.firefox = {
     enable = true;
 
-    package = pkgs.librewolf.override {
-      cfg.speechSynthesisSupport = false;
-    };
-
-    extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
-      bitwarden
-      ublock-origin
-      sponsorblock
-      darkreader
-      tridactyl
-      youtube-shorts-block
-      vimium
-    ];
-
     profiles = {
       default = {
         inherit settings search;
+        extensions.packages = with inputs.firefox-addons.packages."x86_64-linux"; [
+          bitwarden
+          ublock-origin
+          sponsorblock
+          darkreader
+          youtube-shorts-block
+          vimium
+          privacy-badger
+          canvasblocker
+          i-dont-care-about-cookies
+          proton-pass
+          proton-vpn
+        ];
       };
     };
   };

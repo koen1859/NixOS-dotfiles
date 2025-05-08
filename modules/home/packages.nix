@@ -8,6 +8,8 @@
     # Applications
     feh # Image viewer
     zathura # PDF viewer
+    protonvpn-gui
+    proton-pass
   ];
   nixpkgs.config.allowUnfree = true;
 }

@@ -26,6 +26,7 @@ in {
       spicetify.enable = false;
       ghostty.enable = false;
       wezterm.enable = true;
+      firefox.profileNames = ["default"];
     };
   };
 }
