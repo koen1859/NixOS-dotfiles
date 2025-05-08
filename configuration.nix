@@ -4,7 +4,6 @@
     ./modules/core/environment.nix
     ./modules/core/services.nix
     ./modules/core/fonts.nix
-    ./modules/core/flatpak.nix
     ./modules/core/users.nix
     ./modules/core/programs.nix
     ./modules/core/misc.nix
