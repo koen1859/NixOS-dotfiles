@@ -12,6 +12,7 @@
           texcount
           tocbibind
           latexindent
+          adjustbox
         ]);
     };
   };
