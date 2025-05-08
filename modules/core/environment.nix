@@ -22,6 +22,7 @@
       yazi # Fast terminal file manager
       unzip # Unzip utility
       gcc # C/C++ compiler
+      wireguard-tools
     ];
   };
 }
