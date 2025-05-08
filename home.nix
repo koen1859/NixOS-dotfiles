@@ -8,7 +8,6 @@
     ./modules/home/btop.nix
     ./modules/home/git.nix
     ./modules/home/gtk.nix
-    ./modules/home/htop.nix
     ./modules/home/kitty.nix
     ./modules/home/nixcord.nix
     ./modules/home/qt.nix
@@ -22,7 +21,6 @@
     ./modules/home/zellij.nix
     ./modules/home/librewolf.nix
     ./modules/home/spicetify.nix
-    ./modules/home/zen.nix
     ./modules/home/ghostty.nix
     ./modules/home/programming.nix
     ./modules/home/packages.nix

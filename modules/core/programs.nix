@@ -7,7 +7,6 @@
         stdenv.cc.cc.lib
       ];
     };
-    thunar.enable = true;
     zsh.enable = true;
   };
   xdg.portal.enable = true;
