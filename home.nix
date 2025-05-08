@@ -26,6 +26,7 @@
     ./modules/home/packages.nix
     ./modules/home/wezterm.nix
     ./modules/home/rofi.nix
+    ./modules/home/firefox.nix
   ];
 
   home = {
