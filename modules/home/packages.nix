@@ -1,9 +1,11 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
-    (import ./latex.nix {inherit pkgs;})
-    (import ./website.nix {inherit pkgs;})
-    (import ./cloud/OneDrive.nix {inherit pkgs;})
-    (import ./cloud/ProtonDrive.nix {inherit pkgs;})
+    (import ./scripts/latex.nix {inherit pkgs;})
+    (import ./scripts/website.nix {inherit pkgs;})
+    (import ./scripts/OneDrive.nix {inherit pkgs;})
+    (import ./scripts/ProtonDrive.nix {inherit pkgs;})
+    (import ./scripts/VPN_NL.nix {inherit pkgs;})
+    (import ./scripts/VPN_Sui.nix {inherit pkgs;})
     pandoc # Filetype converter (html, pdf, ...)
     fd # Fuzzy finder
 
