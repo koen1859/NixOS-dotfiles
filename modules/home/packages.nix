@@ -13,6 +13,7 @@
     feh # Image viewer
     zathura # PDF viewer
     proton-pass
+    brave
   ];
   nixpkgs.config.allowUnfree = true;
 }
