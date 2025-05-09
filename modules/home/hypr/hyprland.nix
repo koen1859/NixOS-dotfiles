@@ -58,8 +58,8 @@
           xray = true;
           special = false;
           new_optimizations = true;
-          size = 14;
-          passes = 4;
+          size = 2;
+          passes = 2;
           # vibrancy = 0.1696;
           brightness = 1;
           noise = 0.01;

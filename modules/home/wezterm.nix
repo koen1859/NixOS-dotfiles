@@ -29,7 +29,7 @@
      config.term = "xterm-256color"
      config.max_fps = 144
      config.animation_fps = 30
-     config.window_background_opacity = 0.8
+     config.window_background_opacity = 0.6
 
      -- Keybindings using ALT for tabs & splits
      config.keys = {

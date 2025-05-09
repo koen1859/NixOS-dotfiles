@@ -1,6 +1,6 @@
 {config, ...}: {
   programs.wofi = {
-    enable = true;
+    enable = false;
     settings = {
       allow_images = true;
       width = 500;

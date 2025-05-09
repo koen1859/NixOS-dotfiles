@@ -25,8 +25,15 @@ in {
       zathura.enable = false;
       spicetify.enable = false;
       ghostty.enable = false;
-      wezterm.enable = true;
       firefox.profileNames = ["default"];
+      wezterm.enable = true;
+      nixvim = {
+        transparentBackground = {
+          main = true;
+          numberLine = true;
+          signColumn = true;
+        };
+      };
     };
   };
 }
