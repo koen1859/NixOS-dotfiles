@@ -6,7 +6,7 @@
 
   programs = {
     bash = {
-      enable = true;
+      enable = false;
       shellAliases = {
         ls = "${pkgs.lsd}/bin/lsd --color=auto";
         grep = "grep --color=auto";
@@ -25,12 +25,10 @@
     };
 
     starship = {
-      enable = true;
       enableBashIntegration = true;
     };
 
     atuin = {
-      enable = true;
       enableBashIntegration = true;
     };
   };

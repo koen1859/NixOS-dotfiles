@@ -1,6 +1,6 @@
 {config, ...}: {
   programs.zellij = {
-    enable = true;
+    enable = false;
     enableBashIntegration = false;
   };
 
