@@ -11,6 +11,8 @@
         languageserversetup
       ];
     })
+    zed-editor
+    nixd
     devenv # Make nice dev shells
     direnv # Activate shells on directory level
   ];

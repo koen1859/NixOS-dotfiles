@@ -16,7 +16,7 @@
       "$mainMod, Q, killactive,"
       "$mainMod, R, exec, ${pkgs.rofi-wayland}/bin/rofi -show drun"
       "$mainMod, E, exec, ${pkgs.rofi-wayland}/bin/rofi -show filebrowser"
-      "$mainMod, E, exec, ${pkgs.xfce.thunar}/bin/thunar"
+      "$mainMod SHIFT, E, exec, ${pkgs.xfce.thunar}/bin/thunar"
       # "$mainMod, E, exec, ${pkgs.xfce.thunar}/bin/thunar"
       "$mainMod, N, exec, ${pkgs.networkmanagerapplet}/bin/nm-connection-editor"
       "$mainMod SHIFT, N, exec, ${pkgs.blueman}/bin/blueman-manager"
