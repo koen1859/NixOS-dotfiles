@@ -6,6 +6,7 @@
     (import ./scripts/ProtonDrive.nix {inherit pkgs;})
     (import ./scripts/VPN_NL.nix {inherit pkgs;})
     (import ./scripts/VPN_Sui.nix {inherit pkgs;})
+    (import ./scripts/VPN_Toggle.nix {inherit pkgs;})
     pandoc # Filetype converter (html, pdf, ...)
     fd # Fuzzy finder
 

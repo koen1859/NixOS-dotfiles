@@ -1,6 +1,6 @@
 {pkgs, ...}: let
   search = {
-    force = true;
+    force = false;
     default = "ddg";
     privateDefault = "ddg";
 
