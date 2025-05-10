@@ -5,15 +5,33 @@
 }: let
   search = {
     force = true;
-    default = "google";
-    privateDefault = "google";
+    default = "startpage";
+    privateDefault = "startpage";
 
     engines = {
-      google.metaData.hidden = false;
+      google.metaData.hidden = true;
+      ebay.metaData.hidden = true;
+      qwant.metaData.hidden = true;
       bing.metaData.hidden = true;
       ddg.metaData.hidden = true;
       wikipedia.metaData.hidden = true;
       ecosia.metaData.hidden = true;
+      startpage = {
+        urls = [
+          {
+            template = "https://www.startpage.com/sp/search";
+            params = [
+              {
+                name = "query";
+                value = "{searchTerms}";
+              }
+            ];
+          }
+        ];
+        icon = "https://www.startpage.com/favicon.ico";
+        metaData.hidden = false;
+        definedAliases = ["@sp"];
+      };
       "Nix Packages" = {
         urls = [
           {
