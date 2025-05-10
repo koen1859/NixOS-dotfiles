@@ -1,12 +1,11 @@
 {pkgs, ...}:
-pkgs.writeShellScriptBin "VPN_TOGGLE" ''
+pkgs.writeShellScriptBin "toggle_vpn" ''
   set -e
 
-  VPN_DIR=~/VPN
+  VPN_DIR=~/.vpn
   CONF_FILES=($VPN_DIR/*.conf)
   WG_QUICK=${pkgs.wireguard-tools}/bin/wg-quick
 
-  # Check if any interface is currently up
   for CONF_PATH in "''${CONF_FILES[@]}"; do
     INTERFACE=$(basename "$CONF_PATH" .conf)
     if ip link show "$INTERFACE" &> /dev/null; then
@@ -16,7 +15,6 @@ pkgs.writeShellScriptBin "VPN_TOGGLE" ''
     fi
   done
 
-  # If no VPN is up, let user choose one to connect
   echo "Select a VPN config to connect:"
   select CONFIG_PATH in "''${CONF_FILES[@]}"; do
     if [[ -n "$CONFIG_PATH" ]]; then
