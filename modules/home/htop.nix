@@ -4,7 +4,7 @@
   ...
 }: {
   programs.htop = {
-    enable = true;
+    enable = false;
     package = pkgs.htop;
     settings =
       {
