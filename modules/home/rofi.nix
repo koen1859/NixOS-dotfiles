@@ -15,7 +15,7 @@ in {
     package = pkgs.rofi-wayland;
 
     extraConfig = {
-      modi = "drun,filebrowser";
+      modi = "drun,filebrowser,ssh";
       font = "Noto Sans CJK JP 12";
       show-icons = true;
       disable-history = true;

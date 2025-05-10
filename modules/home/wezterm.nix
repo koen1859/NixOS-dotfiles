@@ -13,6 +13,7 @@
      config.enable_wayland = false
      config.color_scheme = 'Gruvbox dark, hard (base16)'
      config.font_size = 14
+     config.font = wezterm.font "JetBrains Mono"
      config.audible_bell = "Disabled"
 
      config.window_padding = {
