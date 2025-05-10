@@ -1,19 +1,58 @@
 {
+  config,
   pkgs,
   inputs,
   ...
 }: let
   search = {
     force = true;
-    default = "google";
-    privateDefault = "google";
+    default = "startpage";
+    privateDefault = "startpage";
 
     engines = {
-      google.metaData.hidden = false;
+      google.metaData.hidden = true;
+      ebay.metaData.hidden = true;
+      qwant.metaData.hidden = true;
       bing.metaData.hidden = true;
       ddg.metaData.hidden = true;
       wikipedia.metaData.hidden = true;
       ecosia.metaData.hidden = true;
+      startpage = {
+        urls = [
+          {
+            template = "https://www.startpage.com/sp/search";
+            params = [
+              {
+                name = "query";
+                value = "{searchTerms}";
+              }
+            ];
+          }
+        ];
+        icon = "https://www.startpage.com/favicon.ico";
+        metaData.hidden = false;
+        definedAliases = ["@sp"];
+      };
+      "Nix Packages" = {
+        urls = [
+          {
+            template = "https://search.nixos.org/packages?channel=unstable";
+            params = [
+              {
+                name = "type";
+                value = "packages";
+              }
+              {
+                name = "query";
+                value = "{searchTerms}";
+              }
+            ];
+          }
+        ];
+
+        icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
+        definedAliases = ["@np"];
+      };
     };
   };
 
@@ -34,8 +73,9 @@
     "browser.newtabpage.activity-stream.showSearch" = false;
     "browser.newtabpage.activity-stream.showTopSites" = false;
     "browser.newtabpage.activity-stream.showBookmarks" = true;
-    # "browser.newtabpage.activity-stream.topSiteWidth" = 6;
+    "browser.newtabpage.activity-stream.topSiteWidth" = 6;
     "browser.newtabpage.activity-stream.newtabWallpapers.customColor.enabled" = true;
+    "browser.newtabpage.activity-stream.newtabWallpapers.wallpaper" = "solid-color-picker-#${config.lib.stylix.colors.base01}";
 
     "browser.translations.neverTranslateLanguages" = "Dutch";
 
@@ -70,8 +110,6 @@
     "browser.tabs.hoverPreview.enabled" = true;
 
     "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
-
-    "identity.fxaccounts.enabled" = true;
 
     "media.autoplay.blocking_policy" = 2;
 
@@ -117,7 +155,6 @@ in {
           canvasblocker
           i-dont-care-about-cookies
           proton-pass
-          proton-vpn
         ];
       };
     };

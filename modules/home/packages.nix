@@ -4,15 +4,13 @@
     (import ./scripts/website.nix {inherit pkgs;})
     (import ./scripts/OneDrive.nix {inherit pkgs;})
     (import ./scripts/ProtonDrive.nix {inherit pkgs;})
-    (import ./scripts/VPN_NL.nix {inherit pkgs;})
-    (import ./scripts/VPN_Sui.nix {inherit pkgs;})
+    (import ./scripts/toggle_vpn.nix {inherit pkgs;})
     pandoc # Filetype converter (html, pdf, ...)
     fd # Fuzzy finder
 
     # Applications
     feh # Image viewer
     zathura # PDF viewer
-    proton-pass
   ];
   nixpkgs.config.allowUnfree = true;
 }
