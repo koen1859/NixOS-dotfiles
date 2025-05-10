@@ -119,6 +119,7 @@ in {
           proton-pass
           proton-vpn
         ];
+        userChrome = ''~/.dotfiles/modules/home/firefox/userChrome.css'';
       };
     };
   };
