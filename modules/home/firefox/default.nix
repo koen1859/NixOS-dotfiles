@@ -1,4 +1,5 @@
 {
+  config,
   pkgs,
   inputs,
   ...
@@ -74,6 +75,7 @@
     "browser.newtabpage.activity-stream.showBookmarks" = true;
     "browser.newtabpage.activity-stream.topSiteWidth" = 6;
     "browser.newtabpage.activity-stream.newtabWallpapers.customColor.enabled" = true;
+    "browser.newtabpage.activity-stream.newtabWallpapers.wallpaper" = "solid-color-picker-#${config.lib.stylix.colors.base01}";
 
     "browser.translations.neverTranslateLanguages" = "Dutch";
 

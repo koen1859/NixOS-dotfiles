@@ -1,6 +1,6 @@
 {pkgs, ...}: let
   search = {
-    force = false;
+    force = true;
     default = "ddg";
     privateDefault = "ddg";
 
@@ -87,7 +87,7 @@ in {
   stylix.targets.librewolf.profileNames = ["default"];
 
   programs.librewolf = {
-    enable = true;
+    enable = false;
 
     package = pkgs.librewolf.override {
       cfg.speechSynthesisSupport = false;
