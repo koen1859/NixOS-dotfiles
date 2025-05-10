@@ -155,7 +155,6 @@ in {
           canvasblocker
           i-dont-care-about-cookies
           proton-pass
-          proton-vpn
         ];
       };
     };

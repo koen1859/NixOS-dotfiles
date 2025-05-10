@@ -3,13 +3,13 @@
     bind = [
       "$mainMod, B, exec, ${pkgs.firefox}/bin/firefox"
       "SUPER_SHIFT, B, exec, ${pkgs.brave}/bin/brave --incognito"
-      "$mainMod, P, exec, ${pkgs.proton-pass}/bin/proton-pass"
       ", PRINT, exec, ${pkgs.hyprshot}/bin/hyprshot -m region"
       "$mainMod, S, exec, ${pkgs.hyprshot}/bin/hyprshot -m output -m active"
       "$mainMod, ESCAPE, exec, ${pkgs.wlogout}/bin/wlogout"
       "SUPER_SHIFT, ESCAPE, exec, ${pkgs.hyprlock}/bin/hyprlock"
       "$mainMod, M, exec, spotify" # Do not run direct binary for spotify because of spicetify
       "$mainMod SHIFT, M, exec, flatpak run me.proton.Mail" # Do not run direct binary for proton mail since it is flatpak
+      "$mainMod, P, exec, flatpak run me.proton.Pass"
       "$mainMod, A, exec, ${pkgs.pavucontrol}/bin/pavucontrol"
       "$mainMod, Return, exec, ${pkgs.wezterm}/bin/wezterm"
       "$mainMod SHIFT, Return, exec, ${pkgs.kitty}/bin/kitty"
