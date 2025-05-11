@@ -11,6 +11,7 @@ pkgs.writeShellScriptBin "toggle_vpn" ''
     if ip link show "$INTERFACE" &> /dev/null; then
       echo "VPN $INTERFACE is currently active. Bringing it down..."
       sudo $WG_QUICK down "$CONF_PATH"
+      ${pkgs.libnotify}/bin/notify-send "VPN disconnected"
       exit 0
     fi
   done
@@ -21,7 +22,9 @@ pkgs.writeShellScriptBin "toggle_vpn" ''
       INTERFACE=$(basename "$CONFIG_PATH" .conf)
       echo "Connecting to $INTERFACE..."
       sudo $WG_QUICK up "$CONFIG_PATH"
-      break
+      IP=$(curl -s ifconfig.me)
+      ${pkgs.libnotify}/bin/notify-send "VPN connected" "Interface: $INTERFACE\nIP: $IP"
+  break
     else
       echo "Invalid selection."
     fi
