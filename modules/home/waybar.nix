@@ -78,6 +78,7 @@ in
             format-wifi = "{icon} {signalStrength}%";
             format-disconnected = "󰤮";
             tooltip = false;
+            on-click = "${pkgs.networkmanagerapplet}/bin/nm-connection-editor";
           };
           "pulseaudio" = {
             format = "{icon} {volume}% {format_source}";
@@ -107,7 +108,7 @@ in
           "custom/startmenu" = {
             tooltip = false;
             format = "";
-            on-click = "${pkgs.wofi}/bin/wofi --show drun";
+            on-click = "${pkgs.rofi-wayland}/bin/rofi -show drun";
           };
           "custom/notification" = {
             tooltip = false;
