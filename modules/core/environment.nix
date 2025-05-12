@@ -14,7 +14,6 @@
       wl-clipboard # Clipboard
       git # Version control
       nix-ld # Make nix pkgs
-      greetd.tuigreet # Display manager
       flatpak # Flatpak apps
       nh # Nix helper
       nix-output-monitor # Nice output when rebuilding
@@ -23,6 +22,7 @@
       unzip # Unzip utility
       gcc # C/C++ compiler
       wireguard-tools
+      libsForQt5.qt5.qtgraphicaleffects
     ];
   };
 }
