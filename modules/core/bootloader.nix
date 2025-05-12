@@ -1,4 +1,8 @@
-{pkgs, ...}: let
+{
+  pkgs,
+  inputs,
+  ...
+}: let
   inherit (import ../../wallpaper.nix) wallpaper;
 in {
   boot = {
@@ -13,7 +17,7 @@ in {
         device = "nodev";
         efiSupport = true;
         useOSProber = true;
-        splashImage = wallpaper;
+        theme = inputs.nixos-grub-themes.packages.${pkgs.system}.hyperfluent;
       };
       timeout = 30;
       efi.canTouchEfiVariables = true;

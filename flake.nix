@@ -27,6 +27,10 @@
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixos-grub-themes = {
+      url = "github:jeslie0/nixos-grub-themes";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -44,6 +48,7 @@
     nixosConfigurations = {
       nixlaptop = lib.nixosSystem {
         inherit system;
+        specialArgs = {inherit inputs;};
         modules = [
           ./configuration.nix
           ./hosts/laptop/configuration.nix
@@ -52,6 +57,7 @@
       };
       nixpc = lib.nixosSystem {
         inherit system;
+        specialArgs = {inherit inputs;};
         modules = [
           ./configuration.nix
           ./hosts/pc/configuration.nix
