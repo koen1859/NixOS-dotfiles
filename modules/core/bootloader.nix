@@ -13,6 +13,7 @@ in {
         device = "nodev";
         efiSupport = true;
         useOSProber = true;
+        splashImage = wallpaper;
       };
       timeout = 30;
       efi.canTouchEfiVariables = true;

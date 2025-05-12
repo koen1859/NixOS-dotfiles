@@ -14,6 +14,7 @@ in {
     image = wallpaper;
     polarity = "dark";
     base16Scheme = theme;
+    targets.grub.enable = false;
     cursor = {
       package = pkgs.bibata-cursors;
       name = "Bibata-Modern-Classic";
