@@ -4,9 +4,14 @@ in {
   boot = {
     loader = {
       systemd-boot = {
-        enable = true;
+        enable = false;
         configurationLimit = 5;
         consoleMode = "max";
+      };
+      grub = {
+        enable = true;
+        device = "nodev";
+	efiSupport = true;
       };
       timeout = 30;
       efi.canTouchEfiVariables = true;

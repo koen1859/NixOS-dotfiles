@@ -10,9 +10,9 @@
 
      local config = wezterm.config_builder()
 
-     config.enable_wayland = false
+     config.enable_wayland = true
      config.color_scheme = 'Gruvbox dark, hard (base16)'
-     config.font_size = 14
+     config.font_size = 13
      config.font = wezterm.font "JetBrains Mono"
      config.audible_bell = "Disabled"
 
@@ -23,7 +23,7 @@
        bottom = 10,
      }
 
-     config.use_fancy_tab_bar = true
+     config.enable_tab_bar = false
 
      config.default_cursor_style = "BlinkingUnderline"
      config.cursor_blink_rate = 500
