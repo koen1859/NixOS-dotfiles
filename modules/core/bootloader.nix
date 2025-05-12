@@ -11,7 +11,8 @@ in {
       grub = {
         enable = true;
         device = "nodev";
-	efiSupport = true;
+        efiSupport = true;
+        useOSProber = true;
       };
       timeout = 30;
       efi.canTouchEfiVariables = true;
