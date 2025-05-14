@@ -57,6 +57,60 @@
   };
 
   settings = {
+    "toolkit.telemetry.enabled" = false;
+    "toolkit.telemetry.unified" = false;
+    "toolkit.telemetry.server" = "";
+    "toolkit.telemetry.archive.enabled" = false;
+    "toolkit.telemetry.newProfilePing.enabled" = false;
+    "toolkit.telemetry.shutdownPingSender.enabled" = false;
+    "toolkit.telemetry.updatePing.enabled" = false;
+    "toolkit.telemetry.bhrPing.enabled" = false;
+    "toolkit.telemetry.firstShutdownPing.enabled" = false;
+
+    "datareporting.healthreport.uploadEnabled" = false;
+    "datareporting.policy.dataSubmissionEnabled" = false;
+
+    "browser.newtabpage.activity-stream.feeds.telemetry" = false;
+    "browser.newtabpage.activity-stream.telemetry" = false;
+    "browser.ping-centre.telemetry" = false;
+
+    "app.shield.optoutstudies.enabled" = false;
+    "app.normandy.enabled" = false;
+    "app.normandy.api_url" = "";
+
+    "privacy.donottrackheader.enabled" = true;
+    "privacy.donottrackheader.value" = 1;
+    "privacy.resistFingerprinting" = true;
+    "privacy.firstparty.isolate" = true;
+    "privacy.trackingprotection.enabled" = true;
+    "privacy.trackingprotection.fingerprinting.enabled" = true;
+    "privacy.trackingprotection.cryptomining.enabled" = true;
+    "privacy.trackingprotection.socialtracking.enabled" = true;
+
+    "network.http.referer.XOriginPolicy" = 2;
+    "network.http.referer.XOriginTrimmingPolicy" = 2;
+    "network.http.sendRefererHeader" = 1;
+
+    "webgl.disabled" = true;
+    "media.peerconnection.enabled" = false;
+    "beacon.enabled" = false;
+    "dom.battery.enabled" = false;
+    "dom.webaudio.enabled" = false;
+    "device.sensors.enabled" = false;
+
+    "network.IDN_show_punycode" = true;
+
+    "permissions.default.camera" = 2;
+    "permissions.default.microphone" = 2;
+    "permissions.default.geo" = 2;
+    "permissions.default.desktop-notification" = 2;
+
+    "geo.enabled" = false;
+    "geo.provider.use_corelocation" = false;
+    "geo.provider.use_gpsd" = false;
+    "geo.provider.use_geoclue" = false;
+    "geo.provider.network.url" = "";
+
     "extensions.autoDisableScopes" = 0;
 
     "middlemouse.paste" = false;
@@ -69,6 +123,7 @@
     "browser.toolbars.bookmarks.visibility" = "never";
     "browser.quitShortcut.disabled" = true;
     "browser.sessionstore.restore_pinned_tabs_on_demand" = true;
+
     "browser.newtabpage.activity-stream.showSponsoredTopSites" = false;
     "browser.newtabpage.activity-stream.showSearch" = false;
     "browser.newtabpage.activity-stream.showTopSites" = false;
@@ -86,55 +141,16 @@
     "browser.urlbar.suggest.topsites" = true;
     "browser.urlbar.trimHttps" = true;
 
-    "browser.sessionstore.privacy_level" = 0;
-    "browser.sessionstore.resume_from_crash" = true;
-    "browser.sessionstore.max_resumed_crashes" = -1;
-
-    "places.history.enabled" = true;
-    "privacy.sanitize.sanitizeOnShutdown" = false;
-
-    "dom.storage.enabled" = true;
-    "dom.indexedDB.enabled" = true;
-    "browser.cache.disk.enable" = true;
-    "browser.cache.offline.enable" = true;
-
     "sidebar.position_start" = "left";
     "sidebar.verticalTabs" = true;
     "sidebar.visibility" = "expand-on-hover";
     "sidebar.main.tools" = "";
     "findbar.highlightAll" = true;
 
-    "xpinstall.signatures.required" = false;
-
-    "apz.overscroll.enabled" = false;
-    "browser.tabs.hoverPreview.enabled" = true;
-
-    "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
-
-    "media.autoplay.blocking_policy" = 2;
-
-    "network.cookie.lifetimePolicy" = 0;
-    "privacy.clearOnShutdown.cookies" = false;
-    "privacy.clearOnShutdown.sessions" = false;
-    "privacy.clearOnShutdown.siteSettings" = false;
-    "privacy.resistFingerprinting.letterboxing" = false;
-
     "browser.theme.content-theme" = 2;
     "browser.theme.toolbar-theme" = 2;
     "ui.systemUsesDarkTheme" = 1;
     "layout.css.prefers-color-scheme.content-override" = 0;
-
-    "dom.security.https_only_mode" = true;
-    "dom.security.https_only_mode_ever_enabled" = true;
-    "dom.security.https_only_mode.upgrade_local" = true;
-
-    "network.trr.mode" = 3;
-    "network.trr.uri" = "https://mozilla.cloudflare-dns.com/dns-query";
-    "network.trr.bootstrapAddress" = "1.1.1.1";
-    "network.trr.confirmationNS" = "example.com";
-    "network.dns.disablePrefetch" = true;
-    "network.dns.echconfig.enabled" = true;
-    "network.dns.use_https_rr_as_altsvc" = true;
   };
 in {
   stylix.targets.firefox.profileNames = ["default"];

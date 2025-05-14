@@ -2,7 +2,7 @@
   wayland.windowManager.hyprland.settings = {
     bind = [
       "$mainMod, B, exec, ${pkgs.firefox}/bin/firefox"
-      "SUPER_SHIFT, B, exec, ${pkgs.firefox}/bin/firefox --private-window"
+      "SUPER_SHIFT, B, exec, ${pkgs.librewolf}/bin/librewolf --private-window"
       ", PRINT, exec, ${pkgs.hyprshot}/bin/hyprshot -m region"
       "$mainMod, S, exec, ${pkgs.hyprshot}/bin/hyprshot -m output -m active"
       "$mainMod, ESCAPE, exec, ${pkgs.wlogout}/bin/wlogout"
