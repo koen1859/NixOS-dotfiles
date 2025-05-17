@@ -62,6 +62,13 @@
           stylix.nixosModules.stylix
         ];
       };
+      nixserver = lib.nixosSystem {
+        inherit system;
+        specialArgs = {inherit inputs;};
+        modules = [
+          ./hosts/server/configuration.nix
+        ];
+      };
     };
     homeConfigurations = {
       "koenstevens@nixlaptop" = home-manager.lib.homeManagerConfiguration {
@@ -81,6 +88,13 @@
           stylix.homeManagerModules.stylix
           nixvim.homeManagerModules.nixvim
           nixcord.homeModules.nixcord
+        ];
+        extraSpecialArgs = {inherit inputs;};
+      };
+      "koenstevens@nixserver" = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        modules = [
+          ./hosts/server/home.nix
         ];
         extraSpecialArgs = {inherit inputs;};
       };
