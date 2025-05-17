@@ -1,6 +1,6 @@
 {pkgs, ...}: let
-  inherit (import ../../wallpaper.nix) wallpaper;
-  inherit (import ../../theme.nix {inherit pkgs;}) theme;
+  inherit (import ../wallpaper.nix) wallpaper;
+  inherit (import ../theme.nix {inherit pkgs;}) theme;
   painted_wallpaper = pkgs.runCommand "painted_wallpaper.png" {} ''
     COLOR1=$(${pkgs.yq}/bin/yq -r .palette.base00 ${theme})
     COLOR2=$(${pkgs.yq}/bin/yq -r .palette.base0F ${theme})

@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   imports = [
     # ./llm.nix
-    ./hyprland.nix
+    ./modules/hyprland.nix
   ];
   home.packages = with pkgs; [
     obs-studio # Screenrecord

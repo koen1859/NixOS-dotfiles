@@ -2,9 +2,7 @@
   pkgs,
   inputs,
   ...
-}: let
-  inherit (import ../../wallpaper.nix) wallpaper;
-in {
+}: {
   boot = {
     loader = {
       systemd-boot = {

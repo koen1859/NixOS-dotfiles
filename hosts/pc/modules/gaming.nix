@@ -8,7 +8,7 @@
     mangohud
     prismlauncher
   ];
-  services.udev.packages = with pkgs; [steamPackages.steam];
+  services.udev.packages = with pkgs; [steam-unwrapped];
   boot.kernelModules = ["hid_sony"];
   programs = {
     gamescope = {
