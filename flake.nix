@@ -50,7 +50,6 @@
         inherit system;
         specialArgs = {inherit inputs;};
         modules = [
-          ./configuration.nix
           ./hosts/laptop/configuration.nix
           stylix.nixosModules.stylix
         ];
@@ -59,7 +58,6 @@
         inherit system;
         specialArgs = {inherit inputs;};
         modules = [
-          ./configuration.nix
           ./hosts/pc/configuration.nix
           stylix.nixosModules.stylix
         ];
@@ -69,7 +67,6 @@
       "koenstevens@nixlaptop" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [
-          ./home.nix
           ./hosts/laptop/home.nix
           stylix.homeManagerModules.stylix
           nixvim.homeManagerModules.nixvim
@@ -80,7 +77,6 @@
       "koenstevens@nixpc" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [
-          ./home.nix
           ./hosts/pc/home.nix
           stylix.homeManagerModules.stylix
           nixvim.homeManagerModules.nixvim
