@@ -1,6 +1,5 @@
-{lib, ...}: {
+{
   wayland.windowManager.hyprland = {
-    xwayland.enable = lib.mkForce true;
     extraConfig = ''
       workspace = 1, monitor:DP-1
       workspace = 2, monitor:DP-1
