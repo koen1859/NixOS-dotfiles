@@ -5,13 +5,13 @@
       settings = {
         PasswordAuthentication = false;
         PermitRootLogin = "no";
-        Port = 2222;
+        Port = 22;
       };
     };
   };
 
   networking.firewall = {
     enable = true;
-    allowedTCPPorts = [2222];
+    allowedTCPPorts = [22];
   };
 }
