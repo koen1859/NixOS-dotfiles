@@ -32,6 +32,10 @@
       url = "github:jeslie0/nixos-grub-themes";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixarr = {
+      url = "github:rasmus-kirk/nixarr";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -41,6 +45,7 @@
     stylix,
     nixvim,
     nixcord,
+    nixarr,
     ...
   } @ inputs: let
     lib = nixpkgs.lib;
@@ -70,6 +75,7 @@
         modules = [
           ./hosts/server/configuration.nix
           stylix.nixosModules.stylix
+          nixarr.nixosModules.default
         ];
       };
     };
