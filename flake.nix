@@ -69,6 +69,7 @@
         specialArgs = {inherit inputs;};
         modules = [
           ./hosts/server/configuration.nix
+          stylix.nixosModules.stylix
         ];
       };
     };
@@ -97,6 +98,9 @@
         inherit pkgs;
         modules = [
           ./hosts/server/home.nix
+          stylix.homeManagerModules.stylix
+          nixvim.homeManagerModules.nixvim
+          nixcord.homeModules.nixcord
         ];
         extraSpecialArgs = {inherit inputs;};
       };
