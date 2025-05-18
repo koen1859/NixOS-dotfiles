@@ -32,4 +32,14 @@ in {
     "${home}/zathura.nix"
     "${home}/zellij.nix"
   ];
+
+  home = {
+    username = "koenstevens";
+    homeDirectory = "/home/koenstevens";
+    sessionVariables = {
+      TEXMFHOME = "~/.texmf/";
+    };
+    stateVersion = "24.11";
+  };
+  programs.home-manager.enable = true;
 }

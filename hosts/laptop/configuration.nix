@@ -5,10 +5,8 @@ in {
     ./modules/hardware.nix
     ./modules/tlp.nix
 
-    "${core}"
+    core
   ];
-
-  system.stateVersion = "24.11";
 
   networking.hostName = "nixlaptop";
 
