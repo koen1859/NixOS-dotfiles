@@ -14,7 +14,7 @@
         enable = true;
         device = "nodev";
         efiSupport = true;
-        useOSProber = true;
+        useOSProber = false;
         theme = inputs.nixos-grub-themes.packages.${pkgs.system}.hyperfluent;
       };
       timeout = 30;

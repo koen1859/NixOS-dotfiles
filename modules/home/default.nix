@@ -1,0 +1,35 @@
+{inputs, ...}: let
+  home = "${inputs.self}/modules/home";
+in {
+  imports = [
+    "${home}/fetch"
+    "${home}/firefox"
+    "${home}/hypr"
+    "${home}/nixvim"
+    "${home}/wlogout"
+    "${home}/zsh"
+    "${home}/atuin.nix"
+    "${home}/bash.nix"
+    "${home}/btop.nix"
+    "${home}/ghostty.nix"
+    "${home}/git.nix"
+    "${home}/gtk.nix"
+    "${home}/htop.nix"
+    "${home}/kitty.nix"
+    "${home}/librewolf.nix"
+    "${home}/nixcord.nix"
+    "${home}/packages.nix"
+    "${home}/programming.nix"
+    "${home}/qt.nix"
+    "${home}/rofi.nix"
+    "${home}/spicetify.nix"
+    "${home}/starship.nix"
+    "${home}/stylix.nix"
+    "${home}/swaync.nix"
+    "${home}/waybar.nix"
+    "${home}/wezterm.nix"
+    "${home}/wofi.nix"
+    "${home}/zathura.nix"
+    "${home}/zellij.nix"
+  ];
+}
