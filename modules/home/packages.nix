@@ -11,6 +11,7 @@
     # Applications
     feh # Image viewer
     zathura # PDF viewer
+    lazygit # Git UI
   ];
   nixpkgs.config.allowUnfree = true;
 }
