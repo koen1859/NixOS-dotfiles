@@ -1,6 +1,6 @@
 {
   nixarr = {
-    enable = true;
+    enable = false;
     # These two values are also the default, but you can set them to whatever
     # else you want
     # WARNING: Do _not_ set them to `/home/user/whatever`, it will not work!
@@ -11,7 +11,7 @@
       enable = true;
       # WARNING: This file must _not_ be in the config git directory
       # You can usually get this wireguard file from your VPN provider
-      wgConf = "/data/.secret/wg-CH-185.conf";
+      wgConf = "/data/.secret/wg-CH-414.conf";
     };
 
     jellyfin = {
@@ -28,7 +28,7 @@
     transmission = {
       enable = true;
       vpn.enable = true;
-      peerPort = 51820; # Set this to the port forwarded by your VPN
+      peerPort = 52158; # Set this to the port forwarded by your VPN
     };
 
     # It is possible for this module to run the *Arrs through a VPN, but it
