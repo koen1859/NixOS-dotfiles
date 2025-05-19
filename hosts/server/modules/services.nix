@@ -18,7 +18,7 @@
   networking = {
     nameservers = ["10.2.0.1"];
     wireguard = {
-      enable = true;
+      enable = false;
       interfaces = {
         wg0 = {
           ips = ["10.2.0.2/32"];
@@ -26,7 +26,7 @@
           peers = [
             {
               publicKey = "R8TfZYSkUM30soIPOVpNsP35qCnnJvJJI9r/VxH5TkQ=";
-              AllowedIPs = ["0.0.0.0/0"];
+              allowedIPs = ["0.0.0.0/0"];
               endpoint = "146.70.226.226:51820";
               persistentKeepalive = 25;
             }
