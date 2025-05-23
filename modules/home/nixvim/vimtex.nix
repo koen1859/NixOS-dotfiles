@@ -2,7 +2,7 @@
   programs.nixvim.plugins = {
     vimtex = {
       enable = true;
-      texlivePackage = pkgs.texliveSmall.withPackages (ps:
+      texlivePackage = pkgs.texliveFull.withPackages (ps:
         with ps; [
           latexmk
           amsmath
@@ -13,6 +13,13 @@
           tocbibind
           latexindent
           adjustbox
+          algpseudocodex
+          algorithmicx
+          algorithms
+          fifo-stack
+          varwidth
+          tabto-ltx
+          totcount
         ]);
     };
   };
