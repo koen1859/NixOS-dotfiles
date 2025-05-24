@@ -3,9 +3,6 @@
     enable = true;
     package = pkgs.wezterm;
   };
-  imports = [
-    ./BSc_Thesis.nix
-  ];
   home.file."./.config/wezterm/wezterm.lua".text = ''
     -- Config from Drew @justaguylinux small mods
 

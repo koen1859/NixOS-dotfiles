@@ -5,6 +5,7 @@
     (import ./scripts/OneDrive.nix {inherit pkgs;})
     (import ./scripts/ProtonDrive.nix {inherit pkgs;})
     (import ./scripts/toggle_vpn.nix {inherit pkgs;})
+    (import ./scripts/BSc_Thesis.nix {inherit pkgs;})
     pandoc # Filetype converter (html, pdf, ...)
     fd # Fuzzy finder
 
