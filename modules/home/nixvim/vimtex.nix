@@ -22,6 +22,7 @@
           totcount
         ]);
     };
+    ltex-extra.enable = true;
   };
   home.file.".texmf/bibtex/bst/rug-econometrics/rug-econometrics.bst".text = ''
     %%% ====================================================================

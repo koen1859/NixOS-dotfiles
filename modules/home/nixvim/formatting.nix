@@ -14,7 +14,6 @@
         diagnostics = {
           statix.enable = true;
           deadnix.enable = true;
-          pylint.enable = true;
           checkstyle.enable = true;
         };
         formatting = {

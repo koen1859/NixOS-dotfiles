@@ -16,6 +16,8 @@
      config.font = wezterm.font "JetBrains Mono"
      config.audible_bell = "Disabled"
 
+     config.warn_about_missing_glyphs=false
+
      config.window_padding = {
        left = 10,
        right = 10,
