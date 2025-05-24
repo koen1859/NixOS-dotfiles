@@ -84,7 +84,7 @@
         inherit pkgs;
         modules = [
           ./hosts/laptop/home.nix
-          stylix.homeManagerModules.stylix
+          stylix.homeModules.stylix
           nixvim.homeManagerModules.nixvim
           nixcord.homeModules.nixcord
         ];
@@ -94,7 +94,7 @@
         inherit pkgs;
         modules = [
           ./hosts/pc/home.nix
-          stylix.homeManagerModules.stylix
+          stylix.homeModules.stylix
           nixvim.homeManagerModules.nixvim
           nixcord.homeModules.nixcord
         ];
@@ -104,7 +104,7 @@
         inherit pkgs;
         modules = [
           ./hosts/server/home.nix
-          stylix.homeManagerModules.stylix
+          stylix.homeModules.stylix
           nixvim.homeManagerModules.nixvim
           nixcord.homeModules.nixcord
         ];
