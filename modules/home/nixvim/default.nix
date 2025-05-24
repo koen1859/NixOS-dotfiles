@@ -15,7 +15,6 @@
     ./aerial.nix
     ./mini.nix
     ./toggleterm.nix
-    ./slime.nix
   ];
   programs.nixvim = {
     enable = true;
