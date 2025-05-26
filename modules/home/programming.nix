@@ -4,11 +4,14 @@
       with ps; [
         ipython
         jupytext
+        pandas
+        numpy
       ]))
     (rWrapper.override {
       packages = with rPackages; [
         languageserver
         languageserversetup
+        ChainLadder
       ];
     })
     zed-editor
