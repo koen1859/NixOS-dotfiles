@@ -9,6 +9,7 @@ in {
     "${home}/wlogout"
     "${home}/wezterm"
     "${home}/zsh"
+    "${home}/ags.nix"
     "${home}/atuin.nix"
     "${home}/bash.nix"
     "${home}/btop.nix"

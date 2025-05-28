@@ -8,6 +8,7 @@
 
     pandoc # Filetype converter (html, pdf, ...)
     fd # Fuzzy finder
+    ags
 
     # Applications
     feh # Image viewer
