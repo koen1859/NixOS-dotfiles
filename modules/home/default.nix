@@ -12,6 +12,7 @@ in {
     "${home}/atuin.nix"
     "${home}/bash.nix"
     "${home}/btop.nix"
+    "${home}/eww.nix"
     "${home}/ghostty.nix"
     "${home}/git.nix"
     "${home}/gtk.nix"
