@@ -12,6 +12,9 @@
         languageserver
         languageserversetup
         ChainLadder
+        xtable
+        Rfast
+        tidyverse
       ];
     })
     zed-editor
