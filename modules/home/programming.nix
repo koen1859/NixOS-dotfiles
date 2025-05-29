@@ -4,21 +4,13 @@
       with ps; [
         ipython
         jupytext
-        pandas
-        numpy
       ]))
     (rWrapper.override {
       packages = with rPackages; [
         languageserver
         languageserversetup
-        ChainLadder
-        xtable
-        Rfast
-        tidyverse
       ];
     })
-    zed-editor
-    nixd
     devenv # Make nice dev shells
     direnv # Activate shells on directory level
   ];
