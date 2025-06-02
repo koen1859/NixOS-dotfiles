@@ -7,14 +7,23 @@
         options.silent = true;
         action = ":UndotreeToggle<cr>";
       }
+      # {
+      #   mode = "n";
+      #   key = "<leader>fe";
+      #   options.silent = true;
+      #   action = "<cmd>:Neotree toggle<CR>";
+      # }
       {
         mode = "n";
         key = "<leader>fe";
         options.silent = true;
-        action = "<cmd>:Neotree toggle<CR>";
+        action = "<cmd>:Oil<CR>";
       }
     ];
     plugins = {
+      oil = {
+        enable = true;
+      };
       web-devicons = {
         enable = true;
       };
