@@ -5,14 +5,12 @@
     (import ./scripts/OneDrive.nix {inherit pkgs;})
     (import ./scripts/ProtonDrive.nix {inherit pkgs;})
     (import ./scripts/toggle_vpn.nix {inherit pkgs;})
-
-    pandoc # Filetype converter (html, pdf, ...)
-    fd # Fuzzy finder
-
-    # Applications
-    feh # Image viewer
-    zathura # PDF viewer
-    lazygit # Git UI
   ];
+
+  programs = {
+    feh.enable = true;
+    fd.enable = true;
+    pandoc.enable = true;
+  };
   nixpkgs.config.allowUnfree = true;
 }

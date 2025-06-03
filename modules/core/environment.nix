@@ -11,15 +11,14 @@
     systemPackages = with pkgs; [
       # Core packages
       wl-clipboard # Clipboard
-      flatpak # Flatpak apps
       nh # Nix helper
       nix-output-monitor # Nice output when rebuilding
       nvd # Version diff after rebuilding
-      yazi # Fast terminal file manager
       unzip # Unzip utility
       gcc # C/C++ compiler
       wireguard-tools
       libsForQt5.qt5.qtgraphicaleffects
+      tree
     ];
   };
 }

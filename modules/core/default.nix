@@ -13,6 +13,7 @@ in {
     "${core}/network.nix"
     "${core}/nixpkgs.nix"
     "${core}/nix.nix"
+    "${core}/nh.nix"
     "${core}/flatpak.nix"
   ];
 
