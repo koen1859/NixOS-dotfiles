@@ -2,6 +2,7 @@
   home = "${inputs.self}/modules/home";
 in {
   imports = [
+    "${home}/eww"
     "${home}/fetch"
     "${home}/firefox"
     "${home}/hypr"
@@ -12,7 +13,6 @@ in {
     "${home}/atuin.nix"
     "${home}/bash.nix"
     "${home}/btop.nix"
-    "${home}/eww.nix"
     "${home}/ghostty.nix"
     "${home}/git.nix"
     "${home}/gtk.nix"
