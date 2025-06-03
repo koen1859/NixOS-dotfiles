@@ -6,6 +6,7 @@
     settings = {
       exec-once = [
         "waybar"
+        "eww daemon"
       ];
       input = {
         kb_layout = "us";
