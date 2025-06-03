@@ -11,13 +11,13 @@
 (defwidget vpn-list []
   (box :orientation "vertical" :space-evenly true :class "vpn-box"
     (for vpn in vpns
-      (button :onclick "sudo /run/current-system/sw/bin/wg-quick up ~/.vpn/${vpn} && eww close vpn-window"
+      (button :onclick "(sudo /run/current-system/sw/bin/wg-quick up ~/.vpn/${vpn} &); eww close vpn-window"
         vpn))
   )
 )
 (defwidget active-vpn-widget []
   (box :orientation "vertical" :space-evenly true :class "active-vpn"
-    (button :onclick "sudo /run/current-system/sw/bin/wg-quick down ~/.vpn/${active-vpn} && eww close vpn-window"
+    (button :onclick "(sudo /run/current-system/sw/bin/wg-quick down ~/.vpn/${active-vpn} &); eww close vpn-window"
       active-vpn)
   )
 )
