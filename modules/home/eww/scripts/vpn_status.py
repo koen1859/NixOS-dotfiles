@@ -1,6 +1,5 @@
 import subprocess
 import re
-import json
 
 
 def get_active_wg_interface():
