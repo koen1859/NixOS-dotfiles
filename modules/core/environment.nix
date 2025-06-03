@@ -10,10 +10,7 @@
     };
     systemPackages = with pkgs; [
       # Core packages
-      hyprland # WM
       wl-clipboard # Clipboard
-      git # Version control
-      nix-ld # Make nix pkgs
       flatpak # Flatpak apps
       nh # Nix helper
       nix-output-monitor # Nice output when rebuilding
