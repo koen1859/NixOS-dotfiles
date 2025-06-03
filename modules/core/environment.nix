@@ -6,7 +6,6 @@
     ];
     sessionVariables = {
       nixos_ozone_wl = "1";
-      NH_FLAKE = "/home/koenstevens/.dotfiles/";
     };
     systemPackages = with pkgs; [
       # Core packages
@@ -18,7 +17,6 @@
       gcc # C/C++ compiler
       wireguard-tools
       libsForQt5.qt5.qtgraphicaleffects
-      tree
     ];
   };
 }

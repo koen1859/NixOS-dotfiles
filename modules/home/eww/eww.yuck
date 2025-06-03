@@ -1,0 +1,31 @@
+(defpoll vpns :interval "1s" `python ~/.config/eww/scripts/vpns.py`)
+(defpoll active-vpn :interval "1s" "python ~/.config/eww/scripts/vpn_status.py")
+
+(defwidget ui []
+  (box :orientation "horizontal"
+    (vpn-list)
+    (active-vpn-widget)
+  )
+)
+
+(defwidget vpn-list []
+  (box :orientation "vertical" :space-evenly true :class "vpn-box"
+    (for vpn in vpns
+      (button :onclick "sudo /run/current-system/sw/bin/wg-quick up ~/.vpn/'${vpn}'"
+        vpn))
+  )
+)
+(defwidget active-vpn-widget []
+  (box :orientation "vertical" :space-evenly true :class "active-vpn"
+    (button :onclick "sudo /run/current-system/sw/bin/wg-quick down ~/.vpn/'${active-vpn}'"
+      active-vpn)
+  )
+)
+
+(defwindow vpn-window
+  :monitor 1
+  :geometry (geometry :x "50%" :y "50%" :width "50%" :height "50%" :anchor "center")
+  :stacking "fg"
+  :wm-ignore false
+  (ui)
+)

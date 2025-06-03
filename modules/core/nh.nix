@@ -1,7 +1,7 @@
 {
   programs.nh = {
     enable = true;
-    flake = "~/.dotfiles/";
+    flake = "/home/koenstevens/.dotfiles/";
     clean = {
       enable = true;
       dates = "weekly";

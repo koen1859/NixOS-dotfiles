@@ -5,6 +5,8 @@
     (import ./scripts/OneDrive.nix {inherit pkgs;})
     (import ./scripts/ProtonDrive.nix {inherit pkgs;})
     (import ./scripts/toggle_vpn.nix {inherit pkgs;})
+    tree
+    libnotify
   ];
 
   programs = {
