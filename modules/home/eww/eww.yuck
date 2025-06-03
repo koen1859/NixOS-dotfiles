@@ -12,20 +12,20 @@
   (box :orientation "vertical" :space-evenly true :class "vpn-box"
     (for vpn in vpns
       (button :onclick "(sudo /run/current-system/sw/bin/wg-quick up ~/.vpn/${vpn} &); eww close vpn-window"
-        vpn))
+        "Connect ${vpn}"))
   )
 )
 (defwidget active-vpn-widget []
   (box :orientation "vertical" :space-evenly true :class "active-vpn"
     (button :onclick "(sudo /run/current-system/sw/bin/wg-quick down ~/.vpn/${active-vpn} &); eww close vpn-window"
-      active-vpn)
+      "Disconnect ${active-vpn}")
   )
 )
 
 (defwindow vpn-window
   :monitor 0
-  :geometry (geometry :x "50%" :y "50%" :width "50%" :height "50%" :anchor "center")
+  :geometry (geometry :width "10%" :height "50%" :anchor "top left")
   :stacking "fg"
-  :wm-ignore false
+  :wm-ignore true
   (ui)
 )
