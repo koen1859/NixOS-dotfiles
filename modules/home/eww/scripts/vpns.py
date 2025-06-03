@@ -4,7 +4,7 @@ import json
 
 def print_vpn_confs():
     directory = "/home/koenstevens/.vpn/"
-    confs = [f for f in os.listdir(directory) if f.endswith(".conf")]
+    confs = sorted([f for f in os.listdir(directory) if f.endswith(".conf")])
     return json.dumps(confs)
 
 
