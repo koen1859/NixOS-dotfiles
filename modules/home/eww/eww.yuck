@@ -1,1 +1,2 @@
 (include "~/.config/eww/vpn/eww.yuck")
+(include "~/.config/eww/appmenu/eww.yuck")

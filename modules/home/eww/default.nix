@@ -5,8 +5,10 @@ in {
   home.file = {
     "${cfgDir}/eww.yuck".source = ./eww.yuck;
     "${cfgDir}/vpn/eww.yuck".source = ./vpn/eww.yuck;
+    "${cfgDir}/appmenu/eww.yuck".source = ./appmenu/eww.yuck;
     "${cfgDir}/scripts/vpns.py".source = ./scripts/vpns.py;
     "${cfgDir}/scripts/vpn_status.py".source = ./scripts/vpn_status.py;
+    "${cfgDir}/scripts/search.sh".source = ./scripts/search.sh;
     "${cfgDir}/eww.scss".text = ''
       * {
         all: unset;
