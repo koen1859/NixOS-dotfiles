@@ -8,7 +8,6 @@
       flatpak install --noninteractive flathub me.proton.Pass
       flatpak install --noninteractive flathub com.github.tchx84.Flatseal
       flatpak install --noninteractive flathub org.gimp.GIMP
-      flatpak install --noninteractive flathub io.github.ungoogled_software.ungoogled_chromium
     '';
   };
 }

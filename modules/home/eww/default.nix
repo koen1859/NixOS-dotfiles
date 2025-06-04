@@ -4,6 +4,7 @@ in {
   programs.eww.enable = true;
   home.file = {
     "${cfgDir}/eww.yuck".source = ./eww.yuck;
+    "${cfgDir}/vpn/eww.yuck".source = ./vpn/eww.yuck;
     "${cfgDir}/scripts/vpns.py".source = ./scripts/vpns.py;
     "${cfgDir}/scripts/vpn_status.py".source = ./scripts/vpn_status.py;
     "${cfgDir}/eww.scss".text = ''
