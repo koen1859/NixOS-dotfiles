@@ -4,8 +4,6 @@ in {
   programs.eww.enable = true;
   home.file = {
     "${cfgDir}/eww.yuck".source = ./eww.yuck;
-    "${cfgDir}/vpn/eww.yuck".source = ./vpn/eww.yuck;
-    "${cfgDir}/appmenu/eww.yuck".source = ./appmenu/eww.yuck;
     "${cfgDir}/scripts/vpns.py".source = ./scripts/vpns.py;
     "${cfgDir}/scripts/vpn_status.py".source = ./scripts/vpn_status.py;
     "${cfgDir}/scripts/search.sh".source = ./scripts/search.sh;
@@ -19,7 +17,7 @@ in {
       }
 
       window#vpn-window {
-        background-color: rgba(0, 0, 0, 0.6);
+        background-color: rgba(0, 0, 0, 0);
         border-radius: 10px;
         padding: 8px;
       }
@@ -32,7 +30,7 @@ in {
         border-radius: 6px;
       }
 
-      .list-vpn-box, .active-vpn-box {
+      .list-vpn-box, .active-vpn-box, .searchapps-bar {
         background: #${config.lib.stylix.colors.base00};
         padding: 6px;
         margin: 4px;
