@@ -12,6 +12,7 @@
 
      config.enable_wayland = false
      config.color_scheme = 'Gruvbox dark, hard (base16)'
+     config.color_scheme = 'tokyonight_night'
      config.font_size = 13
      config.font = wezterm.font "JetBrains Mono"
      config.audible_bell = "Disabled"
