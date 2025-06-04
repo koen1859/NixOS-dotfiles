@@ -21,6 +21,7 @@
       }
     ];
     plugins = {
+      noice.enable = true;
       oil = {
         enable = true;
       };

@@ -38,6 +38,7 @@
           yamlls.enable = true;
           ltex.enable = true;
           texlab.enable = true;
+          tinymist.enable = true;
           r_language_server = {
             enable = true;
             package = pkgs.rPackages.languageserver;
