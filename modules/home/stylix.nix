@@ -24,9 +24,7 @@ in {
       waybar.enable = false;
       zathura.enable = false;
       spicetify.enable = false;
-      ghostty.enable = false;
       firefox.profileNames = ["default"];
-      wezterm.enable = true;
       nixvim = {
         transparentBackground = {
           main = true;
