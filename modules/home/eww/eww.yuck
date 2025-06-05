@@ -1,13 +1,24 @@
-;; Appmenu
-(defpoll search_listen :interval "1s" "cat ~/.config/eww/scripts/search_items.txt")
+(deflisten search_listen "cat ~/.config/eww/scripts/search_items.txt")
 
 (defwidget searchapps []
   (eventbox :onhoverlost "eww close searchapps"
     (box :orientation "v" :space-evenly false :class "search-win" :halign "top" :valign "top"
       (box :orientation "h" :space-evenly false :class "searchapps-bar" :halign "top" :valign "top"
         (label :class "search-label" :text "")
-        (input :class "search-bar" :onchange "~/.config/eww/scripts/search.sh {}"))
+        (input :class "search-bar" :onchange "bash ~/.config/eww/scripts/search.sh {}"))
       (literal :halign "center" :valign "center" :class "app-container" :content search_listen))))
+
+
+(defwindow searchapps
+  :focusable true
+  :monitor 0
+  :windowtype "normal"
+  :geometry (geometry :x "40%"
+                      :y "30%"
+                      :width "20%"
+                      :height "50%"
+                      :anchor "top left")
+(searchapps))
 
 (defwidget bigpowermenu []
   (box :orientation "h" :space-evenly false :class "bigpowermenu" :halign "center" :valign "center" :spacing 20
@@ -19,19 +30,7 @@
   )
 )
 
-(defwindow searchapps
-  :wm-ignore: true
-  :monitor 0
-  :windowtype "normal"
-  :geometry (geometry :x "40%"
-                      :y "30%"
-                      :width "20%"
-                      :height "50%"
-                      :anchor "top left")
-(searchapps))
-
 (defwindow bigpowermenu
-  :wm-ignore true
   :monitor 0
   :windowtype "dock"
   :geometry (geometry :x "0px"

@@ -5,6 +5,11 @@
     (import ./scripts/OneDrive.nix {inherit pkgs;})
     (import ./scripts/ProtonDrive.nix {inherit pkgs;})
     (import ./scripts/toggle_vpn.nix {inherit pkgs;})
+    (import ./scripts/GIMP.nix {inherit pkgs;})
+    (import ./scripts/weather.nix {inherit pkgs;})
+    (import ./scripts/ProtonMail.nix {inherit pkgs;})
+    (import ./scripts/ProtonPass.nix {inherit pkgs;})
+    (import ./scripts/Flatseal.nix {inherit pkgs;})
     tree
     libnotify
   ];

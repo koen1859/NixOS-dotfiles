@@ -1,3 +1,3 @@
 {
-  wallpaper = ../Wallpapers/a_house_in_the_woods.png;
+  wallpaper = ../Wallpapers/a_blue_and_orange_background.jpg;
 }
