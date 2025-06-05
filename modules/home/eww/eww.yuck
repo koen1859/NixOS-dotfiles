@@ -23,18 +23,12 @@
 (defwidget bigpowermenu []
   (eventbox :onhoverlost "eww close bigpowermenu"
     (box :orientation "h" :space-evenly false :class "bigpowermenu" :halign "center" :valign "center" :spacing 20
-      (button :class "shutdown" :onclick "systemctl poweroff"
-        (image :path "/home/koenstevens/.dotfiles/modules/home/wlogout/icons/shutdown.png" :image-width 24 :image-height 24))
-      (button :class "reboot" :onclick "systemctl reboot"
-        (image :path "/home/koenstevens/.dotfiles/modules/home/wlogout/icons/reboot.png" :image-width 24 :image-height 24))
-      (button :class "lock" :onclick "hyprlock"
-        (image :path "/home/koenstevens/.dotfiles/modules/home/wlogout/icons/lock.png" :image-width 24 :image-height 24))
-      (button :class "suspend" :onclick "systemctl suspend"
-        (image :path "/home/koenstevens/.dotfiles/modules/home/wlogout/icons/suspend.png" :image-width 24 :image-height 24))
-      (button :class "logout" :onclick "hyprctl dispatch exit"
-        (image :path "/home/koenstevens/.dotfiles/modules/home/wlogout/icons/logout.png" :image-width 24 :image-height 24))
-      (button :class "hibernate" :onclick "systemctl hibernate"
-        (image :path "/home/koenstevens/.dotfiles/modules/home/wlogout/icons/hibernate.png" :image-width 24 :image-height 24))
+      (button :class "shutdown" :onclick "systemctl poweroff" "")
+      (button :class "reboot" :onclick "systemctl reboot" "󰦛")
+      (button :class "lock" :onclick "hyprlock" "")
+      (button :class "suspend" :onclick "systemctl suspend" "󰤄")
+      (button :class "logout" :onclick "hyprctl dispatch exit" "󰈆")
+      (button :class "hibernate" :onclick "systemctl hibernate" "")
     )
   )
 )
