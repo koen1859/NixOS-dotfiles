@@ -19,12 +19,6 @@
         action = "<cmd>LazyGit<cr>";
       }
       {
-        key = "<leader>a";
-        mode = ["n"];
-        options.silent = true;
-        action = "<cmd>AerialToggle!<cr>";
-      }
-      {
         key = "<C-Enter>";
         mode = ["n"];
         options.silent = true;

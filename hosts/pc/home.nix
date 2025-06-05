@@ -1,8 +1,4 @@
-{
-  inputs,
-  pkgs,
-  ...
-}: let
+{inputs, ...}: let
   home = "${inputs.self}/modules/home";
 in {
   imports = [

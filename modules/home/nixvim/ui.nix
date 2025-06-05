@@ -19,8 +19,52 @@
         options.silent = true;
         action = "<cmd>:Oil<CR>";
       }
+      {
+        mode = "n";
+        key = "<leader>a";
+        action = "<cmd> lua require'harpoon':list():add()<CR>";
+      }
+      {
+        mode = "n";
+        key = "<C-e>";
+        action = "<cmd>lua require'harpoon'.ui:toggle_quick_menu(require'harpoon':list())<CR>";
+      }
+      {
+        mode = "n";
+        key = "<C-1>";
+        action = "<cmd>lua require'harpoon':list():select(1)<CR>";
+      }
+      {
+        mode = "n";
+        key = "<C-2>";
+        action = "<cmd>lua require'harpoon':list():select(2)<CR>";
+      }
+      {
+        mode = "n";
+        key = "<C-3>";
+        action = "<cmd>lua require'harpoon':list():select(3)<CR>";
+      }
+      {
+        mode = "n";
+        key = "<C-4>";
+        action = "<cmd>lua require'harpoon':list():select(4)<CR>";
+      }
+      {
+        mode = "n";
+        key = "<leader><Tab>";
+        action = "<cmd>lua require'harpoon':list():next()<CR>";
+      }
+      {
+        mode = "n";
+        key = "<leader><S-Tab>";
+        action = "<cmd>lua require'harpoon':list():prev()<CR>";
+      }
     ];
     plugins = {
+      harpoon = {
+        enable = true;
+        enableTelescope = true;
+      };
       neoscroll.enable = true;
       smear-cursor.enable = true;
       csvview.enable = true;
