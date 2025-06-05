@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
-    (python3.withPackages (ps:
+    (python313.withPackages (ps:
       with ps; [
         ipython
         jupytext
