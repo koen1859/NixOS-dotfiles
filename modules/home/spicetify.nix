@@ -12,7 +12,7 @@ in {
   ];
   programs.spicetify = {
     enable = true;
-    theme = spicePkgs.themes.text;
+    theme = spicePkgs.themes.sleek;
     customColorScheme = with config.lib.stylix.colors; {
       text = "${base05}";
       subtext = "${base05}";

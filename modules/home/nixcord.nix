@@ -25,7 +25,6 @@
           enable = true;
           notificationVolume = 0.0;
         };
-        nsfwGateBypass.enable = true;
         permissionsViewer.enable = true;
         showHiddenChannels.enable = true;
         showHiddenThings.enable = true;
