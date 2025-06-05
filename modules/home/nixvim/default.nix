@@ -35,7 +35,7 @@
       #   patterns
       smartcase = true; # Override the 'ignorecase' option if the search pattern contains upper
       #   case characters
-      cursorline = false; # Highlight the screen line of the cursor
+      cursorline = true; # Highlight the screen line of the cursor
       cursorcolumn = false; # Highlight the screen column of the cursor
       laststatus = 3; # When to use a status line for the last window
       fileencoding = "utf-8"; # File-content encoding for the current buffer
