@@ -10,7 +10,7 @@ in {
     "${cfgDir}/eww.scss".text = ''
       * {
         all: unset;
-        font-family: JetBrainsMono Nerd Font Mono;
+        font-family: JetBrainsMono Nerd Font;
         font-size: 15px;
         border-radius: 6px;
         color: #${config.lib.stylix.colors.base0D};

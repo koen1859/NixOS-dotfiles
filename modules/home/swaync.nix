@@ -60,7 +60,7 @@
     };
     style = ''
       * {
-        font-family: JetBrainsMono Nerd Font Mono;
+        font-family: JetBrainsMono Nerd Font;
         font-weight: bold;
       }
       .control-center .notification-row:focus,

@@ -2,12 +2,12 @@
   wayland.windowManager.hyprland.settings = {
     bind = [
       "$mainMod, V, exec, eww open vpn-window"
-      "$mainMod SHIFT, R, exec, eww open searchapps"
       "$mainMod, B, exec, ${pkgs.firefox}/bin/firefox"
       "SUPER_SHIFT, B, exec, ${pkgs.librewolf}/bin/librewolf --private-window"
       ", PRINT, exec, ${pkgs.hyprshot}/bin/hyprshot -m region"
       "$mainMod, S, exec, ${pkgs.hyprshot}/bin/hyprshot -m output -m active"
-      "$mainMod, ESCAPE, exec, ${pkgs.wlogout}/bin/wlogout"
+      "$mainMod SHIFT, ESCAPE, exec, ${pkgs.wlogout}/bin/wlogout"
+      "$mainMod, ESCAPE, exec, eww open bigpowermenu"
       "SUPER_SHIFT, ESCAPE, exec, ${pkgs.hyprlock}/bin/hyprlock"
       "$mainMod, M, exec, spotify" # Do not run direct binary for spotify because of spicetify
       "$mainMod SHIFT, M, exec, flatpak run me.proton.Mail" # Do not run direct binary for proton mail since it is flatpak
@@ -16,7 +16,8 @@
       "$mainMod, Return, exec, ${pkgs.wezterm}/bin/wezterm"
       "$mainMod SHIFT, Return, exec, ${pkgs.kitty}/bin/kitty"
       "$mainMod, Q, killactive,"
-      "$mainMod, R, exec, ${pkgs.rofi-wayland}/bin/rofi -show drun"
+      "$mainMod SHIFT, R, exec, ${pkgs.rofi-wayland}/bin/rofi -show drun"
+      "$mainMod, R, exec, eww open searchapps"
       "$mainMod, E, exec, ${pkgs.rofi-wayland}/bin/rofi -show filebrowser"
       "$mainMod SHIFT, E, exec, ${pkgs.xfce.thunar}/bin/thunar"
       # "$mainMod, E, exec, ${pkgs.xfce.thunar}/bin/thunar"

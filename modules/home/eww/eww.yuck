@@ -21,15 +21,23 @@
 (searchapps))
 
 (defwidget bigpowermenu []
-  (box :orientation "h" :space-evenly false :class "bigpowermenu" :halign "center" :valign "center" :spacing 20
-    (button :style "color: #d8dee9;" :class "shutdown" :onrightclick "systemctl poweroff" "")
-    (button :style "color: #e5e9f0;" :class "reboot" :onrightclick "systemctl reboot" "")
-    (button :style "color: #eceff4;" :class "lock" :onrightclick "bsplock" "")
-    (button :style "color: #e8e8e8;" :class "suspend" :onrightclick "mpc -q pause & amixer set Master mute & systemctl suspend" "")
-    (button :style "color: #ffffff;" :class "logout" :onrightclick "bspc quit" "")
+  (eventbox :onhoverlost "eww close bigpowermenu"
+    (box :orientation "h" :space-evenly false :class "bigpowermenu" :halign "center" :valign "center" :spacing 20
+      (button :class "shutdown" :onclick "systemctl poweroff"
+        (image :path "/home/koenstevens/.dotfiles/modules/home/wlogout/icons/shutdown.png" :image-width 24 :image-height 24))
+      (button :class "reboot" :onclick "systemctl reboot"
+        (image :path "/home/koenstevens/.dotfiles/modules/home/wlogout/icons/reboot.png" :image-width 24 :image-height 24))
+      (button :class "lock" :onclick "hyprlock"
+        (image :path "/home/koenstevens/.dotfiles/modules/home/wlogout/icons/lock.png" :image-width 24 :image-height 24))
+      (button :class "suspend" :onclick "systemctl suspend"
+        (image :path "/home/koenstevens/.dotfiles/modules/home/wlogout/icons/suspend.png" :image-width 24 :image-height 24))
+      (button :class "logout" :onclick "hyprctl dispatch exit"
+        (image :path "/home/koenstevens/.dotfiles/modules/home/wlogout/icons/logout.png" :image-width 24 :image-height 24))
+      (button :class "hibernate" :onclick "systemctl hibernate"
+        (image :path "/home/koenstevens/.dotfiles/modules/home/wlogout/icons/hibernate.png" :image-width 24 :image-height 24))
+    )
   )
 )
-
 (defwindow bigpowermenu
   :monitor 0
   :windowtype "dock"
