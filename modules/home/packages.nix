@@ -11,6 +11,7 @@
     (import ./scripts/Flatseal.nix {inherit pkgs;})
     tree
     libnotify
+    timg
   ];
 
   programs = {
