@@ -21,17 +21,14 @@
       }
     ];
     plugins = {
+      neoscroll.enable = true;
+      smear-cursor.enable = true;
+      csvview.enable = true;
+      lazygit.enable = true;
       noice.enable = true;
-      oil = {
-        enable = true;
-      };
-      web-devicons = {
-        enable = true;
-      };
-
-      which-key = {
-        enable = true;
-      };
+      oil.enable = true;
+      web-devicons.enable = true;
+      which-key.enable = true;
 
       startify = {
         enable = true;
@@ -46,10 +43,19 @@
             "     ╚═╝  ╚═══╝╚═╝╚═╝  ╚═╝  ╚═══╝  ╚═╝╚═╝     ╚═╝"
           ];
 
+          commands = [
+            {ff = "Telescope fd";}
+            {fg = "Telescope live_grep";}
+            {fe = "Oil";}
+            {g = "LazyGit";}
+          ];
           change_to_dir = false;
           use_unicode = true;
-          lists = [{type = "dir";}];
-          files_number = 30;
+          lists = [
+            {type = "commands";}
+            {type = "dir";}
+          ];
+          files_number = 5;
           autoExpandWidth = true;
           skiplist = [
             "flake.lock"
@@ -93,7 +99,7 @@
       };
 
       notify = {
-        enable = true;
+        enable = false;
       };
 
       transparent = {

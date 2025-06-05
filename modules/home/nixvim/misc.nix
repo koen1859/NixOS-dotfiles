@@ -3,21 +3,13 @@
     plugins = {
       nvim-surround.enable = true;
       nvim-autopairs.enable = true;
-      treesj.enable = true;
       auto-save.enable = true;
-      compiler.enable = true;
-      csvview.enable = true;
       emmet.enable = true;
+      compiler.enable = true;
       guess-indent.enable = true;
       jupytext.enable = true;
-      lazygit.enable = true;
-      overseer.enable = true;
-      wezterm.enable = true;
-      dropbar.enable = true;
       typst-vim.enable = true;
       typst-preview.enable = true;
-      yazi.enable = true;
-      zen-mode.enable = true;
     };
     keymaps = [
       {
