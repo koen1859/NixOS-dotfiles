@@ -1,4 +1,4 @@
-{config,...}: {
+{config, ...}: {
   services.xserver.videoDrivers = ["nvidia"];
 
   hardware.nvidia = {
@@ -14,7 +14,7 @@
   boot = {
     initrd.kernelModules = ["nvidia"];
     kernelModules = ["nvidia" "nvidia_modeset" "nvidia_uvm" "nvidia_drm"];
-    extraModulePackages = [config.boot.kernelPackages.nvidiaPackages.latest];
+    extraModulePackages = [config.boot.kernelPackages.nvidiaPackages.stable];
   };
 
   environment.variables = {
