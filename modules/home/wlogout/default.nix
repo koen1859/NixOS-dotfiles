@@ -44,7 +44,7 @@
         font-family: "JetBrainsMono Nerd Font";
       	background-image: none;
       	transition: 20ms;
-        font-size: 50px;
+        font-size: 100px;
       }
       window {
       	background-color: rgba(12, 12, 12, 0.1);
