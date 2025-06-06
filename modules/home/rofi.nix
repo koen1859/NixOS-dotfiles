@@ -6,7 +6,7 @@
 }: let
   inherit (lib) mkForce;
   inherit (config.lib.formats.rasi) mkLiteral;
-  inherit (config.lib.stylix.colors.withHashtag) base00 base05;
+  inherit (config.lib.stylix.colors.withHashtag) base00 base05 base0D;
 in {
   programs.rofi = {
     enable = true;
@@ -16,16 +16,15 @@ in {
 
     extraConfig = {
       modi = "drun,filebrowser,ssh";
-      font = "Noto Sans CJK JP 12";
       show-icons = true;
-      disable-history = true;
+      disable-history = false;
       hover-select = true;
       bw = 0;
       display-drun = "";
       display-window = "";
       display-combi = "";
       icon-theme = "Fluent-dark";
-      terminal = "kitty";
+      terminal = "wezterm";
       drun-match-fields = "name";
       drun-display-format = "{name}";
       me-select-entry = "";
@@ -33,13 +32,11 @@ in {
       kb-cancel = "Escape,MouseMiddle";
     };
 
-    # Based on Newman Sánchez's Launchpad theme <https://github.com/newmanls/rofi-themes-collection>
     theme = mkForce {
       "*" = {
-        font = "Noto Sans CJK JP Bold 12";
         background-color = mkLiteral "transparent";
-        foreground = mkLiteral "${base05}";
-        text-color = mkLiteral "${base05}";
+        foreground = mkLiteral "${base0D}";
+        text-color = mkLiteral "${base0D}";
         padding = mkLiteral "0px";
         margin = mkLiteral "0px";
       };
@@ -55,7 +52,7 @@ in {
       };
 
       inputbar = {
-        background-color = mkLiteral "${base05}20";
+        background-color = mkLiteral "${base0D}20";
 
         margin = mkLiteral "0px calc( 50% - 230px )";
         padding = mkLiteral "4px 8px";
@@ -63,7 +60,7 @@ in {
 
         border = mkLiteral "1px";
         border-radius = mkLiteral "2px";
-        border-color = mkLiteral "${base05}40";
+        border-color = mkLiteral "${base0D}40";
 
         children = map mkLiteral [
           "icon-search"
@@ -83,7 +80,7 @@ in {
 
       entry = {
         placeholder = "Search";
-        placeholder-color = mkLiteral "${base05}20";
+        placeholder-color = mkLiteral "${base0D}20";
       };
 
       listview = {
@@ -107,7 +104,7 @@ in {
       };
 
       "element selected" = {
-        background-color = mkLiteral "${base05}33";
+        background-color = mkLiteral "${base0D}33";
       };
 
       element-icon = {

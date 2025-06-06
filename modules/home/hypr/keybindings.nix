@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   wayland.windowManager.hyprland.settings = {
     bind = [
-      "$mainMod, V, exec, eww open vpn-window"
+      "$mainMod, V, exec, ${pkgs.eww}/bin/eww open vpn-window"
       "$mainMod, B, exec, ${pkgs.firefox}/bin/firefox"
       "SUPER_SHIFT, B, exec, ${pkgs.librewolf}/bin/librewolf --private-window"
       ", PRINT, exec, ${pkgs.hyprshot}/bin/hyprshot -m region"
@@ -15,8 +15,7 @@
       "$mainMod, Return, exec, ${pkgs.wezterm}/bin/wezterm"
       "$mainMod SHIFT, Return, exec, ${pkgs.kitty}/bin/kitty"
       "$mainMod, Q, killactive,"
-      "$mainMod SHIFT, R, exec, ${pkgs.rofi-wayland}/bin/rofi -show drun"
-      "$mainMod, R, exec, eww open searchapps"
+      "$mainMod, R, exec, ${pkgs.rofi-wayland}/bin/rofi -show drun"
       "$mainMod, E, exec, ${pkgs.rofi-wayland}/bin/rofi -show filebrowser"
       "$mainMod SHIFT, E, exec, ${pkgs.xfce.thunar}/bin/thunar"
       "$mainMod, N, exec, ${pkgs.networkmanagerapplet}/bin/nm-connection-editor"
