@@ -6,8 +6,7 @@
       "SUPER_SHIFT, B, exec, ${pkgs.librewolf}/bin/librewolf --private-window"
       ", PRINT, exec, ${pkgs.hyprshot}/bin/hyprshot -m region"
       "$mainMod, S, exec, ${pkgs.hyprshot}/bin/hyprshot -m output -m active"
-      "$mainMod SHIFT, ESCAPE, exec, ${pkgs.wlogout}/bin/wlogout"
-      "$mainMod, ESCAPE, exec, eww open bigpowermenu"
+      "$mainMod, ESCAPE, exec, ${pkgs.wlogout}/bin/wlogout"
       "SUPER_SHIFT, ESCAPE, exec, ${pkgs.hyprlock}/bin/hyprlock"
       "$mainMod, M, exec, spotify" # Do not run direct binary for spotify because of spicetify
       "$mainMod SHIFT, M, exec, flatpak run me.proton.Mail" # Do not run direct binary for proton mail since it is flatpak
@@ -20,7 +19,6 @@
       "$mainMod, R, exec, eww open searchapps"
       "$mainMod, E, exec, ${pkgs.rofi-wayland}/bin/rofi -show filebrowser"
       "$mainMod SHIFT, E, exec, ${pkgs.xfce.thunar}/bin/thunar"
-      # "$mainMod, E, exec, ${pkgs.xfce.thunar}/bin/thunar"
       "$mainMod, N, exec, ${pkgs.networkmanagerapplet}/bin/nm-connection-editor"
       "$mainMod SHIFT, N, exec, ${pkgs.blueman}/bin/blueman-manager"
       "$mainMod, D, exec, ${pkgs.vesktop}/bin/vesktop"
@@ -46,7 +44,6 @@
       "$mainMod, TAB, swapsplit"
       "$mainMod, F, fullscreen, 0"
       "$mainMod, T, togglesplit"
-      # "$mainMod, A, exec, hyprctl dispatch workspaceopt allfloat"
       "SUPER_SHIFT, F, exec, hyprctl dispatch togglefloating && if hyprctl activewindow | grep -q 'floating: 1'; then hyprctl dispatch resizeactive exact 800 600 && hyprctl dispatch centerwindow; fi"
       "$mainMod, 1, workspace, 1"
       "$mainMod, 2, workspace, 2"
