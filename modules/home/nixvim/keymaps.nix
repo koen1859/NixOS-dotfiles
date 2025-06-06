@@ -79,6 +79,42 @@
         options.silent = true;
         action = ":bprevious<CR>";
       }
+      {
+        key = "J";
+        mode = ["v"];
+        options.silent = true;
+        action = ":m '>+1<CR>gv=gv";
+      }
+      {
+        key = "J";
+        mode = ["n"];
+        options.silent = true;
+        action = "mzJ`z";
+      }
+      {
+        key = "n";
+        mode = ["n"];
+        options.silent = true;
+        action = "nzzzv";
+      }
+      {
+        key = "N";
+        mode = ["n"];
+        options.silent = true;
+        action = "Nzzzv";
+      }
+      {
+        key = "<";
+        mode = ["v"];
+        options.silent = true;
+        action = "<gv";
+      }
+      {
+        key = ">";
+        mode = ["v"];
+        options.silent = true;
+        action = ">gv";
+      }
     ];
   };
 }
