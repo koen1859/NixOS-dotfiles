@@ -61,6 +61,7 @@
       }
     ];
     plugins = {
+      indent-blankline.enable = true;
       harpoon = {
         enable = true;
         enableTelescope = true;

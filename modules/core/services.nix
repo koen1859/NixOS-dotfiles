@@ -10,17 +10,17 @@
       enable = true;
     };
     greetd = {
-      enable = false;
+      enable = true;
       vt = 3;
       settings = {
         default_session = {
           user = "koenstevens";
-          command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd Hyprland";
+          command = "${pkgs.greetd.greetd}/bin/agreety --cmd Hyprland";
         };
       };
     };
     displayManager.sddm = {
-      enable = true;
+      enable = false;
       wayland.enable = true;
       theme = "${pkgs.sddm-sugar-dark}/share/sddm/themes/sugar-dark";
     };

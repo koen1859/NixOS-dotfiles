@@ -13,7 +13,7 @@
           update_n_lines = "gsn";
         };
       };
-      indentscope = {};
+      # indentscope = {};
     };
   };
 }
