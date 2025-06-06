@@ -9,6 +9,7 @@
     (import ./scripts/ProtonMail.nix {inherit pkgs;})
     (import ./scripts/ProtonPass.nix {inherit pkgs;})
     (import ./scripts/Flatseal.nix {inherit pkgs;})
+    (import ./scripts/weather.nix {inherit pkgs;})
     tree
     libnotify
     timg
