@@ -14,7 +14,6 @@
   programs = {
     feh.enable = true;
     fd.enable = true;
-    pandoc.enable = true;
     chromium = {
       enable = true;
     };

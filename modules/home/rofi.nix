@@ -6,7 +6,7 @@
 }: let
   inherit (lib) mkForce;
   inherit (config.lib.formats.rasi) mkLiteral;
-  inherit (config.lib.stylix.colors.withHashtag) base00 base05 base0D;
+  inherit (config.lib.stylix.colors.withHashtag) base00 base0D;
 in {
   programs.rofi = {
     enable = true;

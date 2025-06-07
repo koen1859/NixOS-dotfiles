@@ -47,7 +47,7 @@
         font-size: 100px;
       }
       window {
-      	background-color: rgba(12, 12, 12, 0.1);
+      	background-color: alpha(#${config.lib.stylix.colors.base00},.2);
       }
       button {
       	color: #${config.lib.stylix.colors.base0D};

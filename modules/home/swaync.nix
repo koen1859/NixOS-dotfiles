@@ -1,4 +1,4 @@
-{ config, ... }: {
+{config, ...}: {
   services.swaync = {
     enable = true;
     settings = {
@@ -62,6 +62,7 @@
       * {
         font-family: JetBrainsMono Nerd Font;
         font-weight: bold;
+        color: #${config.lib.stylix.colors.base0D};
       }
       .control-center .notification-row:focus,
       .control-center .notification-row:hover {
@@ -185,7 +186,7 @@
       }
       .control-center {
         background: #${config.lib.stylix.colors.base00};
-        border: 2px solid #${config.lib.stylix.colors.base0C};
+        border: 2px solid #${config.lib.stylix.colors.base0D};
         border-radius: 5px;
       }
       .control-center-list {
@@ -201,7 +202,7 @@
         background: alpha(black, 0)
       }
       .widget-title {
-        color: #${config.lib.stylix.colors.base0B};
+        color: #${config.lib.stylix.colors.base0D};
         background: #${config.lib.stylix.colors.base00};
         padding: 5px 10px;
         margin: 10px 10px 5px 10px;

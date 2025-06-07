@@ -2,7 +2,6 @@
   core = "${inputs.self}/modules/core";
 in {
   imports = [
-    "${core}/bash.nix"
     "${core}/bootloader.nix"
     "${core}/environment.nix"
     "${core}/services.nix"

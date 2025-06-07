@@ -14,9 +14,9 @@ in {
     enable = true;
     theme = spicePkgs.themes.sleek;
     customColorScheme = with config.lib.stylix.colors; {
-      text = "${base05}";
-      subtext = "${base05}";
-      sidebar-text = "${base05}";
+      text = "${base0D}";
+      subtext = "${base0D}";
+      sidebar-text = "${base0D}";
       main = "${base00}";
       sidebar = "${base01}";
       player = "${base01}";
@@ -24,13 +24,13 @@ in {
       shadow = "${base03}";
       selected-row = "${base03}";
       button = "${base0F}";
-      button-active = "${base05}";
+      button-active = "${base0D}";
       button-disabled = "${base0E}";
       tab-active = "${base03}";
       notification = "${base0A}";
       notification-error = "${base0F}";
-      misc = "${base05}";
-      alt-text = "${base05}";
+      misc = "${base0D}";
+      alt-text = "${base0D}";
       player-bar-bg = "${base01}";
       accent = "${base06}";
     };

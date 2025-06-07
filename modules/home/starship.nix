@@ -4,7 +4,8 @@
   ...
 }: {
   programs.starship = {
-    enable = false;
+    enable = true;
+    enableBashIntegration = true;
     settings = {
       format = lib.concatStrings [
         "\n"

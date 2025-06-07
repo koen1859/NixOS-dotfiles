@@ -3,5 +3,6 @@
     enable = true;
     package = pkgs.atuin;
     enableZshIntegration = true;
+    enableBashIntegration = true;
   };
 }

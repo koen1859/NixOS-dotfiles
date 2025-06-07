@@ -17,7 +17,7 @@ in {
       }
 
       window#vpn-window {
-        background-color: rgba(0, 0, 0, 0);
+        background-color: transparent;
         border-radius: 10px;
         padding: 8px;
       }

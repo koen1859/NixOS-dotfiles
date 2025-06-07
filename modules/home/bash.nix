@@ -6,7 +6,7 @@
 
   programs = {
     bash = {
-      enable = false;
+      enable = true;
       shellAliases = {
         ls = "${pkgs.lsd}/bin/lsd --color=auto";
         grep = "grep --color=auto";
@@ -18,14 +18,9 @@
         ga = "git add -A";
         gc = "git commit";
       };
-    };
-
-    starship = {
-      enableBashIntegration = true;
-    };
-
-    atuin = {
-      enableBashIntegration = true;
+      initExtra = ''
+        source ~/.local/share/blesh/ble.sh
+      '';
     };
   };
 }
