@@ -4,16 +4,16 @@ local config = wezterm.config_builder()
 
 config.enable_wayland = false
 config.color_scheme = 'Gruvbox dark, hard (base16)'
-config.font_size = 13
+config.font_size = 14
 config.audible_bell = "Disabled"
 
 config.warn_about_missing_glyphs = false
 
 config.window_padding = {
-	left = 5,
-	right = 5,
-	top = 5,
-	bottom = 5,
+	left = 1,
+	right = 1,
+	top = 1,
+	bottom = 1,
 }
 
 config.enable_tab_bar = false
