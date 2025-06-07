@@ -44,7 +44,7 @@
         font-family: "JetBrainsMono Nerd Font";
       	background-image: none;
       	transition: 20ms;
-        font-size: 100px;
+        font-size: 200px;
       }
       window {
       	background-color: alpha(#${config.lib.stylix.colors.base00},.2);
@@ -60,7 +60,6 @@
         background-color: #${config.lib.stylix.colors.base00};
       }
       #logout, #suspend, #shutdown, #reboot, #lock, #hibernate {
-        border-radius: 10px;
         margin: 10px;
       }
     '';
