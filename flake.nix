@@ -28,10 +28,6 @@
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixos-grub-themes = {
-      url = "github:jeslie0/nixos-grub-themes";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     nixarr = {
       url = "github:rasmus-kirk/nixarr";
       inputs.nixpkgs.follows = "nixpkgs";

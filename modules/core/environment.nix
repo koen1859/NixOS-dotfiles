@@ -10,7 +10,6 @@
     systemPackages = with pkgs; [
       # Core packages
       wl-clipboard # Clipboard
-      nh # Nix helper
       nix-output-monitor # Nice output when rebuilding
       nvd # Version diff after rebuilding
       unzip # Unzip utility
