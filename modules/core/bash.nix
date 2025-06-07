@@ -22,10 +22,14 @@
 
     starship = {
       enableBashIntegration = true;
+      enable = true;
     };
 
     atuin = {
       enableBashIntegration = true;
+      enable = true;
     };
+
+    blesh.enable = true;
   };
 }
