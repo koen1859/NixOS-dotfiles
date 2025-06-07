@@ -27,7 +27,6 @@
         };
       };
       keymaps = {
-        # Find files using Telescope command-line sugar.
         "<leader>ff" = "fd";
         "<leader>fg" = "live_grep";
         "<leader>b" = "buffers";
@@ -35,7 +34,6 @@
         "<leader>fd" = "diagnostics";
         "<leader>mf" = "media_files";
 
-        # FZF like bindings
         "<C-p>" = "git_files";
         "<leader>p" = "oldfiles";
         "<C-f>" = "live_grep";
@@ -61,7 +59,6 @@
           "^__pycache__/"
           "^output/"
           "^data/"
-          "%.ipynb"
         ];
         set_env.COLORTERM = "truecolor";
       };

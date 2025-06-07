@@ -18,10 +18,5 @@
         };
       };
     };
-    displayManager.sddm = {
-      enable = false;
-      wayland.enable = true;
-      theme = "${pkgs.sddm-sugar-dark}/share/sddm/themes/sugar-dark";
-    };
   };
 }

@@ -15,7 +15,6 @@ in {
     "${home}/btop.nix"
     "${home}/ghostty.nix"
     "${home}/git.nix"
-    "${home}/gtk.nix"
     "${home}/htop.nix"
     "${home}/kitty.nix"
     "${home}/librewolf.nix"

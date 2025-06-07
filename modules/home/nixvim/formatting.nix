@@ -36,9 +36,5 @@
         markdown = ["vale"];
       };
     };
-
-    tailwind-tools = {
-      enable = true;
-    };
   };
 }

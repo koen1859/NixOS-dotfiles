@@ -83,7 +83,7 @@
       };
 
       lsp-signature = {
-        enable = true;
+        enable = false;
       };
 
       colorful-menu = {

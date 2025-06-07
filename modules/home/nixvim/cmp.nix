@@ -20,6 +20,5 @@
         ];
       };
     };
-    # blink-cmp.enable = true;
   };
 }

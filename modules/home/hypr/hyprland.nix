@@ -59,7 +59,7 @@
           xray = true;
           special = false;
           new_optimizations = true;
-          size = 2;
+          size = 8;
           passes = 2;
           # vibrancy = 0.1696;
           brightness = 1;
@@ -84,10 +84,6 @@
         "GDK_SCALE,1"
         "QT_SCALE_FACTOR,1"
         "EDITOR,nvim"
-        # "XCURSOR_SIZE,24"
-        # "XCURSOR_THEME,Bibata-Modern-Classic"
-        # "HYPRCURSOR_SIZE,24"
-        # "HYPRCURSOR_THEME,Bibata-Modern-Classic"
         "HYPRSHOT_DIR,/home/koenstevens/Pictures/"
       ];
     };
