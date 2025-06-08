@@ -37,7 +37,6 @@ def generate_buttons(executables):
 
 def main():
     if len(sys.argv) < 2:
-        print("Usage: search_apps.py <search_term>")
         sys.exit(1)
 
     search_term = sys.argv[1]
