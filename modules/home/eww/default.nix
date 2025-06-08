@@ -6,7 +6,6 @@ in {
     "${cfgDir}/eww.yuck".source = ./eww.yuck;
     "${cfgDir}/scripts/vpns.py".source = ./scripts/vpns.py;
     "${cfgDir}/scripts/vpn_status.py".source = ./scripts/vpn_status.py;
-    "${cfgDir}/scripts/search.sh".source = ./scripts/search.sh;
     "${cfgDir}/scripts/search.py".source = ./scripts/search.py;
     "${cfgDir}/eww.scss".text = ''
       * {
