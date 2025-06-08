@@ -5,7 +5,7 @@
     (box :orientation "v" :space-evenly false :class "search-win" :halign "top" :valign "top"
       (box :orientation "h" :space-evenly false :class "searchapps-bar" :halign "top" :valign "top"
         (label :class "search-label" :text "")
-        (input :class "search-bar" :onchange "bash ~/.config/eww/scripts/search.sh {}"))
+        (input :class "search-bar" :onchange "python ~/.config/eww/scripts/search.py {}"))
       (literal :halign "center" :valign "center" :class "app-container" :content search_listen))))
 
 
