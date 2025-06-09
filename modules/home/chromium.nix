@@ -3,9 +3,15 @@
     enable = true;
     package = pkgs.ungoogled-chromium;
     extensions = [
-      {id = "gcbommkclmclpchllfjekcdonpmejbdp";} # https everywhere
       {id = "cjpalhdlnbpafiamejdnhcphjbkeiagm";} # ublock origin
       {id = "dbepggeogbaibhgnhhndojpepiihcmeb";} # vimium
+      {id = "fihnjjcciajhdojfnbdddfaoknhalnja";} # idc ab cookies
+      {id = "ghmbeldphafepmbegfdlkpapadhbakde";} # proton pass
+      {id = "mnjggcdmjocbbbhaepdhchncahnbgone";} # sponsorblock yt
+      {id = "jiaopdjbehhjgokpphdfgmapkobbnmjp";} # shorts block yt
+      {id = "eimadpbcbfnmbkopoojfekhnkhdbieeh";} # dark reader
+      {id = "pkehgijcmpdhfbdbbnkijodmdjhbjlgp";} # privacy badger
+      {id = "fehfojhhnbfbclgpffmffigfgngbpnmj";} # vertical tabs
     ];
   };
 }
