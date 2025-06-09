@@ -1,6 +1,7 @@
 {config, ...}: {
   imports = [
     ./keymaps.nix
+    ./lsp.nix
   ];
   programs.nvf = {
     enable = true;
@@ -28,14 +29,6 @@
         };
       };
 
-      diagnostics = {
-        enable = true;
-        config = {
-          virtual_lines.enable = true;
-          underline = true;
-        };
-      };
-
       telescope.enable = true;
 
       spellcheck = {
@@ -44,29 +37,6 @@
         programmingWordlist.enable = true;
       };
 
-      lsp = {
-        formatOnSave = true;
-        lspkind.enable = false;
-        lightbulb.enable = false;
-        lspsaga.enable = false;
-        trouble.enable = true;
-        lspSignature.enable = true;
-        otter-nvim.enable = false;
-        nvim-docs-view.enable = false;
-      };
-
-      languages = {
-        enableFormat = true;
-        enableTreesitter = true;
-        enableExtraDiagnostics = true;
-        nix.enable = true;
-        python.enable = true;
-        markdown.enable = true;
-        html.enable = true;
-        lua.enable = true;
-        css.enable = true;
-        typst.enable = true;
-      };
       visuals = {
         nvim-web-devicons.enable = true;
         nvim-cursorline.enable = true;
