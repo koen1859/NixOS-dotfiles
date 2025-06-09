@@ -1,13 +1,13 @@
 {
   programs.nvf.settings.vim = {
+    autocomplete.blink-cmp = {
+      enable = true;
+      setupOpts.signature.enabled = true;
+    };
     lsp = {
       enable = true;
       formatOnSave = true;
-      lspkind.enable = false;
-      lightbulb.enable = false;
-      lspsaga.enable = false;
       trouble.enable = true;
-      lspSignature.enable = true;
       otter-nvim.enable = false;
       nvim-docs-view.enable = false;
     };
@@ -46,6 +46,7 @@
           type = "ruff";
         };
       };
+      php.enable = true;
       r.enable = true;
       markdown.enable = true;
       html.enable = true;

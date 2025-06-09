@@ -2,6 +2,7 @@
   imports = [
     ./keymaps.nix
     ./lsp.nix
+    ./ui.nix
   ];
   programs.nvf = {
     enable = true;
@@ -22,29 +23,13 @@
 
       clipboard = {
         enable = true;
-        registers = "unnamedplus";
-        providers = {
-          wl-copy.enable = true;
-          xsel.enable = true;
-        };
+        registers = "unnamed";
       };
-
-      telescope.enable = true;
 
       spellcheck = {
         enable = true;
         languages = ["en"];
         programmingWordlist.enable = true;
-      };
-
-      visuals = {
-        nvim-web-devicons.enable = true;
-        nvim-cursorline.enable = true;
-        cinnamon-nvim.enable = true;
-        fidget-nvim.enable = true;
-        highlight-undo.enable = true;
-        indent-blankline.enable = true;
-        rainbow-delimiters.enable = true;
       };
 
       statusline.lualine = {
@@ -53,7 +38,6 @@
       };
 
       autopairs.nvim-autopairs.enable = true;
-      autocomplete.nvim-cmp.enable = true;
       snippets.luasnip.enable = true;
       tabline.nvimBufferline.enable = true;
       treesitter.context.enable = false;
@@ -74,36 +58,13 @@
         nvim-notify.setupOpts.background_colour = "#${config.lib.stylix.colors.base01}";
       };
       utility = {
-        preview.markdownPreview.enable = true;
-        ccc.enable = false;
-        vim-wakatime.enable = false;
-        icon-picker.enable = true;
+        oil-nvim.enable = true;
         surround.enable = true;
         diffview-nvim.enable = true;
-        motion = {
-          hop.enable = true;
-          leap.enable = true;
-          precognition.enable = false;
-        };
         images = {
           image-nvim.enable = false;
         };
       };
-      ui = {
-        borders.enable = true;
-        noice.enable = true;
-        colorizer.enable = true;
-        illuminate.enable = true;
-        breadcrumbs = {
-          enable = false;
-          navbuddy.enable = false;
-        };
-        smartcolumn = {
-          enable = true;
-        };
-        fastaction.enable = true;
-      };
-
       session = {
         nvim-session-manager.enable = false;
       };
