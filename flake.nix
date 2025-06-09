@@ -16,6 +16,10 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nvf = {
+      url = "github:notashelf/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -35,11 +39,11 @@
   };
 
   outputs = {
-    self,
     nixpkgs,
     home-manager,
     stylix,
     nixvim,
+    nvf,
     nixcord,
     nixarr,
     ...
@@ -82,6 +86,7 @@
           ./hosts/laptop/home.nix
           stylix.homeModules.stylix
           nixvim.homeManagerModules.nixvim
+          nvf.nixosModules.default
           nixcord.homeModules.nixcord
         ];
         extraSpecialArgs = {inherit inputs;};
@@ -92,6 +97,7 @@
           ./hosts/pc/home.nix
           stylix.homeModules.stylix
           nixvim.homeManagerModules.nixvim
+          nvf.nixosModules.default
           nixcord.homeModules.nixcord
         ];
         extraSpecialArgs = {inherit inputs;};
@@ -102,6 +108,7 @@
           ./hosts/server/home.nix
           stylix.homeModules.stylix
           nixvim.homeManagerModules.nixvim
+          nvf.nixosModules.default
           nixcord.homeModules.nixcord
         ];
         extraSpecialArgs = {inherit inputs;};

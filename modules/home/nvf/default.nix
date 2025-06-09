@@ -1,10 +1,4 @@
-{
-  inputs,
-  config,
-  ...
-}: {
-  imports = [inputs.nvf.homeManagerModules.default];
-
+{config, ...}: {
   programs.nvf = {
     enable = true;
 
