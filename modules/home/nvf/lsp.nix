@@ -10,11 +10,7 @@
       formatOnSave = true;
       trouble.enable = true;
       lspkind.enable = true;
-      lightbulb.enable = true;
-      lspsaga.enable = true;
       lspSignature.enable = true;
-      otter-nvim.enable = true;
-      nvim-docs-view.enable = true;
       servers = {
         ltex_ls = {
           enable = true;
@@ -31,10 +27,15 @@
           cmd = [(lib.getExe pkgs.nixd)];
           filetypes = ["nix"];
         };
-        alejandra = {
+        pyright = {
           enable = true;
-          cmd = [(lib.getExe pkgs.alejandra)];
-          filetypes = ["nix"];
+          cmd = ["${pkgs.pyright}/bin/pyright-langserver" "--stdio"];
+          filetypes = ["python"];
+        };
+        ruff = {
+          enable = true;
+          cmd = [(lib.getExe pkgs.ruff) "server"];
+          filetypes = ["python"];
         };
       };
     };
@@ -54,7 +55,7 @@
       nix = {
         enable = true;
         lsp = {
-          enable = true;
+          enable = false;
           server = "nixd";
         };
         format = {
@@ -65,21 +66,19 @@
       python = {
         enable = true;
         lsp = {
-          enable = true;
+          enable = false;
           server = "pyright";
         };
         format = {
-          enable = true;
+          enable = false;
           type = "ruff";
         };
       };
-      php.enable = true;
       r.enable = true;
-      markdown.enable = true;
+      php.enable = true;
       html.enable = true;
       lua.enable = true;
       css.enable = true;
-      typst.enable = true;
     };
   };
 }

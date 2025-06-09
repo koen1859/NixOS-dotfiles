@@ -19,6 +19,7 @@ in {
     "${home}/git.nix"
     "${home}/htop.nix"
     "${home}/kitty.nix"
+    "${home}/latex.nix"
     "${home}/librewolf.nix"
     "${home}/nixcord.nix"
     "${home}/packages.nix"

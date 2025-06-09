@@ -1,7 +1,3 @@
 {pkgs, ...}: {
-  programs.nvf.config.vim.extraPlugins = {
-    vimtex = {
-      package = pkgs.vimPlugins.vimtex;
-    };
-  };
+  programs.nvf.settings.vim.startPlugins = [pkgs.vimPlugins.vimtex];
 }
