@@ -6,7 +6,7 @@ in {
     "${home}/fetch"
     "${home}/firefox"
     "${home}/hypr"
-    "${home}/nixvim"
+    # "${home}/nixvim"
     "${home}/nvf"
     "${home}/wlogout"
     "${home}/wezterm"

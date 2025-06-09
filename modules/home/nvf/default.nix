@@ -1,4 +1,7 @@
 {config, ...}: {
+  imports = [
+    ./keymaps.nix
+  ];
   programs.nvf = {
     enable = true;
 
@@ -25,15 +28,6 @@
         };
       };
 
-      maps = {
-        normal = {
-          "<leader>fe" = {
-            action = "<CMD>Neotree toggle<CR>";
-            silent = true;
-          };
-        };
-      };
-
       diagnostics = {
         enable = true;
         config = {
@@ -41,33 +35,6 @@
           underline = true;
         };
       };
-
-      keymaps = [
-        {
-          key = "<leader>nh";
-          mode = ["n"];
-          action = ":nohl<CR>";
-          desc = "Clear search highlights";
-        }
-        {
-          key = "<leader>ff";
-          mode = ["n"];
-          action = "<cmd>Telescope find_files<cr>";
-          desc = "Search files by name";
-        }
-        {
-          key = "<leader>fg";
-          mode = ["n"];
-          action = "<cmd>Telescope live_grep<cr>";
-          desc = "Search files by contents";
-        }
-        {
-          key = "<leader>fe";
-          mode = ["n"];
-          action = "<cmd>Neotree toggle<cr>";
-          desc = "File browser toggle";
-        }
-      ];
 
       telescope.enable = true;
 

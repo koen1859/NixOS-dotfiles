@@ -17,7 +17,7 @@
     ./toggleterm.nix
   ];
   programs.nixvim = {
-    enable = false;
+    enable = true;
     opts = {
       number = true;
       relativenumber = true;

@@ -39,6 +39,7 @@
   };
 
   outputs = {
+    self,
     nixpkgs,
     home-manager,
     stylix,
@@ -86,7 +87,7 @@
           ./hosts/laptop/home.nix
           stylix.homeModules.stylix
           nixvim.homeManagerModules.nixvim
-          nvf.nixosModules.default
+          nvf.homeManagerModules.default
           nixcord.homeModules.nixcord
         ];
         extraSpecialArgs = {inherit inputs;};
@@ -97,7 +98,7 @@
           ./hosts/pc/home.nix
           stylix.homeModules.stylix
           nixvim.homeManagerModules.nixvim
-          nvf.nixosModules.default
+          nvf.homeManagerModules.default
           nixcord.homeModules.nixcord
         ];
         extraSpecialArgs = {inherit inputs;};
@@ -108,7 +109,7 @@
           ./hosts/server/home.nix
           stylix.homeModules.stylix
           nixvim.homeManagerModules.nixvim
-          nvf.nixosModules.default
+          nvf.homeManagerModules.default
           nixcord.homeModules.nixcord
         ];
         extraSpecialArgs = {inherit inputs;};
