@@ -1,5 +1,18 @@
-{
+{config, ...}: {
   programs.nvf.settings.vim = {
+    dashboard.dashboard-nvim.enable = true;
+    filetree.neo-tree.enable = true;
+    notify = {
+      nvim-notify.enable = true;
+      nvim-notify.setupOpts.background_colour = "#${config.lib.stylix.colors.base01}";
+    };
+    tabline.nvimBufferline.enable = false;
+    treesitter.context.enable = true;
+    statusline.lualine = {
+      enable = true;
+      theme = "base16";
+    };
+
     telescope.enable = true;
     visuals = {
       nvim-web-devicons.enable = true;

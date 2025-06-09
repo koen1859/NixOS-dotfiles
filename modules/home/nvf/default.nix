@@ -1,4 +1,4 @@
-{config, ...}: {
+{
   imports = [
     ./keymaps.nix
     ./lsp.nix
@@ -33,15 +33,8 @@
         programmingWordlist.enable = true;
       };
 
-      statusline.lualine = {
-        enable = true;
-        theme = "base16";
-      };
-
       autopairs.nvim-autopairs.enable = true;
       snippets.luasnip.enable = true;
-      tabline.nvimBufferline.enable = true;
-      treesitter.context.enable = false;
       binds = {
         whichKey.enable = true;
         cheatsheet.enable = true;
@@ -50,13 +43,6 @@
         enable = true;
         gitsigns.enable = true;
         gitsigns.codeActions.enable = false;
-      };
-      projects.project-nvim.enable = true;
-      dashboard.dashboard-nvim.enable = true;
-      filetree.neo-tree.enable = true;
-      notify = {
-        nvim-notify.enable = true;
-        nvim-notify.setupOpts.background_colour = "#${config.lib.stylix.colors.base01}";
       };
       utility = {
         oil-nvim.enable = true;
