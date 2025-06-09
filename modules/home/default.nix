@@ -7,6 +7,7 @@ in {
     "${home}/firefox"
     "${home}/hypr"
     "${home}/nixvim"
+    "${home}/nvf"
     "${home}/wlogout"
     "${home}/wezterm"
     "${home}/zsh"
