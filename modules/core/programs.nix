@@ -6,6 +6,7 @@
     };
     zsh.enable = true;
     yazi.enable = true;
+    thunar.enable = true;
   };
   xdg.portal = {
     enable = true;

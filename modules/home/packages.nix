@@ -14,7 +14,6 @@
   programs = {
     feh.enable = true;
     fd.enable = true;
-    thunar.enable = true;
   };
   nixpkgs.config.allowUnfree = true;
 }
