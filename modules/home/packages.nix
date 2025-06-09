@@ -14,10 +14,6 @@
   programs = {
     feh.enable = true;
     fd.enable = true;
-    chromium = {
-      enable = true;
-      package = pkgs.ungoogled-chromium;
-    };
   };
   nixpkgs.config.allowUnfree = true;
 }

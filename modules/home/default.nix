@@ -13,6 +13,7 @@ in {
     "${home}/atuin.nix"
     "${home}/bash.nix"
     "${home}/btop.nix"
+    "${home}/chromium.nix"
     "${home}/ghostty.nix"
     "${home}/git.nix"
     "${home}/htop.nix"
