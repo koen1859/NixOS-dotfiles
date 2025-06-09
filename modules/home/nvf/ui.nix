@@ -11,7 +11,6 @@
       rainbow-delimiters.enable = true;
     };
     ui = {
-      borders.enable = false;
       noice.enable = true;
       colorizer.enable = true;
       illuminate.enable = true;

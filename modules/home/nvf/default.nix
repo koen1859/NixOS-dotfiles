@@ -3,6 +3,7 @@
     ./keymaps.nix
     ./lsp.nix
     ./ui.nix
+    ./vimtex.nix
   ];
   programs.nvf = {
     enable = true;

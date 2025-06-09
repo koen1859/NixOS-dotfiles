@@ -1,15 +1,42 @@
 {
+  lib,
+  pkgs,
+  ...
+}: {
   programs.nvf.settings.vim = {
-    autocomplete.blink-cmp = {
-      enable = true;
-      setupOpts.signature.enabled = true;
-    };
+    autocomplete.nvim-cmp.enable = true;
     lsp = {
       enable = true;
       formatOnSave = true;
       trouble.enable = true;
-      otter-nvim.enable = false;
-      nvim-docs-view.enable = false;
+      lspkind.enable = true;
+      lightbulb.enable = true;
+      lspsaga.enable = true;
+      lspSignature.enable = true;
+      otter-nvim.enable = true;
+      nvim-docs-view.enable = true;
+      servers = {
+        ltex_ls = {
+          enable = true;
+          cmd = [(lib.getExe pkgs.ltex-ls)];
+          filetypes = ["tex"];
+        };
+        texlab = {
+          enable = true;
+          cmd = [(lib.getExe pkgs.texlab)];
+          filetypes = ["tex"];
+        };
+        nixd = {
+          enable = true;
+          cmd = [(lib.getExe pkgs.nixd)];
+          filetypes = ["nix"];
+        };
+        alejandra = {
+          enable = true;
+          cmd = [(lib.getExe pkgs.alejandra)];
+          filetypes = ["nix"];
+        };
+      };
     };
 
     diagnostics = {
