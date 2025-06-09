@@ -3,7 +3,7 @@
     ./keymaps.nix
     ./lsp.nix
     ./ui.nix
-    ./vimtex.nix
+    ./plugins.nix
   ];
   programs.nvf = {
     enable = true;
@@ -20,6 +20,12 @@
         tabstop = 4;
         shiftwidth = 2;
         wrap = false;
+        updatetime = 100;
+        scrolloff = 10;
+        undofile = true;
+        incsearch = true;
+        ignorecase = true;
+        smartcase = true;
       };
 
       clipboard = {
