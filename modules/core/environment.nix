@@ -2,7 +2,6 @@
   environment = {
     shells = with pkgs; [
       bash
-      zsh
     ];
     sessionVariables = {
       nixos_ozone_wl = "1";
