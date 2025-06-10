@@ -1,5 +1,5 @@
 {inputs, ...}: let
-  home = "${inputs.self}/modules/home";
+  home = "${inputs.self}/modules/home/server.nix";
 in {
   imports = [
     ./modules/hyprland.nix
