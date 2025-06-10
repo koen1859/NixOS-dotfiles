@@ -4,7 +4,6 @@
     ./lsp.nix
     ./ui.nix
     ./plugins.nix
-    ./compiler.nix
   ];
   programs.nvf = {
     enable = true;
