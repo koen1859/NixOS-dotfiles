@@ -1,6 +1,29 @@
 {config, ...}: {
   programs.nvf.settings.vim = {
-    dashboard.dashboard-nvim.enable = true;
+    dashboard.startify = {
+      enable = true;
+      customHeader = [
+        "███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗"
+        "████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║"
+        "██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║"
+        "██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║"
+        "██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║"
+        "╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝"
+      ];
+      commands = [
+        {ff = "Telescope fd";}
+        {fg = "Telescope live_grep";}
+        {fe = "Oil";}
+        {g = "LazyGit";}
+      ];
+      lists = [
+        {type = "commands";}
+        {type = "dir";}
+      ];
+      skipList = [
+        "flake.lock"
+      ];
+    };
     filetree.neo-tree.enable = true;
     notify = {
       nvim-notify.enable = true;
