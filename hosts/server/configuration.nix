@@ -1,5 +1,5 @@
 {inputs, ...}: let
-  core = "${inputs.self}/modules/core";
+  core = "${inputs.self}/modules/core/server.nix";
 in {
   imports = [
     ./modules/hardware.nix

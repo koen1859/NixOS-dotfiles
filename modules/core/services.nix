@@ -6,9 +6,6 @@
       pulse.enable = true;
     };
     libinput.enable = true;
-    flatpak = {
-      enable = true;
-    };
     greetd = {
       enable = true;
       settings = {
