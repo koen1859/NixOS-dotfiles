@@ -4,6 +4,7 @@
     ./lsp.nix
     ./ui.nix
     ./plugins.nix
+    ./compiler.nix
   ];
   programs.nvf = {
     enable = true;
@@ -40,7 +41,6 @@
       };
 
       autopairs.nvim-autopairs.enable = true;
-      snippets.luasnip.enable = true;
       binds = {
         whichKey.enable = true;
         cheatsheet.enable = true;
@@ -57,12 +57,6 @@
         images = {
           image-nvim.enable = false;
         };
-      };
-      session = {
-        nvim-session-manager.enable = false;
-      };
-      comments = {
-        comment-nvim.enable = true;
       };
     };
   };

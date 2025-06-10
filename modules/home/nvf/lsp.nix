@@ -4,6 +4,7 @@
   ...
 }: {
   programs.nvf.settings.vim = {
+    snippets.luasnip.enable = true;
     autocomplete.nvim-cmp.enable = true;
     lsp = {
       enable = true;

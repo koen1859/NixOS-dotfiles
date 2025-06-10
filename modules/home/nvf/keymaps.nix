@@ -171,6 +171,26 @@
         mode = ["n"];
         action = "<cmd>Trouble lsp_incoming_calls<CR>";
       }
+      {
+        key = "<leader>lg";
+        mode = ["n"];
+        action = "<cmd>LazyGit<cr>";
+      }
+      {
+        key = "<C-Enter>";
+        mode = ["n"];
+        action = "<cmd>CompilerOpen<cr>";
+      }
+      {
+        key = "<leader><BS>";
+        mode = ["n"];
+        action = "<cmd>CompilerToggleResults<cr>";
+      }
+      {
+        key = "<leader>r";
+        mode = ["n"];
+        action = "<cmd>CompilerRedo<cr>";
+      }
     ];
   };
 }
