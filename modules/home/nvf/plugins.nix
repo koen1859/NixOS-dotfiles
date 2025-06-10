@@ -6,8 +6,6 @@
         undotree
         harpoon2
         lazygit-nvim
-        ltex_extra-nvim
-        csvview-nvim
       ];
       extraPlugins = {
         compiler = {
