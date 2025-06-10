@@ -6,7 +6,7 @@
       nvim-notify.enable = true;
       nvim-notify.setupOpts.background_colour = "#${config.lib.stylix.colors.base01}";
     };
-    tabline.nvimBufferline.enable = false;
+    tabline.nvimBufferline.enable = true;
     treesitter.context.enable = true;
     statusline.lualine = {
       enable = true;

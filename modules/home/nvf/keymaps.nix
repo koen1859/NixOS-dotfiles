@@ -54,7 +54,7 @@
       {
         key = "<C-w>";
         mode = ["n"];
-        action = ":bdelete<CR>";
+        action = ":Bdelete<CR>";
       }
       {
         key = "<Tab>";
