@@ -75,7 +75,14 @@
           type = "ruff";
         };
       };
-      r.enable = true;
+      r = {
+        enable = true;
+        lsp.enable = true;
+        format = {
+          enable = true;
+          type = "styler";
+        };
+      };
       php.enable = true;
       html.enable = true;
       lua.enable = true;
