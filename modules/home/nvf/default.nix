@@ -27,6 +27,7 @@
         ignorecase = true;
         smartcase = true;
       };
+      globals.maplocalleader = "\\";
 
       clipboard = {
         enable = true;
@@ -44,11 +45,7 @@
         whichKey.enable = true;
         cheatsheet.enable = true;
       };
-      git = {
-        enable = true;
-        gitsigns.enable = true;
-        gitsigns.codeActions.enable = false;
-      };
+      git.enable = true;
       utility = {
         oil-nvim.enable = true;
         surround.enable = true;
