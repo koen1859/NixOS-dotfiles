@@ -29,5 +29,7 @@
         "lpd-enabled" = false;
       };
     };
+    radarr.enable = true;
+    sonarr.enable = true;
   };
 }
