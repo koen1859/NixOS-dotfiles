@@ -11,6 +11,11 @@
 
     jellyfin = {
       enable = true;
+      expose.https = {
+        enable = true;
+        domainName = "media.koenstevens.nl";
+        acmeMail = "koenstevens1859@pm.me";
+      };
     };
 
     transmission = {
