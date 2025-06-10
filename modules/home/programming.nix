@@ -3,12 +3,9 @@
     (python313.withPackages (ps:
       with ps; [
         ipython
-        jupytext
       ]))
     (rWrapper.override {
       packages = with rPackages; [
-        languageserver
-        languageserversetup
       ];
     })
     devenv # Make nice dev shells

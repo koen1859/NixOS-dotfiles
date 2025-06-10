@@ -39,7 +39,6 @@
   };
 
   outputs = {
-    self,
     nixpkgs,
     home-manager,
     stylix,
@@ -53,6 +52,12 @@
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
   in {
+    packages."x86_64-linux".default =
+      (nvf.lib.neovimConfiguration {
+        pkgs = nixpkgs.legacyPackages."x86_64-linux";
+        modules = [./modules/home/nvf];
+      }).neovim;
+
     nixosConfigurations = {
       nixlaptop = lib.nixosSystem {
         inherit system;
