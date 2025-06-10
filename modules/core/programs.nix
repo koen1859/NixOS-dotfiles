@@ -1,6 +1,5 @@
 {pkgs, ...}: {
   programs = {
-    hyprland.enable = true;
     nix-ld = {
       enable = true;
     };
