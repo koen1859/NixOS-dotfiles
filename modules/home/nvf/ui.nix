@@ -23,6 +23,7 @@
       skipList = [
         "flake.lock"
       ];
+      changeToDir = false;
     };
     filetree.neo-tree.enable = true;
     notify = {

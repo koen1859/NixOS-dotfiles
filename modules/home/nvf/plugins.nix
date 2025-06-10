@@ -16,6 +16,10 @@
           package = pkgs.vimPlugins.csvview-nvim;
           setup = "require('csvview').setup {}";
         };
+        neoscroll = {
+          package = pkgs.vimPlugins.neoscroll-nvim;
+          setup = "require('neoscroll').setup {}";
+        };
       };
     };
   };
