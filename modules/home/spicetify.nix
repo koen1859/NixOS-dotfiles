@@ -7,12 +7,9 @@
   spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
 in {
   imports = [inputs.spicetify-nix.homeManagerModules.default];
-  home.packages = with pkgs; [
-    spicetify-cli
-  ];
   programs.spicetify = {
     enable = true;
-    theme = spicePkgs.themes.sleek;
+    theme = spicePkgs.themes.default;
     customColorScheme = with config.lib.stylix.colors; {
       text = "${base0D}";
       subtext = "${base0D}";
@@ -35,6 +32,10 @@ in {
       accent = "${base06}";
     };
     enabledExtensions = with spicePkgs.extensions; [
+      shuffle
+      trashbin
+      powerBar
+      history
     ];
   };
 }
