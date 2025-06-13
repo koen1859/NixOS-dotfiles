@@ -39,7 +39,7 @@
     treesitter.context.enable = true;
     statusline.lualine = {
       enable = true;
-      theme = "base16";
+      theme = "gruvbox";
     };
 
     telescope.enable = true;
