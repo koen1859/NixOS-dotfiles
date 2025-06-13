@@ -1,8 +1,12 @@
-{pkgs, ...}: let
-  inherit (import ../variables.nix) username;
+{
+  inputs,
+  pkgs,
+  ...
+}: let
+  inherit (import ../variables.nix {inherit inputs pkgs;}) shell username;
 in {
   users = {
-    defaultUserShell = pkgs.zsh;
+    defaultUserShell = shell;
     users.${username} = {
       isNormalUser = true;
       extraGroups = ["wheel" "libvirtd"];

@@ -1,5 +1,9 @@
-{inputs, ...}: let
-  core = "${inputs.self}/modules/core";
+{
+  inputs,
+  pkgs,
+  ...
+}: let
+  inherit (import ../variables.nix {inherit inputs pkgs;}) core;
 in {
   imports = [
     "${core}/bootloader.nix"

@@ -1,9 +1,7 @@
 {pkgs, ...}: {
   programs = {
     zsh.enable = true;
-    nix-ld = {
-      enable = true;
-    };
+    nix-ld.enable = true;
     yazi.enable = true;
     thunar.enable = true;
   };

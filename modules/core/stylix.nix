@@ -1,6 +1,9 @@
-{pkgs, ...}: let
-  inherit (import ../wallpaper.nix) wallpaper;
-  inherit (import ../theme.nix {inherit pkgs;}) theme;
+{
+  inputs,
+  pkgs,
+  ...
+}: let
+  inherit (import ../variables.nix {inherit inputs pkgs;}) wallpaper theme;
 in {
   stylix = {
     enable = true;

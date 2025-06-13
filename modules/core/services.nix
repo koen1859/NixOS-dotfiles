@@ -1,4 +1,10 @@
-{pkgs, ...}: {
+{
+  inputs,
+  pkgs,
+  ...
+}: let
+  inherit (import ../variables.nix {inherit inputs pkgs;}) username;
+in {
   services = {
     blueman.enable = true;
     pipewire = {
@@ -10,7 +16,7 @@
       enable = true;
       settings = {
         default_session = {
-          user = "koenstevens";
+          user = "${username}";
           command = "${pkgs.greetd.greetd}/bin/agreety --cmd Hyprland";
         };
       };

@@ -1,12 +1,11 @@
 {inputs, ...}: let
-  home = "${inputs.self}/modules/home";
+  inherit (import ../variables.nix {inherit inputs pkgs;}) home username;
 in {
   imports = [
     "${home}/eww"
     "${home}/fetch"
     "${home}/firefox"
     "${home}/hypr"
-    # "${home}/nixvim"
     "${home}/wlogout"
     "${home}/wezterm"
     "${home}/zsh"
@@ -36,11 +35,8 @@ in {
   ];
 
   home = {
-    username = "koenstevens";
-    homeDirectory = "/home/koenstevens";
-    sessionVariables = {
-      TEXMFHOME = "~/.texmf/";
-    };
+    inherit username;
+    homeDirectory = "/home/${username}";
     stateVersion = "24.11";
   };
   programs.home-manager.enable = true;
