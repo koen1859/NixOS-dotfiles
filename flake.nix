@@ -52,7 +52,7 @@
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
   in {
-    packages."x86_64-linux".default =
+    packages.${system}.default =
       (nvf.lib.neovimConfiguration {
         inherit pkgs;
         modules = [./modules/home/nvf];

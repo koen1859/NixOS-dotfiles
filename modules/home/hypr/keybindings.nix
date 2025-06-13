@@ -17,6 +17,7 @@
       "$mainMod SHIFT, Return, exec, ${pkgs.kitty}/bin/kitty"
       "$mainMod, Q, killactive,"
       "$mainMod, R, exec, ${pkgs.rofi-wayland}/bin/rofi -show drun"
+      "$mainMod SHIFT, R, exec, ${pkgs.rofi-wayland}/bin/rofi -show ssh"
       "$mainMod, E, exec, ${pkgs.rofi-wayland}/bin/rofi -show filebrowser"
       "$mainMod SHIFT, E, exec, ${pkgs.xfce.thunar}/bin/thunar"
       "$mainMod, N, exec, ${pkgs.networkmanagerapplet}/bin/nm-connection-editor"
