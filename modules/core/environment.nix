@@ -1,8 +1,5 @@
 {pkgs, ...}: {
   environment = {
-    shells = with pkgs; [
-      bash
-    ];
     sessionVariables = {
       nixos_ozone_wl = "1";
     };
