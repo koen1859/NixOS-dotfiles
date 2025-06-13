@@ -54,8 +54,8 @@
   in {
     packages."x86_64-linux".default =
       (nvf.lib.neovimConfiguration {
-        pkgs = nixpkgs.legacyPackages."x86_64-linux";
-        modules = [./nvf];
+        inherit pkgs;
+        modules = [./modules/home/nvf];
       }).neovim;
 
     nixosConfigurations = {
@@ -92,7 +92,7 @@
           ./hosts/laptop/home.nix
           stylix.homeModules.stylix
           nixvim.homeManagerModules.nixvim
-          nvf.homeManagerModules.default
+          inputs.nvf.homeManagerModules.default
           nixcord.homeModules.nixcord
         ];
         extraSpecialArgs = {inherit inputs;};

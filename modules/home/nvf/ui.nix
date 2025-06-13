@@ -1,5 +1,11 @@
-{config, ...}: {
-  programs.nvf.settings.vim = {
+{
+  vim = {
+    theme = {
+      enable = true;
+      name = "gruvbox";
+      style = "dark";
+      transparent = false;
+    };
     dashboard.startify = {
       enable = true;
       customHeader = [
@@ -28,7 +34,6 @@
     filetree.neo-tree.enable = true;
     notify = {
       nvim-notify.enable = true;
-      nvim-notify.setupOpts.background_colour = "#${config.lib.stylix.colors.base01}";
     };
     tabline.nvimBufferline.enable = true;
     treesitter.context.enable = true;

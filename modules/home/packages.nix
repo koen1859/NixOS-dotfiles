@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  inputs,
+  ...
+}: {
   home.packages = with pkgs; [
     (import ./scripts/latex.nix {inherit pkgs;})
     (import ./scripts/website.nix {inherit pkgs;})
@@ -9,6 +13,11 @@
     tree
     libnotify
     timg
+
+    (inputs.nvf.lib.neovimConfiguration {
+      inherit pkgs;
+      modules = [./nvf];
+    }).neovim
   ];
 
   programs = {

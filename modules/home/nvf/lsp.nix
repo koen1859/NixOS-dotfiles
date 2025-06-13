@@ -3,7 +3,7 @@
   pkgs,
   ...
 }: {
-  programs.nvf.settings.vim = {
+  vim = {
     snippets.luasnip.enable = true;
     autocomplete.nvim-cmp.enable = true;
     lsp = {
