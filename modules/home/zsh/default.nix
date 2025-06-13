@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   programs.zsh = {
-    enable = false;
+    enable = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
 
