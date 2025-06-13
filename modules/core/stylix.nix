@@ -3,7 +3,7 @@
   pkgs,
   ...
 }: let
-  inherit (import ../variables.nix {inherit inputs pkgs;}) wallpaper theme;
+  inherit (import "${inputs.self}/variables.nix" {inherit inputs pkgs;}) wallpaper theme;
 in {
   stylix = {
     enable = true;

@@ -3,7 +3,7 @@
   pkgs,
   ...
 }: let
-  inherit (import ../variables.nix {inherit inputs pkgs;}) shell username;
+  inherit (import "${inputs.self}/variables.nix" {inherit inputs pkgs;}) shell username;
 in {
   users = {
     defaultUserShell = shell;

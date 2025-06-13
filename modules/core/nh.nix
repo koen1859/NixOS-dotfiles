@@ -3,7 +3,7 @@
   pkgs,
   ...
 }: let
-  inherit (import ../variables.nix {inherit inputs pkgs;}) username;
+  inherit (import "${inputs.self}/variables.nix" {inherit inputs pkgs;}) username;
 in {
   programs.nh = {
     enable = true;

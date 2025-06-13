@@ -51,6 +51,7 @@
     lib = nixpkgs.lib;
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
+    inherit (import "${inputs.self}/variables.nix" {inherit inputs pkgs;}) username;
   in {
     packages.${system}.default =
       (nvf.lib.neovimConfiguration {
@@ -89,7 +90,7 @@
       };
     };
     homeConfigurations = {
-      "koenstevens@nixlaptop" = home-manager.lib.homeManagerConfiguration {
+      "${username}@nixlaptop" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [
           ./modules/home
@@ -101,7 +102,7 @@
         ];
         extraSpecialArgs = {inherit inputs;};
       };
-      "koenstevens@nixpc" = home-manager.lib.homeManagerConfiguration {
+      "${username}@nixpc" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [
           ./modules/home
@@ -113,7 +114,7 @@
         ];
         extraSpecialArgs = {inherit inputs;};
       };
-      "koenstevens@nixserver" = home-manager.lib.homeManagerConfiguration {
+      "${username}@nixserver" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [
           ./modules/home/server.nix

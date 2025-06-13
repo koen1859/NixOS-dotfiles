@@ -1,5 +1,9 @@
-{inputs, ...}: let
-  inherit (import ../variables.nix {inherit inputs pkgs;}) home username;
+{
+  inputs,
+  pkgs,
+  ...
+}: let
+  inherit (import "${inputs.self}/variables.nix" {inherit inputs pkgs;}) home username;
 in {
   imports = [
     "${home}/eww"
