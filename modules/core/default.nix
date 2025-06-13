@@ -1,5 +1,6 @@
 {inputs, ...}: let
   core = "${inputs.self}/modules/core";
+  inherit (import ../variables.nix) username;
 in {
   imports = [
     "${core}/boot.nix"
@@ -9,8 +10,6 @@ in {
     "${core}/programs.nix"
     "${core}/stylix.nix"
     "${core}/network.nix"
-    "${core}/nixpkgs.nix"
-    "${core}/nix.nix"
     "${core}/nh.nix"
     "${core}/flatpak.nix"
   ];
@@ -23,7 +22,14 @@ in {
     settings = {
       experimental-features = ["nix-command" "flakes"];
       auto-optimise-store = true;
-      trusted-users = ["root" "koenstevens"];
+      trusted-users = ["root" "${username}"];
     };
+  };
+
+  nixpkgs.config = {
+    packageOverrides = pkgs: {
+      unstable = import <nixos-unstable> {};
+    };
+    allowUnfree = true;
   };
 }

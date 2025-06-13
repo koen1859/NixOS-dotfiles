@@ -10,8 +10,6 @@ in {
     "${core}/misc.nix"
     "${core}/stylix.nix"
     "${core}/network.nix"
-    "${core}/nixpkgs.nix"
-    "${core}/nix.nix"
     "${core}/nh.nix"
   ];
 
