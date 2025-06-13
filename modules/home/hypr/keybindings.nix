@@ -6,6 +6,7 @@
       "SUPER_SHIFT, B, exec, ${pkgs.librewolf}/bin/librewolf --private-window"
       ", PRINT, exec, ${pkgs.hyprshot}/bin/hyprshot -m region"
       "$mainMod, S, exec, ${pkgs.hyprshot}/bin/hyprshot -m output -m active"
+      "$mainMod SHIFT, S, exec, ${pkgs.hyprshot}/bin/hyprshot -m region"
       "$mainMod, ESCAPE, exec, ${pkgs.wlogout}/bin/wlogout"
       "SUPER_SHIFT, ESCAPE, exec, ${pkgs.hyprlock}/bin/hyprlock"
       "$mainMod, M, exec, spotify" # Do not run direct binary for spotify because of spicetify
