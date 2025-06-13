@@ -1,6 +1,4 @@
-{inputs, ...}: let
-  core = "${inputs.self}/modules/core/server.nix";
-in {
+{
   imports = [
     ./modules/hardware.nix
     ./modules/nvidia.nix
@@ -8,8 +6,6 @@ in {
     ./modules/nixarr.nix
     # ./modules/packages.nix
     # ./modules/services.nix
-
-    core
   ];
 
   networking.hostName = "nixserver";

@@ -1,11 +1,7 @@
-{inputs, ...}: let
-  core = "${inputs.self}/modules/core";
-in {
+{
   imports = [
     ./modules/hardware.nix
     ./modules/tlp.nix
-
-    core
   ];
 
   networking.hostName = "nixlaptop";

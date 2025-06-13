@@ -1,13 +1,9 @@
-{inputs, ...}: let
-  core = "${inputs.self}/modules/core";
-in {
+{
   imports = [
     ./modules/hardware.nix
     ./modules/nvidia.nix
     ./modules/ssh.nix
     ./modules/gaming.nix
-
-    core
   ];
 
   networking.hostName = "nixpc";

@@ -63,6 +63,7 @@
         inherit system;
         specialArgs = {inherit inputs;};
         modules = [
+          ./modules/core
           ./hosts/laptop/configuration.nix
           stylix.nixosModules.stylix
         ];
@@ -71,6 +72,7 @@
         inherit system;
         specialArgs = {inherit inputs;};
         modules = [
+          ./modules/core
           ./hosts/pc/configuration.nix
           stylix.nixosModules.stylix
         ];
@@ -79,6 +81,7 @@
         inherit system;
         specialArgs = {inherit inputs;};
         modules = [
+          ./modules/core/server.nix
           ./hosts/server/configuration.nix
           stylix.nixosModules.stylix
           nixarr.nixosModules.default
@@ -89,6 +92,7 @@
       "koenstevens@nixlaptop" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [
+          ./modules/home
           ./hosts/laptop/home.nix
           stylix.homeModules.stylix
           nixvim.homeManagerModules.nixvim
@@ -100,6 +104,7 @@
       "koenstevens@nixpc" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [
+          ./modules/home
           ./hosts/pc/home.nix
           stylix.homeModules.stylix
           nixvim.homeManagerModules.nixvim
@@ -111,6 +116,7 @@
       "koenstevens@nixserver" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [
+          ./modules/home/server.nix
           ./hosts/server/home.nix
           stylix.homeModules.stylix
           nixvim.homeManagerModules.nixvim
