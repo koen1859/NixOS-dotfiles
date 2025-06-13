@@ -17,9 +17,7 @@ in {
     "${home}/bash.nix"
     "${home}/btop.nix"
     "${home}/chromium.nix"
-    "${home}/ghostty.nix"
     "${home}/git.nix"
-    "${home}/htop.nix"
     "${home}/kitty.nix"
     "${home}/latex.nix"
     "${home}/librewolf.nix"
@@ -33,9 +31,7 @@ in {
     "${home}/stylix.nix"
     "${home}/swaync.nix"
     "${home}/waybar.nix"
-    "${home}/wofi.nix"
     "${home}/zathura.nix"
-    "${home}/zellij.nix"
   ];
 
   home = {
@@ -43,5 +39,35 @@ in {
     homeDirectory = "/home/${username}";
     stateVersion = "24.11";
   };
-  programs.home-manager.enable = true;
+  programs = {
+    home-manager.enable = true;
+
+    eww.enable = true;
+    wlogout.enable = true;
+    rofi.enable = true;
+    waybar.enable = true;
+
+    starship.enable = true;
+    fastfetch.enable = true;
+    btop.enable = true;
+    atuin.enable = true;
+    bash.enable = true;
+    zsh.enable = true;
+    feh.enable = true;
+    fd.enable = true;
+
+    wezterm.enable = true;
+    kitty.enable = true;
+
+    firefox.enable = true;
+    librewolf.enable = true;
+    chromium.enable = true;
+
+    nixcord.enable = true;
+    spicetify.enable = true;
+    zathura.enable = true;
+
+    git.enable = true;
+    lazygit.enable = true;
+  };
 }

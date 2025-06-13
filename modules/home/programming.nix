@@ -8,7 +8,6 @@
       packages = with rPackages; [
       ];
     })
-    devenv # Make nice dev shells
-    direnv # Activate shells on directory level
+    direnv
   ];
 }

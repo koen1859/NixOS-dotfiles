@@ -1661,7 +1661,7 @@
 
 
     '';
-    home.file.".texmf/tex/latex/rug-econometrics/natbib.sty".text = ''
+    file.".texmf/tex/latex/rug-econometrics/natbib.sty".text = ''
       %%
       %% This is file `natbib.sty',
       %% generated with the docstrip utility.

@@ -156,8 +156,6 @@ in {
   stylix.targets.firefox.profileNames = ["default"];
 
   programs.firefox = {
-    enable = true;
-
     profiles = {
       default = {
         inherit settings search;

@@ -14,6 +14,8 @@
     libnotify
     timg
     typst
+    microfetch
+    onefetch
 
     (inputs.nvf.lib.neovimConfiguration {
       inherit pkgs;
@@ -21,9 +23,5 @@
     }).neovim
   ];
 
-  programs = {
-    feh.enable = true;
-    fd.enable = true;
-  };
   nixpkgs.config.allowUnfree = true;
 }

@@ -1,11 +1,5 @@
-{pkgs, ...}: {
-  home.packages = with pkgs; [
-    microfetch
-    onefetch
-  ];
+{
   programs.fastfetch = {
-    enable = true;
-
     settings = {
       display = {
         separator = " ➜  ";
