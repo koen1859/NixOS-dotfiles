@@ -5,6 +5,7 @@
       undotree
       harpoon2
       lazygit-nvim
+      base16-nvim
     ];
     extraPlugins = {
       compiler = {
