@@ -13,6 +13,7 @@
     tree
     libnotify
     timg
+    typst
 
     (inputs.nvf.lib.neovimConfiguration {
       inherit pkgs;

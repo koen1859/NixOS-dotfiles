@@ -87,6 +87,7 @@
       html.enable = true;
       lua.enable = true;
       css.enable = true;
+      typst.enable = true;
     };
   };
 }
