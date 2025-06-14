@@ -1,12 +1,12 @@
 {
   nixarr = {
-    enable = false;
+    enable = true;
     mediaDir = "/data/media";
     stateDir = "/data/media/.state/nixarr";
 
     vpn = {
       enable = true;
-      wgConf = "/data/.secret/wg-CH-414.conf";
+      wgConf = "/data/.secret/wg.conf";
     };
 
     jellyfin = {
