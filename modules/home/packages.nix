@@ -16,6 +16,7 @@
     typst
     microfetch
     onefetch
+    ncdu
 
     (inputs.nvf.lib.neovimConfiguration {
       inherit pkgs;
