@@ -7,7 +7,7 @@
         efiSupport = true;
         useOSProber = false;
       };
-      timeout = 30;
+      timeout = 5;
       efi.canTouchEfiVariables = true;
       efi.efiSysMountPoint = "/boot";
     };

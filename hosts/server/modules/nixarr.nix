@@ -22,6 +22,7 @@
       enable = true;
       vpn.enable = true;
       peerPort = 52158;
+      openFirewall = true;
       extraSettings = {
         "peer-port-random-on-start" = true; # Avoid fixed blocked port
         "pex-enabled" = true;
@@ -31,5 +32,6 @@
     };
     radarr.enable = true;
     sonarr.enable = true;
+    prowlarr.enable = true;
   };
 }
