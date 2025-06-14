@@ -1,6 +1,6 @@
 {
   nixarr = {
-    enable = true;
+    enable = false;
     mediaDir = "/data/media";
     stateDir = "/data/media/.state/nixarr";
 
