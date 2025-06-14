@@ -32,5 +32,6 @@ in {
   };
 
   programs.zsh.enable = true;
+  programs.yazi.enable = true;
   system.stateVersion = "24.11";
 }
