@@ -25,9 +25,18 @@
       openFirewall = true;
       extraSettings = {
         "peer-port-random-on-start" = true; # Avoid fixed blocked port
-        "pex-enabled" = true;
-        "dht-enabled" = true;
+        "upload-speed-limit" = 0;
+        "upload-speed-limit-enabled" = true;
+        "ratio-limit" = 0.01;
+        "ratio-limit-enabled" = true;
+        "seed-queue-enabled" = true;
+        "seed-queue-size" = 0;
+        "max-peers-global" = 10;
+        "peer-limit-per-torrent" = 5;
+        "pex-enabled" = false;
+        "dht-enabled" = false;
         "lpd-enabled" = false;
+        "utp-enabled" = false;
       };
     };
     radarr.enable = true;
