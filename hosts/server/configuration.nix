@@ -9,7 +9,7 @@
   ];
 
   fileSystems."/data" = {
-    device = "/dev/sda1";
+    device = "/dev/sdb1";
     fsType = "ext4";
     options = ["defaults"];
   };
