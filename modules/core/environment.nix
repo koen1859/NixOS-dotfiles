@@ -2,6 +2,8 @@
   environment = {
     sessionVariables = {
       nixos_ozone_wl = "1";
+      EDITOR = "nvim";
+      HYPRSHOT_DIR = "/home/koenstevens/Pictures/";
     };
     systemPackages = with pkgs; [
       wl-clipboard # Clipboard

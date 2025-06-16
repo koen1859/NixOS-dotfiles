@@ -1,7 +1,7 @@
 {
   programs.nixcord = {
-    discord.enable = false;
-    vesktop.enable = true;
+    discord.enable = true;
+    vesktop.enable = false;
     config = {
       frameless = true;
       plugins = {

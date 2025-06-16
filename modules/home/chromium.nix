@@ -1,6 +1,5 @@
-{pkgs, ...}: {
+{
   programs.chromium = {
-    package = pkgs.ungoogled-chromium;
     extensions = [
       {id = "cjpalhdlnbpafiamejdnhcphjbkeiagm";} # ublock origin
       {id = "dbepggeogbaibhgnhhndojpepiihcmeb";} # vimium

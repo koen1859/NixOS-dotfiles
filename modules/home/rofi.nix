@@ -10,9 +10,7 @@
 in {
   programs.rofi = {
     cycle = false;
-
     package = pkgs.rofi-wayland;
-
     extraConfig = {
       modi = "drun,filebrowser,ssh";
       show-icons = true;

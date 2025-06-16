@@ -14,8 +14,6 @@
     libnotify
     timg
     typst
-    microfetch
-    onefetch
     ncdu
     ladybird
 

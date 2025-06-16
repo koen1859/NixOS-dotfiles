@@ -87,9 +87,6 @@ in
             format-source-muted = "";
             format-icons = {
               headphone = "";
-              phone = "";
-              portable = "";
-              car = "";
               default = [
                 ""
                 ""
@@ -154,96 +151,96 @@ in
       ];
       style = concatStrings [
         ''
-               * {
-                 font-family: JetBrainsMono Nerd Font;
-                 font-size: 10px;
-                 border-radius: 0px;
-                 border: none;
-                 min-height: 2px;
-               }
-               window#waybar {
-                 background: rgba(0,0,0,0);
-          margin-top: 2px;
-               }
-               #workspaces {
-                 color: #${config.lib.stylix.colors.base0D};
-                 background: #${config.lib.stylix.colors.base00};
-                 padding: 3px 3px;
-                 border-radius: 8px;
-               }
-               #workspaces button {
-                 font-weight: bold;
-                 padding: 0px 3px;
-                 border-radius: 8px;
-                 color: #${config.lib.stylix.colors.base00};
-                 background: #${config.lib.stylix.colors.base0D};
-                 opacity: 0.5;
-                 transition: ${betterTransition};
-               }
-               #workspaces button.active {
-                 font-weight: bold;
-                 padding: 0px 3px;
-                 border-radius: 8px;
-                 color: #${config.lib.stylix.colors.base00};
-                 background: #${config.lib.stylix.colors.base0D};
-                 transition: ${betterTransition};
-                 opacity: 1.0;
-                 min-width: 20px;
-               }
-               #workspaces button:hover {
-                 font-weight: bold;
-                 border-radius: 8px;
-                 color: #${config.lib.stylix.colors.base00};
-                 background: #${config.lib.stylix.colors.base0D};
-                 opacity: 0.8;
-                 transition: ${betterTransition};
-               }
-               tooltip {
-                 background: #${config.lib.stylix.colors.base00};
-                 border: 1px solid #${config.lib.stylix.colors.base0D};
-                 border-radius: 8px;
-               }
-               tooltip label {
-                 color: #${config.lib.stylix.colors.base0D};
-               }
-               #window, #pulseaudio, #cpu, #memory, #network, #idle_inhibitor, #disk {
-                 font-weight: bold;
-                 margin-left: 7px;
-                 padding: 0px 9px;
-                 background: #${config.lib.stylix.colors.base00};
-                 color: #${config.lib.stylix.colors.base0D};
-                 border-radius: 4px 4px 4px 4px;
-               }
-               #idle_inhibitor {
-               font-size: 10px;
-               }
-               #custom-startmenu {
-                 color: #${config.lib.stylix.colors.base0D};
-                 background: #${config.lib.stylix.colors.base00};
-                 font-size: 10px;
-                 margin: 0px;
-                 padding: 0px 3px 0px 3px;
-                 border-radius: 8px 8px 8px 8px;
-               }
-               #custom-hyprbindings, #battery,
-               #custom-notification, #tray, #custom-exit {
-                 /* font-weight: bold; */
-                 font-size: 10px;
-                 background: #${config.lib.stylix.colors.base00};
-                 color: #${config.lib.stylix.colors.base0D};
-                 margin-right: 7px;
-                 border-radius: 4px 4px 4px 4px;
-                 padding: 0px 9px;
-               }
-               #clock {
-                 font-weight: bold;
-                 font-size: 10px;
-                 color: #${config.lib.stylix.colors.base0D};
-                 background: #${config.lib.stylix.colors.base00};
-                 margin-right: 7px;
-                 padding: 0px 9px;
-                 border-radius: 4px 4px 4px 4px;
-               }
+          * {
+            font-family: JetBrainsMono Nerd Font;
+            font-size: 10px;
+            border-radius: 0px;
+            border: none;
+            min-height: 2px;
+          }
+          window#waybar {
+            background: rgba(0,0,0,0);
+            margin-top: 2px;
+          }
+          #workspaces {
+            color: #${config.lib.stylix.colors.base0D};
+            background: #${config.lib.stylix.colors.base00};
+            padding: 3px 3px;
+            border-radius: 8px;
+          }
+          #workspaces button {
+            font-weight: bold;
+            padding: 0px 3px;
+            border-radius: 8px;
+            color: #${config.lib.stylix.colors.base00};
+            background: #${config.lib.stylix.colors.base0D};
+            opacity: 0.5;
+            transition: ${betterTransition};
+          }
+          #workspaces button.active {
+            font-weight: bold;
+            padding: 0px 3px;
+            border-radius: 8px;
+            color: #${config.lib.stylix.colors.base00};
+            background: #${config.lib.stylix.colors.base0D};
+            transition: ${betterTransition};
+            opacity: 1.0;
+            min-width: 20px;
+          }
+          #workspaces button:hover {
+            font-weight: bold;
+            border-radius: 8px;
+            color: #${config.lib.stylix.colors.base00};
+            background: #${config.lib.stylix.colors.base0D};
+            opacity: 0.8;
+            transition: ${betterTransition};
+          }
+          tooltip {
+            background: #${config.lib.stylix.colors.base00};
+            border: 1px solid #${config.lib.stylix.colors.base0D};
+            border-radius: 8px;
+          }
+          tooltip label {
+            color: #${config.lib.stylix.colors.base0D};
+          }
+          #window, #pulseaudio, #cpu, #memory, #network, #idle_inhibitor, #disk {
+            font-weight: bold;
+            margin-left: 7px;
+            padding: 0px 9px;
+            background: #${config.lib.stylix.colors.base00};
+            color: #${config.lib.stylix.colors.base0D};
+            border-radius: 4px 4px 4px 4px;
+          }
+          #idle_inhibitor {
+          font-size: 10px;
+          }
+          #custom-startmenu {
+            color: #${config.lib.stylix.colors.base0D};
+            background: #${config.lib.stylix.colors.base00};
+            font-size: 10px;
+            margin: 0px;
+            padding: 0px 3px 0px 3px;
+            border-radius: 8px 8px 8px 8px;
+          }
+          #custom-hyprbindings, #battery,
+          #custom-notification, #tray, #custom-exit {
+            /* font-weight: bold; */
+            font-size: 10px;
+            background: #${config.lib.stylix.colors.base00};
+            color: #${config.lib.stylix.colors.base0D};
+            margin-right: 7px;
+            border-radius: 4px 4px 4px 4px;
+            padding: 0px 9px;
+          }
+          #clock {
+            font-weight: bold;
+            font-size: 10px;
+            color: #${config.lib.stylix.colors.base0D};
+            background: #${config.lib.stylix.colors.base00};
+            margin-right: 7px;
+            padding: 0px 9px;
+            border-radius: 4px 4px 4px 4px;
+          }
         ''
       ];
     };

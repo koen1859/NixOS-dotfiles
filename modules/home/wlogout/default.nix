@@ -1,4 +1,8 @@
-{config, ...}: {
+{
+  config,
+  pkgs,
+  ...
+}: {
   programs.wlogout = {
     layout = [
       {
@@ -27,7 +31,7 @@
       }
       {
         "label" = "lock";
-        "action" = "sleep 1; hyprlock";
+        "action" = "sleep 1; ${pkgs.hyprlock}/bin/hyprlock";
         "text" = "";
         "keybind" = "l";
       }
