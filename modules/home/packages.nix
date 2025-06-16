@@ -17,6 +17,7 @@
     microfetch
     onefetch
     ncdu
+    ladybird
 
     (inputs.nvf.lib.neovimConfiguration {
       inherit pkgs;
