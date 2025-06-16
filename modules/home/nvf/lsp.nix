@@ -30,13 +30,35 @@
         };
         pyright = {
           enable = true;
-          cmd = ["${pkgs.pyright}/bin/pyright-langserver" "--stdio"];
+          cmd = [(lib.getExe pkgs.pyright) "--stdio"];
           filetypes = ["python"];
         };
         ruff = {
           enable = true;
           cmd = [(lib.getExe pkgs.ruff) "server"];
           filetypes = ["python"];
+        };
+        r_language_server = {
+          enable = true;
+          cmd = [
+            "${(pkgs.rWrapper.override {
+              packages = with pkgs.rPackages; [languageserver];
+            })}/bin/R"
+            "--slave"
+            "-e"
+            "languageserver::run()"
+          ];
+          filetypes = ["r" "rmd"];
+        };
+        tinymist = {
+          enable = true;
+          cmd = [(lib.getExe pkgs.tinymist) "lsp"];
+          filetypes = ["typst"];
+        };
+        phpactor = {
+          enable = true;
+          cmd = [(lib.getExe pkgs.phpactor) "language-server"];
+          filetypes = ["php"];
         };
       };
     };
@@ -52,13 +74,9 @@
     languages = {
       enableFormat = true;
       enableTreesitter = true;
-      enableExtraDiagnostics = true;
       nix = {
         enable = true;
-        lsp = {
-          enable = false;
-          server = "nixd";
-        };
+        lsp.enable = false;
         format = {
           enable = true;
           type = "alejandra";
@@ -66,10 +84,7 @@
       };
       python = {
         enable = true;
-        lsp = {
-          enable = false;
-          server = "pyright";
-        };
+        lsp.enable = false;
         format = {
           enable = false;
           type = "ruff";
@@ -77,17 +92,23 @@
       };
       r = {
         enable = true;
-        lsp.enable = true;
+        lsp.enable = false;
         format = {
           enable = true;
           type = "styler";
         };
       };
-      php.enable = true;
+      php = {
+        enable = true;
+        lsp.enable = false;
+      };
       html.enable = true;
       lua.enable = true;
       css.enable = true;
-      typst.enable = true;
+      typst = {
+        enable = true;
+        lsp.enable = false;
+      };
     };
   };
 }

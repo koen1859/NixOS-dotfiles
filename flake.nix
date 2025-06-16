@@ -12,12 +12,8 @@
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    nvf = {
-      url = "github:notashelf/nvf";
+    nvim-conf = {
+      url = "github:koen1859/nvim-conf";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     spicetify-nix = {
@@ -42,8 +38,6 @@
     nixpkgs,
     home-manager,
     stylix,
-    nixvim,
-    nvf,
     nixcord,
     nixarr,
     ...
@@ -53,12 +47,6 @@
     pkgs = nixpkgs.legacyPackages.${system};
     inherit (import "${inputs.self}/variables.nix" {inherit inputs pkgs;}) username;
   in {
-    packages.${system}.default =
-      (nvf.lib.neovimConfiguration {
-        inherit pkgs;
-        modules = [./modules/home/nvf];
-      }).neovim;
-
     nixosConfigurations = {
       nixlaptop = lib.nixosSystem {
         inherit system;
@@ -96,8 +84,6 @@
           ./modules/home
           ./hosts/laptop/home.nix
           stylix.homeModules.stylix
-          nixvim.homeManagerModules.nixvim
-          inputs.nvf.homeManagerModules.default
           nixcord.homeModules.nixcord
         ];
         extraSpecialArgs = {inherit inputs;};
@@ -108,8 +94,6 @@
           ./modules/home
           ./hosts/pc/home.nix
           stylix.homeModules.stylix
-          nixvim.homeManagerModules.nixvim
-          nvf.homeManagerModules.default
           nixcord.homeModules.nixcord
         ];
         extraSpecialArgs = {inherit inputs;};
@@ -120,8 +104,6 @@
           ./modules/home/server.nix
           ./hosts/server/home.nix
           stylix.homeModules.stylix
-          nixvim.homeManagerModules.nixvim
-          nvf.homeManagerModules.default
           nixcord.homeModules.nixcord
         ];
         extraSpecialArgs = {inherit inputs;};

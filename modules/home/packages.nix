@@ -19,10 +19,7 @@
     ncdu
     ladybird
 
-    (inputs.nvf.lib.neovimConfiguration {
-      inherit pkgs;
-      modules = [./nvf];
-    }).neovim
+    inputs.nvim-conf.packages.${pkgs.system}.default
   ];
 
   nixpkgs.config.allowUnfree = true;
