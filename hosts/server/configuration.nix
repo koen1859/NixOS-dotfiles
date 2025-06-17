@@ -4,8 +4,6 @@
     ./modules/nvidia.nix
     ./modules/ssh.nix
     ./modules/nixarr.nix
-    # ./modules/packages.nix
-    # ./modules/services.nix
   ];
 
   fileSystems."/data" = {
