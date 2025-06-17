@@ -9,7 +9,7 @@
   ];
 
   fileSystems."/data" = {
-    device = "/dev/sdb1";
+    device = "/dev/disk/by-uuid/8a919333-cd1d-4ba7-9d34-94f814e93b44";
     fsType = "ext4";
     options = ["defaults"];
   };
