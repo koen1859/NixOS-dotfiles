@@ -12,7 +12,6 @@ in {
     "${home}/bash.nix"
     "${home}/btop.nix"
     "${home}/git.nix"
-    "${home}/packages.nix"
     "${home}/programming.nix"
     "${home}/starship.nix"
     "${home}/stylix.nix"
@@ -22,6 +21,9 @@ in {
     inherit username;
     homeDirectory = "/home/${username}";
     stateVersion = "24.11";
+    packages = [
+      inputs.nvim-conf.packages.${pkgs.system}.default
+    ];
   };
   programs = {
     home-manager.enable = true;
