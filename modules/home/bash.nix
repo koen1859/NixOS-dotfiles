@@ -27,17 +27,13 @@
   };
 in {
   home.packages = [ble-sh];
-  home.sessionVariables = {
-    EDITOR = "nvim";
-    XDG_CONFIG_HOME = "$HOME/.config";
-  };
 
   programs = {
     bash = {
       shellAliases = {
         ls = "${pkgs.lsd}/bin/lsd --color=auto";
         grep = "grep --color=auto";
-        ll = "lsd -l --color=auto";
+        ll = "${pkgs.lsd}/bin/lsd -l --color=auto";
         ".." = "cd ..";
         v = "nvim";
         gps = "git push";
