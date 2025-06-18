@@ -80,7 +80,7 @@
 
     "privacy.donottrackheader.enabled" = true;
     "privacy.donottrackheader.value" = 1;
-    "privacy.resistFingerprinting" = true;
+    "privacy.resistFingerprinting" = false;
     "privacy.firstparty.isolate" = true;
     "privacy.trackingprotection.enabled" = true;
     "privacy.trackingprotection.fingerprinting.enabled" = true;
@@ -117,7 +117,7 @@
 
     "signon.rememberSignons" = false;
 
-    "browser.download.useDownloadDir" = true;
+    "browser.download.useDownloadDir" = false;
     "browser.tabs.insertAfterCurrent" = true;
     "browser.tabs.warnOnClose" = true;
     "browser.toolbars.bookmarks.visibility" = "never";
@@ -150,7 +150,7 @@
     "browser.theme.content-theme" = 2;
     "browser.theme.toolbar-theme" = 2;
     "ui.systemUsesDarkTheme" = 1;
-    "layout.css.prefers-color-scheme.content-override" = 0;
+    "layout.css.prefers-color-scheme.content-override" = 2;
   };
 in {
   stylix.targets.firefox.profileNames = ["default"];
@@ -162,7 +162,7 @@ in {
         extensions.packages = with inputs.firefox-addons.packages."x86_64-linux"; [
           ublock-origin
           sponsorblock
-          darkreader
+          # darkreader
           youtube-shorts-block
           vimium
           privacy-badger
