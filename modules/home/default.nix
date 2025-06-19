@@ -25,6 +25,7 @@ in {
     "${home}/packages.nix"
     "${home}/programming.nix"
     "${home}/qt.nix"
+    "${home}/qutebrowser.nix"
     "${home}/rofi.nix"
     "${home}/spicetify.nix"
     "${home}/starship.nix"
@@ -67,6 +68,7 @@ in {
     firefox.enable = true;
     librewolf.enable = true;
     chromium.enable = false;
+    qutebrowser.enable = true;
     brave.enable = true;
 
     nixcord.enable = true;

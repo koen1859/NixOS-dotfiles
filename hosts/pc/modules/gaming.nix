@@ -13,6 +13,7 @@
     pkgs.heroic
     pkgs.mangohud
     pkgs.prismlauncher
+    pkgs.lutris
   ];
 
   programs = {
