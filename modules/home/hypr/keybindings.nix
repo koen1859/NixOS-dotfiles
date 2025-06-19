@@ -2,7 +2,8 @@
   wayland.windowManager.hyprland.settings = {
     bind = [
       "$mainMod, V, exec, ${pkgs.eww}/bin/eww open vpn-window"
-      "$mainMod, B, exec, ${pkgs.firefox}/bin/firefox"
+      # "$mainMod, B, exec, ${pkgs.firefox}/bin/firefox"
+      "$mainMod, B, exec, ${pkgs.qutebrowser}/bin/qutebrowser"
       "SUPER_SHIFT, B, exec, ${pkgs.librewolf}/bin/librewolf --private-window"
       ", PRINT, exec, ${pkgs.hyprshot}/bin/hyprshot -m region"
       "$mainMod, S, exec, ${pkgs.hyprshot}/bin/hyprshot -m output -m active"
