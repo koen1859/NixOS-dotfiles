@@ -16,7 +16,7 @@ in {
     "${home}/atuin.nix"
     "${home}/bash.nix"
     "${home}/btop.nix"
-    "${home}/chromium.nix"
+    "${home}/brave.nix"
     "${home}/git.nix"
     "${home}/kitty.nix"
     "${home}/latex.nix"
@@ -66,7 +66,8 @@ in {
 
     firefox.enable = true;
     librewolf.enable = true;
-    chromium.enable = true;
+    chromium.enable = false;
+    brave.enable = true;
 
     nixcord.enable = true;
     spicetify.enable = true;
