@@ -4,6 +4,7 @@
       auto_save.session = true;
       content = {
         cookies.accept = "no-3rdparty";
+        notifications.enabled = false;
       };
       scrolling.smooth = true;
       url = {
