@@ -68,7 +68,7 @@ in {
     firefox.enable = true;
     librewolf.enable = true;
     chromium.enable = false;
-    qutebrowser.enable = true;
+    qutebrowser.enable = false;
     brave.enable = true;
 
     nixcord.enable = true;
