@@ -33,6 +33,7 @@ in {
     "${home}/swaync.nix"
     "${home}/waybar.nix"
     "${home}/zathura.nix"
+    "${home}/zoxide.nix"
   ];
 
   home = {
@@ -61,6 +62,7 @@ in {
     zsh.enable = true;
     feh.enable = true;
     fd.enable = true;
+    zoxide.enable = true;
 
     wezterm.enable = true;
     kitty.enable = true;
