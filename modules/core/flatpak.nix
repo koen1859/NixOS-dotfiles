@@ -11,6 +11,8 @@
       flatpak install --noninteractive flathub me.proton.Pass
       flatpak install --noninteractive flathub com.github.tchx84.Flatseal
       flatpak install --noninteractive flathub org.gimp.GIMP
+      flatpak install --noninteractive flathub io.freetubeapp.FreeTube
+      flatpak install --noninteractive flathub com.github.iwalton3.jellyfin-media-player
     '';
   };
 }
