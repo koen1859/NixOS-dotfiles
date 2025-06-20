@@ -16,6 +16,7 @@
     typst
     ncdu
     ladybird
+    mullvad-browser
 
     inputs.nvim-conf.packages.${pkgs.system}.default
   ];
