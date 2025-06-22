@@ -47,7 +47,7 @@
         font-family: "JetBrainsMono Nerd Font";
       	background-image: none;
       	transition: 20ms;
-        font-size: 100px;
+        font-size: 200px;
       }
       window {
       	background-color: alpha(#${config.lib.stylix.colors.base00},.2);

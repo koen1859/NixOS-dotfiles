@@ -52,11 +52,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1750621645,
-        "narHash": "sha256-cp2DYG8spun0l2RivjNRy/P7gozEEtt9Z1UzVO76zMQ=",
+        "lastModified": 1750627984,
+        "narHash": "sha256-JC3BiNCAJMyu8MDDBkuG/IQ26MCLrHJLxHUwAjFLT5I=",
         "owner": "koen1859",
         "repo": "astal-widgets",
-        "rev": "86958b03c1a7795f3604015e5eca85da0325b1af",
+        "rev": "e8a48ff351c80a9572141d4ce3b7402fee51dd7c",
         "type": "github"
       },
       "original": {
