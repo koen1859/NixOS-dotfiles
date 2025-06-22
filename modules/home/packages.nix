@@ -19,6 +19,7 @@
     mullvad-browser
 
     inputs.nvim-conf.packages.${pkgs.system}.default
+    inputs.astal-widgets.packages.${pkgs.system}.TopBar
   ];
 
   nixpkgs.config.allowUnfree = true;

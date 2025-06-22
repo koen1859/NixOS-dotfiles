@@ -16,8 +16,8 @@
       url = "github:koen1859/nvim-conf";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    top-bar = {
-      url = "github:koen1859/top-bar";
+    astal-widgets = {
+      url = "github:koen1859/astal-widgets";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     spicetify-nix = {

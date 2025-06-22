@@ -4,7 +4,7 @@
       "inputs": {
         "astal": "astal",
         "nixpkgs": [
-          "top-bar",
+          "astal-widgets",
           "nixpkgs"
         ]
       },
@@ -25,7 +25,7 @@
     "astal": {
       "inputs": {
         "nixpkgs": [
-          "top-bar",
+          "astal-widgets",
           "ags",
           "nixpkgs"
         ]
@@ -41,6 +41,27 @@
       "original": {
         "owner": "aylur",
         "repo": "astal",
+        "type": "github"
+      }
+    },
+    "astal-widgets": {
+      "inputs": {
+        "ags": "ags",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1750609868,
+        "narHash": "sha256-AdixKXVk9qPaCnVQSK89/44OBEHTs/7T/JTRRdpTa+o=",
+        "owner": "koen1859",
+        "repo": "astal-widgets",
+        "rev": "fc0f1dd5d8bb5dffd781bf2db23d4e2b0fa50fc2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "koen1859",
+        "repo": "astal-widgets",
         "type": "github"
       }
     },
@@ -377,11 +398,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1750304462,
-        "narHash": "sha256-Mj5t4yX05/rXnRqJkpoLZTWqgStB88Mr/fegTRqyiWc=",
+        "lastModified": 1750604619,
+        "narHash": "sha256-wNMm3ioA7q83UBDBQDew47bbjyvhOIcUcpjRFq3kHBY=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "863842639722dd12ae9e37ca83bcb61a63b36f6c",
+        "rev": "39b7903eaba5579046f7069b9d85d3ef4f2f972c",
         "type": "github"
       },
       "original": {
@@ -649,6 +670,7 @@
     },
     "root": {
       "inputs": {
+        "astal-widgets": "astal-widgets",
         "firefox-addons": "firefox-addons",
         "flake-utils": "flake-utils",
         "home-manager": "home-manager",
@@ -658,8 +680,7 @@
         "nixpkgs": "nixpkgs",
         "nvim-conf": "nvim-conf",
         "spicetify-nix": "spicetify-nix",
-        "stylix": "stylix",
-        "top-bar": "top-bar"
+        "stylix": "stylix"
       }
     },
     "spicetify-nix": {
@@ -873,27 +894,6 @@
       "original": {
         "owner": "tinted-theming",
         "repo": "base16-zed",
-        "type": "github"
-      }
-    },
-    "top-bar": {
-      "inputs": {
-        "ags": "ags",
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1750607902,
-        "narHash": "sha256-wlDAS2Es4ZIqGVOXnkkeuLQYUNG4Pu2tmLL8UP/rNJE=",
-        "owner": "koen1859",
-        "repo": "top-bar",
-        "rev": "a14bfdf04a6ec09268fa5e0a62ced542b8274ab8",
-        "type": "github"
-      },
-      "original": {
-        "owner": "koen1859",
-        "repo": "top-bar",
         "type": "github"
       }
     },
