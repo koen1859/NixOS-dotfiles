@@ -52,11 +52,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1750611124,
-        "narHash": "sha256-iO90//ZCjB7hZr3voqnFkAlLlLP+OBXJAwPEQ2yi/Ao=",
+        "lastModified": 1750618930,
+        "narHash": "sha256-8q2lhh3cyJ6X+FLA2XVr8Gy4R+Ccg/LpAgB5t0UAh10=",
         "owner": "koen1859",
         "repo": "astal-widgets",
-        "rev": "68d7d568cee66c8c20f1a57063eb34b735bf4705",
+        "rev": "bddda0a95b543bffd774bc2fdd83f0f7161079c5",
         "type": "github"
       },
       "original": {
@@ -398,11 +398,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1750604619,
-        "narHash": "sha256-wNMm3ioA7q83UBDBQDew47bbjyvhOIcUcpjRFq3kHBY=",
+        "lastModified": 1750614446,
+        "narHash": "sha256-6WH0aRFay79r775RuTqUcnoZNm6A4uHxU1sbcNIk63s=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "39b7903eaba5579046f7069b9d85d3ef4f2f972c",
+        "rev": "7c35504839f915abec86a96435b881ead7eb6a2b",
         "type": "github"
       },
       "original": {
@@ -500,11 +500,11 @@
         "website-builder": "website-builder"
       },
       "locked": {
-        "lastModified": 1750367617,
-        "narHash": "sha256-1kz35TbeqhJMdo1s/WHidoUT64IuoKCGlngv5/JCHiw=",
+        "lastModified": 1750616651,
+        "narHash": "sha256-Ylb2Jx+y4dsy3ZRh4FNQ+FT5FEqF3/qwopVNG+6/f1E=",
         "owner": "rasmus-kirk",
         "repo": "nixarr",
-        "rev": "450d76583ae6ec025577bde7da2a38cfc7fb0510",
+        "rev": "7b4e2e6780c0f6979cd0c7f4375c15de06554d1a",
         "type": "github"
       },
       "original": {
