@@ -1,11 +1,16 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  inputs,
+  ...
+}: {
   wayland.windowManager.hyprland = {
     enable = true;
     package = pkgs.hyprland;
     xwayland.enable = true;
     settings = {
       exec-once = [
-        "${pkgs.waybar}/bin/waybar"
+        "${inputs.top-bar.packages.${pkgs.system}.default}/bin/simple-bar"
+        # "${pkgs.waybar}/bin/waybar"
         "${pkgs.eww}/bin/eww daemon"
       ];
       input = {
