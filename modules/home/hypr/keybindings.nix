@@ -1,31 +1,33 @@
-{pkgs, ...}: {
+{
+  inputs,
+  pkgs,
+  ...
+}: {
   wayland.windowManager.hyprland.settings = {
     bind = [
       "$mainMod, V, exec, ${pkgs.eww}/bin/eww open vpn-window"
-      "$mainMod, B, exec, ${pkgs.firefox}/bin/firefox"
-      # "$mainMod, B, exec, ${pkgs.qutebrowser}/bin/qutebrowser"
-      "SUPER_SHIFT, B, exec, ${pkgs.librewolf}/bin/librewolf --private-window"
+      "$mainMod, B, exec, firefox"
+      "SUPER_SHIFT, B, exec, librewolf --private-window"
       ", PRINT, exec, ${pkgs.hyprshot}/bin/hyprshot -m region"
       "$mainMod, S, exec, ${pkgs.hyprshot}/bin/hyprshot -m output -m active"
       "$mainMod SHIFT, S, exec, ${pkgs.hyprshot}/bin/hyprshot -m region"
-      "$mainMod, ESCAPE, exec, ${pkgs.wlogout}/bin/wlogout"
-      "SUPER_SHIFT, ESCAPE, exec, ${pkgs.hyprlock}/bin/hyprlock"
-      "$mainMod, M, exec, spotify" # Do not run direct binary for spotify because of spicetify
-      "$mainMod SHIFT, M, exec, flatpak run me.proton.Mail" # Do not run direct binary for proton mail since it is flatpak
+      "$mainMod, ESCAPE, exec, wlogout"
+      "SUPER_SHIFT, ESCAPE, exec, hyprlock"
+      "$mainMod, M, exec, spotify"
+      "$mainMod SHIFT, M, exec, flatpak run me.proton.Mail"
       "$mainMod, P, exec, flatpak run me.proton.Pass"
       "$mainMod, A, exec, ${pkgs.pavucontrol}/bin/pavucontrol"
       "$mainMod, Return, exec, ${pkgs.wezterm}/bin/wezterm"
       "$mainMod SHIFT, Return, exec, ${pkgs.kitty}/bin/kitty"
       "$mainMod, Q, killactive,"
-      "$mainMod, R, exec, ${pkgs.rofi-wayland}/bin/rofi -show drun"
-      "$mainMod SHIFT, R, exec, ${pkgs.rofi-wayland}/bin/rofi -show ssh"
-      "$mainMod, E, exec, ${pkgs.rofi-wayland}/bin/rofi -show filebrowser"
-      "$mainMod SHIFT, E, exec, ${pkgs.xfce.thunar}/bin/thunar"
+      "$mainMod, R, exec, ${inputs.astal-widgets.packages.${pkgs.system}.AppLauncher}/bin/AppLauncher"
+      "$mainMod SHIFT, R, exec, rofi -show ssh"
+      "$mainMod, E, exec, rofi -show filebrowser"
+      "$mainMod SHIFT, E, exec, thunar"
       "$mainMod, N, exec, ${pkgs.networkmanagerapplet}/bin/nm-connection-editor"
       "$mainMod SHIFT, N, exec, ${pkgs.blueman}/bin/blueman-manager"
-      "$mainMod, D, exec, ${pkgs.vesktop}/bin/vesktop"
       "$mainMod SHIFT, O, exec, ${pkgs.rclone}/bin/rclone --vfs-cache-mode writes mount OneDrive: ~/OneDrive/ &"
-      ", F12, exec, pkill waybar || ${pkgs.waybar}/bin/waybar"
+      ", F12, exec, pkill waybar || waybar"
       ", F1, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 0%"
       ", F2, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
       ", F3, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
