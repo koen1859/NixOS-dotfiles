@@ -11,4 +11,6 @@
     fsType = "ext4";
     options = ["defaults"];
   };
+
+  services.upower.enable = true;
 }
