@@ -17,6 +17,7 @@
     ncdu
     ladybird
     mullvad-browser
+    signal-desktop
 
     inputs.nvim-conf.packages.${pkgs.system}.default
     inputs.astal-widgets.packages.${pkgs.system}.TopBar
