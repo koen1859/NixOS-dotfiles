@@ -17,6 +17,7 @@ in {
     "${home}/bash.nix"
     "${home}/btop.nix"
     "${home}/brave.nix"
+    "${home}/chromium.nix"
     "${home}/git.nix"
     "${home}/kitty.nix"
     "${home}/latex.nix"
@@ -69,7 +70,7 @@ in {
 
     firefox.enable = true;
     librewolf.enable = true;
-    chromium.enable = false;
+    chromium.enable = true;
     qutebrowser.enable = false;
     brave.enable = true;
 
