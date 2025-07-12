@@ -9,7 +9,8 @@
     xwayland.enable = true;
     settings = {
       exec-once = [
-        "${inputs.astal-widgets.packages.${pkgs.system}.TopBar}/bin/TopBar"
+        # "${inputs.astal-widgets.packages.${pkgs.system}.TopBar}/bin/TopBar"
+        "${pkgs.waybar}/bin/waybar"
         "${pkgs.eww}/bin/eww daemon"
       ];
       input = {
