@@ -25,14 +25,14 @@
       openFirewall = true;
       extraSettings = {
         "peer-port-random-on-start" = true; # Avoid fixed blocked port
-        "upload-speed-limit" = 0;
-        "upload-speed-limit-enabled" = true;
-        "ratio-limit" = 0;
-        "ratio-limit-enabled" = true;
-        "pex-enabled" = false;
-        "dht-enabled" = false;
-        "lpd-enabled" = false;
-        "utp-enabled" = false;
+        # "upload-speed-limit" = 0;
+        # "upload-speed-limit-enabled" = true;
+        # "ratio-limit" = 0;
+        # "ratio-limit-enabled" = true;
+        # "pex-enabled" = false;
+        # "dht-enabled" = false;
+        # "lpd-enabled" = false;
+        # "utp-enabled" = false;
       };
     };
     radarr.enable = true;
