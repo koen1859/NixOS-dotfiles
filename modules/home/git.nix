@@ -1,8 +1,15 @@
 {
+  inputs,
+  pkgs,
+  ...
+}: let
+  inherit (import "${inputs.self}/variables.nix" {inherit inputs pkgs;}) username;
+  inherit (import "${inputs.self}/secrets.nix") email;
+in {
   programs = {
     git = {
-      userName = "koen1859";
-      userEmail = "koenstevens1859@gmail.com";
+      userName = username;
+      userEmail = email;
       extraConfig = {
         init.defaultBranch = "main";
       };

@@ -44,7 +44,7 @@ in {
     sessionVariables = {
       nixos_ozone_wl = "1";
       EDITOR = "nvim";
-      HYPRSHOT_DIR = "/home/koenstevens/Pictures/";
+      HYPRSHOT_DIR = "/home/${username}/Pictures/";
     };
   };
   programs = {
