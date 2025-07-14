@@ -1,6 +1,4 @@
-{inputs, ...}: let
-  inherit (import "${inputs.self}/secrets.nix") email domain;
-in {
+{
   nixarr = {
     enable = true;
     mediaDir = "/data/media";
@@ -15,8 +13,8 @@ in {
       enable = true;
       expose.https = {
         enable = true;
-        domainName = email;
-        acmeMail = domain;
+        domainName = "media.koenstevens.nl";
+        acmeMail = "github.follicle106@passmail.net";
       };
     };
 
