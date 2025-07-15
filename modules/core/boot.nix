@@ -11,7 +11,8 @@
       efi.canTouchEfiVariables = true;
       efi.efiSysMountPoint = "/boot";
     };
-    kernelPackages = pkgs.linuxPackages_zen;
+    # kernelPackages = pkgs.linuxPackages_zen;
+    kernelPackages = pkgs.linuxPackages_latest;
     kernelParams = [
       "quiet"
       "splash"
