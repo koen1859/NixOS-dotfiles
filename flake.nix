@@ -32,10 +32,6 @@
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixarr = {
-      url = "github:rasmus-kirk/nixarr";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     nix-gaming = {
       url = "github:fufexan/nix-gaming";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -47,7 +43,6 @@
     home-manager,
     stylix,
     nixcord,
-    nixarr,
     ...
   } @ inputs: let
     lib = nixpkgs.lib;
@@ -81,7 +76,6 @@
           ./modules/core/server.nix
           ./hosts/server/configuration.nix
           stylix.nixosModules.stylix
-          nixarr.nixosModules.default
         ];
       };
     };
