@@ -74,8 +74,9 @@
         };
       };
     };
-    extraConfig = "
-      monitor=,preferred,auto,1.25
-      ";
+    extraConfig = ''
+      monitor=HDMI-A-1,3440x1440@60,0x0,1
+      monitor=eDP-1,1920x1080@60,3440x0,1.25
+    '';
   };
 }
