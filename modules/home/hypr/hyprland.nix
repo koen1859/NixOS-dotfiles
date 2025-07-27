@@ -31,8 +31,8 @@
       general = {
         "$mainMod" = "SUPER";
         layout = "dwindle";
-        gaps_in = 2;
-        gaps_out = 2;
+        gaps_in = 4;
+        gaps_out = 4;
         border_size = 2;
         resize_on_border = false;
         allow_tearing = false;

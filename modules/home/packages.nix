@@ -15,7 +15,6 @@
     timg
     typst
     ncdu
-    ladybird
     mullvad-browser
     signal-desktop
 
