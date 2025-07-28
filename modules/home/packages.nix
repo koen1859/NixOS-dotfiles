@@ -19,8 +19,8 @@
     signal-desktop
 
     inputs.nvim-conf.packages.${pkgs.system}.default
-    inputs.astal-widgets.packages.${pkgs.system}.TopBar
-    inputs.astal-widgets.packages.${pkgs.system}.AppLauncher
+    # inputs.astal-widgets.packages.${pkgs.system}.TopBar
+    # inputs.astal-widgets.packages.${pkgs.system}.AppLauncher
   ];
 
   nixpkgs.config.allowUnfree = true;

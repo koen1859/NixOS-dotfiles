@@ -16,10 +16,10 @@
       url = "github:koen1859/nvim-conf";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    astal-widgets = {
-      url = "github:koen1859/astal-widgets";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # astal-widgets = {
+    #   url = "github:koen1859/astal-widgets";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
