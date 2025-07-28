@@ -6,6 +6,7 @@
   inherit (import "${inputs.self}/variables.nix" {inherit inputs pkgs;}) username core;
 in {
   imports = [
+    /etc/nixos/hardware-configuration.nix
     "${core}/boot.nix"
     "${core}/environment.nix"
     "${core}/users.nix"
