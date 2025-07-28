@@ -1,6 +1,5 @@
 {
   imports = [
-    ./modules/hardware.nix
     ./modules/tlp.nix
   ];
 
