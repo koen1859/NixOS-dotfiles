@@ -17,6 +17,8 @@
     ncdu
     mullvad-browser
     signal-desktop
+    proton-pass
+    protonmail-desktop
 
     inputs.nvim-conf.packages.${pkgs.system}.default
     # inputs.astal-widgets.packages.${pkgs.system}.TopBar
