@@ -12,6 +12,7 @@
         # "${inputs.astal-widgets.packages.${pkgs.system}.TopBar}/bin/TopBar"
         "${pkgs.waybar}/bin/waybar"
         "${pkgs.eww}/bin/eww daemon"
+        "${pkgs.rclone}/bin/rclone --vfs-cache-mode writes mount Proton: ~/ProtonDrive/ &"
       ];
       input = {
         kb_layout = "us";
