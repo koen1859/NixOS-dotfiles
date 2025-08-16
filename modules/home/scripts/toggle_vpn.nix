@@ -1,5 +1,5 @@
 {pkgs, ...}:
-pkgs.writeShellScriptBin "toggle_vpn" ''
+pkgs.writeShellScriptBin "protonvpn" ''
   set -e
 
   VPN_DIR=~/.vpn

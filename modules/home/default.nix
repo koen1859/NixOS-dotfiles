@@ -6,7 +6,6 @@
   inherit (import "${inputs.self}/variables.nix" {inherit inputs pkgs;}) home username;
 in {
   imports = [
-    "${home}/eww"
     "${home}/fetch"
     "${home}/firefox"
     "${home}/hypr"
@@ -50,7 +49,6 @@ in {
   programs = {
     home-manager.enable = true;
 
-    eww.enable = true;
     wlogout.enable = true;
     rofi.enable = true;
     waybar.enable = true;

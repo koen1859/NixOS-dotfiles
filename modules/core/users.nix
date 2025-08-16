@@ -12,15 +12,15 @@ in {
       extraGroups = ["wheel" "libvirtd"];
     };
   };
-  security.sudo.extraRules = [
-    {
-      users = ["${username}"];
-      commands = [
-        {
-          command = "/run/current-system/sw/bin/wg-quick";
-          options = ["NOPASSWD"];
-        }
-      ];
-    }
-  ];
+  # security.sudo.extraRules = [
+  #   {
+  #     users = ["${username}"];
+  #     commands = [
+  #       {
+  #         command = "/run/current-system/sw/bin/wg-quick";
+  #         options = ["NOPASSWD"];
+  #       }
+  #     ];
+  #   }
+  # ];
 }
