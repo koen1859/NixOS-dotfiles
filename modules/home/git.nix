@@ -8,7 +8,7 @@ in {
   programs = {
     git = {
       userName = username;
-      userEmail = "github.follicle106@passmail.net";
+      userEmail = "gitlab.slurp563@passmail.net";
       extraConfig = {
         init.defaultBranch = "main";
       };
