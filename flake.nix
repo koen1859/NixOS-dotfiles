@@ -13,7 +13,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nvim-conf = {
-      url = "github:koen1859/nvim-conf";
+      url = "gitlab:koenstevens/nvim-conf";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     spicetify-nix = {
@@ -35,6 +35,7 @@
     home-manager,
     stylix,
     nixcord,
+    nvim-conf,
     ...
   } @ inputs: let
     lib = nixpkgs.lib;
@@ -70,6 +71,7 @@
           ./hosts/laptop/home.nix
           stylix.homeModules.stylix
           nixcord.homeModules.nixcord
+          nvim-conf.homeModules.default
         ];
         extraSpecialArgs = {inherit inputs;};
       };
@@ -80,6 +82,7 @@
           ./hosts/pc/home.nix
           stylix.homeModules.stylix
           nixcord.homeModules.nixcord
+          nvim-conf.homeModules.default
         ];
         extraSpecialArgs = {inherit inputs;};
       };

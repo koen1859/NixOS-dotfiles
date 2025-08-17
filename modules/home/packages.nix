@@ -1,8 +1,4 @@
-{
-  pkgs,
-  inputs,
-  ...
-}: {
+{pkgs, ...}: {
   home.packages = with pkgs; [
     tree
     libnotify
@@ -12,13 +8,12 @@
     signal-desktop
     proton-pass
     protonmail-desktop
-
-    inputs.nvim-conf.packages.${pkgs.system}.default
   ];
 
   programs = {
     fd.enable = true;
     feh.enable = true;
+    nvim-conf.enable = true;
   };
 
   nixpkgs.config.allowUnfree = true;
