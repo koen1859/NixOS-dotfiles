@@ -1,17 +1,11 @@
-{
-  pkgs,
-  inputs,
-  ...
-}: {
+{pkgs, ...}: {
   wayland.windowManager.hyprland = {
     enable = true;
     package = pkgs.hyprland;
     xwayland.enable = true;
     settings = {
       exec-once = [
-        # "${inputs.astal-widgets.packages.${pkgs.system}.TopBar}/bin/TopBar"
         "${pkgs.waybar}/bin/waybar"
-        "${pkgs.eww}/bin/eww daemon"
         "${pkgs.rclone}/bin/rclone --vfs-cache-mode writes mount Proton: ~/ProtonDrive/ &"
       ];
       input = {

@@ -1,11 +1,6 @@
-{
-  inputs,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   wayland.windowManager.hyprland.settings = {
     bind = [
-      "$mainMod, V, exec, ${pkgs.eww}/bin/eww open vpn-window"
       "$mainMod, B, exec, firefox"
       "SUPER_SHIFT, B, exec, librewolf --private-window"
       ", PRINT, exec, ${pkgs.hyprshot}/bin/hyprshot -m region"
@@ -20,7 +15,6 @@
       "$mainMod, Return, exec, ${pkgs.wezterm}/bin/wezterm"
       "$mainMod SHIFT, Return, exec, ${pkgs.kitty}/bin/kitty"
       "$mainMod, Q, killactive,"
-      # "$mainMod, R, exec, ${inputs.astal-widgets.packages.${pkgs.system}.AppLauncher}/bin/AppLauncher"
       "$mainMod, R, exec, rofi -show drun"
       "$mainMod SHIFT, R, exec, rofi -show ssh"
       "$mainMod, E, exec, rofi -show filebrowser"
