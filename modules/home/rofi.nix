@@ -18,6 +18,8 @@ in {
       hover-select = true;
       bw = 0;
       display-drun = "";
+      display-filebrowser = "";
+      display-ssh = "";
       display-window = "";
       display-combi = "";
       icon-theme = "Fluent-dark";
