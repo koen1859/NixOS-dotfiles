@@ -1,6 +1,7 @@
 {
   imports = [
     ./modules/tlp.nix
+    ./modules/hardware.nix
   ];
 
   networking.hostName = "nixlaptop";

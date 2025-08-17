@@ -15,7 +15,6 @@ in {
     "${core}/network.nix"
     "${core}/nh.nix"
     "${core}/flatpak.nix"
-    /etc/nixos/hardware-configuration.nix
   ];
 
   time.timeZone = "Europe/Amsterdam";
