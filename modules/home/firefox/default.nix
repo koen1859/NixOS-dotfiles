@@ -49,7 +49,6 @@
             ];
           }
         ];
-
         icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
         definedAliases = ["@np"];
       };
