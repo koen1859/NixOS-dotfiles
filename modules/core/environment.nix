@@ -6,7 +6,6 @@
       nvd # Version diff after rebuilding
       unzip # Unzip utility
       gcc # Compiler
-      wireguard-tools # VPN
     ];
   };
 }
