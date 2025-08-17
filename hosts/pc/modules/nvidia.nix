@@ -14,7 +14,7 @@
   boot = {
     initrd.kernelModules = ["nvidia"];
     kernelModules = ["nvidia" "nvidia_modeset" "nvidia_uvm" "nvidia_drm"];
-    extraModulePackages = [config.boot.kernelPackages.nvidiaPackages.stable];
+    extraModulePackages = [config.boot.kernelPackages.nvidiaPackages.latest];
   };
 
   environment.variables = {
