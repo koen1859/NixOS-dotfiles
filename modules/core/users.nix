@@ -9,7 +9,7 @@ in {
     defaultUserShell = shell;
     users.${username} = {
       isNormalUser = true;
-      extraGroups = ["wheel" "libvirtd"];
+      extraGroups = ["wheel"];
     };
   };
 }
