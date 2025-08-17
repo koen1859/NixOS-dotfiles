@@ -1,5 +1,6 @@
 {config, ...}: {
   programs.zathura = {
+    enable = true;
     options = {
       default-bg = "#${config.lib.stylix.colors.base00}";
       default-fg = "#${config.lib.stylix.colors.base0D}";

@@ -8,6 +8,7 @@
 in
   with lib; {
     programs.waybar = {
+      enable = true;
       settings = [
         {
           layer = "top";

@@ -9,6 +9,7 @@
   inherit (config.lib.stylix.colors.withHashtag) base00 base0D;
 in {
   programs.rofi = {
+    enable = true;
     cycle = false;
     package = pkgs.rofi-wayland;
     extraConfig = {

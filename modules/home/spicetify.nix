@@ -8,6 +8,7 @@
 in {
   imports = [inputs.spicetify-nix.homeManagerModules.default];
   programs.spicetify = {
+    enable = true;
     theme = spicePkgs.themes.default;
     customColorScheme = with config.lib.stylix.colors; {
       text = "${base0D}";

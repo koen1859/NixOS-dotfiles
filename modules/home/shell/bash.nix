@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   programs = {
     bash = {
+      enable = true;
       shellAliases = {
         ls = "${pkgs.lsd}/bin/lsd --color=auto";
         grep = "grep --color=auto";
