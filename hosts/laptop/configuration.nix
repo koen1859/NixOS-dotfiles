@@ -1,6 +1,6 @@
 {
   imports = [
-    ./modules/tlp.nix
+    ./modules/auto-cpufreq.nix
     ./modules/hardware.nix
   ];
 
@@ -11,6 +11,4 @@
     fsType = "ext4";
     options = ["defaults"];
   };
-
-  services.upower.enable = true;
 }

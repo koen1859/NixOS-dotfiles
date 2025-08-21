@@ -28,6 +28,10 @@
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    auto-cpufreq = {
+      url = "github:AdnanHodzic/auto-cpufreq";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -36,6 +40,7 @@
     stylix,
     nixcord,
     nvim-conf,
+    auto-cpufreq,
     ...
   } @ inputs: let
     lib = nixpkgs.lib;
@@ -51,6 +56,7 @@
           ./modules/core
           ./hosts/laptop/configuration.nix
           stylix.nixosModules.stylix
+          auto-cpufreq.nixosModules.default
         ];
       };
       nixpc = lib.nixosSystem {
