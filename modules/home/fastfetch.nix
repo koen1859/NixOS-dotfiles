@@ -10,12 +10,12 @@
         "break"
         {
           type = "os";
-          key = "OS";
+          key = " ┌  ";
           keyColor = "31";
         }
         {
           type = "kernel";
-          key = " ├  ";
+          key = " ├  ";
           keyColor = "31";
         }
         {
@@ -31,7 +31,7 @@
         "break"
         {
           type = "wm";
-          key = "WM   ";
+          key = " ┌  ";
           keyColor = "32";
         }
         {
@@ -46,7 +46,7 @@
         }
         {
           type = "cursor";
-          key = " ├  ";
+          key = " ├ 󰇀 ";
           keyColor = "32";
         }
         {
@@ -63,7 +63,7 @@
         {
           type = "host";
           format = "{5} {1} Type {2}";
-          key = "PC   ";
+          key = " ┌ 󰇅 ";
           keyColor = "33";
         }
         {
@@ -84,33 +84,28 @@
           keyColor = "33";
         }
         {
+          type = "swap";
+          key = " ├  ";
+          keyColor = "33";
+        }
+        {
           type = "disk";
           key = " ├ 󰋊 ";
           keyColor = "33";
         }
         {
           type = "monitor";
-          key = " ├  ";
-          keyColor = "33";
-        }
-        {
-          type = "player";
-          key = " ├ 󰥠 ";
-          keyColor = "33";
-        }
-        {
-          type = "media";
-          key = " └ 󰝚 ";
+          key = " └  ";
           keyColor = "33";
         }
         "break"
         {
           type = "uptime";
-          key = "   Uptime   ";
+          key = " ┌ 󱎫 ";
         }
         {
           type = "command";
-          key = "   OS Age   ";
+          key = " └ 󰔟 ";
           text = "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days";
         }
       ];
