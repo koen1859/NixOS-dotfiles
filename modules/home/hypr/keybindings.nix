@@ -16,7 +16,7 @@
       "$mainMod SHIFT, Return, exec, kitty"
       "$mainMod, Q, killactive,"
       "$mainMod, R, exec, rofi -show drun"
-      "$mainMod, O, exec, filepicker"
+      ''$mainMod, O, exec, zathura "$(find "$HOME/Documents/Books" -maxdepth 2 -type f | rofi -dmenu -i -p 'Open book:')"''
       "$mainMod SHIFT, R, exec, rofi -show ssh"
       "$mainMod, E, exec, rofi -show filebrowser"
       "$mainMod SHIFT, E, exec, thunar"

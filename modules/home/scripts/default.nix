@@ -6,6 +6,5 @@
     (import ./ProtonDrive.nix {inherit pkgs;})
     (import ./toggle_vpn.nix {inherit pkgs;})
     (import ./weather.nix {inherit pkgs;})
-    (import ./filepicker.nix {inherit pkgs;})
   ];
 }
