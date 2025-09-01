@@ -16,7 +16,7 @@ pkgs.writeShellScriptBin "protonvpn" ''
     fi
   done
 
-  echo "Select a VPN config to connect:"
+  echo "Select a server:"
   select CONFIG_PATH in "''${CONF_FILES[@]}"; do
     if [[ -n "$CONFIG_PATH" ]]; then
       INTERFACE=$(basename "$CONFIG_PATH" .conf)
