@@ -451,11 +451,11 @@
         "systems": "systems_4"
       },
       "locked": {
-        "lastModified": 1756990466,
-        "narHash": "sha256-MDOVyzYxIc90vj0oJAab7Y3JJ23OXvhG+/KFWfjp8CI=",
+        "lastModified": 1756991018,
+        "narHash": "sha256-myJJjbzTvr6uysLuNHijr+VpSA83f4DYPX4li1DZI6g=",
         "owner": "koenstevens",
         "repo": "nvim-conf",
-        "rev": "3db1489deca1cf21286aceff4fb1ba7c05c6684b",
+        "rev": "f7368502ccefb5f46b73befb0eea2526b4cae9e4",
         "type": "gitlab"
       },
       "original": {
