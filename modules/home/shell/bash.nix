@@ -2,6 +2,9 @@
   programs = {
     bash = {
       enable = true;
+      initExtra = ''
+        eval "$(direnv hook bash)"
+      '';
       shellAliases = {
         ls = "${pkgs.lsd}/bin/lsd --color=auto";
         grep = "grep --color=auto";
