@@ -10,6 +10,7 @@
       {id = "jiaopdjbehhjgokpphdfgmapkobbnmjp";} # shorts block yt
       # {id = "eimadpbcbfnmbkopoojfekhnkhdbieeh";} # dark reader
       {id = "pkehgijcmpdhfbdbbnkijodmdjhbjlgp";} # privacy badger
+      {id = "jplgfhpmjnbigmhklmmbgecoobifkmpa";} # proton vpn
     ];
   };
 }

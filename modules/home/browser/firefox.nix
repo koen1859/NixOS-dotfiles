@@ -162,13 +162,13 @@ in {
         extensions.packages = with inputs.firefox-addons.packages."x86_64-linux"; [
           ublock-origin
           sponsorblock
-          # darkreader
           youtube-shorts-block
           vimium
           privacy-badger
           canvasblocker
           i-dont-care-about-cookies
           proton-pass
+          proton-vpn
         ];
       };
     };
