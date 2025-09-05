@@ -2,6 +2,7 @@
   wayland.windowManager.hyprland.settings = {
     bind = [
       "$mainMod, B, exec, brave"
+      "$mainMod, V, exec, protonvpn"
       "SUPER_SHIFT, B, exec, mullvad-browser"
       ", PRINT, exec, ${pkgs.hyprshot}/bin/hyprshot -m region"
       "$mainMod, S, exec, ${pkgs.hyprshot}/bin/hyprshot -m output -m active"

@@ -6,7 +6,6 @@
     settings = {
       exec-once = [
         "${pkgs.waybar}/bin/waybar"
-        "${pkgs.rclone}/bin/rclone --vfs-cache-mode writes mount Proton: ~/ProtonDrive/ &"
       ];
       input = {
         kb_layout = "us";
