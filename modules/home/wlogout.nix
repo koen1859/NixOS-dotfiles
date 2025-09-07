@@ -9,37 +9,37 @@
       {
         label = "shutdown";
         action = "sleep 1; systemctl poweroff";
-        text = "  ";
+        text = " ";
         keybind = "s";
       }
       {
         "label" = "reboot";
         "action" = "sleep 1; systemctl reboot";
-        "text" = " 󰦛 ";
+        "text" = "󰦛 ";
         "keybind" = "r";
       }
       {
         "label" = "logout";
         "action" = "sleep 1; hyprctl dispatch exit";
-        "text" = " 󰈆 ";
+        "text" = "󰈆 ";
         "keybind" = "e";
       }
       {
         "label" = "suspend";
         "action" = "sleep 1; systemctl suspend";
-        "text" = " 󰤄 ";
+        "text" = "󰤄 ";
         "keybind" = "u";
       }
       {
         "label" = "lock";
         "action" = "sleep 1; ${pkgs.hyprlock}/bin/hyprlock";
-        "text" = "  ";
+        "text" = " ";
         "keybind" = "l";
       }
       {
         "label" = "hibernate";
         "action" = "sleep 1; systemctl hibernate";
-        "text" = "  ";
+        "text" = " ";
         "keybind" = "h";
       }
     ];
@@ -47,11 +47,10 @@
       * {
         font-family: "JetBrainsMono Nerd Font";
       	background-image: none;
-      	transition: 20ms;
-        font-size: 200px;
+        font-size: 250px;
       }
       window {
-      	background-color: alpha(#${config.lib.stylix.colors.base00},.2);
+      	background-color: alpha(#${config.lib.stylix.colors.base00},.8);
       }
       button {
       	color: #${config.lib.stylix.colors.base0D};
@@ -64,7 +63,7 @@
         background-color: #${config.lib.stylix.colors.base00};
       }
       #logout, #suspend, #shutdown, #reboot, #lock, #hibernate {
-        margin: 10px;
+        margin: 30px;
       }
     '';
   };

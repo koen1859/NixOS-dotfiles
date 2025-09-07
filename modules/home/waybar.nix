@@ -15,6 +15,7 @@ in
           position = "top";
           modules-center = ["hyprland/workspaces"];
           modules-left = [
+            "custom/startmenu"
             "hyprland/window"
             "pulseaudio"
             "cpu"
@@ -203,7 +204,7 @@ in
           tooltip label {
             color: #${config.lib.stylix.colors.base0B};
           }
-          #window, #pulseaudio, #cpu, #memory, #network, #idle_inhibitor, #disk {
+          #window, #pulseaudio, #cpu, #memory, #network, #idle_inhibitor, #disk, #custom-startmenu {
             font-weight: bold;
             margin-left: 7px;
             padding: 0px 9px;
@@ -230,10 +231,6 @@ in
           }
           #custom-startmenu {
             color: #${config.lib.stylix.colors.base0D};
-            background: #${config.lib.stylix.colors.base00};
-            margin: 0px;
-            padding: 0px 3px 0px 3px;
-            border-radius: 8px 8px 8px 8px;
           }
           #custom-hyprbindings, #battery,
           #custom-notification, #tray, #custom-exit {
