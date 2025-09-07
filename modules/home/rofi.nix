@@ -6,7 +6,7 @@
 }: let
   inherit (lib) mkForce;
   inherit (config.lib.formats.rasi) mkLiteral;
-  inherit (config.lib.stylix.colors.withHashtag) base00 base0D;
+  inherit (config.lib.stylix.colors.withHashtag) base00 base08 base09 base0A base0B base0C base0D base0E base0F;
 in {
   programs.rofi = {
     enable = true;
@@ -34,23 +34,64 @@ in {
 
     theme = mkForce {
       "*" = {
-        background-color = mkLiteral "transparent";
-        foreground = mkLiteral "${base0D}";
-        text-color = mkLiteral "${base0D}";
+        background-color = mkLiteral "${base00}dd";
+        foreground-color = mkLiteral "${base0D}";
+        text-color = mkLiteral "${base0C}";
       };
 
       window = {
         background-color = mkLiteral "${base00}dd";
+        border-color = mkLiteral "${base0D}";
+        border = mkLiteral "1px";
+        border-size = mkLiteral "5px";
+        padding = mkLiteral "5px";
+        width = mkLiteral "25%";
+      };
+
+      mainbox = {
+        border = 0;
+        padding = mkLiteral "2px";
+      };
+
+      message = {
+        border = mkLiteral "2px 0px 0px";
+        border-color = mkLiteral "${base0D}";
+        padding = mkLiteral "1px";
+      };
+
+      listview = {
+        fixed-height = 0;
+        border = mkLiteral "1px 1px 1px";
+        border-color = mkLiteral "${base0D}";
+        spacing = mkLiteral "5px";
+        scrollbar = mkLiteral "false";
+        padding = mkLiteral "1px 1px 1px";
+        lines = 10;
+      };
+
+      element = {
+        border = 0;
+        padding = mkLiteral "3px";
+        cursor = mkLiteral "pointer";
+        spacing = mkLiteral "5px";
+      };
+
+      element-text = {
+        background-color = mkLiteral "transparent";
+        cursor = mkLiteral "inherit";
+        highlight = mkLiteral "inherit";
+        text-color = mkLiteral "inherit";
       };
 
       inputbar = {
-        background-color = mkLiteral "${base0D}20";
-        border-color = mkLiteral "${base0D}40";
+        background-color = mkLiteral "${base0D}dd";
+        border-color = mkLiteral "${base0D}";
+        padding = mkLiteral "1px 1px 1px 1px";
       };
 
       entry = {
         placeholder = "Search";
-        placeholder-color = mkLiteral "${base0D}20";
+        placeholder-color = mkLiteral "${base0C}";
       };
 
       "element selected" = {
