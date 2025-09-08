@@ -11,6 +11,7 @@ in {
     "${home}/terminal"
     "${home}/scripts"
     "${home}/shell"
+    "${home}/wlogout"
     "${home}/atuin.nix"
     "${home}/btop.nix"
     "${home}/fastfetch.nix"
@@ -26,7 +27,6 @@ in {
     "${home}/stylix.nix"
     "${home}/swaync.nix"
     "${home}/waybar.nix"
-    "${home}/wlogout.nix"
     "${home}/zathura.nix"
     "${home}/zoxide.nix"
   ];
