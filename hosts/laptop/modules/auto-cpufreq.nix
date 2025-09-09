@@ -1,7 +1,7 @@
 {
-  services.power-profiles-daemon.enable = true;
+  services.power-profiles-daemon.enable = false;
   programs.auto-cpufreq = {
-    enable = false;
+    enable = true;
     settings = {
       charger = {
         governor = "performance";
