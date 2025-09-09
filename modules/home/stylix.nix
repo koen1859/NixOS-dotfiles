@@ -1,10 +1,9 @@
 {
-  inputs,
   pkgs,
+  wallpaper,
+  theme,
   ...
-}: let
-  inherit (import "${inputs.self}/variables.nix" {inherit inputs pkgs;}) wallpaper theme;
-in {
+}: {
   stylix = {
     enable = true;
     image = wallpaper;
@@ -27,13 +26,6 @@ in {
       zathura.enable = false;
       spicetify.enable = false;
       firefox.profileNames = ["default"];
-      nixvim = {
-        transparentBackground = {
-          main = true;
-          numberLine = true;
-          signColumn = true;
-        };
-      };
     };
   };
 }

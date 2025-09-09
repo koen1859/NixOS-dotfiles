@@ -1,10 +1,4 @@
-{
-  inputs,
-  pkgs,
-  ...
-}: let
-  inherit (import "${inputs.self}/variables.nix" {inherit inputs pkgs;}) username;
-in {
+{username, ...}: {
   programs = {
     git = {
       enable = true;

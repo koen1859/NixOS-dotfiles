@@ -1,10 +1,8 @@
 {
-  inputs,
-  pkgs,
+  core,
+  username,
   ...
-}: let
-  inherit (import "${inputs.self}/variables.nix" {inherit inputs pkgs;}) core username;
-in {
+}: {
   imports = [
     "${core}/boot.nix"
     "${core}/environment.nix"

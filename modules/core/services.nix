@@ -1,10 +1,8 @@
 {
-  inputs,
   pkgs,
+  username,
   ...
-}: let
-  inherit (import "${inputs.self}/variables.nix" {inherit inputs pkgs;}) username;
-in {
+}: {
   services = {
     blueman.enable = true;
     pipewire = {

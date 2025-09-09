@@ -1,10 +1,8 @@
 {
-  inputs,
-  pkgs,
+  home,
+  username,
   ...
-}: let
-  inherit (import "${inputs.self}/variables.nix" {inherit inputs pkgs;}) home username;
-in {
+}: {
   imports = [
     "${home}/browser"
     "${home}/hypr"
