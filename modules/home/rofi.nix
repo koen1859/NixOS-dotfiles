@@ -36,7 +36,7 @@ in {
       "*" = {
         background-color = mkLiteral "${base00}dd";
         foreground-color = mkLiteral "${base0D}";
-        text-color = mkLiteral "${base0C}";
+        text-color = mkLiteral "${base0B}";
       };
 
       window = {
@@ -45,18 +45,12 @@ in {
         border = mkLiteral "1px";
         border-size = mkLiteral "5px";
         padding = mkLiteral "5px";
-        width = mkLiteral "25%";
+        width = mkLiteral "33%";
       };
 
       mainbox = {
         border = 0;
         padding = mkLiteral "2px";
-      };
-
-      message = {
-        border = mkLiteral "2px 0px 0px";
-        border-color = mkLiteral "${base0D}";
-        padding = mkLiteral "1px";
       };
 
       listview = {
@@ -66,7 +60,7 @@ in {
         spacing = mkLiteral "5px";
         scrollbar = mkLiteral "false";
         padding = mkLiteral "1px 1px 1px";
-        lines = 10;
+        lines = 20;
       };
 
       element = {
@@ -83,15 +77,9 @@ in {
         text-color = mkLiteral "inherit";
       };
 
-      inputbar = {
-        background-color = mkLiteral "${base0D}dd";
-        border-color = mkLiteral "${base0D}";
-        padding = mkLiteral "1px 1px 1px 1px";
-      };
-
       entry = {
         placeholder = "Search";
-        placeholder-color = mkLiteral "${base0C}";
+        placeholder-color = mkLiteral "${base0A}";
       };
 
       "element selected" = {
