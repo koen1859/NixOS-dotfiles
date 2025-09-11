@@ -1,5 +1,9 @@
 {pkgs, ...}: {
   wayland.windowManager.hyprland.settings = {
+    binde = [
+      "$mainMod, TAB, exec, next_workspace"
+      "$mainMod SHIFT, TAB, exec, previous_workspace"
+    ];
     bind = [
       "$mainMod, B, exec, brave"
       "$mainMod, V, exec, protonvpn"
@@ -40,11 +44,9 @@
       "$mainMod, K, movefocus, u"
       "$mainMod, L, movefocus, r"
       "$mainMod, H, movefocus, l"
-      "$mainMod SHIFT, L, movetoworkspace, e+1"
-      "$mainMod SHIFT, H, movetoworkspace, e-1"
-      "$mainMod, TAB, swapsplit"
+      "$mainMod, T, swapsplit"
       "$mainMod, F, fullscreen, 0"
-      "$mainMod, T, togglesplit"
+      "$mainMod SHIFT, T, togglesplit"
       "SUPER_SHIFT, F, exec, hyprctl dispatch togglefloating && if hyprctl activewindow | grep -q 'floating: 1'; then hyprctl dispatch resizeactive exact 800 600 && hyprctl dispatch centerwindow; fi"
       "$mainMod, 1, workspace, 1"
       "$mainMod, 2, workspace, 2"
