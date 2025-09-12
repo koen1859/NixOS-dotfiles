@@ -1,6 +1,6 @@
 {
   imports = [
-    ./modules/auto-cpufreq.nix
+    ./modules/tlp.nix
     ./modules/hardware.nix
     ./modules/gaming.nix
   ];
