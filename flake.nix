@@ -39,6 +39,7 @@
   };
 
   outputs = {
+    self,
     nixpkgs,
     home-manager,
     stylix,
@@ -54,8 +55,8 @@
     username = "koenstevens";
     theme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
     wallpaper = ./wallpapers/solar_system.png;
-    core = "${inputs.self}/modules/core";
-    home = "${inputs.self}/modules/home";
+    core = "${self}/modules/core";
+    home = "${self}/modules/home";
     shell = pkgs.zsh;
 
     commonSpecialArgs = {
@@ -75,16 +76,18 @@
           ++ extraModules;
       };
 
-    mkHome = name: hostHome:
+    mkHome = name: hostHome: extraModules:
       home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        modules = [
-          home
-          hostHome
-          stylix.homeModules.stylix
-          nixcord.homeModules.nixcord
-          nvim-conf.homeModules.default
-        ];
+        modules =
+          [
+            home
+            hostHome
+            stylix.homeModules.stylix
+            nixcord.homeModules.nixcord
+            nvim-conf.homeModules.default
+          ]
+          ++ extraModules;
         extraSpecialArgs = commonSpecialArgs;
       };
   in {
@@ -99,9 +102,9 @@
     };
 
     homeConfigurations = {
-      "${username}@nixlaptop" = mkHome "nixlaptop" ./hosts/laptop/home.nix;
-      "${username}@nixpc" = mkHome "nixpc" ./hosts/pc/home.nix;
-      "${username}@nixserver" = mkHome "nixserver" ./hosts/server/home.nix;
+      "${username}@nixlaptop" = mkHome "nixlaptop" ./hosts/laptop/home.nix [];
+      "${username}@nixpc" = mkHome "nixpc" ./hosts/pc/home.nix [];
+      "${username}@nixserver" = mkHome "nixserver" ./hosts/server/home.nix [];
     };
   };
 }
