@@ -2,9 +2,8 @@
   imports = [
     ./modules/nvidia.nix
     ./modules/hardware.nix
-    # ./modules/ssh.nix
-    # ./modules/gaming.nix
-    # ./modules/virtualization.nix
+    ./modules/ssh.nix
+    ./modules/webserver.nix
   ];
 
   networking.hostName = "nixserver";
