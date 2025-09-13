@@ -33,7 +33,7 @@
           User = "${username}";
         };
       };
-      services.football-restart = {
+      football-restart = {
         description = "Restart football app nightly";
         serviceConfig = {
           Type = "oneshot";
