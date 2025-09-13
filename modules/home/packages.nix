@@ -8,6 +8,7 @@
     signal-desktop
     proton-pass
     protonmail-desktop
+    onlyoffice-desktopeditors
   ];
 
   programs = {
