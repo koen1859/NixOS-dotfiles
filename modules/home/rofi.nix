@@ -78,7 +78,7 @@ in {
       };
 
       entry = {
-        placeholder = "Search";
+        placeholder = "";
         placeholder-color = mkLiteral "${base0A}";
       };
 
