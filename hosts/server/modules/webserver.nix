@@ -33,6 +33,13 @@
           User = "${username}";
         };
       };
+      services.football-restart = {
+        description = "Restart football app nightly";
+        serviceConfig = {
+          Type = "oneshot";
+          ExecStart = "/run/current-system/sw/bin/systemctl restart football.service";
+        };
+      };
       scraper = {
         description = "Football scraper service";
         serviceConfig = {
@@ -50,6 +57,14 @@
         wantedBy = ["timers.target"];
         timerConfig = {
           OnCalendar = "*-*-* 04:00:00";
+          Persistent = true;
+        };
+      };
+      football-restart = {
+        description = "Restart football app nightly at 04:10";
+        wantedBy = ["timers.target"];
+        timerConfig = {
+          OnCalendar = "*-*-* 07:00:00";
           Persistent = true;
         };
       };
