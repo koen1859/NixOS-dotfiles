@@ -94,7 +94,7 @@ in {
   stylix.targets.librewolf.profileNames = ["default"];
 
   programs.librewolf = {
-    enable = true;
+    enable = false;
 
     package = pkgs.librewolf.override {
       cfg.speechSynthesisSupport = false;
