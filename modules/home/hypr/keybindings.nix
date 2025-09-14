@@ -7,7 +7,7 @@
     bind = [
       "$mainMod, B, exec, brave"
       "$mainMod, V, exec, protonvpn"
-      "SUPER_SHIFT, B, exec, mullvad-browser"
+      "SUPER_SHIFT, B, exec, brave --incognito"
       ", PRINT, exec, ${pkgs.hyprshot}/bin/hyprshot -m region"
       "$mainMod, S, exec, ${pkgs.hyprshot}/bin/hyprshot -m output -m active"
       "$mainMod SHIFT, S, exec, ${pkgs.hyprshot}/bin/hyprshot -m region"
