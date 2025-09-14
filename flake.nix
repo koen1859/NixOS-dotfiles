@@ -69,7 +69,6 @@
         specialArgs = commonSpecialArgs;
         modules =
           [
-            core
             hostConfig
             stylix.nixosModules.stylix
           ]
@@ -81,10 +80,8 @@
         inherit pkgs;
         modules =
           [
-            home
             hostHome
             stylix.homeModules.stylix
-            nixcord.homeModules.nixcord
             nvim-conf.homeModules.default
           ]
           ++ extraModules;
@@ -93,18 +90,23 @@
   in {
     nixosConfigurations = {
       nixlaptop = mkHost "nixlaptop" ./hosts/laptop/configuration.nix [
+        core
         auto-cpufreq.nixosModules.default
       ];
-
-      nixpc = mkHost "nixpc" ./hosts/pc/configuration.nix [];
-
-      nixserver = mkHost "nixserver" ./hosts/server/configuration.nix [];
+      nixpc = mkHost "nixpc" ./hosts/pc/configuration.nix [core];
+      nixserver = mkHost "nixserver" ./hosts/server/configuration.nix ["${self}/modules/core/server.nix"];
     };
 
     homeConfigurations = {
-      "${username}@nixlaptop" = mkHome "nixlaptop" ./hosts/laptop/home.nix [];
-      "${username}@nixpc" = mkHome "nixpc" ./hosts/pc/home.nix [];
-      "${username}@nixserver" = mkHome "nixserver" ./hosts/server/home.nix [];
+      "${username}@nixlaptop" = mkHome "nixlaptop" ./hosts/laptop/home.nix [
+        home
+        nixcord.homeModules.nixcord
+      ];
+      "${username}@nixpc" = mkHome "nixpc" ./hosts/pc/home.nix [
+        home
+        nixcord.homeModules.nixcord
+      ];
+      "${username}@nixserver" = mkHome "nixserver" ./hosts/server/home.nix ["${self}/modules/home/server.nix"];
     };
   };
 }
