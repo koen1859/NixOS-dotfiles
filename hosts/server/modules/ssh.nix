@@ -5,7 +5,6 @@
       settings = {
         PasswordAuthentication = false;
         PermitRootLogin = "no";
-        Port = 2222;
       };
     };
   };
