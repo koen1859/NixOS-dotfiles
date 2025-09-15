@@ -34,13 +34,6 @@
           tooltip = true;
           tooltip-format = "<big>{:%A, %d %B %Y }</big>\n<tt><small>{calendar}</small></tt>";
         };
-        "hyprland/window" = {
-          max-length = 40;
-          separate-outputs = false;
-          rewrite = {
-            "" = " 🙈 No Windows? ";
-          };
-        };
         "memory" = {
           interval = 5;
           format = " {used}GiB";
