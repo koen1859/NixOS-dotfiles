@@ -14,6 +14,8 @@
         touchpad = {
           natural_scroll = false;
         };
+        repeat_rate = 35;
+        repeat_delay = 200;
       };
       gestures = {
         workspace_swipe = false;
