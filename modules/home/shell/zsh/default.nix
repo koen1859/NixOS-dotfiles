@@ -33,8 +33,9 @@
       v = "nvim";
       c = "clear";
       cat = "${pkgs.bat}/bin/bat";
-      ls = "${pkgs.lsd}/bin/lsd --color=auto";
-      ll = "${pkgs.lsd}/bin/lsd -l --color=auto";
+      ls = "${pkgs.eza}/bin/eza";
+      cd = "z";
+      ff = "${pkgs.fzf}/bin/fzf";
       grep = "grep --color=auto";
       ".." = "cd ..";
       gps = "git push gitlab main";
