@@ -9,5 +9,6 @@
       ];
     })
     direnv
+    jetbrains.pycharm-community
   ];
 }

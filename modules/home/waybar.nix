@@ -10,19 +10,15 @@
       {
         layer = "top";
         position = "top";
-        modules-center = ["hyprland/workspaces"];
-        modules-left = [
-          "custom/startmenu"
-          "hyprland/window"
+        modules-center = ["hyprland/window"];
+        modules-left = ["hyprland/workspaces"];
+        modules-right = [
           "pulseaudio"
           "cpu"
           "memory"
           "disk"
           "network"
-        ];
-        modules-right = [
           "custom/notification"
-          "custom/exit"
           "battery"
           "clock"
         ];
@@ -90,16 +86,6 @@
             ];
           };
           on-click = "${pkgs.pavucontrol}/bin/pavucontrol";
-        };
-        "custom/exit" = {
-          tooltip = false;
-          format = "";
-          on-click = "${pkgs.wlogout}/bin/wlogout";
-        };
-        "custom/startmenu" = {
-          tooltip = false;
-          format = "";
-          on-click = "${pkgs.rofi-wayland}/bin/rofi -show drun";
         };
         "custom/notification" = {
           tooltip = false;
@@ -179,7 +165,7 @@
         tooltip label {
           color: #${config.lib.stylix.colors.base0B};
         }
-        #window, #pulseaudio, #cpu, #memory, #network, #idle_inhibitor, #disk, #custom-startmenu {
+        #window {
           margin-left: 7px;
           padding: 0px 9px;
         }
@@ -187,7 +173,19 @@
           color: #${config.lib.stylix.colors.base09};
           border-bottom: 4px solid #${config.lib.stylix.colors.base09};
         }
+        #battery, #custom-notification, #clock, #pulseaudio, #cpu, #memory, #network, #disk {
+          margin-right: 7px;
+          padding: 0px 9px;
+        }
+        #network {
+          color: #${config.lib.stylix.colors.base08};
+          border-bottom: 4px solid #${config.lib.stylix.colors.base08};
+        }
         #pulseaudio {
+          color: #${config.lib.stylix.colors.base09};
+          border-bottom: 4px solid #${config.lib.stylix.colors.base09};
+        }
+        #battery {
           color: #${config.lib.stylix.colors.base0A};
           border-bottom: 4px solid #${config.lib.stylix.colors.base0A};
         }
@@ -199,34 +197,13 @@
           color: #${config.lib.stylix.colors.base0C};
           border-bottom: 4px solid #${config.lib.stylix.colors.base0C};
         }
-        #network {
-          color: #${config.lib.stylix.colors.base08};
-          border-bottom: 4px solid #${config.lib.stylix.colors.base08};
+        #custom-notification {
+          color: #${config.lib.stylix.colors.base0D};
+          border-bottom: 4px solid #${config.lib.stylix.colors.base0D};
         }
         #disk {
           color: #${config.lib.stylix.colors.base0E};
           border-bottom: 4px solid #${config.lib.stylix.colors.base0E};
-        }
-        #custom-startmenu {
-          color: #${config.lib.stylix.colors.base0D};
-          border-bottom: 4px solid #${config.lib.stylix.colors.base0D};
-        }
-        #custom-hyprbindings, #battery,
-        #custom-notification, #tray, #custom-exit, #clock {
-          margin-right: 7px;
-          padding: 0px 9px;
-        }
-        #battery {
-          color: #${config.lib.stylix.colors.base0B};
-          border-bottom: 4px solid #${config.lib.stylix.colors.base0B};
-        }
-        #custom-notification {
-          color: #${config.lib.stylix.colors.base0E};
-          border-bottom: 4px solid #${config.lib.stylix.colors.base0E};
-        }
-        #custom-exit {
-          color: #${config.lib.stylix.colors.base0D};
-          border-bottom: 4px solid #${config.lib.stylix.colors.base0D};
         }
         #clock {
           color: #${config.lib.stylix.colors.base0F};
