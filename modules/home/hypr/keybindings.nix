@@ -5,7 +5,7 @@
       "$mainMod SHIFT, TAB, exec, previous_workspace"
     ];
     bind = [
-      "$mainMod, B, exec, brave"
+      "$mainMod, B, exec, firefox"
       "$mainMod, V, exec, protonvpn"
       "SUPER_SHIFT, B, exec, brave --incognito"
       ", PRINT, exec, ${pkgs.hyprshot}/bin/hyprshot -m region"

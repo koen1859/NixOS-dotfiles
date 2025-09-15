@@ -27,9 +27,9 @@
       general = {
         "$mainMod" = "SUPER";
         layout = "dwindle";
-        gaps_in = 4;
-        gaps_out = 4;
-        border_size = 2;
+        gaps_in = 0;
+        gaps_out = 0;
+        border_size = 0;
         resize_on_border = false;
         allow_tearing = false;
       };
@@ -45,9 +45,9 @@
         disable_hyprland_logo = true;
       };
       decoration = {
-        rounding = 5;
+        rounding = 0;
         active_opacity = 1.0;
-        inactive_opacity = 0.6;
+        inactive_opacity = 0.9;
         shadow = {
           enabled = true;
           ignore_window = true;
@@ -56,7 +56,7 @@
           render_power = 4;
         };
         blur = {
-          enabled = true;
+          enabled = false;
           xray = true;
           special = false;
           new_optimizations = true;

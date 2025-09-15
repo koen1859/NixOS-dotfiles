@@ -152,24 +152,25 @@
     "layout.css.prefers-color-scheme.content-override" = 2;
   };
 in {
-  stylix.targets.firefox.profileNames = ["default"];
-
   programs.firefox = {
     enable = true;
     profiles = {
       default = {
         inherit settings search;
-        extensions.packages = with inputs.firefox-addons.packages."x86_64-linux"; [
-          ublock-origin
-          sponsorblock
-          youtube-shorts-block
-          vimium
-          privacy-badger
-          canvasblocker
-          i-dont-care-about-cookies
-          proton-pass
-          proton-vpn
-        ];
+        extensions = {
+          force = true;
+          packages = with inputs.firefox-addons.packages."x86_64-linux"; [
+            ublock-origin
+            sponsorblock
+            youtube-shorts-block
+            vimium
+            privacy-badger
+            canvasblocker
+            i-dont-care-about-cookies
+            proton-pass
+            proton-vpn
+          ];
+        };
       };
     };
   };

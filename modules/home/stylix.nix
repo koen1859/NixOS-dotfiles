@@ -25,7 +25,10 @@
       waybar.enable = false;
       zathura.enable = false;
       spicetify.enable = false;
-      firefox.profileNames = ["default"];
+      firefox = {
+        profileNames = ["default"];
+        colorTheme.enable = true;
+      };
     };
   };
 }
