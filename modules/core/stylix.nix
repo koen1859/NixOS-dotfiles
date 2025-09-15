@@ -12,7 +12,7 @@
     cursor = {
       package = pkgs.bibata-cursors;
       name = "Bibata-Modern-Classic";
-      size = 15;
+      size = 16;
     };
     fonts = {
       monospace = {
