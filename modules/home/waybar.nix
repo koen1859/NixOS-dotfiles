@@ -13,10 +13,10 @@
         modules-center = ["hyprland/window"];
         modules-left = ["hyprland/workspaces"];
         modules-right = [
-          "pulseaudio"
+          # "pulseaudio"
           "cpu"
           "memory"
-          "disk"
+          # "disk"
           "network"
           "custom/notification"
           "battery"
