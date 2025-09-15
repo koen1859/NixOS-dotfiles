@@ -17,9 +17,6 @@
         repeat_rate = 35;
         repeat_delay = 200;
       };
-      gestures = {
-        workspace_swipe = false;
-      };
       device = {
         name = "epic-mouse-v1";
         sensitivity = -0.5;

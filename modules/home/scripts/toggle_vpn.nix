@@ -5,7 +5,7 @@ pkgs.writeShellScriptBin "protonvpn" ''
   VPN_DIR="$HOME/.vpn"
   WG_QUICK="${pkgs.wireguard-tools}/bin/wg-quick"
   NOTIFY_SEND="${pkgs.libnotify}/bin/notify-send"
-  ROFI="${pkgs.rofi-wayland}/bin/rofi"
+  ROFI="${pkgs.rofi}/bin/rofi"
 
   # Function to prompt for password using rofi
   prompt_password() {

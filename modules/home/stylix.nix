@@ -25,6 +25,7 @@
       waybar.enable = false;
       zathura.enable = false;
       spicetify.enable = false;
+      foot.enable = false;
       firefox = {
         profileNames = ["default"];
         colorTheme.enable = true;
