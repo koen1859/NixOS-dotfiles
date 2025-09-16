@@ -33,17 +33,18 @@
       v = "nvim";
       c = "clear";
       cat = "${pkgs.bat}/bin/bat";
-      ls = "${pkgs.eza}/bin/eza";
+      ls = "${pkgs.eza}/bin/eza --icons";
+      lt = "${pkgs.eza}/bin/eza --icons -TL 2";
       cd = "z";
       ff = "${pkgs.fzf}/bin/fzf";
       grep = "grep --color=auto";
-      ".." = "cd ..";
-      gps = "git push gitserver main";
-      gpl = "git pull gitserver main";
-      ga = "git add --patch";
-      gc = "git commit";
-      gs = "git status";
-      gd = "git diff";
+      ".." = "z ..";
+      gps = "${pkgs.git}/bin/git push gitserver main";
+      gpl = "${pkgs.git}/bin/git pull gitserver main";
+      ga = "${pkgs.git}/bin/git add --patch";
+      gc = "${pkgs.git}/bin/git commit";
+      gs = "${pkgs.git}/bin/git status";
+      gd = "${pkgs.git}/bin/git diff";
     };
   };
 }
