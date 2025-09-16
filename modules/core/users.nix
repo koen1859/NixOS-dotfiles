@@ -5,9 +5,11 @@
 }: {
   users = {
     defaultUserShell = shell;
-    users.${username} = {
-      isNormalUser = true;
-      extraGroups = ["wheel"];
+    users = {
+      ${username} = {
+        isNormalUser = true;
+        extraGroups = ["wheel"];
+      };
     };
   };
 }
