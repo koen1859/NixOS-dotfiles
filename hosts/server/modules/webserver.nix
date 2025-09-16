@@ -2,7 +2,7 @@
   services.nginx = {
     enable = true;
 
-    virtualHosts."football.koenstevens.nl" = {
+    virtualHosts."koenstevens.nl" = {
       enableACME = true;
       forceSSL = true;
       locations."/" = {
@@ -20,31 +20,31 @@
 
   systemd = {
     services = {
-      football = {
-        description = "Football app service";
+      website = {
+        description = "website service";
         after = ["network.target"];
         wantedBy = ["multi-user.target"];
         serviceConfig = {
-          ExecStart = "/home/${username}/Documents/Football/start.sh";
-          WorkingDirectory = "/home/${username}/Documents/Football";
+          ExecStart = "/home/${username}website/start.sh";
+          WorkingDirectory = "/home/${username}/website";
           Restart = "always";
           RestartSec = 5;
           Type = "simple";
           User = "${username}";
         };
       };
-      football-restart = {
-        description = "Restart football app nightly";
+      website-restart = {
+        description = "Reload website";
         serviceConfig = {
           Type = "oneshot";
-          ExecStart = "/run/current-system/sw/bin/systemctl restart football.service";
+          ExecStart = "/run/current-system/sw/bin/systemctl restart website.service";
         };
       };
       scraper = {
         description = "Football scraper service";
         serviceConfig = {
-          ExecStart = "/home/${username}/Documents/Football/scraper.sh";
-          WorkingDirectory = "/home/${username}/Documents/Football";
+          ExecStart = "/home/${username}/website/scraper.sh";
+          WorkingDirectory = "/home/${username}/website";
           User = "${username}";
           Type = "oneshot";
           TimeoutStartSec = "infinity";
@@ -60,8 +60,8 @@
           Persistent = true;
         };
       };
-      football-restart = {
-        description = "Restart football app nightly at 04:10";
+      website-restart = {
+        description = "reload website nightly at 04:10";
         wantedBy = ["timers.target"];
         timerConfig = {
           OnCalendar = "*-*-* 07:00:00";
