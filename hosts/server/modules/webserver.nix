@@ -25,7 +25,7 @@
         after = ["network.target"];
         wantedBy = ["multi-user.target"];
         serviceConfig = {
-          ExecStart = "/home/${username}website/start.sh";
+          ExecStart = "/home/${username}/website/start.sh";
           WorkingDirectory = "/home/${username}/website";
           Restart = "always";
           RestartSec = 5;
