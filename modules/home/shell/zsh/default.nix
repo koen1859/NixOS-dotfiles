@@ -38,8 +38,8 @@
       ff = "${pkgs.fzf}/bin/fzf";
       grep = "grep --color=auto";
       ".." = "cd ..";
-      gps = "git push gitlab main";
-      gpl = "git pull gitlab main";
+      gps = "git push gitserver main";
+      gpl = "git pull gitserver main";
       ga = "git add --patch";
       gc = "git commit";
       gs = "git status";
