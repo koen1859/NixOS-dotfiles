@@ -15,6 +15,8 @@
     fd.enable = true;
     feh.enable = true;
     nvim-conf.enable = true;
+    ripgrep.enable = true;
+    fzf.enable = true;
   };
 
   nixpkgs.config.allowUnfree = true;
