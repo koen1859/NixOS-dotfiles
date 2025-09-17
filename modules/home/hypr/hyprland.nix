@@ -6,6 +6,7 @@
     settings = {
       exec-once = [
         "${pkgs.waybar}/bin/waybar"
+        "${pkgs.hyprpaper}/bin/hyprpaper"
       ];
       input = {
         kb_layout = "us";
