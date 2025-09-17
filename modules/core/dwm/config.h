@@ -73,6 +73,10 @@ static const char *browsercmd[] = {"firefox", NULL};
 static const char *privatebrowsercmd[] = {"brave", "--incognito", NULL};
 static const char *protonvpncmd[] = {"protonvpn", NULL};
 static const char *wlogoutcmd[] = {"wlogout", NULL};
+static const char *brightness_up[] = {"brightnessctl", "set", "1%+"};
+static const char *brightness_down[] = {"brightnessctl", "set", "1%-"};
+static const char *brightness_max[] = {"brightnessctl", "set", "100%"};
+static const char *brightness_min[] = {"brightnessctl", "set", "1%"};
 
 static const Key keys[] = {
     /* modifier                     key        function        argument */
@@ -83,6 +87,10 @@ static const Key keys[] = {
     {MODKEY, XK_v, spawn, {.v = protonvpncmd}},
     {MODKEY, XK_Escape, spawn, {.v = wlogoutcmd}},
     {0, XK_F12, togglebar, {0}},
+    {0, XK_F4, spawn, {.v = brightness_down}},
+    {0, XK_F5, spawn, {.v = brightness_up}},
+    {0, XK_F6, spawn, {.v = brightness_min}},
+    {0, XK_F7, spawn, {.v = brightness_max}},
     {MODKEY, XK_j, focusstack, {.i = +1}},
     {MODKEY, XK_k, focusstack, {.i = -1}},
     {MODKEY, XK_i, incnmaster, {.i = +1}},

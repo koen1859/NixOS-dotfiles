@@ -49,5 +49,6 @@
       patches = [];
     }))
     xclip
+    brightnessctl
   ];
 }
