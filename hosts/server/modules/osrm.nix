@@ -17,9 +17,9 @@ in {
   #     };
   #   };
   # };
-  systemd.services = {
+  systemd.services.osrm = {
     description = "OSRM Routing Backend";
-    wantedBy = ["multi-user.targer"];
+    wantedBy = ["multi-user.target"];
     serviceConfig = {
       ExecStart = "${pkgs.osrm-backend}/bin/osrm-routed --algorithm mld --port 5000 --host 0.0.0.0 ${osrmData}";
       WorkingDirectory = "/home/${username}/osrm";
