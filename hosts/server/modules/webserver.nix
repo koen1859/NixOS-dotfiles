@@ -1,12 +1,13 @@
 {username, ...}: {
   services.nginx = {
     enable = true;
-
-    virtualHosts."koenstevens.nl" = {
-      enableACME = true;
-      forceSSL = true;
-      locations."/" = {
-        proxyPass = "http://127.0.0.1:5001";
+    virtualHosts = {
+      "koenstevens.nl" = {
+        enableACME = true;
+        forceSSL = true;
+        locations."/" = {
+          proxyPass = "http://127.0.0.1:5001";
+        };
       };
     };
   };
