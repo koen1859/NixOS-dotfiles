@@ -19,11 +19,8 @@
     #     };
     #   };
     # };
-    # displayManager.ly = {
-    #   enable = true;
-    #   settings = {
-    #     session = "Hyprland";
-    #   };
-    # };
+    displayManager.ly = {
+      enable = true;
+    };
   };
 }
