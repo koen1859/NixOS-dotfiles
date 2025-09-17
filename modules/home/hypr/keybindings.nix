@@ -18,7 +18,7 @@
       "$mainMod, M, exec, spotify"
       "$mainMod SHIFT, M, exec, proton-mail"
       "$mainMod, P, exec, ${pkgs.proton-pass}/bin/proton-pass"
-      "$mainMod, Return, exec, wezterm"
+      "$mainMod, Return, exec, st"
       "$mainMod SHIFT, Return, exec, kitty"
       "$mainMod, Q, killactive,"
       "$mainMod, R, exec, rofi -show drun"
