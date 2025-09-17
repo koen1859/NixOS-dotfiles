@@ -7,11 +7,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1757911848,
-        "narHash": "sha256-YkT8N8VFISStPADblSg1aCI0BP1TJ2koA5QqfJ7t12U=",
+        "lastModified": 1758056808,
+        "narHash": "sha256-7I4duKo9OdQ7sldgjoYBlpZ+xykszDj/IVz5hlJOaeg=",
         "owner": "AdnanHodzic",
         "repo": "auto-cpufreq",
-        "rev": "c2ff712325dd919b3ee7c7e5354d67fb841618d0",
+        "rev": "9f86acc38dca4299b70ea55ae6c52902da5c903c",
         "type": "github"
       },
       "original": {
@@ -95,11 +95,11 @@
       },
       "locked": {
         "dir": "pkgs/firefox-addons",
-        "lastModified": 1757995413,
-        "narHash": "sha256-vaU/7/PXoym6vnspGxhR29V9klGe9iy9zmp6x7w38f8=",
+        "lastModified": 1758081812,
+        "narHash": "sha256-ikibeoVpZHokzM39nW9zh404Y104ljFD1cUaHX6HxpA=",
         "owner": "rycee",
         "repo": "nur-expressions",
-        "rev": "4ae8996b3e139926c784acd22824cde46cd28833",
+        "rev": "dc341074ce432678b89bf1e3a3e583c553d477ef",
         "type": "gitlab"
       },
       "original": {
@@ -290,11 +290,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1757997814,
-        "narHash": "sha256-F+1aoG+3NH4jDDEmhnDUReISyq6kQBBuktTUqCUWSiw=",
+        "lastModified": 1758119172,
+        "narHash": "sha256-LnVuGLf0PJHqqIHroxEzwXS57mjAdHSrXi0iODKbbiU=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "5820376beb804de9acf07debaaff1ac84728b708",
+        "rev": "9f408dc51c8e8216a94379e6356bdadbe8b4fef9",
         "type": "github"
       },
       "original": {
@@ -370,11 +370,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1757985474,
-        "narHash": "sha256-Npg0TeMV3+HS6zImSkT4KS0xIWP311llJBF+xK8Htpo=",
+        "lastModified": 1758071854,
+        "narHash": "sha256-j+WhSfu+/gehgfV3zCVV7Nt8DERdXm8e3TAJ9r9wUtA=",
         "owner": "kaylorben",
         "repo": "nixcord",
-        "rev": "82c3b412d816faec23f6e008e471c813c9d218e5",
+        "rev": "cebd8615c6e896b34083986eeee1a9b5c662689a",
         "type": "github"
       },
       "original": {
@@ -503,11 +503,11 @@
         "systems": "systems_4"
       },
       "locked": {
-        "lastModified": 1758053576,
-        "narHash": "sha256-fAoY6ufSjwh+BxMR0VcHkIV0cbCXXF7TqI26jh677kg=",
+        "lastModified": 1758132953,
+        "narHash": "sha256-dgROqoZs5zfScfebrCTGHLkWk0LG8l2gma3d8BhB3ic=",
         "owner": "koenstevens",
         "repo": "nvim-conf",
-        "rev": "b5d55e8028dcc26180515217309e2c588aa6a465",
+        "rev": "42426ad837e4c7dc9028b9e14795e74b12bcb425",
         "type": "gitlab"
       },
       "original": {

@@ -41,6 +41,10 @@
       src = ./dmenu;
       patches = [];
     }))
+    (pkgs.slstatus.overrideAttrs (_: {
+      src = ./slstatus;
+      patches = [];
+    }))
     xclip
   ];
 }
