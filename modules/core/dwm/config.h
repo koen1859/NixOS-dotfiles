@@ -77,6 +77,12 @@ static const char *brightness_up[] = {"brightnessctl", "set", "1%+"};
 static const char *brightness_down[] = {"brightnessctl", "set", "1%-"};
 static const char *brightness_max[] = {"brightnessctl", "set", "100%"};
 static const char *brightness_min[] = {"brightnessctl", "set", "1%"};
+static const char *mute[] = {"wpctl", "set-volume", "@DEFAULT_AUDIO_SINK@",
+                             "0%"};
+static const char *volume_up[] = {"wpctl", "set-volume", "@DEFAULT_AUDIO_SINK@",
+                                  "5%+"};
+static const char *volume_down[] = {"wpctl", "set-volume",
+                                    "@DEFAULT_AUDIO_SINK@", "5%-"};
 
 static const Key keys[] = {
     /* modifier                     key        function        argument */
@@ -87,6 +93,9 @@ static const Key keys[] = {
     {MODKEY, XK_v, spawn, {.v = protonvpncmd}},
     {MODKEY, XK_Escape, spawn, {.v = wlogoutcmd}},
     {0, XK_F12, togglebar, {0}},
+    {0, XK_F1, spawn, {.v = mute}},
+    {0, XK_F2, spawn, {.v = volume_down}},
+    {0, XK_F3, spawn, {.v = volume_up}},
     {0, XK_F4, spawn, {.v = brightness_down}},
     {0, XK_F5, spawn, {.v = brightness_up}},
     {0, XK_F6, spawn, {.v = brightness_min}},
