@@ -26,4 +26,5 @@ in {
       Restart = "on-failure";
     };
   };
+  networking.firewall.allowedTCPPorts = [5000];
 }
