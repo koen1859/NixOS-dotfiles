@@ -13,7 +13,7 @@
     "${core}/network.nix"
     "${core}/nh.nix"
     "${core}/flatpak.nix"
-    "${core}/xserver.nix"
+    # "${core}/xserver.nix"
   ];
 
   time.timeZone = "Europe/Amsterdam";
