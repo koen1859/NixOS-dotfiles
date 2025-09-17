@@ -70,13 +70,19 @@ static const char *dmenucmd[] = {
     "-nf",       col_gray3, "-sb",    col_cyan, "-sf",     col_gray4, NULL};
 static const char *termcmd[] = {"st", NULL};
 static const char *browsercmd[] = {"firefox", NULL};
+static const char *privatebrowsercmd[] = {"brave", "--incognito", NULL};
+static const char *protonvpncmd[] = {"protonvpn", NULL};
+static const char *wlogoutcmd[] = {"wlogout", NULL};
 
 static const Key keys[] = {
     /* modifier                     key        function        argument */
     {MODKEY, XK_r, spawn, {.v = dmenucmd}},
     {MODKEY, XK_Return, spawn, {.v = termcmd}},
     {MODKEY, XK_b, spawn, {.v = browsercmd}},
-    {MODKEY | ShiftMask, XK_b, togglebar, {0}},
+    {MODKEY | ShiftMask, XK_b, spawn, {.v = privatebrowsercmd}},
+    {MODKEY, XK_v, spawn, {.v = protonvpncmd}},
+    {MODKEY, XK_Escape, spawn, {.v = wlogoutcmd}},
+    {0, XK_F12, togglebar, {0}},
     {MODKEY, XK_j, focusstack, {.i = +1}},
     {MODKEY, XK_k, focusstack, {.i = -1}},
     {MODKEY, XK_i, incnmaster, {.i = +1}},
