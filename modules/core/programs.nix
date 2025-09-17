@@ -4,6 +4,7 @@
     nix-ld.enable = true;
     yazi.enable = true;
     thunar.enable = true;
+    hyprland.enable = true;
   };
   xdg.portal = {
     enable = true;

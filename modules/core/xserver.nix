@@ -28,6 +28,9 @@
         package = pkgs.dwm.overrideAttrs {
           src = ./dwm;
         };
+        extraSessionCommands = ''
+          slstatus &
+        '';
       };
     };
     picom.enable = true;
