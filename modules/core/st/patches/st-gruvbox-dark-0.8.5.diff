@@ -1,5 +1,7 @@
---- config.def.h
-+++ config.def.h
+diff --git a/config.def.h b/config.def.h
+index 91ab8ca..a068694 100644
+--- a/config.def.h
++++ b/config.def.h
 @@ -96,32 +96,24 @@ unsigned int tabspaces = 8;
  /* Terminal colors (16 first used in escape sequence) */
  static const char *colorname[] = {
