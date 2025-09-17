@@ -3,7 +3,7 @@
   username,
   ...
 }: let
-  osrmData = "/home/username/osrm/netherlands-latest.osrm";
+  osrmData = "/home/${username}/osrm/netherlands-latest.osrm";
 in {
   # services.nginx = {
   #   enable = true;
@@ -21,7 +21,7 @@ in {
     description = "OSRM Routing Backend";
     wantedBy = ["multi-user.target"];
     serviceConfig = {
-      ExecStart = "${pkgs.osrm-backend}/bin/osrm-routed --algorithm mld --port 5000 --host 0.0.0.0 ${osrmData}";
+      ExecStart = "${pkgs.osrm-backend}/bin/osrm-routed --algorithm mld -p 5000 -i 0.0.0.0 ${osrmData}";
       WorkingDirectory = "/home/${username}/osrm";
       Restart = "on-failure";
     };
