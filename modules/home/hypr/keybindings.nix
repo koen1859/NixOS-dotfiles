@@ -29,8 +29,8 @@
       "SUPER_SHIFT, ESCAPE, exec, hyprlock"
       "$mainMod, M, exec, proton-mail"
       "$mainMod, P, exec, ${pkgs.proton-pass}/bin/proton-pass"
-      "$mainMod, Return, exec, st"
-      "$mainMod SHIFT, Return, exec, kitty"
+      "$mainMod, Return, exec, wezterm"
+      "$mainMod SHIFT, Return, exec, st"
       "$mainMod, Q, killactive,"
       "$mainMod, R, exec, rofi -show drun"
       ''$mainMod, O, exec, zathura "$(find "$HOME/Documents/Books" -maxdepth 2 -type f | rofi -dmenu -i -p 'Open book:')"''

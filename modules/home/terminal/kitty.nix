@@ -1,6 +1,6 @@
 {
   programs.kitty = {
-    enable = true;
+    enable = false;
     extraConfig = ''
       font_size 16
       background_opacity 0.9
