@@ -36,6 +36,10 @@
       url = "github:fufexan/nix-gaming";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -46,6 +50,7 @@
     nixcord,
     nvim-conf,
     auto-cpufreq,
+    sops-nix,
     ...
   } @ inputs: let
     lib = nixpkgs.lib;
@@ -54,7 +59,7 @@
 
     username = "koenstevens";
     theme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
-    wallpaper = ./wallpapers/solar_system.png;
+    wallpaper = ./wallpapers/a_pile_of_cut_logs.jpg;
     core = "${self}/modules/core";
     home = "${self}/modules/home";
     shell = pkgs.zsh;
@@ -71,6 +76,7 @@
           [
             hostConfig
             stylix.nixosModules.stylix
+            sops-nix.nixosModules.sops
           ]
           ++ extraModules;
       };
