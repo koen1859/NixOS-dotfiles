@@ -9,6 +9,7 @@
     "${core}/services.nix"
     "${core}/users.nix"
     "${core}/programs.nix"
+    "${core}/sops.nix"
     "${core}/stylix.nix"
     "${core}/network.nix"
     "${core}/nh.nix"
