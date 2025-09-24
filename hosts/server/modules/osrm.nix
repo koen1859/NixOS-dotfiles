@@ -5,18 +5,18 @@
 }: let
   osrmData = "/home/${username}/osrm/netherlands-latest.osrm";
 in {
-  # services.nginx = {
-  #   enable = true;
-  #   virtualHosts = {
-  #     "routing.koenstevens.nl" = {
-  #       enableACME = true;
-  #       forceSSL = true;
-  #       locations."/" = {
-  #         proxyPass = "http://127.0.0.1:5000";
-  #       };
-  #     };
-  #   };
-  # };
+  services.nginx = {
+    enable = true;
+    virtualHosts = {
+      "routing.koenstevens.nl" = {
+        enableACME = true;
+        # forceSSL = true;
+        locations."/" = {
+          proxyPass = "http://127.0.0.1:5000";
+        };
+      };
+    };
+  };
   systemd.services.osrm = {
     description = "OSRM Routing Backend";
     wantedBy = ["multi-user.target"];
