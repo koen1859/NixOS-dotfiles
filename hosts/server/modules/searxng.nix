@@ -25,7 +25,7 @@
     settings = {
       general = {
         debug = false;
-        instance_name = "SearXNG Instance";
+        instance_name = "SearXNG";
         donation_url = false;
         contact_url = false;
         privacypolicy_url = false;
