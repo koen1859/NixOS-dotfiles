@@ -1,9 +1,11 @@
 keys:
   - &koenstevens_pc age15nalrpgtpmhf88sdv30xuez4usvv6f9nyzulxpe884a0zzc34udsyhh9ed
   - &koenstevens_server age1mhmjynfypqfrd2pmd8hg5wq95x4vv8p3trdzlrwx7wg9gulu5qlqllmdwp
+  - &koenstevens_laptop age1635gcpzrn93lz3sa7puyxmc00u3pf9czst42dd42uay35mc25c0q2wgxgp
 creation_rules:
   - path_regex: secrets/[^/]+\.(yaml|json|env|ini)$
     key_groups:
       - age:
         - *koenstevens_pc
         - *koenstevens_server
+        - *koenstevens_laptop
