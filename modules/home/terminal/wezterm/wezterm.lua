@@ -23,7 +23,7 @@ config.cursor_blink_rate = 500
 config.term = "xterm-256color"
 config.max_fps = 144
 config.animation_fps = 144
-config.window_background_opacity = 0.9
+config.window_background_opacity = 0.7
 
 config.keys = {
 	{ key = "t", mods = "ALT", action = wezterm.action.SpawnTab("CurrentPaneDomain") },

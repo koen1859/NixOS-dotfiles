@@ -59,7 +59,7 @@
 
     username = "koenstevens";
     theme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
-    wallpaper = ./wallpapers/a_pile_of_cut_logs.jpg;
+    wallpaper = ./wallpapers/gruvbox_painting.png;
     core = "${self}/modules/core";
     home = "${self}/modules/home";
     shell = pkgs.zsh;
