@@ -10,6 +10,7 @@
     "${core}/stylix.nix"
     "${core}/network.nix"
     "${core}/nh.nix"
+    "${core}/sops.nix"
   ];
 
   programs = {
