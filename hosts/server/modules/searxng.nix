@@ -161,12 +161,8 @@
       "search.koenstevens.nl" = {
         forceSSL = true;
         enableACME = true;
-        locations = {
-          "/" = {
-            extraConfig = ''
-              uwsgi_pass unix:${config.services.searx.uwsgiConfig.socket};
-            '';
-          };
+        locations."/" = {
+          proxyPass = "http://127.0.0.1:8888";
         };
       };
     };
