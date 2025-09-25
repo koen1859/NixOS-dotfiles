@@ -6,8 +6,8 @@
 }: let
   search = {
     force = true;
-    default = "startpage";
-    privateDefault = "startpage";
+    default = "koenstevens";
+    privateDefault = "koenstevens";
 
     engines = {
       google.metaData.hidden = true;
@@ -32,6 +32,22 @@
         icon = "https://www.startpage.com/favicon.ico";
         metaData.hidden = false;
         definedAliases = ["@sp"];
+      };
+      koenstevens = {
+        urls = [
+          {
+            template = "https://search.koenstevens.nl/search";
+            params = [
+              {
+                name = "q";
+                value = "{searchTerms}";
+              }
+            ];
+          }
+        ];
+        icon = "https://search.koenstevens.nl/favicon.ico";
+        metaData.hidden = false;
+        definedAliases = ["@ks"];
       };
       "Nix Packages" = {
         urls = [
