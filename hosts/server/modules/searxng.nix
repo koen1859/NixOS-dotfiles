@@ -53,7 +53,7 @@
       };
 
       server = {
-        base_url = "https://search.example.com";
+        base_url = "https://search.koenstevens.nl";
         port = 8888;
         bind_address = "127.0.0.1";
         secret_key = config.sops.secrets.searx.path;
