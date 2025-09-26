@@ -7,6 +7,7 @@
     ./modules/git.nix
     ./modules/osrm.nix
     ./modules/searxng.nix
+    ./modules/adguard.nix
   ];
 
   networking.hostName = "nixserver";
