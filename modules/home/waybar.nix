@@ -133,7 +133,7 @@
           font-weight: bold;
         }
         window#waybar {
-          background-color: #${config.lib.stylix.colors.base00};
+          background-color: alpha(#${config.lib.stylix.colors.base00},.7);
         }
         #workspaces button {
           padding: 0px 6px;

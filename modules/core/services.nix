@@ -1,4 +1,4 @@
-{
+{pkgs, ...}: {
   services = {
     blueman.enable = true;
     pipewire = {
@@ -6,8 +6,13 @@
       pulse.enable = true;
     };
     libinput.enable = true;
-    displayManager.ly = {
+    greetd = {
       enable = true;
+      settings = {
+        default_session = {
+          command = "${pkgs.tuigreet}/bin/tuigreet --cmd start-dwl --time --user-menu --remember";
+        };
+      };
     };
   };
 }

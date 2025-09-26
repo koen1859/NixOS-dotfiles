@@ -1,18 +1,18 @@
-{pkgs, ...}: {
+{pkgs, ...}: let
+  start-dwl = pkgs.writeShellScriptBin "start-dwl" ''
+    slstatus -s | dwl -s "sh -c 'hyprpaper &'"
+  '';
+in {
   environment.systemPackages = with pkgs; [
     wmenu
-    wl-clipboard
     grim
     slurp
     hyprpaper
+    start-dwl
   ];
   programs = {
     dwl = {
       enable = true;
-      extraSessionCommands = ''
-        ${pkgs.hyprpaper}/bin/hyprpaper &
-        slstatus -s &
-      '';
       package = pkgs.dwl.overrideAttrs (oldAttrs: {
         src = ./dwl;
         nativeBuildInputs =
