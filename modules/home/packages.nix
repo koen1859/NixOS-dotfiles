@@ -9,6 +9,7 @@
     proton-pass
     protonmail-desktop
     onlyoffice-desktopeditors
+    onefetch
   ];
 
   programs = {
