@@ -5,6 +5,7 @@
 }: {
   imports = [
     "${core}/boot.nix"
+    "${core}/dwl.nix"
     "${core}/environment.nix"
     "${core}/services.nix"
     "${core}/users.nix"
@@ -14,7 +15,7 @@
     "${core}/network.nix"
     "${core}/nh.nix"
     "${core}/flatpak.nix"
-    "${core}/xserver.nix"
+    "${core}/suckless.nix"
   ];
 
   time.timeZone = "Europe/Amsterdam";

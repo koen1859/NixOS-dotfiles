@@ -7,6 +7,7 @@
       unzip # Unzip utility
       gcc # Compiler
       sops
+      wmenu
     ];
   };
 }
