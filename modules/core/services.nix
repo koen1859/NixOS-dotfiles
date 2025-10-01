@@ -10,7 +10,7 @@
       enable = true;
       settings = {
         default_session = {
-          command = "${pkgs.tuigreet}/bin/tuigreet --cmd start-dwl --time --user-menu --remember";
+          command = "${pkgs.tuigreet}/bin/tuigreet --time --user-menu --remember";
         };
       };
     };
