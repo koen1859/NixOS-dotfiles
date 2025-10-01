@@ -5,6 +5,7 @@
       enable = true;
       pulse.enable = true;
     };
+    printing.enable = true;
     libinput.enable = true;
     greetd = {
       enable = true;
