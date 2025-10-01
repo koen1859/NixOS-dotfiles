@@ -143,8 +143,15 @@ static const enum libinput_config_tap_button_map button_map =
 
 /* commands */
 static const char *termcmd[] = {"st", NULL};
-static const char *menucmd[] = {"dmenu_run", NULL};
+static const char *menucmd[] = {"wmenu_run", "-f", "JetBrainsMono Nerd Font 16",
+                                NULL};
 static const char *browsercmd[] = {"firefox", NULL};
+static const char *privatebrowsercmd[] = {"brave", "--incognito", NULL};
+static const char *screenshotcmd[] = {"hyprshot", "-m", "active", NULL};
+static const char *screenshotregioncmd[] = {"hyprshot", "-m", "region", NULL};
+static const char *vpncmd[] = {"protonvpn", NULL};
+static const char *mailcmd[] = {"proton-mail", NULL};
+static const char *passcmd[] = {"proton-pass", NULL};
 
 static const Key keys[] = {
     /* Note that Shift changes certain key codes: c -> C, 2 -> at, etc. */
