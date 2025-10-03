@@ -5,6 +5,7 @@
     yazi.enable = true;
     thunar.enable = true;
     hyprland.enable = true;
+    niri.enable = true;
   };
   xdg.portal = {
     enable = true;
