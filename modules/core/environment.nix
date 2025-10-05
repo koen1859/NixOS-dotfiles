@@ -8,6 +8,8 @@
       gcc # Compiler
       sops
       wmenu
+      alacritty
+      fuzzel
     ];
   };
 }
