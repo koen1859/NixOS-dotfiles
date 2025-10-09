@@ -45,6 +45,7 @@
       gc = "${pkgs.git}/bin/git commit";
       gs = "${pkgs.git}/bin/git status";
       gd = "${pkgs.git}/bin/git diff";
+      ns = "${pkgs.nix-search-tv}/bin/nix-search-tv print | ${pkgs.fzf}/bin/fzf --preview '${pkgs.nix-search-tv}/bin/nix-search-tv preview {}' --scheme history";
     };
   };
 }
