@@ -18,7 +18,7 @@
           "memory"
           # "disk"
           "network"
-          "custom/notification"
+          # "custom/notification"
           "battery"
           "clock"
         ];
