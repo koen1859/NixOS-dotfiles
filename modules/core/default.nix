@@ -5,7 +5,7 @@
 }: {
   imports = [
     "${core}/boot.nix"
-    "${core}/dwl.nix"
+    # "${core}/dwl.nix"
     "${core}/environment.nix"
     "${core}/services.nix"
     "${core}/users.nix"

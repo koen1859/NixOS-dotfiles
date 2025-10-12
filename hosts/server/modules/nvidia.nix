@@ -9,13 +9,14 @@
 
     open = false;
     nvidiaSettings = true;
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
 
-  boot = {
-    initrd.kernelModules = ["nvidia"];
-    kernelModules = ["nvidia" "nvidia_modeset" "nvidia_uvm" "nvidia_drm"];
-    extraModulePackages = [config.boot.kernelPackages.nvidiaPackages.stable];
-  };
+  # boot = {
+  #   initrd.kernelModules = ["nvidia"];
+  #   kernelModules = ["nvidia" "nvidia_modeset" "nvidia_uvm" "nvidia_drm"];
+  #   extraModulePackages = [config.boot.kernelPackages.nvidiaPackages.stable];
+  # };
 
   environment.variables = {
     "__GLX_VENDOR_LIBRARY_NAME" = "nvidia";
