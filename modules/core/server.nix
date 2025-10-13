@@ -33,4 +33,5 @@
   nixpkgs.config = {
     allowUnfree = true;
   };
+  hardware.graphics.enable = true;
 }

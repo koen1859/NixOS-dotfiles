@@ -25,6 +25,4 @@
     "WLR_NO_HARDWARE_CURSORS" = "1";
     "LIBGL_ALWAYS_INDIRECT" = "1";
   };
-
-  hardware.graphics.enable = true;
 }

@@ -44,6 +44,7 @@
       ", F1, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 0%"
       ", F6, exec, ${pkgs.brightnessctl}/bin/brightnessctl set 1%"
       ", F7, exec, ${pkgs.brightnessctl}/bin/brightnessctl set 100%"
+      ", F8, exec, ${pkgs.pavucontrol}/bin/pavucontrol"
       "$mainMod, T, swapsplit"
       "$mainMod, F, fullscreen, 0"
       "$mainMod SHIFT, T, togglesplit"
