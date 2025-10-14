@@ -4,7 +4,7 @@
   ...
 }: let
   osrmData = "/home/${username}/osrm/netherlands-latest.osrm";
-  osrm = pkgs.osrm-backend.overrideAttrs (old: rec {
+  osrm = pkgs.osrm-backend.overrideAttrs (old: {
     CXXFLAGS = (old.CXXFLAGS or []) ++ ["-Wno-error=maybe-uninitialized"];
   });
 in {
