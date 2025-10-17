@@ -5,7 +5,7 @@
     xwayland.enable = true;
     settings = {
       exec-once = [
-        "${pkgs.waybar}/bin/waybar"
+        # "${pkgs.waybar}/bin/waybar"
         "${pkgs.hyprpaper}/bin/hyprpaper"
       ];
       input = {
