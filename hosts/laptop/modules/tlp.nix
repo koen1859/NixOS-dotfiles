@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   services.tlp = {
-    enable = true;
+    enable = false;
     package = pkgs.tlp;
     settings = {
       CPU_SCALING_GOVERNOR_ON_AC = "performance";
