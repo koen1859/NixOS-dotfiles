@@ -89,6 +89,7 @@
             hostHome
             stylix.homeModules.stylix
             nvim-conf.homeModules.default
+            inputs.sops-nix.homeManagerModules.sops
           ]
           ++ extraModules;
         extraSpecialArgs = commonSpecialArgs;

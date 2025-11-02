@@ -1,4 +1,8 @@
-{username, ...}: {
+{
+  username,
+  pkgs,
+  ...
+}: {
   programs = {
     virt-manager.enable = true;
     dconf.enable = true;

@@ -1,11 +1,11 @@
-{
+{config, ...}: {
   services = {
     fail2ban = {
       enable = true;
     };
     openssh = {
       enable = true;
-      hostKeys = [];
+      authorizedKeysFiles = [config.sops.secrets.ssh_public_key.path];
       settings = {
         PasswordAuthentication = false;
         PermitRootLogin = "no";
