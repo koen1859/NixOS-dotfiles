@@ -3,7 +3,7 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
 config.enable_wayland = true
-config.color_scheme = "Gruvbox dark, hard (base16)"
+config.color_scheme = "nord"
 config.font_size = 16
 config.audible_bell = "Disabled"
 
@@ -23,7 +23,7 @@ config.cursor_blink_rate = 500
 config.term = "xterm-256color"
 config.max_fps = 144
 config.animation_fps = 144
-config.window_background_opacity = 0.7
+config.window_background_opacity = 0.5
 
 config.keys = {
 	{ key = "t", mods = "ALT", action = wezterm.action.SpawnTab("CurrentPaneDomain") },
