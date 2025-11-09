@@ -506,11 +506,11 @@
         "systems": "systems_4"
       },
       "locked": {
-        "lastModified": 1762726523,
-        "narHash": "sha256-AxcGod0Hck1YqOYNlkndEyGhaa0nrIqjqa4KxBmRdco=",
+        "lastModified": 1762728692,
+        "narHash": "sha256-k5wcuHIsBSf1bJTJyGW1xBMFThk9tmgPlbjrzar3o3Q=",
         "owner": "koenstevens",
         "repo": "nvim-conf",
-        "rev": "109039cd09cff2bb363121003863c3e4be8d573c",
+        "rev": "7fdb4f112d2cc7ae7c1b86d12374e85990a2a0d7",
         "type": "gitlab"
       },
       "original": {
