@@ -3,7 +3,7 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
 config.enable_wayland = true
-config.color_scheme = "Everforest Dark Hard (Gogh)"
+config.color_scheme = "Gruvbox dark, hard (base16)"
 config.font_size = 16
 config.audible_bell = "Disabled"
 

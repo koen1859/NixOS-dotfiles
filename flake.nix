@@ -58,7 +58,7 @@
     pkgs = nixpkgs.legacyPackages.${system};
 
     username = "koenstevens";
-    theme = "${pkgs.base16-schemes}/share/themes/everforest.yaml";
+    theme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
     wallpaper = ./wallpapers/ign_legendary.png;
     core = "${self}/modules/core";
     home = "${self}/modules/home";
