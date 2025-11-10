@@ -115,18 +115,5 @@
       ];
       "${username}@nixserver" = mkHome "nixserver" ./hosts/server/home.nix ["${self}/modules/home/server.nix"];
     };
-    devShells.${system}.default = pkgs.mkShell {
-      packages = with pkgs; [
-        pkg-config
-        xorg.libX11
-        xorg.libXft
-        xorg.libXinerama
-        fontconfig
-        freetype
-        harfbuzz
-        gcc
-        gnumake
-      ];
-    };
   };
 }
