@@ -10,7 +10,7 @@
         hostname = builtins.readFile config.sops.secrets.home_ip.path;
         user = username;
         identityFile = "${config.sops.secrets.ssh_private_key.path}";
-        port = 2222;
+        port = 21;
       };
       "homeserver" = {
         hostname = builtins.readFile config.sops.secrets.home_ip.path;

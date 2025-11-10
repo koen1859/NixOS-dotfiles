@@ -5,12 +5,13 @@
     };
     openssh = {
       enable = true;
-      ports = [2222];
       authorizedKeysFiles = [config.sops.secrets.ssh_public_key.path];
       settings = {
-        PasswordAuthentication = false;
+        PasswordAuthentication = true;
         PermitRootLogin = "no";
       };
+      ports = [21];
+      openFirewall = true;
     };
   };
 }
