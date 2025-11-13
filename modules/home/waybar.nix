@@ -10,8 +10,11 @@
       {
         layer = "top";
         position = "top";
-        modules-center = ["hyprland/window"];
-        modules-left = ["hyprland/workspaces"];
+        # modules-center = ["hyprland/window"];
+        modules-left = [
+          "ext/workspaces"
+          # "hyprland/workspaces"
+        ];
         modules-right = [
           # "pulseaudio"
           "cpu"
@@ -22,7 +25,12 @@
           "battery"
           "clock"
         ];
-
+        "ext/workspaces" = {
+          format = "{icon}";
+          ignore-hidden = true;
+          on-click = "activate";
+          sort-by-id = true;
+        };
         "hyprland/workspaces" = {
           format = "{name}";
           persistent-workspaces = {

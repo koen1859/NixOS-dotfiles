@@ -15,6 +15,7 @@
     "${home}/fastfetch.nix"
     "${home}/git.nix"
     "${home}/latex.nix"
+    "${home}/mango.nix"
     "${home}/nixcord.nix"
     "${home}/packages.nix"
     "${home}/programming.nix"

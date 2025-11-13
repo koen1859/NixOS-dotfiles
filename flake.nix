@@ -40,6 +40,10 @@
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    mango = {
+      url = "github:DreamMaoMao/mango";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -51,6 +55,7 @@
     nvim-conf,
     auto-cpufreq,
     sops-nix,
+    mango,
     ...
   } @ inputs: let
     lib = nixpkgs.lib;
@@ -99,8 +104,12 @@
       nixlaptop = mkHost "nixlaptop" ./hosts/laptop/configuration.nix [
         core
         auto-cpufreq.nixosModules.default
+        mango.nixosModules.mango
       ];
-      nixpc = mkHost "nixpc" ./hosts/pc/configuration.nix [core];
+      nixpc = mkHost "nixpc" ./hosts/pc/configuration.nix [
+        core
+        mango.nixosModules.mango
+      ];
       nixserver = mkHost "nixserver" ./hosts/server/configuration.nix ["${self}/modules/core/server.nix"];
     };
 
@@ -108,10 +117,12 @@
       "${username}@nixlaptop" = mkHome "nixlaptop" ./hosts/laptop/home.nix [
         home
         nixcord.homeModules.nixcord
+        mango.hmModules.mango
       ];
       "${username}@nixpc" = mkHome "nixpc" ./hosts/pc/home.nix [
         home
         nixcord.homeModules.nixcord
+        mango.hmModules.mango
       ];
       "${username}@nixserver" = mkHome "nixserver" ./hosts/server/home.nix ["${self}/modules/home/server.nix"];
     };
