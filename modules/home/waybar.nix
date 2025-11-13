@@ -10,7 +10,10 @@
       {
         layer = "top";
         position = "top";
-        # modules-center = ["hyprland/window"];
+        modules-center = [
+          "hyprland/window"
+          "dwl/window"
+        ];
         modules-left = [
           "ext/workspaces"
           # "hyprland/workspaces"

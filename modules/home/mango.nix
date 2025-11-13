@@ -93,7 +93,7 @@
 
       # keyboard
       repeat_rate=35
-      repeat_delay=200
+      repeat_delay=300
       numlockon=0
       xkb_rules_layout=us
       xkb_rules_options=caps:swapescape
@@ -147,16 +147,37 @@
       # key name refer to `xev` or `wev` command output,
       # mod keys name: super,ctrl,alt,shift,none
 
-      # reload config
+      # reload config, waybar
       bind=SUPER+SHIFT,r,reload_config
+      bind=NONE,F12,spawn_shell,pkill waybar; waybar
 
       # menu and terminal
       bind=SUPER,r,spawn,rofi -show drun
       bind=SUPER,Return,spawn,wezterm
+
+      # audio and brightness
+      bind=NONE,F2,spawn,wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%
+      bind=NONE,F3,spawn,wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
+      bind=NONE,F4,spawn,${pkgs.brightnessctl}/bin/brightnessctl set 1%-
+      bind=NONE,F5,spawn,${pkgs.brightnessctl}/bin/brightnessctl set 1%+
+
+      # apps
       bind=SUPER,b,spawn,firefox
+      bind=SUPER+SHIFT,b,spawn,brave --incognito
+      bind=SUPER,a,spawn,brave --app=https://chatgpt.com
+      bind=SUPER,s,spawn,${pkgs.hyprshot}/bin/hyprshot -m region
+      bind=SUPER,ESCAPE,spawn,wlogout
+      bind=SUPER+SHIFT,ESCAPE,spawn,hyprlock
+      bind=SUPER,m,spawn,proton-mail
+      bind=SUPER,p,spawn,proton-pass
+      bind=SUPER,o,spawn_shell,zathura "$(find "$HOME/Documents/Books" -maxdepth 2 -type f | rofi -dmenu -i -p 'Open book:')"
+      bind=SUPER,e,spawn,rofi -show filebrowser
+      bind=SUPER+SHIFT,e,spawn,thunar
+      bind=SUPER,n,spawn,${pkgs.networkmanagerapplet}/bin/nm-connection-editor
+      bind=SUPER+SHIFT,n,spawn,${pkgs.blueman}/bin/blueman-manager
 
       # exit
-      bind=SUPER,m,quit
+      bind=SUPER+SHIFT,q,quit
       bind=SUPER,q,killclient,
 
       # switch window focus
@@ -189,7 +210,7 @@
       bind=ALT,x,switch_proportion_preset,
 
       # switch layout
-      bind=SUPER,n,switch_layout
+      bind=NONE,F11,switch_layout
 
       # tag switch
       bind=SUPER,Left,viewtoleft,0
