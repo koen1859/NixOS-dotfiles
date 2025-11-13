@@ -2,7 +2,7 @@
   wayland.windowManager.mango = {
     enable = true;
     autostart_sh = ''
-      ${pkgs.waybar}/bin/waybar
+      # ${pkgs.waybar}/bin/waybar
       ${pkgs.hyprpaper}/bin/hyprpaper
     '';
     settings = ''
