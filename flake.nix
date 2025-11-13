@@ -64,7 +64,7 @@
 
     username = "koenstevens";
     theme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
-    wallpaper = ./wallpapers/ign_legendary.png;
+    wallpaper = ./wallpapers/a_road_surrounded_by_trees.jpg;
     core = "${self}/modules/core";
     home = "${self}/modules/home";
     shell = pkgs.zsh;
