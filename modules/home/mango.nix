@@ -292,10 +292,10 @@
       tagrule=id:3,no_hide:1,layout_name:scroller
       tagrule=id:4,no_hide:1,layout_name:scroller
       tagrule=id:5,no_hide:1,layout_name:scroller
-      tagrule=id:6,monitor_name:HDMI-A-1,no_hide:1,layout_name:scroller
-      tagrule=id:7,monitor_name:HDMI-A-1,no_hide:1,layout_name:scroller
-      tagrule=id:8,monitor_name:HDMI-A-1,no_hide:1,layout_name:scroller
-      tagrule=id:9,monitor_name:HDMI-A-1,no_hide:1,layout_name:scroller
+      tagrule=id:6,no_hide:1,layout_name:scroller
+      tagrule=id:7,no_hide:1,layout_name:scroller
+      tagrule=id:8,no_hide:1,layout_name:scroller
+      tagrule=id:9,no_hide:1,layout_name:scroller
     '';
   };
 }

@@ -16,7 +16,7 @@
         ];
         modules-left = [
           "ext/workspaces"
-          # "hyprland/workspaces"
+          "hyprland/workspaces"
         ];
         modules-right = [
           # "pulseaudio"
