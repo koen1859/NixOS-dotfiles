@@ -166,8 +166,8 @@
       bind=SUPER+SHIFT,b,spawn,brave --incognito
       bind=SUPER,a,spawn,brave --app=https://chatgpt.com
       bind=SUPER,s,spawn,${pkgs.hyprshot}/bin/hyprshot -m region
-      bind=SUPER,ESCAPE,spawn,wlogout
-      bind=SUPER+SHIFT,ESCAPE,spawn,hyprlock
+      bind=SUPER,w,spawn,${pkgs.wlogout}/bin/wlogout
+      bind=SUPER+SHIFT,w,spawn,${pkgs.hyprlock}/bin/hyprlock
       bind=SUPER,m,spawn,proton-mail
       bind=SUPER,p,spawn,proton-pass
       bind=SUPER,o,spawn_shell,zathura "$(find "$HOME/Documents/Books" -maxdepth 2 -type f | rofi -dmenu -i -p 'Open book:')"
