@@ -78,7 +78,7 @@
       overviewgappo=30
 
       # Misc
-      no_border_when_single=1
+      no_border_when_single=0
       axis_bind_apply_timeout=100
       focus_on_activate=1
       inhibit_regardless_of_visibility=0
@@ -133,15 +133,15 @@
 
       # layout support:
       # tile,scroller,grid,deck,monocle,center_tile,vertical_tile,vertical_scroller
-      tagrule=id:1,layout_name:tile
-      tagrule=id:2,layout_name:tile
-      tagrule=id:3,layout_name:tile
-      tagrule=id:4,layout_name:tile
-      tagrule=id:5,layout_name:tile
-      tagrule=id:6,layout_name:tile
-      tagrule=id:7,layout_name:tile
-      tagrule=id:8,layout_name:tile
-      tagrule=id:9,layout_name:tile
+      tagrule=id:1,no_hide:1,layout_name:scroller
+      tagrule=id:2,no_hide:1,layout_name:scroller
+      tagrule=id:3,no_hide:1,layout_name:scroller
+      tagrule=id:4,no_hide:1,layout_name:scroller
+      tagrule=id:5,no_hide:1,layout_name:scroller
+      tagrule=id:6,no_hide:1,layout_name:scroller
+      tagrule=id:7,no_hide:1,layout_name:scroller
+      tagrule=id:8,no_hide:1,layout_name:scroller
+      tagrule=id:9,no_hide:1,layout_name:scroller
 
       # Key Bindings
       # key name refer to `xev` or `wev` command output,
@@ -278,24 +278,10 @@
       axisbind=SUPER,UP,viewtoleft_have_client
       axisbind=SUPER,DOWN,viewtoright_have_client
 
-
-      # layer rule
-      layerrule=animation_type_open:zoom,layer_name:rofi
-      layerrule=animation_type_close:zoom,layer_name:rofi
-
+      # monitors
       monitorrule=DP-1,0.55,1,scroll,0,1,0,0,3440,1440,60
       monitorrule=HDMI-A-1,0.55,1,scroll,0,1,1920,0,1920,1080,60
       monitorrule=eDP-1,0.55,1,scroll,0,1,0,0,1920,1080,60
-
-      tagrule=id:1,no_hide:1,layout_name:scroller
-      tagrule=id:2,no_hide:1,layout_name:scroller
-      tagrule=id:3,no_hide:1,layout_name:scroller
-      tagrule=id:4,no_hide:1,layout_name:scroller
-      tagrule=id:5,no_hide:1,layout_name:scroller
-      tagrule=id:6,no_hide:1,layout_name:scroller
-      tagrule=id:7,no_hide:1,layout_name:scroller
-      tagrule=id:8,no_hide:1,layout_name:scroller
-      tagrule=id:9,no_hide:1,layout_name:scroller
     '';
   };
 }
