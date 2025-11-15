@@ -29,6 +29,7 @@
     "${home}/swaync.nix"
     "${home}/waybar.nix"
     "${home}/zathura.nix"
+    "${home}/zed.nix"
     "${home}/zoxide.nix"
   ];
 
