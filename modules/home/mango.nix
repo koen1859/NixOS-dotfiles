@@ -2,8 +2,8 @@
   wayland.windowManager.mango = {
     enable = true;
     autostart_sh = ''
-      # ${pkgs.waybar}/bin/waybar
-      ${pkgs.hyprpaper}/bin/hyprpaper
+      ${pkgs.waybar}/bin/waybar > /dev/null 2>&1 &
+      ${pkgs.hyprpaper}/bin/hyprpaper > /dev/null 2>&1 &
     '';
     settings = ''
       # Window effect
@@ -133,15 +133,15 @@
 
       # layout support:
       # tile,scroller,grid,deck,monocle,center_tile,vertical_tile,vertical_scroller
-      tagrule=id:1,no_hide:1,layout_name:scroller
-      tagrule=id:2,no_hide:1,layout_name:scroller
-      tagrule=id:3,no_hide:1,layout_name:scroller
-      tagrule=id:4,no_hide:1,layout_name:scroller
-      tagrule=id:5,no_hide:1,layout_name:scroller
-      tagrule=id:6,no_hide:1,layout_name:scroller
-      tagrule=id:7,no_hide:1,layout_name:scroller
-      tagrule=id:8,no_hide:1,layout_name:scroller
-      tagrule=id:9,no_hide:1,layout_name:scroller
+      tagrule=id:1,layout_name:scroller
+      tagrule=id:2,layout_name:scroller
+      tagrule=id:3,layout_name:scroller
+      tagrule=id:4,layout_name:scroller
+      tagrule=id:5,layout_name:scroller
+      tagrule=id:6,layout_name:scroller
+      tagrule=id:7,layout_name:scroller
+      tagrule=id:8,layout_name:scroller
+      tagrule=id:9,layout_name:scroller
 
       # Key Bindings
       # key name refer to `xev` or `wev` command output,
@@ -149,7 +149,7 @@
 
       # reload config, waybar
       bind=SUPER+SHIFT,r,reload_config
-      bind=NONE,F12,spawn_shell,pkill waybar; waybar
+      bind=NONE,F12,spawn_shell,pkill waybar || waybar > /dev/null 2>&1 &
 
       # menu and terminal
       bind=SUPER,r,spawn,rofi -show drun
@@ -201,7 +201,7 @@
       bind=SUPER,f,togglefullscreen,
       bind=ALT+SHIFT,f,togglefakefullscreen,
       bind=SUPER,i,minimized,
-      bind=SUPER,o,toggleoverlay,
+      bind=SUPER+SHIFT,o,toggleoverlay,
       bind=SUPER+SHIFT,I,restore_minimized
       bind=ALT,z,toggle_scratchpad
 
@@ -213,9 +213,9 @@
       bind=NONE,F11,switch_layout
 
       # tag switch
-      bind=SUPER,Left,viewtoleft,0
+      bind=ALT,Left,viewtoleft,0
       bind=CTRL,Left,viewtoleft_have_client,0
-      bind=SUPER,Right,viewtoright,0
+      bind=ALT,Right,viewtoright,0
       bind=CTRL,Right,viewtoright_have_client,0
       bind=CTRL+SUPER,Left,tagtoleft,0
       bind=CTRL+SUPER,Right,tagtoright,0
@@ -261,10 +261,10 @@
       bind=CTRL+SHIFT,Right,movewin,+50,+0
 
       # resizewin
-      bind=SUPER+SHIFT,Up,resizewin,+0,-50
-      bind=SUPER+SHIFT,Down,resizewin,+0,+50
-      bind=SUPER+SHIFT,Left,resizewin,-50,+0
-      bind=SUPER+SHIFT,Right,resizewin,+50,+0
+      bind=SUPER,Up,resizewin,+0,-50
+      bind=SUPER,Down,resizewin,+0,+50
+      bind=SUPER,Left,resizewin,-50,+0
+      bind=SUPER,Right,resizewin,+50,+0
 
       # Mouse Button Bindings
       # NONE mode key only work in ov mode

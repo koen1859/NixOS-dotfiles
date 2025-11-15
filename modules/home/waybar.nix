@@ -30,7 +30,7 @@
         ];
         "ext/workspaces" = {
           format = "{icon}";
-          ignore-hidden = true;
+          ignore-hidden = false;
           on-click = "activate";
           sort-by-id = true;
         };
