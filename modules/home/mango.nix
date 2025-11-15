@@ -279,9 +279,9 @@
       axisbind=SUPER,DOWN,viewtoright_have_client
 
       # monitors
-      monitorrule=DP-1,0.55,1,scroll,0,1,0,0,3440,1440,60
-      monitorrule=HDMI-A-1,0.55,1,scroll,0,1,1920,0,1920,1080,60
-      monitorrule=eDP-1,0.55,1,scroll,0,1,0,0,1920,1080,60
+      monitorrule=DP-1,0.5,1,scroller,0,1,0,0,3440,1440,60
+      monitorrule=HDMI-A-1,0.5,1,scroller,0,1,3440,0,1920,1080,60
+      monitorrule=eDP-1,0.5,1,scroller,0,1,0,0,1920,1080,60
     '';
   };
 }
