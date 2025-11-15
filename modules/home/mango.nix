@@ -244,10 +244,10 @@
       bind=SUPER+SHIFT,9,tag,9,0
 
       # monitor switch
-      bind=alt+shift,Left,focusmon,left
-      bind=alt+shift,Right,focusmon,right
-      bind=SUPER+Alt,Left,tagmon,left
-      bind=SUPER+Alt,Right,tagmon,right
+      bind=SUPER+shift,h,focusmon,left
+      bind=SUPER+shift,l,focusmon,right
+      bind=SUPER+Alt,h,tagmon,left
+      bind=SUPER+Alt,l,tagmon,right
 
       # gaps
       bind=ALT+SHIFT,X,incgaps,1
