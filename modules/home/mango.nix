@@ -170,7 +170,7 @@
       bind=SUPER+SHIFT,w,spawn,${pkgs.hyprlock}/bin/hyprlock
       bind=SUPER,m,spawn,proton-mail
       bind=SUPER,p,spawn,proton-pass
-      bind=SUPER,o,spawn_shell,zathura "$(find "$HOME/Documents/Books" -maxdepth 2 -type f | rofi -dmenu -i -p 'Open book:')"
+      bind=SUPER,o,spawn_shell,book=$(find "$HOME/Documents/Books" -maxdepth 2 -type f | rofi -dmenu -i -p 'Open book:'); [ -n "$book" ] && zathura "$book"
       bind=SUPER,e,spawn,rofi -show filebrowser
       bind=SUPER+SHIFT,e,spawn,thunar
       bind=SUPER,n,spawn,${pkgs.networkmanagerapplet}/bin/nm-connection-editor
