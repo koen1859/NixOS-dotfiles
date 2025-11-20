@@ -1,0 +1,128 @@
+{
+  description = "System Flake";
+
+  inputs = {
+    nixpkgs.url = "nixpkgs/nixos-25.05";
+    flake-utils.url = "github:numtide/flake-utils";
+    stylix = {
+      url = "github:danth/stylix/release-25.05";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    home-manager = {
+      url = "github:nix-community/home-manager/release-25.05";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    nvim-conf = {
+      url = "gitlab:koenstevens/nvim-conf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    spicetify-nix = {
+      url = "github:Gerg-L/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    nixcord = {
+      url = "github:kaylorben/nixcord";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    firefox-addons = {
+      url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    auto-cpufreq = {
+      url = "github:AdnanHodzic/auto-cpufreq";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    nix-gaming = {
+      url = "github:fufexan/nix-gaming";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    mango = {
+      url = "github:DreamMaoMao/mango";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+  };
+
+  outputs = {
+    self,
+    nixpkgs,
+    home-manager,
+    stylix,
+    nixcord,
+    nvim-conf,
+    auto-cpufreq,
+    sops-nix,
+    mango,
+    ...
+  } @ inputs: let
+    lib = nixpkgs.lib;
+    system = "x86_64-linux";
+    pkgs = nixpkgs.legacyPackages.${system};
+
+    username = "koenstevens";
+    wallpaper = ./wallpapers/a_road_surrounded_by_trees.jpg;
+    core = "${self}/modules/core";
+    home = "${self}/modules/home";
+
+    commonSpecialArgs = {
+      inherit inputs username wallpaper core home;
+    };
+
+    mkHost = name: hostConfig: extraModules:
+      lib.nixosSystem {
+        inherit system;
+        specialArgs = commonSpecialArgs;
+        modules =
+          [
+            hostConfig
+            stylix.nixosModules.stylix
+            sops-nix.nixosModules.sops
+          ]
+          ++ extraModules;
+      };
+
+    mkHome = name: hostHome: extraModules:
+      home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        modules =
+          [
+            hostHome
+            stylix.homeModules.stylix
+            nvim-conf.homeModules.default
+            inputs.sops-nix.homeManagerModules.sops
+          ]
+          ++ extraModules;
+        extraSpecialArgs = commonSpecialArgs;
+      };
+  in {
+    nixosConfigurations = {
+      nixlaptop = mkHost "nixlaptop" ./hosts/laptop/configuration.nix [
+        core
+        auto-cpufreq.nixosModules.default
+        mango.nixosModules.mango
+      ];
+      nixpc = mkHost "nixpc" ./hosts/pc/configuration.nix [
+        core
+        mango.nixosModules.mango
+      ];
+      nixserver = mkHost "nixserver" ./hosts/server/configuration.nix ["${self}/modules/core/server.nix"];
+    };
+
+    homeConfigurations = {
+      "${username}@nixlaptop" = mkHome "nixlaptop" ./hosts/laptop/home.nix [
+        home
+        nixcord.homeModules.nixcord
+        mango.hmModules.mango
+      ];
+      "${username}@nixpc" = mkHome "nixpc" ./hosts/pc/home.nix [
+        home
+        nixcord.homeModules.nixcord
+        mango.hmModules.mango
+      ];
+      "${username}@nixserver" = mkHome "nixserver" ./hosts/server/home.nix ["${self}/modules/home/server.nix"];
+    };
+  };
+}

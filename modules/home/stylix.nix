@@ -1,13 +1,12 @@
 {
   pkgs,
   wallpaper,
-  theme,
   ...
 }: {
   stylix = {
     enable = true;
     image = wallpaper;
-    base16Scheme = theme;
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
     polarity = "dark";
     cursor = {
       package = pkgs.bibata-cursors;

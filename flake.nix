@@ -4,6 +4,7 @@
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-25.05";
     flake-utils.url = "github:numtide/flake-utils";
+    flake-parts.url = "github:hercules-ci/flake-parts";
     stylix = {
       url = "github:danth/stylix/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -48,83 +49,12 @@
 
   outputs = {
     self,
-    nixpkgs,
-    home-manager,
-    stylix,
-    nixcord,
-    nvim-conf,
-    auto-cpufreq,
-    sops-nix,
-    mango,
+    flake-parts,
     ...
-  } @ inputs: let
-    lib = nixpkgs.lib;
-    system = "x86_64-linux";
-    pkgs = nixpkgs.legacyPackages.${system};
+  } @ inputs:
+    flake-parts.lib.mkFlake {inherit inputs;} {
+      systems = ["x86_64-linux" "aarch64-linux"];
 
-    username = "koenstevens";
-    theme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
-    wallpaper = ./wallpapers/a_road_surrounded_by_trees.jpg;
-    core = "${self}/modules/core";
-    home = "${self}/modules/home";
-    shell = pkgs.zsh;
-
-    commonSpecialArgs = {
-      inherit inputs username theme wallpaper core home shell;
+      imports = [./nixos.nix ./home.nix];
     };
-
-    mkHost = name: hostConfig: extraModules:
-      lib.nixosSystem {
-        inherit system;
-        specialArgs = commonSpecialArgs;
-        modules =
-          [
-            hostConfig
-            stylix.nixosModules.stylix
-            sops-nix.nixosModules.sops
-          ]
-          ++ extraModules;
-      };
-
-    mkHome = name: hostHome: extraModules:
-      home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        modules =
-          [
-            hostHome
-            stylix.homeModules.stylix
-            nvim-conf.homeModules.default
-            inputs.sops-nix.homeManagerModules.sops
-          ]
-          ++ extraModules;
-        extraSpecialArgs = commonSpecialArgs;
-      };
-  in {
-    nixosConfigurations = {
-      nixlaptop = mkHost "nixlaptop" ./hosts/laptop/configuration.nix [
-        core
-        auto-cpufreq.nixosModules.default
-        mango.nixosModules.mango
-      ];
-      nixpc = mkHost "nixpc" ./hosts/pc/configuration.nix [
-        core
-        mango.nixosModules.mango
-      ];
-      nixserver = mkHost "nixserver" ./hosts/server/configuration.nix ["${self}/modules/core/server.nix"];
-    };
-
-    homeConfigurations = {
-      "${username}@nixlaptop" = mkHome "nixlaptop" ./hosts/laptop/home.nix [
-        home
-        nixcord.homeModules.nixcord
-        mango.hmModules.mango
-      ];
-      "${username}@nixpc" = mkHome "nixpc" ./hosts/pc/home.nix [
-        home
-        nixcord.homeModules.nixcord
-        mango.hmModules.mango
-      ];
-      "${username}@nixserver" = mkHome "nixserver" ./hosts/server/home.nix ["${self}/modules/home/server.nix"];
-    };
-  };
 }

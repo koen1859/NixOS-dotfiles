@@ -45,6 +45,5 @@
   };
   programs = {
     home-manager.enable = true;
-    fuzzel.enable = true;
   };
 }

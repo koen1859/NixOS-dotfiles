@@ -1,10 +1,10 @@
 {
-  shell,
+  pkgs,
   username,
   ...
 }: {
   users = {
-    defaultUserShell = shell;
+    defaultUserShell = pkgs.zsh;
     users = {
       ${username} = {
         isNormalUser = true;
