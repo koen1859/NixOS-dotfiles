@@ -39,7 +39,6 @@ in {
         specialArgs = commonSpecialArgs;
         modules = [
           ./hosts/server/configuration.nix
-          core
           inputs.stylix.nixosModules.stylix
           inputs.sops-nix.nixosModules.sops
           "${self}/modules/core/server.nix"

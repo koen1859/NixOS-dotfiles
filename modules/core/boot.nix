@@ -17,5 +17,6 @@
     #   "quiet"
     #   "splash"
     # ];
+    binfmt.emulatedSystems = ["aarch64-linux"];
   };
 }
