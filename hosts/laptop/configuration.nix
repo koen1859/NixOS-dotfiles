@@ -4,6 +4,7 @@
     ./modules/auto-cpufreq.nix
     ./modules/hardware.nix
     ./modules/gaming.nix
+    ./modules/boot.nix
   ];
 
   networking.hostName = "nixlaptop";

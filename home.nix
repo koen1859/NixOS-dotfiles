@@ -54,5 +54,17 @@ in {
           inputs.sops-nix.homeManagerModules.sops
         ];
       });
+    "${username}@rpi5" = withSystem "aarch64-linux" ({pkgs, ...}:
+      inputs.home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        extraSpecialArgs = commonSpecialArgs;
+        modules = [
+          ./hosts/rpi5/home.nix
+          "${self}/modules/home/server.nix"
+          inputs.stylix.homeModules.stylix
+          inputs.nvim-conf.homeModules.default
+          inputs.sops-nix.homeManagerModules.sops
+        ];
+      });
   };
 }

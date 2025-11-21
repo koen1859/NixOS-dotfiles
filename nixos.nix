@@ -7,9 +7,10 @@
   wallpaper = ./wallpapers/a_road_surrounded_by_trees.jpg;
   core = "${self}/modules/core";
   home = "${self}/modules/home";
+  nixos-raspberrypi = inputs.nixos-raspberrypi;
 
   commonSpecialArgs = {
-    inherit inputs username wallpaper core home;
+    inherit inputs username wallpaper core home nixos-raspberrypi;
   };
 in {
   flake = {
@@ -42,6 +43,18 @@ in {
           inputs.stylix.nixosModules.stylix
           inputs.sops-nix.nixosModules.sops
           "${self}/modules/core/server.nix"
+        ];
+      };
+      rpi5 = inputs.nixos-raspberrypi.lib.nixosSystemFull {
+        specialArgs = commonSpecialArgs;
+        modules = [
+          ./hosts/rpi5/configuration.nix
+          inputs.stylix.nixosModules.stylix
+          inputs.sops-nix.nixosModules.sops
+          "${self}/modules/core/server.nix"
+
+          inputs.nixos-raspberrypi.nixosModules.raspberry-pi-5.base
+          inputs.nixos-raspberrypi.nixosModules.raspberry-pi-5.display-vc4
         ];
       };
     };

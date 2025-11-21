@@ -4,7 +4,6 @@
   ...
 }: {
   imports = [
-    "${core}/boot.nix"
     "${core}/environment.nix"
     "${core}/users.nix"
     "${core}/stylix.nix"

@@ -8,6 +8,7 @@
     ./modules/osrm.nix
     ./modules/searxng.nix
     ./modules/adguard.nix
+    ./modules/boot.nix
   ];
 
   networking.hostName = "nixserver";
