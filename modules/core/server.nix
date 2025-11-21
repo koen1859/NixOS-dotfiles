@@ -7,7 +7,6 @@
     "${core}/environment.nix"
     "${core}/users.nix"
     "${core}/stylix.nix"
-    "${core}/network.nix"
     "${core}/nh.nix"
     "${core}/sops.nix"
   ];

@@ -8,6 +8,7 @@
   ];
 
   networking.hostName = "nixlaptop";
+  networking.networkmanager.enable = true;
 
   fileSystems."/home/koenstevens/secondary_storage" = {
     device = "/dev/nvme0n1p2";

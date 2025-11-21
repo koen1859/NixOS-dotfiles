@@ -4,7 +4,6 @@
     libnotify
     timg
     typst
-    mullvad-browser
     signal-desktop
     proton-pass
     protonmail-desktop

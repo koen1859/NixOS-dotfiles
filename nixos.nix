@@ -49,9 +49,10 @@ in {
         specialArgs = commonSpecialArgs;
         modules = [
           ./hosts/rpi5/configuration.nix
+          core
           inputs.stylix.nixosModules.stylix
           inputs.sops-nix.nixosModules.sops
-          "${self}/modules/core/server.nix"
+          inputs.mango.nixosModules.mango
 
           inputs.nixos-raspberrypi.nixosModules.raspberry-pi-5.base
           inputs.nixos-raspberrypi.nixosModules.raspberry-pi-5.display-vc4

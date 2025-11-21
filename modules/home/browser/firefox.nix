@@ -169,7 +169,7 @@
   };
 in {
   programs.firefox = {
-    enable = true;
+    enable = false;
     profiles = {
       default = {
         inherit settings search;

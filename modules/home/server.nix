@@ -9,7 +9,6 @@
     "${home}/btop.nix"
     "${home}/fastfetch.nix"
     "${home}/git.nix"
-    "${home}/packages.nix"
     "${home}/programming.nix"
     "${home}/starship.nix"
     "${home}/stylix.nix"
