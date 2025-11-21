@@ -6,7 +6,7 @@
   imports = [
     "${home}/shell"
     "${home}/atuin.nix"
-    "${home}/btop.nix"
+    # "${home}/btop.nix"
     "${home}/fastfetch.nix"
     "${home}/git.nix"
     "${home}/programming.nix"

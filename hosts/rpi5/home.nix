@@ -1,6 +1,6 @@
 {
   imports = [
-    ./modules/mango.nix
+    # ./modules/mango.nix
   ];
-  nixpkgs.config.allowUnsupportedSystem = true;
+  nixpkgs.config.allowUnsupportedSystem = false;
 }

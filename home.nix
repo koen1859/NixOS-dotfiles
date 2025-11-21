@@ -60,12 +60,10 @@ in {
         extraSpecialArgs = commonSpecialArgs;
         modules = [
           ./hosts/rpi5/home.nix
-          home
+          "${self}/modules/home/server.nix"
           inputs.stylix.homeModules.stylix
           inputs.nvim-conf.homeModules.default
           inputs.sops-nix.homeManagerModules.sops
-          inputs.nixcord.homeModules.nixcord
-          inputs.mango.hmModules.mango
         ];
       });
   };

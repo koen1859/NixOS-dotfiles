@@ -153,7 +153,7 @@
 
       # menu and terminal
       bind=SUPER,r,spawn,rofi -show drun
-      bind=SUPER,Return,spawn,wezterm
+      bind=SUPER,Return,spawn,foot
 
       # audio and brightness
       bind=NONE,F2,spawn,wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%
