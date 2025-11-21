@@ -12,6 +12,8 @@
     "${home}/programming.nix"
     "${home}/starship.nix"
     "${home}/stylix.nix"
+    "${home}/sops.nix"
+    "${home}/ssh.nix"
     "${home}/zoxide.nix"
   ];
 
