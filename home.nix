@@ -5,7 +5,7 @@
   ...
 }: let
   username = "koenstevens";
-  wallpaper = ./wallpapers/a_road_surrounded_by_trees.jpg;
+  wallpaper = ./wallpapers/wallhaven-r7x9z7_3440x1440.png;
   core = "${self}/modules/core";
   home = "${self}/modules/home";
 
