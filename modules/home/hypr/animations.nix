@@ -1,7 +1,7 @@
 {
   wayland.windowManager.hyprland.settings = {
     animations = {
-      enabled = false;
+      enabled = true;
       bezier = [
         "linear, 0, 0, 1, 1"
         "wind, 0.05, 0.9, 0.1, 1.05"

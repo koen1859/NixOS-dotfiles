@@ -5,7 +5,7 @@
     xwayland.enable = true;
     settings = {
       exec-once = [
-        # "${pkgs.waybar}/bin/waybar"
+        "${pkgs.waybar}/bin/waybar"
         "${pkgs.hyprpaper}/bin/hyprpaper"
       ];
       input = {
@@ -24,10 +24,10 @@
       };
       general = {
         "$mainMod" = "SUPER";
-        layout = "dwindle";
-        gaps_in = 0;
-        gaps_out = 0;
-        border_size = 0;
+        layout = "master";
+        gaps_in = 5;
+        gaps_out = 5;
+        border_size = 2;
         resize_on_border = false;
         allow_tearing = false;
       };
@@ -37,15 +37,16 @@
       };
       master = {
         new_status = "master";
+        new_on_top = true;
       };
       misc = {
         force_default_wallpaper = 0;
         disable_hyprland_logo = true;
       };
       decoration = {
-        rounding = 0;
+        rounding = 5;
         active_opacity = 1.0;
-        inactive_opacity = 0.9;
+        inactive_opacity = 0.7;
         shadow = {
           enabled = true;
           ignore_window = true;
@@ -54,7 +55,7 @@
           render_power = 4;
         };
         blur = {
-          enabled = false;
+          enabled = true;
           xray = true;
           special = false;
           new_optimizations = true;
@@ -73,5 +74,7 @@
       monitor=HDMI-A-1,1920x1080@60,3440x0,1
       monitor=eDP-1,1920x1080@60,3440x0,1.25
     '';
+    plugins = with pkgs.hyprlandPlugins; [
+    ];
   };
 }

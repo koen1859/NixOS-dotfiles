@@ -11,20 +11,20 @@
         layer = "top";
         position = "top";
         modules-center = [
-          "hyprland/window"
-          "dwl/window"
+          # "hyprland/window"
+          # "dwl/window"
         ];
         modules-left = [
           "ext/workspaces"
           "hyprland/workspaces"
         ];
         modules-right = [
-          # "pulseaudio"
+          "pulseaudio"
           "cpu"
           "memory"
           # "disk"
           "network"
-          # "custom/notification"
+          "custom/notification"
           "battery"
           "clock"
         ];
