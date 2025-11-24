@@ -70,9 +70,9 @@
       };
     };
     extraConfig = ''
-      monitor=DP-1,3440x1440@60,0x0,1
-      monitor=HDMI-A-1,1920x1080@60,3440x0,1
-      monitor=eDP-1,1920x1080@60,3440x0,1.25
+      monitor=DP-2,3440x1440@180,0x0,1
+      monitor=DP-1,3440x1440@60,3440x0,1
+      monitor=eDP-1,1920x1080@60,0x0,1.25
     '';
     plugins = with pkgs.hyprlandPlugins; [
     ];
