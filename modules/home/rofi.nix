@@ -11,7 +11,7 @@ in {
   programs.rofi = {
     enable = true;
     cycle = false;
-    package = pkgs.rofi;
+    package = pkgs.rofi-wayland;
     extraConfig = {
       modi = "drun,filebrowser,ssh";
       show-icons = true;

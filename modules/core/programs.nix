@@ -6,6 +6,7 @@
     thunar.enable = true;
     hyprland.enable = true;
     mango.enable = true;
+    niri.enable = true;
   };
   xdg.portal = {
     enable = true;

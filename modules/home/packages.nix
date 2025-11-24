@@ -9,6 +9,7 @@
     protonmail-desktop
     onlyoffice-desktopeditors
     onefetch
+    brightnessctl
   ];
 
   programs = {
@@ -17,6 +18,7 @@
     nvim-conf.enable = true;
     ripgrep.enable = true;
     fzf.enable = true;
+    fuzzel.enable = true;
   };
 
   nixpkgs.config.allowUnfree = true;
