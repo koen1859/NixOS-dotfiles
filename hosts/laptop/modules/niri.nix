@@ -102,7 +102,7 @@
     binds {
         Mod+Shift+Slash { show-hotkey-overlay; }
 
-        Mod+Return { spawn "wezterm"; }
+        Mod+Return { spawn "foot"; }
         Mod+R { spawn "rofi" "-show" "drun"; }
         Mod+E { spawn "rofi" "-show" "filebrowser"; }
         Super+Alt+L { spawn "hyprlock"; }

@@ -153,11 +153,12 @@
 
       # menu and terminal
       bind=SUPER,r,spawn,rofi -show drun
-      bind=SUPER,Return,spawn,wezterm
+      bind=SUPER,Return,spawn,foot
 
       # audio and brightness
-      bind=NONE,F2,spawn,wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%
-      bind=NONE,F3,spawn,wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
+      bind=NONE,F1,sapwn,wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+      bind=NONE,F2,spawn,wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%
+      bind=NONE,F3,spawn,wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%+
       bind=NONE,F4,spawn,${pkgs.brightnessctl}/bin/brightnessctl set 1%-
       bind=NONE,F5,spawn,${pkgs.brightnessctl}/bin/brightnessctl set 1%+
 
@@ -279,9 +280,8 @@
       axisbind=SUPER,DOWN,viewtoright_have_client
 
       # monitors
-      monitorrule=DP-1,0.5,1,scroller,0,1,0,0,3440,1440,60
-      monitorrule=HDMI-A-1,0.5,1,scroller,0,1,3440,0,1920,1080,60
-      monitorrule=eDP-1,0.5,1,scroller,0,1,0,0,1920,1080,60
+      monitorrule=DP-2,0.5,1,scroller,0,1,0,0,3440,1440,180
+      monitorrule=DP-1,0.5,1,scroller,0,1,3440,0,3440,1440,60
     '';
   };
 }

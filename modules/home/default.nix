@@ -13,6 +13,7 @@
     "${home}/atuin.nix"
     "${home}/btop.nix"
     "${home}/fastfetch.nix"
+    "${home}/foot.nix"
     "${home}/git.nix"
     "${home}/latex.nix"
     "${home}/nixcord.nix"

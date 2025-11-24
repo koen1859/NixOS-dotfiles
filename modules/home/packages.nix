@@ -18,7 +18,7 @@
     nvim-conf.enable = true;
     ripgrep.enable = true;
     fzf.enable = true;
-    fuzzel.enable = true;
+    foot.enable = true;
   };
 
   nixpkgs.config.allowUnfree = true;

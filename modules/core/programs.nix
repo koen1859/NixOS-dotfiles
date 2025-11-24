@@ -7,7 +7,9 @@
     hyprland.enable = true;
     mango.enable = true;
     niri.enable = true;
+    xwayland.enable = true;
   };
+  environment.systemPackages = with pkgs; [xwayland-satellite];
   xdg.portal = {
     enable = true;
     config = {
