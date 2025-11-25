@@ -157,7 +157,7 @@
 
       # audio and brightness
       bind=NONE,F1,sapwn,wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
-      bind=NONE,F2,spawn,wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%
+      bind=NONE,F2,spawn,wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%-
       bind=NONE,F3,spawn,wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%+
       bind=NONE,F4,spawn,${pkgs.brightnessctl}/bin/brightnessctl set 1%-
       bind=NONE,F5,spawn,${pkgs.brightnessctl}/bin/brightnessctl set 1%+
