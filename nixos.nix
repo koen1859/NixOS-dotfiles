@@ -4,7 +4,7 @@
   ...
 }: let
   username = "koenstevens";
-  wallpaper = ./wallpapers/a_road_surrounded_by_trees.jpg;
+  wallpaper = ./wallpapers/wallhaven-8g5qr2_3440x1440.png;
   core = "${self}/modules/core";
   home = "${self}/modules/home";
   nixos-raspberrypi = inputs.nixos-raspberrypi;

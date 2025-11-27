@@ -5,7 +5,7 @@
   ...
 }: let
   username = "koenstevens";
-  wallpaper = ./wallpapers/wallhaven-r7x9z7_3440x1440.png;
+  wallpaper = ./wallpapers/wallhaven-8g5qr2_3440x1440.png;
   core = "${self}/modules/core";
   home = "${self}/modules/home";
 
