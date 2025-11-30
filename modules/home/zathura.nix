@@ -1,7 +1,11 @@
-{config, ...}: {
+{
+  config,
+  lib,
+  ...
+}: {
   programs.zathura = {
     enable = true;
-    options = {
+    options = lib.mkForce {
       default-bg = "#${config.lib.stylix.colors.base00}";
       default-fg = "#${config.lib.stylix.colors.base0D}";
       inputbar-bg = "#${config.lib.stylix.colors.base00}";

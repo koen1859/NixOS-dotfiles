@@ -43,7 +43,6 @@
     autoEnable = true;
     targets = {
       waybar.enable = false;
-      zathura.enable = false;
       spicetify.enable = false;
       firefox = {
         profileNames = ["default"];
