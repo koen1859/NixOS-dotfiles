@@ -24,6 +24,7 @@ in {
           inputs.sops-nix.nixosModules.sops
           inputs.auto-cpufreq.nixosModules.default
           inputs.mango.nixosModules.mango
+          inputs.noctalia.nixosModules.default
         ];
       };
       nixpc = inputs.nixpkgs.lib.nixosSystem {
@@ -34,6 +35,7 @@ in {
           inputs.stylix.nixosModules.stylix
           inputs.sops-nix.nixosModules.sops
           inputs.mango.nixosModules.mango
+          inputs.noctalia.nixosModules.default
         ];
       };
       nixserver = inputs.nixpkgs.lib.nixosSystem {

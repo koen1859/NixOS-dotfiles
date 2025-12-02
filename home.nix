@@ -27,6 +27,7 @@ in {
             inputs.sops-nix.homeManagerModules.sops
             inputs.nixcord.homeModules.nixcord
             inputs.mango.hmModules.mango
+            inputs.noctalia.homeModules.default
           ];
         });
       "${username}@nixpc" = withSystem "x86_64-linux" ({pkgs, ...}:
@@ -41,6 +42,7 @@ in {
             inputs.sops-nix.homeManagerModules.sops
             inputs.nixcord.homeModules.nixcord
             inputs.mango.hmModules.mango
+            inputs.noctalia.homeModules.default
           ];
         });
       "${username}@nixserver" = withSystem "x86_64-linux" ({pkgs, ...}:

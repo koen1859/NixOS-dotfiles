@@ -12,6 +12,7 @@
   environment.systemPackages = with pkgs; [xwayland-satellite];
   xdg.portal = {
     enable = true;
+    wlr.enable = true;
     config = {
       common = {
         default = ["hyprland"];

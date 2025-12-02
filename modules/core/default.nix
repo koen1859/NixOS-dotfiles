@@ -11,6 +11,7 @@
     "${core}/sops.nix"
     "${core}/stylix.nix"
     "${core}/network.nix"
+    "${core}/noctalia.nix"
     "${core}/nh.nix"
     "${core}/flatpak.nix"
   ];

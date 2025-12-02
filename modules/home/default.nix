@@ -17,6 +17,7 @@
     "${home}/git.nix"
     "${home}/latex.nix"
     "${home}/nixcord.nix"
+    "${home}/noctalia.nix"
     "${home}/packages.nix"
     "${home}/programming.nix"
     "${home}/qt.nix"

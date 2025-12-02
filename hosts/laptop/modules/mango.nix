@@ -152,13 +152,14 @@
       bind=NONE,F12,spawn_shell,pkill waybar || waybar > /dev/null 2>&1 &
 
       # menu and terminal
-      bind=SUPER,r,spawn,rofi -show drun
+      # bind=SUPER,r,spawn,rofi -show drun
+      bind=SUPER,r,spawn,noctalia-shell ipc call launcher toggle
       bind=SUPER,Return,spawn,foot
 
       # audio and brightness
-      bind=NONE,F1,spawn,wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
-      bind=NONE,F2,spawn,wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%-
-      bind=NONE,F3,spawn,wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%+
+      bind=NONE,XF86AudioMute,spawn,noctalia-shell ipc call volume muteOutput
+      bind=NONE,XF86AudioLowerVolume,spawn,noctalia-shell ipc call volume decrease
+      bind=NONE,XF86AudioRaiseVolume,spawn,noctalia-shell ipc call volume increase
       bind=NONE,F4,spawn,${pkgs.brightnessctl}/bin/brightnessctl set 1%-
       bind=NONE,F5,spawn,${pkgs.brightnessctl}/bin/brightnessctl set 1%+
 
@@ -167,7 +168,8 @@
       bind=SUPER+SHIFT,b,spawn,brave --incognito
       bind=SUPER,a,spawn,brave --app=https://chatgpt.com
       bind=SUPER,s,spawn,${pkgs.hyprshot}/bin/hyprshot -m region
-      bind=SUPER,w,spawn,${pkgs.wlogout}/bin/wlogout
+      # bind=SUPER,w,spawn,${pkgs.wlogout}/bin/wlogout
+      bind=SUPER,w,spawn,noctalia-shell ipc call sessionMenu toggle
       bind=SUPER+SHIFT,w,spawn,${pkgs.hyprlock}/bin/hyprlock
       bind=SUPER,m,spawn,proton-mail
       bind=SUPER,p,spawn,proton-pass
