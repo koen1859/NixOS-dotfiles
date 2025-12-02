@@ -2,8 +2,9 @@
   wayland.windowManager.mango = {
     enable = true;
     autostart_sh = ''
-      ${pkgs.waybar}/bin/waybar > /dev/null 2>&1 &
-      ${pkgs.hyprpaper}/bin/hyprpaper > /dev/null 2>&1 &
+      # ${pkgs.waybar}/bin/waybar > /dev/null 2>&1 &
+      # ${pkgs.hyprpaper}/bin/hyprpaper > /dev/null 2>&1 &
+      noctalia-shell
     '';
     settings = ''
       # Window effect

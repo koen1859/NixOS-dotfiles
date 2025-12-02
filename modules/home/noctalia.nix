@@ -68,6 +68,7 @@
         name = "Groningen";
       };
       appLauncher = {
+        enabled = true;
         terminalCommand = "foot";
       };
       colorSchemes.predefinedScheme = "Gruvbox";
