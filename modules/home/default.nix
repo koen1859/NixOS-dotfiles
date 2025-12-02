@@ -16,6 +16,7 @@
     "${home}/foot.nix"
     "${home}/git.nix"
     "${home}/latex.nix"
+    "${home}/mango.nix"
     "${home}/nixcord.nix"
     "${home}/noctalia.nix"
     "${home}/packages.nix"

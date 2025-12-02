@@ -1,9 +1,6 @@
 {
   imports = [
-    ./modules/tlp.nix
-    ./modules/auto-cpufreq.nix
     ./modules/hardware.nix
-    ./modules/gaming.nix
     ./modules/boot.nix
   ];
 
@@ -15,4 +12,6 @@
     fsType = "ext4";
     options = ["defaults"];
   };
+
+  services.power-profiles-daemon.enable = true;
 }

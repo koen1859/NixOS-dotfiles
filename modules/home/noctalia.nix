@@ -1,4 +1,8 @@
-{wallpaper, ...}: {
+{
+  username,
+  wallpaper,
+  ...
+}: {
   programs.noctalia-shell = {
     enable = true;
     settings = {
@@ -58,6 +62,9 @@
       sessionMenu = {
         enableCountdown = false;
       };
+      controlCenter = {
+        position = "top_center";
+      };
       dock = {
         monitors = ["eDP-1" "DP-1" "DP-2" "HDMI-A-1"];
       };
@@ -75,6 +82,7 @@
       wallpaper = {
         enabled = true;
         defaultWallpaper = wallpaper;
+        directory = "/home/${username}/.dotfiles/wallpapers";
         monitors = ["eDP-1" "DP-1" "DP-2" "HDMI-A-1"];
       };
     };

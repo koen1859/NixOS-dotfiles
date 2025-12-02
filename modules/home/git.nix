@@ -2,12 +2,13 @@
   programs = {
     git = {
       enable = true;
-      userName = username;
-      userEmail = "gitlab.slurp563@passmail.net";
-      extraConfig = {
+      settings = {
+        user = {
+          name = username;
+          email = "gitlab.slurp563@passmail.net";
+        };
         init.defaultBranch = "main";
       };
     };
-    lazygit.enable = true;
   };
 }

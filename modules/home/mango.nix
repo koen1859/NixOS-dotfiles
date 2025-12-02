@@ -1,9 +1,11 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  config,
+  ...
+}: {
   wayland.windowManager.mango = {
     enable = true;
     autostart_sh = ''
-      # ${pkgs.waybar}/bin/waybar > /dev/null 2>&1 &
-      # ${pkgs.hyprpaper}/bin/hyprpaper > /dev/null 2>&1 &
       noctalia-shell
     '';
     settings = ''
@@ -112,25 +114,24 @@
       swipe_min_threshold=1
 
       # mouse
-      # need relogin to make it apply
       mouse_natural_scrolling=0
 
       # Appearance
       gappih=5
       gappiv=5
-      gappoh=10
-      gappov=10
+      gappoh=5
+      gappov=5
       scratchpad_width_ratio=0.8
       scratchpad_height_ratio=0.9
-      borderpx=4
-      rootcolor=0x201b14ff
-      bordercolor=0x444444ff
-      focuscolor=0xc9b890ff
-      maximizescreencolor=0x89aa61ff
-      urgentcolor=0xad401fff
-      scratchpadcolor=0x516c93ff
-      globalcolor=0xb153a7ff
-      overlaycolor=0x14a57cff
+      borderpx=2
+      rootcolor=0x${builtins.substring 1 6 config.lib.stylix.colors.base00}ff
+      # bordercolor=0x${builtins.substring 1 6 config.lib.stylix.colors.base02}ff
+      focuscolor=0x${builtins.substring 1 6 config.lib.stylix.colors.base0D}ff
+      maximizescreencolor=0x${builtins.substring 1 6 config.lib.stylix.colors.base0D}ff
+      urgentcolor=0x${builtins.substring 1 6 config.lib.stylix.colors.base08}ff
+      scratchpadcolor=${builtins.substring 1 6 config.lib.stylix.colors.base0B}ff
+      globalcolor=0x${builtins.substring 1 6 config.lib.stylix.colors.base0B}ff
+      overlaycolor=0x${builtins.substring 1 6 config.lib.stylix.colors.base0B}ff
 
       # layout support:
       # tile,scroller,grid,deck,monocle,center_tile,vertical_tile,vertical_scroller
@@ -148,15 +149,16 @@
       # key name refer to `xev` or `wev` command output,
       # mod keys name: super,ctrl,alt,shift,none
 
-      # reload config, waybar
+      # reload config
       bind=SUPER+SHIFT,r,reload_config
-      # bind=NONE,F12,spawn_shell,pkill waybar || waybar > /dev/null 2>&1 &
-      bind=NONE,F12,spawn,noctalia-shell ipc call bar toggle
 
-      # menu and terminal
-      # bind=SUPER,r,spawn,rofi -show drun
+      # noctalia shell
       bind=SUPER,r,spawn,noctalia-shell ipc call launcher toggle
-      bind=SUPER,Return,spawn,foot
+      bind=SUPER+ALT,b,spawn,noctalia-shell ipc call bar toggle
+      bind=SUPER,w,spawn,noctalia-shell ipc call sessionMenu toggle
+      bind=SUPER,t,spawn,noctalia-shell ipc call controlCenter toggle
+      bind=SUPER,c,spawn,noctalia-shell ipc call calendar toggle
+      bind=SUPER+SHIFT,w,spawn,noctalia-shell ipc call lockScreen lock
 
       # audio and brightness
       bind=NONE,XF86AudioMute,spawn,noctalia-shell ipc call volume muteOutput
@@ -164,24 +166,21 @@
       bind=NONE,XF86AudioRaiseVolume,spawn,noctalia-shell ipc call volume increase
       bind=NONE,XF86MonBrightnessDown,spawn,noctalia-shell ipc call brightness decrease
       bind=NONE,XF86MonBrightnessUp,spawn,noctalia-shell ipc call brightness increase
+      bind=NONE,XF86AudioPrev,spawn,noctalia-shell ipc call media previous
+      bind=NONE,XF86AudioPlay,spawn,noctalia-shell ipc call media playPause
+      bind=NONE,XF86AudioNext,spawn,noctalia-shell ipc call media next
 
       # apps
       bind=SUPER,b,spawn,firefox
+      bind=SUPER,Return,spawn,foot
       bind=SUPER+SHIFT,b,spawn,brave --incognito
       bind=SUPER,a,spawn,brave --app=https://chatgpt.com
       bind=SUPER,s,spawn,${pkgs.hyprshot}/bin/hyprshot -m region
-      # bind=SUPER,w,spawn,${pkgs.wlogout}/bin/wlogout
-      bind=SUPER,w,spawn,noctalia-shell ipc call sessionMenu toggle
-      bind=SUPER,t,spawn,noctalia-shell ipc call controlCenter toggle
-      bind=SUPER,c,spawn,noctalia-shell ipc call calendar toggle
-      bind=SUPER+SHIFT,w,spawn,noctalia-shell ipc call lockScreen lock
       bind=SUPER,m,spawn,proton-mail
       bind=SUPER,p,spawn,proton-pass
-      bind=SUPER,o,spawn_shell,book=$(find "$HOME/Documents/Books" -maxdepth 2 -type f | rofi -dmenu -i -p 'Open book:'); [ -n "$book" ] && zathura "$book"
-      bind=SUPER,e,spawn,rofi -show filebrowser
+      bind=SUPER,o,spawn,foot yazi ~/Documents/Books
+      bind=SUPER,e,spawn,foot yazi
       bind=SUPER+SHIFT,e,spawn,thunar
-      bind=SUPER,n,spawn,${pkgs.networkmanagerapplet}/bin/nm-connection-editor
-      bind=SUPER+SHIFT,n,spawn,${pkgs.blueman}/bin/blueman-manager
 
       # exit
       bind=SUPER+SHIFT,q,quit
@@ -217,7 +216,7 @@
       bind=ALT,x,switch_proportion_preset,
 
       # switch layout
-      bind=NONE,F11,switch_layout
+      bind=SUPER+ALT,s,switch_layout
 
       # tag switch
       bind=ALT,Left,viewtoleft,0
@@ -239,7 +238,6 @@
 
       # tag: move client to the tag and focus it
       # tagsilent: move client to the tag and not focus it
-      # bind=Alt,1,tagsilent,1
       bind=SUPER+SHIFT,1,tag,1,0
       bind=SUPER+SHIFT,2,tag,2,0
       bind=SUPER+SHIFT,3,tag,3,0
@@ -288,6 +286,7 @@
       # monitors
       monitorrule=DP-2,0.5,1,scroller,0,1,0,0,3440,1440,180
       monitorrule=DP-1,0.5,1,scroller,0,1,3440,0,3440,1440,60
+      monitorrule=eDP-1,0.5,1,scroller,0,1,0,0,1920,1080,60
     '';
   };
 }

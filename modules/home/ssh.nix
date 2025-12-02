@@ -5,6 +5,7 @@
 }: {
   programs.ssh = {
     enable = true;
+    enableDefaultConfig = false;
     matchBlocks = {
       "nixpc" = {
         hostname = builtins.readFile config.sops.secrets.home_ip.path;

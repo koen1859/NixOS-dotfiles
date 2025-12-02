@@ -4,9 +4,9 @@
     nix-ld.enable = true;
     yazi.enable = true;
     thunar.enable = true;
-    hyprland.enable = true;
+    hyprland.enable = false;
     mango.enable = true;
-    niri.enable = true;
+    niri.enable = false;
     xwayland.enable = true;
   };
   environment.systemPackages = with pkgs; [xwayland-satellite];
@@ -15,9 +15,9 @@
     wlr.enable = true;
     config = {
       common = {
-        default = ["hyprland" "wlr"];
+        default = ["wlr"];
       };
     };
-    extraPortals = [pkgs.xdg-desktop-portal-hyprland];
+    extraPortals = [pkgs.xdg-desktop-portal-wlr];
   };
 }
