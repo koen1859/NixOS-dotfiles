@@ -149,7 +149,8 @@
 
       # reload config, waybar
       bind=SUPER+SHIFT,r,reload_config
-      bind=NONE,F12,spawn_shell,pkill waybar || waybar > /dev/null 2>&1 &
+      # bind=NONE,F12,spawn_shell,pkill waybar || waybar > /dev/null 2>&1 &
+      bind=NONE,F12,spawn,noctalia-shell ipc call bar toggle
 
       # menu and terminal
       # bind=SUPER,r,spawn,rofi -show drun
@@ -160,8 +161,8 @@
       bind=NONE,XF86AudioMute,spawn,noctalia-shell ipc call volume muteOutput
       bind=NONE,XF86AudioLowerVolume,spawn,noctalia-shell ipc call volume decrease
       bind=NONE,XF86AudioRaiseVolume,spawn,noctalia-shell ipc call volume increase
-      bind=NONE,F4,spawn,${pkgs.brightnessctl}/bin/brightnessctl set 1%-
-      bind=NONE,F5,spawn,${pkgs.brightnessctl}/bin/brightnessctl set 1%+
+      bind=NONE,XF86MonBrightnessDown,spawn,noctalia-shell ipc call brightness decrease
+      bind=NONE,XF86MonBrightnessUp,spawn,noctalia-shell ipc call brightness increase
 
       # apps
       bind=SUPER,b,spawn,firefox
@@ -170,7 +171,9 @@
       bind=SUPER,s,spawn,${pkgs.hyprshot}/bin/hyprshot -m region
       # bind=SUPER,w,spawn,${pkgs.wlogout}/bin/wlogout
       bind=SUPER,w,spawn,noctalia-shell ipc call sessionMenu toggle
-      bind=SUPER+SHIFT,w,spawn,${pkgs.hyprlock}/bin/hyprlock
+      bind=SUPER,t,spawn,noctalia-shell ipc call controlCenter toggle
+      bind=SUPER,c,spawn,noctalia-shell ipc call calendar toggle
+      bind=SUPER+SHIFT,w,spawn,noctalia-shell ipc call lockScreen lock
       bind=SUPER,m,spawn,proton-mail
       bind=SUPER,p,spawn,proton-pass
       bind=SUPER,o,spawn_shell,book=$(find "$HOME/Documents/Books" -maxdepth 2 -type f | rofi -dmenu -i -p 'Open book:'); [ -n "$book" ] && zathura "$book"

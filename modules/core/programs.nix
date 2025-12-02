@@ -15,7 +15,7 @@
     wlr.enable = true;
     config = {
       common = {
-        default = ["hyprland"];
+        default = ["hyprland" "wlr"];
       };
     };
     extraPortals = [pkgs.xdg-desktop-portal-hyprland];
