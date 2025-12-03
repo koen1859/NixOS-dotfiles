@@ -1,4 +1,4 @@
-{
+{pkgs, ...}: {
   imports = [
     ./modules/hardware.nix
     ./modules/boot.nix
@@ -14,4 +14,5 @@
   };
 
   services.power-profiles-daemon.enable = true;
+  environment.systemPackages = with pkgs; [upower];
 }
