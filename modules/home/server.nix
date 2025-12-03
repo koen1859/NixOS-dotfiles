@@ -5,12 +5,9 @@
 }: {
   imports = [
     "${home}/shell"
-    "${home}/atuin.nix"
     "${home}/fastfetch.nix"
     "${home}/git.nix"
     "${home}/programming.nix"
-    "${home}/starship.nix"
-    "${home}/stylix.nix"
     "${home}/sops.nix"
     "${home}/ssh.nix"
     "${home}/zoxide.nix"

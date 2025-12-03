@@ -6,7 +6,6 @@
   imports = [
     "${core}/environment.nix"
     "${core}/users.nix"
-    "${core}/stylix.nix"
     "${core}/nh.nix"
     "${core}/sops.nix"
   ];
