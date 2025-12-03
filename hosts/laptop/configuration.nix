@@ -14,5 +14,5 @@
   };
 
   services.power-profiles-daemon.enable = true;
-  environment.systemPackages = with pkgs; [upower];
+  services.upower.enable = true;
 }
