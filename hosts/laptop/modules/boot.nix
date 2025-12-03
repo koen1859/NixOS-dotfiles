@@ -1,4 +1,4 @@
-{
+{pkgs, ...}: {
   boot = {
     loader = {
       grub = {
@@ -12,5 +12,6 @@
       efi.efiSysMountPoint = "/boot";
     };
     binfmt.emulatedSystems = ["aarch64-linux"];
+    kernelPackages = pkgs.linuxPackages_latest;
   };
 }
