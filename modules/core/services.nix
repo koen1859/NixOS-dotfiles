@@ -7,13 +7,15 @@
     };
     printing.enable = true;
     libinput.enable = true;
+    xserver.enable = true;
     greetd = {
       enable = true;
       settings = {
         default_session = {
-          command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --user-menu --remember --cmd mango";
+          command = "${pkgs.tuigreet}/bin/tuigreet --time --user-menu --remember --cmd mango";
         };
       };
     };
   };
+  systemd.tmpfiles.rules = ["L /usr/bin/which - - - - ${pkgs.which}/bin/which"];
 }
