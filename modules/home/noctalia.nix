@@ -79,11 +79,17 @@
         terminalCommand = "foot";
       };
       colorSchemes.predefinedScheme = "Gruvbox";
+      nightlight = {
+        autoSchedule = true;
+        manualSunrise = "06:30";
+        manualSunset = "18:30";
+      };
       wallpaper = {
         enabled = true;
         defaultWallpaper = wallpaper;
         directory = "/home/${username}/.dotfiles/wallpapers";
         monitors = ["eDP-1" "DP-1" "DP-2" "HDMI-A-1"];
+        useWallhaven = true;
       };
     };
   };
