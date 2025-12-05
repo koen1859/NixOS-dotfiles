@@ -10,6 +10,7 @@
     onlyoffice-desktopeditors
     onefetch
     brightnessctl
+    quickshell
   ];
 
   programs = {

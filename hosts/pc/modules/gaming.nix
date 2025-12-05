@@ -1,16 +1,21 @@
-{inputs, ...}: {
+{
+  username,
+  inputs,
+  pkgs,
+  ...
+}: {
   imports = [
     inputs.nix-gaming.nixosModules.platformOptimizations
   ];
 
-  # environment.systemPackages = [
-  #   pkgs.vulkan-loader
-  #   pkgs.vulkan-tools
-  #   pkgs.heroic
-  #   pkgs.mangohud
-  #   pkgs.prismlauncher
-  #   pkgs.lutris
-  # ];
+  environment.systemPackages = with pkgs; [
+    vulkan-loader
+    vulkan-tools
+    heroic
+    mangohud
+    prismlauncher
+    lutris
+  ];
 
   programs = {
     gamescope = {
