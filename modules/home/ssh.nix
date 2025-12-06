@@ -24,6 +24,12 @@
         identityFile = "${config.sops.secrets.ssh_private_key.path}";
         port = 2222;
       };
+      "gitserver" = {
+        hostname = builtins.readFile config.sops.secrets.home_ip.path;
+        user = "git";
+        identityFile = "${config.sops.secrets.ssh_private_key.path}";
+        port = 2222;
+      };
       "homegitserver" = {
         hostname = builtins.readFile config.sops.secrets.home_ip.path;
         user = "git";
