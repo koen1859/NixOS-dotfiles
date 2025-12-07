@@ -24,7 +24,7 @@
         identityFile = "${config.sops.secrets.ssh_private_key.path}";
         port = 2222;
       };
-      "gitserver" = {
+      "git_rpi5" = {
         hostname = builtins.readFile config.sops.secrets.home_ip.path;
         user = "git";
         identityFile = "${config.sops.secrets.ssh_private_key.path}";
