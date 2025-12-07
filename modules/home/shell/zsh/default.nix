@@ -49,8 +49,8 @@
       ff = "${pkgs.fzf}/bin/fzf";
       grep = "grep --color=auto";
       ".." = "z ..";
-      gps = "${pkgs.git}/bin/git push gitserver main";
-      gpl = "${pkgs.git}/bin/git pull gitserver main";
+      gps = "${pkgs.git}/bin/git push rpi5 main";
+      gpl = "${pkgs.git}/bin/git pull rpi5 main";
       ga = "${pkgs.git}/bin/git add --patch";
       gc = "${pkgs.git}/bin/git commit";
       gs = "${pkgs.git}/bin/git status";
