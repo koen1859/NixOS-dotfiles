@@ -11,6 +11,10 @@
     onefetch
     brightnessctl
     quickshell
+    obs-studio
+    pipewire
+    vlc
+    kdePackages.kdenlive
   ];
 
   programs = {
