@@ -28,6 +28,7 @@ in {
             inputs.nixcord.homeModules.nixcord
             inputs.mango.hmModules.mango
             inputs.noctalia.homeModules.default
+            inputs.zen-browser.homeModules.beta
           ];
         });
       "${username}@nixpc" = withSystem "x86_64-linux" ({pkgs, ...}:
@@ -43,6 +44,7 @@ in {
             inputs.nixcord.homeModules.nixcord
             inputs.mango.hmModules.mango
             inputs.noctalia.homeModules.default
+            inputs.zen-browser.homeModules.beta
           ];
         });
       "${username}@nixserver" = withSystem "x86_64-linux" ({pkgs, ...}:

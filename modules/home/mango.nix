@@ -171,7 +171,7 @@
       bind=NONE,XF86AudioNext,spawn,noctalia-shell ipc call media next
 
       # apps
-      bind=SUPER,b,spawn,firefox
+      bind=SUPER,b,spawn,zen-beta
       bind=SUPER,Return,spawn,foot
       bind=SUPER+SHIFT,b,spawn,brave --incognito
       bind=SUPER,a,spawn,brave --app=https://chatgpt.com

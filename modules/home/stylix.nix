@@ -48,6 +48,9 @@
         profileNames = ["default"];
         colorTheme.enable = true;
       };
+      zen-browser = {
+        profileNames = ["default"];
+      };
     };
   };
 }
