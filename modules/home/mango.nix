@@ -6,7 +6,7 @@
   wayland.windowManager.mango = {
     enable = true;
     autostart_sh = ''
-      noctalia-shell
+      noctalia-shell & disown
     '';
     settings = ''
       # Window effect
