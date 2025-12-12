@@ -7,6 +7,7 @@
     enable = true;
     settings = {
       bar = {
+        outerCorners = false;
         widgets = {
           left = [
             {

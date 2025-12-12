@@ -7,6 +7,9 @@
     survival
     xtable
     ggplot2
+    quarto
+    dplyr
+    tidyverse
   ];
 in {
   home.packages = with pkgs; [
@@ -21,5 +24,9 @@ in {
       packages = rPackages;
     })
     direnv
+    quarto
   ];
+  home.sessionVariables = {
+    "QUARTO_R" = "${pkgs.which}/bin/which R";
+  };
 }

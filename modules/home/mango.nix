@@ -29,14 +29,14 @@
       shadows_position_y = 0
       shadowscolor= 0x000000ff
 
-      border_radius=6
+      border_radius=0
       no_radius_when_single=0
       focused_opacity=1.0
       unfocused_opacity=1.0
 
       # Animation Configuration(support type:zoom,slide)
       # tag_animation_direction: 0-horizontal,1-vertical
-      animations=1
+      animations=0
       layer_animations=1
       animation_type_open=slide
       animation_type_close=slide
@@ -117,10 +117,10 @@
       mouse_natural_scrolling=0
 
       # Appearance
-      gappih=5
-      gappiv=5
-      gappoh=5
-      gappov=5
+      gappih=0
+      gappiv=0
+      gappoh=0
+      gappov=0
       scratchpad_width_ratio=0.8
       scratchpad_height_ratio=0.9
       borderpx=2
