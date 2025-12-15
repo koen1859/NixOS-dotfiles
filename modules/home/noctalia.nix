@@ -78,9 +78,9 @@
       dock = {
         monitors = ["eDP-1" "DP-1" "DP-2" "HDMI-A-1"];
       };
-      ui = {
-        fontDefault = "Jetbrains Mono Nerd Font";
-      };
+      # ui = {
+      #   fontDefault = "Jetbrains Mono Nerd Font";
+      # };
       location = {
         name = "Groningen";
       };
