@@ -10,7 +10,10 @@
     xwayland.enable = true;
     regreet.enable = false;
   };
-  environment.systemPackages = with pkgs; [xwayland-satellite];
+  environment.systemPackages = with pkgs; [
+    pipewire
+    xwayland-satellite
+  ];
   xdg.portal = {
     enable = true;
     wlr.enable = true;

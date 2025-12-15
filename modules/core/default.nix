@@ -14,6 +14,7 @@
     "${core}/noctalia.nix"
     "${core}/nh.nix"
     "${core}/flatpak.nix"
+    "${core}/gnome.nix"
   ];
 
   time.timeZone = "Europe/Amsterdam";

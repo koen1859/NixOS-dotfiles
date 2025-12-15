@@ -5,6 +5,9 @@
 }: {
   wayland.windowManager.mango = {
     enable = true;
+    autostart_sh = ''
+      noctalia-shell
+    '';
     settings = ''
       # Window effect
       blur=0
