@@ -8,6 +8,7 @@
     mango.enable = true;
     niri.enable = false;
     xwayland.enable = true;
+    regreet.enable = false;
   };
   environment.systemPackages = with pkgs; [xwayland-satellite];
   xdg.portal = {

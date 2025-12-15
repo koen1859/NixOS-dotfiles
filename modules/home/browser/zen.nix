@@ -185,6 +185,7 @@ in {
             i-dont-care-about-cookies
             proton-pass
             proton-vpn
+            darkreader
           ];
         };
       };

@@ -60,6 +60,10 @@
           ];
         };
       };
+      general = {
+        animationDisabled = true;
+        enableShadows = false;
+      };
       brightness = {
         brightnessStep = 5;
         enforceMinimum = true;
@@ -83,9 +87,11 @@
       appLauncher = {
         enabled = true;
         terminalCommand = "foot";
+        showCategories = false;
       };
       colorSchemes.predefinedScheme = "Gruvbox";
       nightlight = {
+        enabled = true;
         autoSchedule = true;
         manualSunrise = "06:30";
         manualSunset = "18:30";
