@@ -20,28 +20,9 @@
       dark = "Gruvbox-Plus-Dark";
       light = "Gruvbox-Plus-Dark";
     };
-    fonts = {
-      monospace = {
-        package = pkgs.nerd-fonts.jetbrains-mono;
-        name = "JetBrains Mono";
-      };
-      sansSerif = {
-        package = pkgs.montserrat;
-        name = "Montserrat";
-      };
-      serif = {
-        package = pkgs.montserrat;
-        name = "Montserrat";
-      };
-      sizes = {
-        applications = 12;
-        terminal = 15;
-        desktop = 12;
-        popups = 12;
-      };
-    };
     autoEnable = true;
     targets = {
+      noctalia-shell.enable = false;
       waybar.enable = false;
       spicetify.enable = false;
       firefox = {
