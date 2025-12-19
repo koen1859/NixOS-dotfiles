@@ -1,3 +1,4 @@
 {
-  services.desktopManager.gnome.enable = true;
+  services.desktopManager.gnome.enable = false;
+  services.desktopManager.plasma6.enable = false;
 }
