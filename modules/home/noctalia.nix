@@ -4,7 +4,7 @@
   ...
 }: {
   programs.noctalia-shell = {
-    enable = true;
+    enable = false;
     settings = {
       bar = {
         outerCorners = false;

@@ -6,9 +6,13 @@
   wayland.windowManager.mango = {
     enable = true;
     autostart_sh = ''
-      noctalia-shell
+      echo
     '';
     settings = ''
+      exec-once=dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP XDG_SESSION_TYPE NIXOS_OZONE_WL XCURSOR_THEME XCURSOR_SIZE
+      exec-once=systemctl --user reset-failed && systemctl --user start mango-session.target
+      exec-once=dms run --daemon
+
       # Window effect
       blur=0
       blur_layer=0
@@ -153,22 +157,40 @@
       bind=SUPER+SHIFT,r,reload_config
 
       # noctalia shell
-      bind=SUPER,r,spawn,noctalia-shell ipc call launcher toggle
-      bind=SUPER+ALT,b,spawn,noctalia-shell ipc call bar toggle
-      bind=SUPER,w,spawn,noctalia-shell ipc call sessionMenu toggle
-      bind=SUPER,t,spawn,noctalia-shell ipc call controlCenter toggle
-      bind=SUPER,c,spawn,noctalia-shell ipc call calendar toggle
-      bind=SUPER+SHIFT,w,spawn,noctalia-shell ipc call lockScreen lock
+      # bind=SUPER,r,spawn,noctalia-shell ipc call launcher toggle
+      # bind=SUPER+ALT,b,spawn,noctalia-shell ipc call bar toggle
+      # bind=SUPER,w,spawn,noctalia-shell ipc call sessionMenu toggle
+      # bind=SUPER,t,spawn,noctalia-shell ipc call controlCenter toggle
+      # bind=SUPER,c,spawn,noctalia-shell ipc call calendar toggle
+      # bind=SUPER+SHIFT,w,spawn,noctalia-shell ipc call lockScreen lock
 
       # audio and brightness
-      bind=NONE,XF86AudioMute,spawn,noctalia-shell ipc call volume muteOutput
-      bind=NONE,XF86AudioLowerVolume,spawn,noctalia-shell ipc call volume decrease
-      bind=NONE,XF86AudioRaiseVolume,spawn,noctalia-shell ipc call volume increase
-      bind=NONE,XF86MonBrightnessDown,spawn,noctalia-shell ipc call brightness decrease
-      bind=NONE,XF86MonBrightnessUp,spawn,noctalia-shell ipc call brightness increase
-      bind=NONE,XF86AudioPrev,spawn,noctalia-shell ipc call media previous
-      bind=NONE,XF86AudioPlay,spawn,noctalia-shell ipc call media playPause
-      bind=NONE,XF86AudioNext,spawn,noctalia-shell ipc call media next
+      # bind=NONE,XF86AudioMute,spawn,noctalia-shell ipc call volume muteOutput
+      # bind=NONE,XF86AudioLowerVolume,spawn,noctalia-shell ipc call volume decrease
+      # bind=NONE,XF86AudioRaiseVolume,spawn,noctalia-shell ipc call volume increase
+      # bind=NONE,XF86MonBrightnessDown,spawn,noctalia-shell ipc call brightness decrease
+      # bind=NONE,XF86MonBrightnessUp,spawn,noctalia-shell ipc call brightness increase
+      # bind=NONE,XF86AudioPrev,spawn,noctalia-shell ipc call media previous
+      # bind=NONE,XF86AudioPlay,spawn,noctalia-shell ipc call media playPause
+      # bind=NONE,XF86AudioNext,spawn,noctalia-shell ipc call media next
+
+      # DankMaterialShell
+      bind=SUPER,r,spawn,dms ipc call spotlight toggle
+      bind=SUPER+ALT,b,spawn,dms ipc call bar toggle index 0
+      bind=SUPER,w,spawn,dms ipc call powermenu toggle
+      bind=SUPER,t,spawn,dms ipc call control-center toggle
+      bind=SUPER+SHIFT,w,spawn,dms ipc call lock lock
+      bind=SUPER,n,spawn,dms ipc call night toggle
+
+      # audio and brightness
+      bind=NONE,XF86AudioMute,spawn,dms ipc call audio mute
+      bind=NONE,XF86AudioLowerVolume,spawn,dms ipc call audio decrement 5
+      bind=NONE,XF86AudioRaiseVolume,spawn,dms ipc call audio increment 5
+      bind=NONE,XF86MonBrightnessDown,spawn,dms ipc call brightness decrement 5 ""
+      bind=NONE,XF86MonBrightnessUp,spawn,dms ipc call brightness increment 5 ""
+      bind=NONE,XF86AudioPrev,spawn,dms ipc call mpris previous
+      bind=NONE,XF86AudioPlay,spawn,dms ipc call mpris playPause
+      bind=NONE,XF86AudioNext,spawn,dms ipc call mpris next
 
       # apps
       bind=SUPER,b,spawn,zen-beta

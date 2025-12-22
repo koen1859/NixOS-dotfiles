@@ -29,6 +29,8 @@ in {
             inputs.mango.hmModules.mango
             inputs.noctalia.homeModules.default
             inputs.zen-browser.homeModules.beta
+            inputs.dms.homeModules.dankMaterialShell.default
+            inputs.nix-monitor.homeManagerModules.default
           ];
         });
       "${username}@nixpc" = withSystem "x86_64-linux" ({pkgs, ...}:
@@ -45,6 +47,8 @@ in {
             inputs.mango.hmModules.mango
             inputs.noctalia.homeModules.default
             inputs.zen-browser.homeModules.beta
+            inputs.dms.homeModules.dankMaterialShell.default
+            inputs.nix-monitor.homeManagerModules.default
           ];
         });
       "${username}@nixserver" = withSystem "x86_64-linux" ({pkgs, ...}:

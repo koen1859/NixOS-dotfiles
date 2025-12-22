@@ -11,6 +11,7 @@
     "${home}/shell"
     "${home}/wlogout"
     "${home}/btop.nix"
+    "${home}/dms.nix"
     "${home}/fastfetch.nix"
     "${home}/foot.nix"
     "${home}/git.nix"

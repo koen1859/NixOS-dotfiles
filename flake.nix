@@ -70,6 +70,14 @@
         home-manager.follows = "home-manager";
       };
     };
+    dms = {
+      url = "github:AvengeMedia/DankMaterialShell/stable";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    nix-monitor = {
+      url = "github:antonjah/nix-monitor";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
